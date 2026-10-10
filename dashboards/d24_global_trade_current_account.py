@@ -6,25 +6,49 @@ Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 V
 """
 
 import os
+import sys
 import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 
-from app.components.html_utils import render_html
-from app.components.info_modal import render_info_button
-from app.components.kpi_card import render_kpi
-from app.components.charts import (
-    base_layout, COLOR_PALETTE, create_geo_scatter, create_donut_chart,
-    create_histogram, create_violin_chart, create_sunburst, create_funnel_chart,
-    create_horizontal_bar, create_correlation_heatmap, create_density_heatmap,
-    create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
-    create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
-    create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart,
-    create_growth_velocity_bar, create_pareto_chart
-)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+APP_DIR = os.path.join(PROJECT_ROOT, "app")
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
+
+try:
+    from app.components.html_utils import render_html
+    from app.components.info_modal import render_info_button
+    from app.components.kpi_card import render_kpi
+    from app.components.charts import (
+        base_layout, COLOR_PALETTE, create_geo_scatter, create_donut_chart,
+        create_histogram, create_violin_chart, create_sunburst, create_funnel_chart,
+        create_horizontal_bar, create_correlation_heatmap, create_density_heatmap,
+        create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
+        create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
+        create_gauge_chart, create_bubble_chart, create_sankey_diagram,
+        create_parallel_coordinates, create_pyramid_chart,
+        create_growth_velocity_bar, create_pareto_chart
+    )
+except (ImportError, ModuleNotFoundError):
+    from components.html_utils import render_html
+    from components.info_modal import render_info_button
+    from components.kpi_card import render_kpi
+    from components.charts import (
+        base_layout, COLOR_PALETTE, create_geo_scatter, create_donut_chart,
+        create_histogram, create_violin_chart, create_sunburst, create_funnel_chart,
+        create_horizontal_bar, create_correlation_heatmap, create_density_heatmap,
+        create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
+        create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
+        create_gauge_chart, create_bubble_chart, create_sankey_diagram,
+        create_parallel_coordinates, create_pyramid_chart,
+        create_growth_velocity_bar, create_pareto_chart
+    )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d24_global_trade_current_account.csv")
 WHY_MATTERS = """Persistent global current account surpluses and deficits highlight macroeconomic imbalances, global savings gluts, and trade openness shifts that influence exchange rate adjustments and multilateral trade agreements."""

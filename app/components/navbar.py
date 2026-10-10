@@ -4,7 +4,10 @@ Minimal, buzzword-free, beautiful header navigation.
 """
 
 import streamlit as st
-from app.components.html_utils import render_html
+try:
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from .html_utils import render_html
 
 NAV_ITEMS = [
     ("Dashboard Gallery", "Gallery"),

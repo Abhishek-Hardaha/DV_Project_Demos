@@ -8,9 +8,14 @@ import os
 import json
 import pandas as pd
 import streamlit as st
-from app.components.header import render_header
-from app.components.kpi_card import render_kpi
-from app.components.html_utils import render_html
+try:
+    from app.components.header import render_header
+    from app.components.kpi_card import render_kpi
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from components.header import render_header
+    from components.kpi_card import render_kpi
+    from components.html_utils import render_html
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 META_DIR = os.path.join(BASE_DIR, "metadata")

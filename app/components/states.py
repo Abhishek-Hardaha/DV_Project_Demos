@@ -4,7 +4,10 @@ Provides purpose-built analytical feedback for searches, filters, loading, and o
 """
 
 import streamlit as st
-from app.components.html_utils import render_html
+try:
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from .html_utils import render_html
 
 def render_empty_state(title="No Observations Found", description="No verified records match the active filter criteria. Try adjusting your time horizon or categorical selections.", icon="🔍"):
     """

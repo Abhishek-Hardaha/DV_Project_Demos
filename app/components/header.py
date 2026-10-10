@@ -3,7 +3,10 @@ Reusable Component: Executive Platform Header & Breadcrumb Bar
 Delivers an institutional, custom-designed command header across all views.
 """
 
-from app.components.html_utils import render_html
+try:
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from .html_utils import render_html
 
 def render_header(title="Data Visualization Intelligence Suite", subtitle=None, active_view=None, meta_chips=None):
     """

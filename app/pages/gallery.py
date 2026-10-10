@@ -6,10 +6,16 @@ Minimal text, prominent vector visuals, domain-specific colors, clean responsive
 import os
 import json
 import streamlit as st
-from app.components.header import render_header
-from app.components.states import render_empty_state
-from app.components.html_utils import render_html
-from app.components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
+try:
+    from app.components.header import render_header
+    from app.components.states import render_empty_state
+    from app.components.html_utils import render_html
+    from app.components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
+except (ImportError, ModuleNotFoundError):
+    from components.header import render_header
+    from components.states import render_empty_state
+    from components.html_utils import render_html
+    from components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
 
 META_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "metadata")
 

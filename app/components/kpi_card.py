@@ -5,7 +5,10 @@ Designed for executive readability, zero visual clutter, and precision data visu
 """
 
 import streamlit as st
-from app.components.html_utils import render_html
+try:
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from .html_utils import render_html
 
 def _infer_icon(label: str) -> str:
     lbl = label.lower()

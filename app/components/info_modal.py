@@ -6,7 +6,10 @@ Populated dynamically from metadata to provide complete methodological and sourc
 import os
 import json
 import streamlit as st
-from app.components.html_utils import render_html
+try:
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from .html_utils import render_html
 
 META_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "metadata")
 

@@ -9,13 +9,21 @@ import json
 import importlib
 import streamlit as st
 
-# Add project root to sys.path
+# Add project root and app directory to sys.path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from app.pages import landing, gallery, dataset_explorer, source_explorer, api_explorer
-from app.components.html_utils import render_html
+APP_DIR = os.path.join(PROJECT_ROOT, "app")
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
+
+try:
+    from app.pages import landing, gallery, dataset_explorer, source_explorer, api_explorer
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from pages import landing, gallery, dataset_explorer, source_explorer, api_explorer
+    from components.html_utils import render_html
 
 # Page Configuration
 st.set_page_config(
@@ -215,6 +223,10 @@ elif st.session_state["current_view"] == "Dashboards":
             st.rerun()
 
     try:
+        if PROJECT_ROOT not in sys.path:
+            sys.path.insert(0, PROJECT_ROOT)
+        if APP_DIR not in sys.path:
+            sys.path.insert(0, APP_DIR)
         mod = importlib.import_module(f"dashboards.{slug}")
         mod.render()
     except Exception as e:

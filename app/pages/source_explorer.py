@@ -7,10 +7,16 @@ Transformed into an executive authority directory with instant search and deep d
 import os
 import json
 import streamlit as st
-from app.components.header import render_header
-from app.components.kpi_card import render_kpi
-from app.components.states import render_empty_state
-from app.components.html_utils import render_html
+try:
+    from app.components.header import render_header
+    from app.components.kpi_card import render_kpi
+    from app.components.states import render_empty_state
+    from app.components.html_utils import render_html
+except (ImportError, ModuleNotFoundError):
+    from components.header import render_header
+    from components.kpi_card import render_kpi
+    from components.states import render_empty_state
+    from components.html_utils import render_html
 
 META_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "metadata")
 

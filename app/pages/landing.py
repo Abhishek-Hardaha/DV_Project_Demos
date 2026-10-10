@@ -6,10 +6,16 @@ Zero corporate buzzwords, minimal text, prominent vector visuals, high visual cl
 import os
 import json
 import streamlit as st
-from app.components.header import render_header
-from app.components.kpi_card import render_kpi
-from app.components.html_utils import render_html
-from app.components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
+try:
+    from app.components.header import render_header
+    from app.components.kpi_card import render_kpi
+    from app.components.html_utils import render_html
+    from app.components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
+except (ImportError, ModuleNotFoundError):
+    from components.header import render_header
+    from components.kpi_card import render_kpi
+    from components.html_utils import render_html
+    from components.svg_covers import get_dashboard_svg_cover, DOMAIN_THEMES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 META_DIR = os.path.join(BASE_DIR, "metadata")
