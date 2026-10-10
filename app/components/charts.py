@@ -65,6 +65,42 @@ def base_layout(fig, title="", x_title="", y_title="", height=380, subtitle=""):
 
 def create_line_chart(df, x, y, color=None, title="", x_title="", y_title="", markers=True, height=380, subtitle=""):
     df_clean = df.dropna(subset=[x]).copy() if x in df.columns else df.copy()
+    
+    # Intelligent multi-entity detection: if x has duplicate values and color is not set,
+    # group by the entity column so lines never zigzag backwards across years!
+    if color is None and x in df_clean.columns and df_clean[x].duplicated().any():
+        if isinstance(y, list) and len(y) > 1:
+            valid_y = [col for col in y if col in df_clean.columns and pd.api.types.is_numeric_dtype(df_clean[col])]
+            if valid_y:
+                df_clean = df_clean.groupby(x, as_index=False)[valid_y].mean().sort_values(by=x)
+            color = None
+        else:
+            entity_col = next((c for c in ['country', 'state', 'region', 'economy_group', 'sector', 'category', 'city', 'zone', 'basin'] if c in df_clean.columns), None)
+            if not entity_col:
+                cat_cols = [c for c in df_clean.select_dtypes(include=['object']).columns if c != x]
+                entity_col = cat_cols[0] if cat_cols else None
+                
+            if entity_col:
+                # If high cardinality, focus on top 7 by metric volume
+                if df_clean[entity_col].nunique() > 8:
+                    metric_check = y if isinstance(y, str) else (y[0] if y else None)
+                    if metric_check and metric_check in df_clean.columns and pd.api.types.is_numeric_dtype(df_clean[metric_check]):
+                        top_ents = df_clean.groupby(entity_col)[metric_check].sum().nlargest(7).index.tolist()
+                        df_clean = df_clean[df_clean[entity_col].isin(top_ents)].copy()
+                color = entity_col
+                df_clean = df_clean.sort_values(by=[entity_col, x])
+            else:
+                # Aggregate by x so each point in time is unique
+                if isinstance(y, str) and y in df_clean.columns:
+                    df_clean = df_clean.groupby(x, as_index=False)[y].mean().sort_values(by=x)
+                elif isinstance(y, list):
+                    valid_y = [col for col in y if col in df_clean.columns]
+                    df_clean = df_clean.groupby(x, as_index=False)[valid_y].mean().sort_values(by=x)
+    elif color and color in df_clean.columns:
+        df_clean = df_clean.sort_values(by=[color, x])
+    elif x in df_clean.columns:
+        df_clean = df_clean.sort_values(by=x)
+
     fig = px.line(
         df_clean, x=x, y=y, color=color,
         markers=markers,
@@ -80,12 +116,56 @@ def create_bar_chart(df, x, y, color=None, title="", x_title="", y_title="", ori
     )
     return base_layout(fig, title, x_title, y_title, height, subtitle=subtitle)
 
-def create_scatter_chart(df, x, y, size=None, color=None, hover_name=None, title="", x_title="", y_title="", height=380, subtitle=""):
-    df_clean = df.dropna(subset=[c for c in [x, y] if c in df.columns]).copy()
+def create_scatter_chart(df, x, y, size=None, color=None, hover_name=None, trendline=None, title="", x_title="", y_title="", height=380, subtitle=""):
+    valid_cols = [c for c in [x, y] if c in df.columns]
+    if len(valid_cols) < 2:
+        return go.Figure()
+    df_clean = df.dropna(subset=valid_cols).copy()
+
+    time_col = next((c for c in ['year', 'fiscal_year', 'crop_year', 'date', 'Date'] if c in df_clean.columns), None)
+    entity_col = next((c for c in ['country', 'state', 'region', 'economy_group', 'sector', 'category', 'city'] if c in df_clean.columns), None)
+
+    # If dataset spans multiple time periods with entities, snapshot the latest period
+    # to show a crisp cross-sectional frontier without caterpillar smears
+    if time_col and entity_col and df_clean[time_col].nunique() > 1:
+        latest_t = df_clean[time_col].max()
+        df_snapshot = df_clean[df_clean[time_col] == latest_t].copy()
+        if len(df_snapshot) >= 4:
+            df_clean = df_snapshot
+            if color is None:
+                color = entity_col
+            if hover_name is None:
+                hover_name = entity_col
+
+    if color and color not in df_clean.columns:
+        color = None
+    if hover_name and hover_name not in df_clean.columns:
+        hover_name = None
+    if size and (size not in df_clean.columns or not pd.api.types.is_numeric_dtype(df_clean[size]) or (df_clean[size] <= 0).all()):
+        size = None
+
     fig = px.scatter(
         df_clean, x=x, y=y, size=size, color=color, hover_name=hover_name,
         color_discrete_sequence=COLOR_PALETTE
     )
+    
+    # Fit crisp OLS trendline across all observations
+    if trendline == "ols" and len(df_clean) >= 3 and pd.api.types.is_numeric_dtype(df_clean[x]) and pd.api.types.is_numeric_dtype(df_clean[y]):
+        try:
+            valid = df_clean.dropna(subset=[x, y])
+            if len(valid) >= 3 and valid[x].nunique() > 1:
+                p = np.polyfit(valid[x].astype(float), valid[y].astype(float), 1)
+                x_vals = np.linspace(float(valid[x].min()), float(valid[x].max()), 60)
+                y_vals = np.polyval(p, x_vals)
+                fig.add_trace(go.Scatter(
+                    x=x_vals, y=y_vals,
+                    mode="lines",
+                    name="OLS Fit",
+                    line=dict(color="#f43f5e", width=2.2, dash="dash")
+                ))
+        except Exception:
+            pass
+
     return base_layout(fig, title, x_title, y_title, height, subtitle=subtitle)
 
 def create_treemap(df, path, values, title="", subtitle="", height=380):
@@ -107,6 +187,27 @@ def create_treemap(df, path, values, title="", subtitle="", height=380):
 
 def create_area_chart(df, x, y, color=None, title="", x_title="", y_title="", height=380, subtitle=""):
     df_clean = df.dropna(subset=[x]).copy() if x in df.columns else df.copy()
+    if color is None and x in df_clean.columns and df_clean[x].duplicated().any():
+        if isinstance(y, list) and len(y) > 1:
+            valid_y = [col for col in y if col in df_clean.columns and pd.api.types.is_numeric_dtype(df_clean[col])]
+            if valid_y:
+                df_clean = df_clean.groupby(x, as_index=False)[valid_y].sum().sort_values(by=x)
+            color = None
+        else:
+            entity_col = next((c for c in ['country', 'state', 'region', 'economy_group', 'sector', 'category', 'city'] if c in df_clean.columns), None)
+            if entity_col:
+                if df_clean[entity_col].nunique() > 6:
+                    metric_check = y if isinstance(y, str) else (y[0] if y else None)
+                    if metric_check and metric_check in df_clean.columns and pd.api.types.is_numeric_dtype(df_clean[metric_check]):
+                        top_ents = df_clean.groupby(entity_col)[metric_check].sum().nlargest(6).index.tolist()
+                        df_clean = df_clean[df_clean[entity_col].isin(top_ents)].copy()
+                color = entity_col
+                df_clean = df_clean.sort_values(by=[entity_col, x])
+    elif color and color in df_clean.columns:
+        df_clean = df_clean.sort_values(by=[color, x])
+    elif x in df_clean.columns:
+        df_clean = df_clean.sort_values(by=x)
+
     fig = px.area(
         df_clean, x=x, y=y, color=color,
         color_discrete_sequence=COLOR_PALETTE
@@ -286,17 +387,27 @@ def create_density_heatmap(df, x, y, title="", x_title="", y_title="", subtitle=
     )
     return base_layout(fig, title, x_title, y_title, height=height, subtitle=subtitle)
 
-def create_radar_chart(categories, values, title="", subtitle="", height=380):
+def create_radar_chart(categories, values, title="", subtitle="", height=380, df=None):
     """
     Renders a balanced, accurate multi-indicator radar profile.
-    Automatically normalizes radial coordinates to 0-100% scale while displaying
-    authentic, unscaled raw values and units in the hover tooltip.
+    Automatically normalizes radial coordinates to independent 15-95% scale per indicator
+    while displaying authentic, unscaled raw values and ranges in the hover tooltip.
     """
     if not categories or not values or len(categories) != len(values):
         categories = ["Indicator A", "Indicator B", "Indicator C"]
         values = [50.0, 75.0, 60.0]
 
-    # Convert values to float
+    # Deduplicate categories to prevent duplicate spokes
+    seen = set()
+    dedup_cats = []
+    dedup_vals = []
+    for c, v in zip(categories, values):
+        if c not in seen:
+            seen.add(c)
+            dedup_cats.append(c)
+            dedup_vals.append(v)
+    categories, values = dedup_cats, dedup_vals
+
     clean_vals = []
     for v in values:
         try:
@@ -305,32 +416,40 @@ def create_radar_chart(categories, values, title="", subtitle="", height=380):
         except Exception:
             clean_vals.append(0.0)
 
-    # Determine scaling: if values are already 0-100, use directly; otherwise scale to relative % of max
-    max_val = max(clean_vals) if clean_vals and max(clean_vals) > 0 else 1.0
-    min_val = min(clean_vals) if clean_vals else 0.0
+    # Independent normalization per dimension so disparate scales don't collapse into a needle
+    r_coords = []
+    hover_lines = []
 
-    if min_val >= 0 and max_val <= 100:
-        r_coords = clean_vals
-        r_scale_text = "%"
-    else:
-        # Scale to 0-100 for polygon balance, keeping exact true numbers in hover
-        r_coords = [round((v / max_val) * 100, 1) if max_val > 0 else 50.0 for v in clean_vals]
-        r_scale_text = "% of max"
+    for c, v in zip(categories, clean_vals):
+        lbl = c.replace('_', ' ').title()
+        if df is not None and c in df.columns and pd.api.types.is_numeric_dtype(df[c]):
+            s = df[c].dropna()
+            c_min = float(s.min()) if not s.empty else 0.0
+            c_max = float(s.max()) if not s.empty else 1.0
+            span = c_max - c_min
+            if span > 0:
+                pct = ((v - c_min) / span) * 75.0 + 18.0  # Normalized between 18% and 93%
+            else:
+                pct = 55.0
+            r_coords.append(round(pct, 1))
+            hover_lines.append(f"<b>{lbl}</b><br>Observed: {v:,.2f}<br>Range: {c_min:,.2f} – {c_max:,.2f}<br>Benchmark Score: {pct:.1f}%")
+        else:
+            pct = max(15.0, min(95.0, float(v))) if 0 <= v <= 100 else 50.0
+            r_coords.append(round(pct, 1))
+            hover_lines.append(f"<b>{lbl}</b><br>Observed: {v:,.2f}<br>Benchmark Score: {pct:.1f}%")
 
-    # Close the radar loop
-    r_loop = list(r_coords) + [r_coords[0]]
-    cat_loop = list(categories) + [categories[0]]
-    raw_loop = list(clean_vals) + [clean_vals[0]]
-
-    hover_text = [f"<b>{c}</b><br>Value: {raw:,.2f}<br>Relative Scale: {r:.1f}%" for c, raw, r in zip(cat_loop, raw_loop, r_loop)]
+    clean_cat_labels = [c.replace('_', ' ').title() for c in categories]
 
     fig = go.Figure()
     fig.add_trace(go.Scatterpolar(
-        r=r_loop, theta=cat_loop, fill="toself",
-        hovertext=hover_text, hoverinfo="text",
+        r=r_coords,
+        theta=clean_cat_labels,
+        fill="toself",
+        hovertext=hover_lines,
+        hoverinfo="text",
         line=dict(color="#38bdf8", width=2.5),
         fillcolor="rgba(56, 189, 248, 0.22)",
-        marker=dict(size=6, color="#ffffff", line=dict(color="#38bdf8", width=1.5))
+        marker=dict(size=7, color="#ffffff", line=dict(color="#38bdf8", width=2))
     ))
 
     fig.update_layout(
@@ -348,6 +467,114 @@ def create_radar_chart(categories, values, title="", subtitle="", height=380):
         )
     )
     return base_layout(fig, title, height=height, subtitle=subtitle)
+
+def create_growth_velocity_bar(df, time_col, metric_col, title="", subtitle="", height=380):
+    """
+    Plots period-over-period growth velocity / rate of change.
+    Positive acceleration is highlighted in vibrant emerald, contractions in coral red.
+    """
+    if metric_col not in df.columns:
+        num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+        metric_col = num_cols[0] if num_cols else None
+    if not metric_col:
+        return go.Figure()
+
+    if time_col not in df.columns:
+        time_col = next((c for c in ['year', 'fiscal_year', 'crop_year', 'date', 'Date', 'month', 'period', 'quarter'] if c in df.columns), None)
+
+    if time_col and time_col in df.columns:
+        df_agg = df.groupby(time_col, as_index=False)[metric_col].sum() if df[time_col].duplicated().any() else df[[time_col, metric_col]].dropna().copy()
+        df_agg = df_agg.sort_values(by=time_col)
+        df_agg['pct_change'] = df_agg[metric_col].pct_change() * 100
+        df_plot = df_agg.dropna(subset=['pct_change']).tail(25)
+        x_axis_title = time_col.replace('_', ' ').title()
+        y_axis_title = "Period Growth Rate (%)"
+    else:
+        # Fallback for non-temporal dataset: percentage deviation from the mean across categories
+        cat_c = next((c for c in df.select_dtypes(include=['object']).columns), None)
+        if cat_c:
+            df_agg = df.groupby(cat_c, as_index=False)[metric_col].mean().head(20)
+            x_col = cat_c
+        else:
+            df_agg = df[[metric_col]].dropna().head(20).copy()
+            df_agg['Index'] = [f"Item {i+1}" for i in range(len(df_agg))]
+            x_col = 'Index'
+        mean_val = df_agg[metric_col].mean() if not df_agg.empty else 1.0
+        if mean_val == 0:
+            mean_val = 1.0
+        df_agg['pct_change'] = ((df_agg[metric_col] - mean_val) / abs(mean_val)) * 100
+        df_plot = df_agg
+        x_axis_title = x_col.replace('_', ' ').title()
+        y_axis_title = "Deviation from Mean (%)"
+        time_col = x_col
+
+    colors = ['#34d399' if v >= 0 else '#f87171' for v in df_plot['pct_change']]
+
+    fig = go.Figure()
+    fig.add_trace(go.Bar(
+        x=df_plot[time_col].astype(str),
+        y=df_plot['pct_change'],
+        marker_color=colors,
+        text=[f"{v:+.1f}%" for v in df_plot['pct_change']],
+        textposition="outside",
+        textfont=dict(family="JetBrains Mono", size=9, color="#cbd5e1"),
+        name="Velocity"
+    ))
+    fig.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.25)", line_width=1)
+    return base_layout(fig, title, x_axis_title, y_axis_title, height=height, subtitle=subtitle)
+
+def create_pareto_chart(df, cat_col, metric_col, title="", subtitle="", height=380):
+    """
+    Plots entity volume ranking with cumulative percentage concentration line.
+    Reveals structural concentration and 80/20 distribution across entities.
+    """
+    if metric_col not in df.columns:
+        num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+        metric_col = num_cols[0] if num_cols else None
+    if not metric_col:
+        return go.Figure()
+
+    if cat_col not in df.columns:
+        cat_col = next((c for c in df.select_dtypes(include=['object']).columns), None)
+        if not cat_col:
+            cat_col = next((c for c in ['year', 'fiscal_year', 'crop_year', 'date', 'Date'] if c in df.columns), df.columns[0])
+
+    df_agg = df.groupby(cat_col, as_index=False)[metric_col].sum().sort_values(by=metric_col, ascending=False).head(14)
+    tot = df_agg[metric_col].sum()
+    if tot <= 0:
+        tot = 1.0
+    df_agg['cum_pct'] = (df_agg[metric_col].cumsum() / tot) * 100
+
+    fig = go.Figure()
+    fig.add_trace(go.Bar(
+        x=df_agg[cat_col].astype(str),
+        y=df_agg[metric_col],
+        name="Volume",
+        marker_color="#38bdf8",
+        opacity=0.85
+    ))
+    fig.add_trace(go.Scatter(
+        x=df_agg[cat_col].astype(str),
+        y=df_agg['cum_pct'],
+        name="Cumulative %",
+        yaxis="y2",
+        mode="lines+markers",
+        line=dict(color="#f59e0b", width=2.5),
+        marker=dict(size=6, color="#ffffff", line=dict(color="#f59e0b", width=1.5))
+    ))
+
+    fig.update_layout(
+        yaxis2=dict(
+            title="Cumulative Share (%)",
+            overlaying="y",
+            side="right",
+            range=[0, 105],
+            ticksuffix="%",
+            tickfont=dict(family="JetBrains Mono", size=9, color="#f59e0b"),
+            showgrid=False
+        )
+    )
+    return base_layout(fig, title, cat_col.replace('_', ' ').title(), metric_col.replace('_', ' ').title(), height=height, subtitle=subtitle)
 
 def create_waterfall_chart(x, y, measure=None, title="", subtitle="", height=380):
     if measure is None:

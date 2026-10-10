@@ -2,7 +2,7 @@
 Dashboard Module: D31 - Global Tourism Arrivals & International Travel Recovery
 Domain: Travel & Hospitality Economics (Archetype: social_demographics)
 Authentic Source: Verified Primary Dataset (data/analytical/d31_global_unwto_tourism.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d31_global_unwto_tourism.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Regional Demographics & Social Distribution
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">👥 Regional Demographics & Social Distribution</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Regional Benchmark Hero Split (2.1 : 1.1) with Target Gauge
-    r1_c1, r1_c2 = st.columns([2.1, 1.1])
-    with r1_c1:
-        # Chart 1: Regional Benchmark
-        fig1 = px.line(df, x="year", y=['tourist_arrivals_millions'], markers=True, color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "International Tourist Arrivals Trajectory by Nation (Millions)", "Year", "Arrivals (M)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Target Coverage Gauge
-        val_gauge_2 = float(df['tourist_arrivals_millions'].dropna().iloc[-1]) if ('tourist_arrivals_millions' in df.columns and len(df['tourist_arrivals_millions'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=17.5, title="Top Arrivals Nation (France) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: Demographic Comparison & Spatial Scale (1.4 : 1.6)
-    r2_c1, r2_c2 = st.columns([1.4, 1.6])
-    with r2_c1:
-        # Chart 3: Demographic Comparison Pyramid
-        df_tree3 = df[df["tourist_arrivals_millions"] > 0] if ("tourist_arrivals_millions" in df.columns and pd.api.types.is_numeric_dtype(df["tourist_arrivals_millions"])) else df
-        tree_val_3 = "tourist_arrivals_millions" if ("tourist_arrivals_millions" in df.columns and pd.api.types.is_numeric_dtype(df["tourist_arrivals_millions"])) else None
-        fig3 = create_treemap(df_tree3, path=['country'], values=tree_val_3, title="Global Tourism Arrivals & International Travel Recovery Regional Distribution", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_line_chart(df, x="year", y=['tourist_arrivals_millions'], title="International Tourist Arrivals Trajectory by Nation (Millions)", x_title="Year", y_title="Arrivals (M)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['tourist_arrivals_millions'].dropna().iloc[-1]) if ('tourist_arrivals_millions' in df.columns and len(df['tourist_arrivals_millions'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=17.5, title="Top Arrivals Nation (France) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="year", metric_col="tourist_arrivals_millions", title="Tourist Arrivals Millions Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin Spread
-        fig4 = create_violin_chart(df, x="country", y="tourist_arrivals_millions", title="Tourist Arrivals Millions Distribution by Country", x_title="Country", y_title="Tourist Arrivals Millions", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
 
-    # Row 3: 3-Column Dispersion & Progression Strip (1:1:1)
-    r3_c1, r3_c2, r3_c3 = st.columns(3)
-    with r3_c1:
-        # Chart 5: Multi-Factor Demographic Bubble Matrix
-        fig5 = create_bubble_chart(df, x="tourist_arrivals_millions", y="tourism_receipts_usd_billions", size="year", color="country", hover_name="country", title="Tourist Arrivals Millions vs Tourism Receipts Usd Billions Relationship", x_title="Tourist Arrivals Millions", y_title="Tourism Receipts Usd Billions", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
-    with r3_c2:
-        # Chart 6: Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['year', 'tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (4 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c3:
-        # Chart 7: Relationship Scatter
-        fig7 = px.scatter(df, x="tourist_arrivals_millions", y="tourism_receipts_usd_billions", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Tourist Arrival Volumes vs Gross Travel Receipts ($ B)", "Arrivals (M)", "Receipts ($ B)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_tree4 = df[df["tourist_arrivals_millions"] > 0] if ("tourist_arrivals_millions" in df.columns and pd.api.types.is_numeric_dtype(df["tourist_arrivals_millions"])) else df
+            tree_val_4 = "tourist_arrivals_millions" if ("tourist_arrivals_millions" in df.columns and pd.api.types.is_numeric_dtype(df["tourist_arrivals_millions"])) else None
+            fig4 = create_treemap(df_tree4, path=['country'], values=tree_val_4, title="Global Tourism Arrivals & International Travel Recovery Regional Distribution", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="country", y="tourist_arrivals_millions", title="Tourist Arrivals Millions Distribution by Country", x_title="Country", y_title="Tourist Arrivals Millions", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Scan & Ranking Benchmark (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Ranking Benchmark
-        fig9 = create_horizontal_bar(df, x="tourist_arrivals_millions", y="country", title="Rankings by Tourist Arrivals Millions", x_title="Tourist Arrivals Millions", y_title="Country", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="tourist_arrivals_millions", y="tourism_receipts_usd_billions", size="year", color="country", hover_name="country", title="Tourist Arrivals Millions vs Tourism Receipts Usd Billions Multidimensional Matrix", x_title="Tourist Arrivals Millions", y_title="Tourism Receipts Usd Billions", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['year', 'tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (4 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="tourist_arrivals_millions", y="tourism_receipts_usd_billions", trendline="ols", title="Tourist Arrivals Millions vs Tourism Receipts Usd Billions Regression Frontier", x_title="Tourist Arrivals Millions", y_title="Tourism Receipts Usd Billions", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['tourist_arrivals_millions', 'tourism_receipts_usd_billions', 'receipt_per_arrival_usd'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="tourist_arrivals_millions", y="country", title="Rankings by Tourist Arrivals Millions", x_title="Tourist Arrivals Millions", y_title="Country", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="country", metric_col="tourist_arrivals_millions", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

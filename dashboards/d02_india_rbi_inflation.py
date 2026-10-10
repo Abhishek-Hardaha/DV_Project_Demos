@@ -2,7 +2,7 @@
 Dashboard Module: D02 - Reserve Bank of India (RBI) Inflation & Monetary Policy Monitor
 Domain: Central Banking & Monetary Policy (Archetype: macro_policy)
 Authentic Source: Verified Primary Dataset (data/analytical/d02_india_rbi_inflation.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d02_india_rbi_inflation.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Economic Trends & Visualizations
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🏛️ Economic Indicators & Trends</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Hero Trajectory Split (2.3 : 1.0) with Benchmark Gauge
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Hero Trajectory
-        fig1 = px.line(df, x="date", y=['headline_cpi_yoy', 'rbi_repo_rate', 'target_band_mid', 'target_band_upper', 'target_band_lower'], markers=True, color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Headline CPI vs RBI Policy Corridor & Tolerance Bands (%)", "Date", "Rate (%)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Target Benchmark Gauge
-        val_gauge_2 = float(df['headline_cpi_yoy'].dropna().iloc[-1]) if ('headline_cpi_yoy' in df.columns and len(df['headline_cpi_yoy'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=5.1, title="Latest Headline CPI (%) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="%", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Comparative Analytical Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Component Breakdown Waterfall
-        wf_labels_3 = [col.replace('_', ' ').title() for col in ['rbi_repo_rate', 'reverse_repo_rate', 'crr_pct', 'real_policy_rate'] if col in df.columns]
-        wf_vals_3 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['rbi_repo_rate', 'reverse_repo_rate', 'crr_pct', 'real_policy_rate'] if col in df.columns]
-        fig3 = create_waterfall_chart(wf_labels_3, wf_vals_3, title="Reserve Bank of India (RBI) Inflation & Monetary Policy Monitor Component Breakdown", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_line_chart(df, x="date", y=['headline_cpi_yoy', 'rbi_repo_rate', 'target_band_mid', 'target_band_upper', 'target_band_lower'], title="Headline CPI vs RBI Policy Corridor & Tolerance Bands (%)", x_title="Date", y_title="Rate (%)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['headline_cpi_yoy'].dropna().iloc[-1]) if ('headline_cpi_yoy' in df.columns and len(df['headline_cpi_yoy'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=5.1, title="Latest Headline CPI (%) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="%", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="date", metric_col="headline_cpi_yoy", title="Headline Cpi Yoy Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Distribution Violin/Box
-        fig4 = create_box_chart(df, x=None, y="month", title="Distribution & Outlier Analysis", x_title="Quartiles", y_title="Month", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Matrix
-        fig5 = create_bubble_chart(df, x="year", y="month", size="headline_cpi_yoy", color="food_inflation_yoy", hover_name="date", title="Year vs Month Relationship", x_title="Year", y_title="Month", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Correlation & Comparison Split (1.6 : 1.4)
-    r3_c1, r3_c2 = st.columns([1.6, 1.4])
-    with r3_c1:
-        # Chart 6: Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['year', 'month', 'headline_cpi_yoy', 'food_inflation_yoy', 'fuel_inflation_yoy', 'core_cpi_yoy'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Relationship Scatter
-        fig7 = px.scatter(df, x="headline_cpi_yoy", y="rbi_repo_rate", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Monetary Reaction Function: CPI vs Repo Rate", "Headline CPI (%)", "RBI Repo Rate (%)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            wf_labels_4 = [col.replace('_', ' ').title() for col in ['rbi_repo_rate', 'reverse_repo_rate', 'crr_pct', 'real_policy_rate'] if col in df.columns]
+            wf_vals_4 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['rbi_repo_rate', 'reverse_repo_rate', 'crr_pct', 'real_policy_rate'] if col in df.columns]
+            fig4 = create_waterfall_chart(wf_labels_4, wf_vals_4, title="Reserve Bank of India (RBI) Inflation & Monetary Policy Monitor Component Breakdown", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_box_chart(df, x=None, y="month", title="Distribution & Outlier Analysis", x_title="Quartiles", y_title="Month", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Polar Profile Radar
-        radar_cols_8 = [c for c in ['headline_cpi_yoy', 'food_inflation_yoy', 'fuel_inflation_yoy', 'core_cpi_yoy', 'rbi_repo_rate'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Milestone Ranking Bar
-        fig9 = create_horizontal_bar(df, x="headline_cpi_yoy", y="date", title="Progress Over Time (Headline Cpi Yoy)", x_title="Headline Cpi Yoy", y_title="Timeline", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="year", y="month", size="headline_cpi_yoy", color="food_inflation_yoy", hover_name="date", title="Year vs Month Multidimensional Matrix", x_title="Year", y_title="Month", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['year', 'month', 'headline_cpi_yoy', 'food_inflation_yoy'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['year', 'month', 'headline_cpi_yoy', 'food_inflation_yoy'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['year', 'month', 'headline_cpi_yoy', 'food_inflation_yoy', 'fuel_inflation_yoy', 'core_cpi_yoy'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="headline_cpi_yoy", y="rbi_repo_rate", trendline="ols", title="Headline Cpi Yoy vs Rbi Repo Rate Regression Frontier", x_title="Headline Cpi Yoy", y_title="Rbi Repo Rate", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['headline_cpi_yoy', 'food_inflation_yoy', 'fuel_inflation_yoy', 'core_cpi_yoy', 'rbi_repo_rate', 'reverse_repo_rate'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="headline_cpi_yoy", y="date", title="Progress Over Time (Headline Cpi Yoy)", x_title="Headline Cpi Yoy", y_title="Timeline", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="date", metric_col="headline_cpi_yoy", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

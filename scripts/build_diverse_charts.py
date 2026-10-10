@@ -124,25 +124,32 @@ DOMAIN_ARCHETYPES = {
     'Industrial Pollution Control & Environmental Regulation': 'tech_science',
 }
 
-def create_9_diverse_charts(spec, df):
+def create_12_diverse_charts(spec, df):
     """
-    Constructs an analytically tailored 9-chart suite for any dashboard.
+    Constructs an analytically tailored 12-chart suite for any dashboard.
     Zero synthetic columns, 100% verified against df.
+    Organized into 4 executive focus tabs.
     """
     arch = DOMAIN_ARCHETYPES.get(spec['domain'], 'macro_policy')
     num_cols = [c for c in df.select_dtypes(include=['number']).columns if c.lower() not in ['unnamed: 0', 'index']]
+    if not num_cols:
+        num_cols = [df.columns[0]]
     cat_cols = [c for c in df.select_dtypes(include=['object']).columns if c.lower() not in ['unnamed: 0', 'index', 'date', 'year']]
-    time_col = spec.get('time_col') or next((c for c in ['year', 'fiscal_year', 'crop_year', 'date', 'Date'] if c in df.columns), None)
+    time_col = spec.get('time_col') or next((c for c in ['year', 'fiscal_year', 'crop_year', 'date', 'Date', 'month', 'period', 'quarter'] if c in df.columns), None)
     
     # Identify primary and secondary KPI columns
     kpi_col = spec['kpis'][0][1] if spec['kpis'][0][1] in df.columns else num_cols[0]
     kpi2_col = spec['kpis'][1][1] if len(spec['kpis']) > 1 and spec['kpis'][1][1] in df.columns else (num_cols[1] if len(num_cols) > 1 else num_cols[0])
-    
-    # 1. Chart 1: Hero Visual (Preserve original primary visual)
+    kpi_label = spec['kpis'][0][0]
+
+    # --- TAB 1: PRIMARY TRENDS & TRAJECTORY ---
+    # 1. Chart 1: Hero Trajectory (Preserve original primary visual if line/area/bar/geo)
     c1 = spec['charts'][0]
-    
+    if c1[0] not in ['line', 'area', 'bar', 'geo_scatter']:
+        c1 = ("line", time_col if time_col else (cat_cols[0] if cat_cols else num_cols[0]), kpi_col, f"{spec['title']} Historical Trajectory", time_col.replace('_', ' ').title() if time_col else "Category", kpi_col.replace('_', ' ').title())
+
     # 2. Chart 2: Domain Executive Gauge
-    s = df[kpi_col].dropna()
+    s = df[kpi_col].dropna() if kpi_col in df.columns else pd.Series([50.0])
     s_min = float(s.min()) if not s.empty else 0.0
     s_max = float(s.max()) if not s.empty else 100.0
     s_latest = float(s.iloc[-1]) if not s.empty else 50.0
@@ -161,20 +168,24 @@ def create_9_diverse_charts(spec, df):
         target_g = round(s_mean, 1)
     
     suffix = "%" if "%" in spec['kpis'][0][3] else ("$" if "$" in spec['kpis'][0][3] else "")
-    kpi_label = spec['kpis'][0][0]
     c2 = ("gauge", kpi_col, target_g, f"{kpi_label} Target Benchmark Gauge", min_g, max_g, suffix)
 
-    # 3. Chart 3: Specialty Visual
+    # 3. Chart 3: Period Growth Velocity Bar
+    t_col_gv = time_col if time_col else (cat_cols[0] if cat_cols else num_cols[0])
+    c3 = ("growth_velocity", t_col_gv, kpi_col, f"{kpi_col.replace('_', ' ').title()} Period Growth Velocity")
+
+    # --- TAB 2: STRUCTURAL BREAKDOWN & DISTRIBUTION ---
+    # 4. Chart 4: Structural Classification Visual
     if arch == "macro_policy":
-        # Check if original chart 1 was multi-column area or if we have sectoral cols
         multi_cols = [c for c in num_cols if any(k in c.lower() for k in ['pct', 'gva', 'share', 'tax', 'rate', 'revenue', 'expenditure'])][:4]
         if len(multi_cols) >= 3:
-            c3 = ("waterfall", multi_cols, None, f"{spec['title']} Component Breakdown")
+            c4 = ("waterfall", multi_cols, None, f"{spec['title']} Component Breakdown")
+        elif cat_cols:
+            c4 = ("treemap", [cat_cols[0]], kpi_col, f"{cat_cols[0].replace('_', ' ').title()} Structural Breakdown")
         else:
             t_col_wf = time_col if time_col else (cat_cols[0] if cat_cols else num_cols[0])
-            c3 = ("waterfall", t_col_wf, "change", f"{kpi_label} Change Attribution", kpi_col)
+            c4 = ("waterfall", t_col_wf, "change", f"{kpi_label} Change Attribution", kpi_col)
     elif arch == "social_demographics":
-        # Check for pair of demographic columns
         pairs = [
             ('male_literacy', 'female_literacy'), ('pop_2001', 'pop_2011'),
             ('stunting_pct', 'wasting_pct'), ('rural_pop', 'urban_pop'),
@@ -187,7 +198,6 @@ def create_9_diverse_charts(spec, df):
                 found_pair = (p1, p2)
                 break
         if not found_pair and len(num_cols) >= 4:
-            # Check any two numeric columns sharing a suffix/prefix
             for i in range(len(num_cols)):
                 for j in range(i + 1, len(num_cols)):
                     c_a, c_b = num_cols[i], num_cols[j]
@@ -196,75 +206,91 @@ def create_9_diverse_charts(spec, df):
                         break
                 if found_pair:
                     break
-        
         if found_pair and cat_cols:
-            c3 = ("pyramid", cat_cols[0], found_pair[0], found_pair[1], f"Demographic Comparison: {found_pair[0].replace('_', ' ').title()} vs {found_pair[1].replace('_', ' ').title()}", found_pair[0].replace('_', ' ').title(), found_pair[1].replace('_', ' ').title())
+            c4 = ("pyramid", cat_cols[0], found_pair[0], found_pair[1], f"Demographic Comparison: {found_pair[0].replace('_', ' ').title()} vs {found_pair[1].replace('_', ' ').title()}", found_pair[0].replace('_', ' ').title(), found_pair[1].replace('_', ' ').title())
         elif cat_cols:
-            c3 = ("treemap", [cat_cols[0]], kpi_col, f"{spec['title']} Regional Distribution")
+            c4 = ("treemap", [cat_cols[0]], kpi_col, f"{spec['title']} Regional Distribution")
         else:
-            c3 = ("waterfall", time_col if time_col else num_cols[0], "change", f"Attribution Breakdown ({kpi_col})", kpi_col)
+            c4 = ("waterfall", time_col if time_col else num_cols[0], "change", f"Attribution Breakdown ({kpi_col})", kpi_col)
     elif arch == "energy_logistics":
         if cat_cols:
-            c3 = ("treemap", [cat_cols[0]], kpi_col, f"Sectoral Capacity & Resource Mix")
+            c4 = ("treemap", [cat_cols[0]], kpi_col, f"Sectoral Capacity & Resource Mix")
         elif len(num_cols) >= 3:
             comp_cols = [c for c in num_cols if c != time_col][:4]
-            c3 = ("treemap", [time_col if time_col else 'year'], comp_cols[0], f"Sectoral Capacity & Resource Mix")
+            c4 = ("treemap", [time_col if time_col else 'year'], comp_cols[0], f"Sectoral Capacity & Resource Mix")
         else:
-            c3 = ("waterfall", time_col if time_col else num_cols[0], "change", f"Operational Change Waterfall", kpi_col)
+            c4 = ("waterfall", time_col if time_col else num_cols[0], "change", f"Operational Change Waterfall", kpi_col)
     else: # tech_science
         if cat_cols and len(df[cat_cols[0]].dropna().unique()) <= 16:
-            c3 = ("sunburst", [cat_cols[0]], kpi_col, f"{cat_cols[0].replace('_', ' ').title()} Structural Breakdown")
+            c4 = ("sunburst", [cat_cols[0]], kpi_col, f"{cat_cols[0].replace('_', ' ').title()} Structural Breakdown")
         elif cat_cols:
-            c3 = ("treemap", [cat_cols[0]], kpi_col, f"{cat_cols[0].replace('_', ' ').title()} Volume & Share")
+            c4 = ("treemap", [cat_cols[0]], kpi_col, f"{cat_cols[0].replace('_', ' ').title()} Volume & Share")
         elif len(num_cols) >= 3:
             comp_cols = [c for c in num_cols if c != time_col][:4]
-            c3 = ("treemap", [time_col if time_col else 'year'], comp_cols[0], f"Capacity & Indicator Mix")
+            c4 = ("treemap", [time_col if time_col else 'year'], comp_cols[0], f"Capacity & Indicator Mix")
         else:
-            c3 = ("treemap", [time_col if time_col else 'year'], kpi_col, f"Classification Breakdown")
+            c4 = ("treemap", [time_col if time_col else 'year'], kpi_col, f"Classification Breakdown")
 
-    # 4. Chart 4: Dispersion Visual
+    # 5. Chart 5: Dispersion Spread Visual
     if cat_cols and len(df[cat_cols[0]].dropna().unique()) <= 36:
-        c4 = ("violin", cat_cols[0], kpi_col, f"{kpi_col.replace('_', ' ').title()} Distribution by {cat_cols[0].title()}", cat_cols[0].title(), kpi_col.replace('_', ' ').title())
+        c5 = ("violin", cat_cols[0], kpi_col, f"{kpi_col.replace('_', ' ').title()} Distribution by {cat_cols[0].title()}", cat_cols[0].title(), kpi_col.replace('_', ' ').title())
     elif len(num_cols) > 2:
-        c4 = ("box", None, num_cols[1], f"Distribution & Outlier Analysis", "Quartiles", num_cols[1].replace('_', ' ').title())
+        c5 = ("box", None, num_cols[1], f"Distribution & Outlier Analysis", "Quartiles", num_cols[1].replace('_', ' ').title())
     else:
-        c4 = ("histogram", kpi_col, None, f"{kpi_col.replace('_', ' ').title()} Frequency Distribution", kpi_col.replace('_', ' ').title(), "Observation Count")
+        c5 = ("histogram", kpi_col, None, f"{kpi_col.replace('_', ' ').title()} Frequency Distribution", kpi_col.replace('_', ' ').title(), "Observation Count")
 
-    # 5. Chart 5: Multi-Dimensional Bubble Matrix
+    # 6. Chart 6: Multi-Dimensional Bubble Matrix
     b_x = num_cols[0] if num_cols[0] != time_col else (num_cols[1] if len(num_cols) > 1 else num_cols[0])
     b_y = num_cols[1] if len(num_cols) > 1 and num_cols[1] != b_x else (num_cols[2] if len(num_cols) > 2 else b_x)
     b_size = num_cols[2] if len(num_cols) > 2 and num_cols[2] not in [b_x, b_y] else (num_cols[0] if num_cols[0] not in [b_x, b_y] else kpi_col)
     b_color = cat_cols[0] if cat_cols else (num_cols[3] if len(num_cols) > 3 else b_x)
     b_hover = cat_cols[0] if cat_cols else (time_col if time_col else None)
-    c5 = ("bubble", b_x, b_y, f"{b_x.replace('_', ' ').title()} vs {b_y.replace('_', ' ').title()} Relationship", b_size, b_color, b_hover, b_x.replace('_', ' ').title(), b_y.replace('_', ' ').title())
+    c6 = ("bubble", b_x, b_y, f"{b_x.replace('_', ' ').title()} vs {b_y.replace('_', ' ').title()} Multidimensional Matrix", b_size, b_color, b_hover, b_x.replace('_', ' ').title(), b_y.replace('_', ' ').title())
 
-    # 6. Chart 6: Heatmap Dynamics
+    # 7. Chart 7: Proportional Contribution Visual
+    if cat_cols and 2 <= len(df[cat_cols[0]].dropna().unique()) <= 10:
+        c7 = ("donut", cat_cols[0], kpi_col, f"{kpi_col.replace('_', ' ').title()} Share by {cat_cols[0].title()}")
+    elif len(num_cols) >= 4:
+        share_cols = [c for c in num_cols if c != time_col][:4]
+        c7 = ("waterfall", share_cols, None, f"Key Indicator Scale Comparison")
+    else:
+        t_wf = time_col if time_col else (cat_cols[0] if cat_cols else num_cols[0])
+        c7 = ("waterfall", t_wf, "change", f"{kpi_col.replace('_', ' ').title()} Net Movement", kpi_col)
+
+    # --- TAB 3: DEEP DRIVERS & RELATIONSHIPS ---
+    # 8. Chart 8: Pearson Correlation Matrix
     corr_cols = [c for c in num_cols if c.lower() not in ['unnamed: 0', 'index']][:6]
-    c6 = ("correlation_heatmap", corr_cols, None, f"Correlation Matrix ({len(corr_cols)} Key Indicators)")
+    c8 = ("correlation_heatmap", corr_cols, None, f"Cross-Indicator Correlation Matrix ({len(corr_cols)} Dimensions)")
 
-    # 7. Chart 7: Analytical Frontier / Structural Trade-off
+    # 9. Chart 9: Frontier Trade-Off Scatter
     scatter_orig = next((c for c in spec['charts'] if c[0] == 'scatter'), None)
     if scatter_orig:
-        c7 = scatter_orig
+        c9 = ("scatter", scatter_orig[1], scatter_orig[2], f"{scatter_orig[1].replace('_', ' ').title()} vs {scatter_orig[2].replace('_', ' ').title()} Regression Frontier", scatter_orig[1].replace('_', ' ').title(), scatter_orig[2].replace('_', ' ').title())
     else:
         sc_x = num_cols[1] if len(num_cols) > 1 else num_cols[0]
         sc_y = num_cols[2] if len(num_cols) > 2 else (num_cols[0] if num_cols[0] != sc_x else sc_x)
-        c7 = ("scatter", sc_x, sc_y, f"{sc_x.replace('_', ' ').title()} vs {sc_y.replace('_', ' ').title()} Analysis", sc_x.replace('_', ' ').title(), sc_y.replace('_', ' ').title())
+        c9 = ("scatter", sc_x, sc_y, f"{sc_x.replace('_', ' ').title()} vs {sc_y.replace('_', ' ').title()} Regression Frontier", sc_x.replace('_', ' ').title(), sc_y.replace('_', ' ').title())
 
-    # 8. Chart 8: Polar Capability Diagnostic
-    radar_cols = [c for c in num_cols if c.lower() not in ['year', 'month', 'date', 'day']][:5]
+    # 10. Chart 10: Multi-Indicator Capabilities Profile Radar
+    radar_cols = [c for c in num_cols if c.lower() not in ['year', 'month', 'date', 'day']][:6]
     if len(radar_cols) < 3:
         radar_cols = num_cols[:4]
-    c8 = ("radar", radar_cols, None, f"Multi-Indicator Capabilities Profile")
+    radar_cols = list(dict.fromkeys(radar_cols))
+    c10 = ("radar", radar_cols, None, f"Multi-Indicator Capabilities Footprint")
 
-    # 9. Chart 9: Cross-Sectional Ranking / Milestone Progression
+    # --- TAB 4: RANKINGS & BENCHMARKS ---
+    # 11. Chart 11: Cross-Sectional Ranking Horizontal Bar
     if cat_cols:
-        c9 = ("horizontal_bar", kpi_col, cat_cols[0], f"Rankings by {kpi_col.replace('_', ' ').title()}", kpi_col.replace('_', ' ').title(), cat_cols[0].title())
+        c11 = ("horizontal_bar", kpi_col, cat_cols[0], f"Rankings by {kpi_col.replace('_', ' ').title()}", kpi_col.replace('_', ' ').title(), cat_cols[0].title())
     else:
         t_col_bar = time_col if time_col else 'year'
-        c9 = ("horizontal_bar", kpi_col, t_col_bar, f"Progress Over Time ({kpi_col.replace('_', ' ').title()})", kpi_col.replace('_', ' ').title(), "Timeline")
+        c11 = ("horizontal_bar", kpi_col, t_col_bar, f"Progress Over Time ({kpi_col.replace('_', ' ').title()})", kpi_col.replace('_', ' ').title(), "Timeline")
 
-    return [c1, c2, c3, c4, c5, c6, c7, c8, c9]
+    # 12. Chart 12: Concentration & Pareto Analysis
+    p_cat = cat_cols[0] if cat_cols else (time_col if time_col else num_cols[0])
+    c12 = ("pareto", p_cat, kpi_col, f"Pareto Concentration & Cumulative Distribution", p_cat.replace('_', ' ').title(), "Volume & Cumulative %")
+
+    return [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]
 
 def generate_enhanced_chart_code(fig_num, c, palette_slice, subtitle="", height=380, indent=8):
     ctype = c[0]
@@ -282,6 +308,10 @@ def generate_enhanced_chart_code(fig_num, c, palette_slice, subtitle="", height=
         suf = f'"{c[6]}"' if len(c) > 6 and c[6] is not None else '""'
         lines.append(f"val_gauge_{fig_num} = float(df['{col_name}'].dropna().iloc[-1]) if ('{col_name}' in df.columns and len(df['{col_name}'].dropna()) > 0) else 0.0")
         lines.append(f"{var_name} = create_gauge_chart(val_gauge_{fig_num}, min_val={min_v}, max_val={max_v}, target={target_val}, title=\"{title}\", subtitle=\"{subtitle}\", suffix={suf}, height={height})")
+    elif ctype == "growth_velocity":
+        lines.append(f"{var_name} = create_growth_velocity_bar(df, time_col=\"{x}\", metric_col=\"{y}\", title=\"{title}\", subtitle=\"{subtitle}\", height={height})")
+    elif ctype == "pareto":
+        lines.append(f"{var_name} = create_pareto_chart(df, cat_col=\"{x}\", metric_col=\"{y}\", title=\"{title}\", subtitle=\"{subtitle}\", height={height})")
     elif ctype == "waterfall":
         if isinstance(x, list):
             lines.append(f"wf_labels_{fig_num} = [col.replace('_', ' ').title() for col in {x} if col in df.columns]")
@@ -337,9 +367,9 @@ def generate_enhanced_chart_code(fig_num, c, palette_slice, subtitle="", height=
         y_title = c[5] if len(c) > 5 and c[5] else ""
         lines.append(f"{var_name} = create_density_heatmap(df, x=\"{x}\", y=\"{y}\", title=\"{title}\", x_title=\"{x_title}\", y_title=\"{y_title}\", subtitle=\"{subtitle}\", height={height})")
     elif ctype == "radar":
-        lines.append(f"radar_cols_{fig_num} = [c for c in {x} if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]")
+        lines.append(f"radar_cols_{fig_num} = list(dict.fromkeys([c for c in {x} if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))")
         lines.append(f"radar_vals_{fig_num} = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_{fig_num}]")
-        lines.append(f"{var_name} = create_radar_chart(radar_cols_{fig_num}, radar_vals_{fig_num}, title=\"{title}\", subtitle=\"{subtitle}\", height={height})")
+        lines.append(f"{var_name} = create_radar_chart(radar_cols_{fig_num}, radar_vals_{fig_num}, title=\"{title}\", subtitle=\"{subtitle}\", height={height}, df=df)")
     elif ctype == "violin":
         x_expr = f'"{x}"' if x else "None"
         x_title = c[4] if len(c) > 4 and c[4] else ""
@@ -367,31 +397,28 @@ def generate_enhanced_chart_code(fig_num, c, palette_slice, subtitle="", height=
     elif ctype == "area":
         x_title = c[4] if len(c) > 4 and c[4] else ""
         y_title = c[5] if len(c) > 5 and c[5] else ""
-        lines.append(f"{var_name} = px.area(df, x=\"{x}\", y={y}, color_discrete_sequence={palette_slice})")
-        lines.append(f"{var_name} = base_layout({var_name}, \"{title}\", \"{x_title}\", \"{y_title}\", height={height}, subtitle=\"{subtitle}\")")
+        y_expr = f"{y}" if isinstance(y, list) else f'"{y}"'
+        lines.append(f"{var_name} = create_area_chart(df, x=\"{x}\", y={y_expr}, title=\"{title}\", x_title=\"{x_title}\", y_title=\"{y_title}\", subtitle=\"{subtitle}\", height={height})")
     elif ctype == "line":
         x_title = c[4] if len(c) > 4 and c[4] else ""
         y_title = c[5] if len(c) > 5 and c[5] else ""
-        lines.append(f"{var_name} = px.line(df, x=\"{x}\", y={y}, markers=True, color_discrete_sequence={palette_slice})")
-        lines.append(f"{var_name} = base_layout({var_name}, \"{title}\", \"{x_title}\", \"{y_title}\", height={height}, subtitle=\"{subtitle}\")")
+        y_expr = f"{y}" if isinstance(y, list) else f'"{y}"'
+        lines.append(f"{var_name} = create_line_chart(df, x=\"{x}\", y={y_expr}, title=\"{title}\", x_title=\"{x_title}\", y_title=\"{y_title}\", subtitle=\"{subtitle}\", height={height})")
     elif ctype == "bar":
-        y_expr = y if isinstance(y, list) else f'"{y}"'
+        y_expr = f"{y}" if isinstance(y, list) else f'"{y}"'
         x_title = c[4] if len(c) > 4 and c[4] else ""
         y_title = c[5] if len(c) > 5 and c[5] else ""
-        lines.append(f"{var_name} = px.bar(df, x=\"{x}\", y={y_expr}, color_discrete_sequence={palette_slice})")
-        lines.append(f"{var_name} = base_layout({var_name}, \"{title}\", \"{x_title}\", \"{y_title}\", height={height}, subtitle=\"{subtitle}\")")
+        lines.append(f"{var_name} = create_bar_chart(df, x=\"{x}\", y={y_expr}, title=\"{title}\", x_title=\"{x_title}\", y_title=\"{y_title}\", subtitle=\"{subtitle}\", height={height})")
     elif ctype == "scatter":
-        trend = ', trendline="ols"' if fig_num in [4, 6, 7] else ""
         x_title = c[4] if len(c) > 4 and c[4] else ""
         y_title = c[5] if len(c) > 5 and c[5] else ""
-        lines.append(f"{var_name} = px.scatter(df, x=\"{x}\", y=\"{y}\"{trend}, color_discrete_sequence={palette_slice})")
-        lines.append(f"{var_name} = base_layout({var_name}, \"{title}\", \"{x_title}\", \"{y_title}\", height={height}, subtitle=\"{subtitle}\")")
+        lines.append(f"{var_name} = create_scatter_chart(df, x=\"{x}\", y=\"{y}\", trendline=\"ols\", title=\"{title}\", x_title=\"{x_title}\", y_title=\"{y_title}\", subtitle=\"{subtitle}\", height={height})")
     else:
-        lines.append(f"{var_name} = px.line(df, x=\"{x}\", y={y}, color_discrete_sequence={palette_slice})")
-        lines.append(f"{var_name} = base_layout({var_name}, \"{title}\", height={height}, subtitle=\"{subtitle}\")")
+        y_expr = f"{y}" if isinstance(y, list) else f'"{y}"'
+        lines.append(f"{var_name} = create_line_chart(df, x=\"{x}\", y={y_expr}, title=\"{title}\", height={height}, subtitle=\"{subtitle}\")")
 
     pad = " " * indent
-    return f"\n{pad}".join(lines)
+    return "\n".join(f"{pad}{line}" for line in lines)
 
 def generate_diverse_dashboard_code(spec, df, charts):
     slug = spec["slug"]
@@ -424,7 +451,7 @@ def generate_diverse_dashboard_code(spec, df, charts):
 Dashboard Module: {did} - {title}
 Domain: {spec['domain']} (Archetype: {arch})
 Authentic Source: Verified Primary Dataset ({csv_file})
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -444,7 +471,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "{csv_file}")
@@ -633,252 +661,115 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
         pass
 '''
 
-    # Generate Chart Codes for all 9 charts
+    # Generate Chart Codes for all 12 charts
     c_codes = []
     subtitles = [
-        "Historical trajectory and primary trend",
+        "Historical trajectory and long-term trend",
         "Current level against target benchmark",
-        "Contribution breakdown by segment",
-        "Distribution spread and variance",
+        "Period-over-period growth velocity and acceleration",
+        "Hierarchical classification and structural composition",
+        "Distribution spread, quartiles, and variance",
         "Multi-factor comparison (bubble size represents scale)",
+        "Proportional contribution and component share",
         "Pairwise correlation coefficients across indicators",
-        "Direct relationship and trendline",
-        "Comparative profile across core indicators (0-100% scale)",
-        "Comparative ranking across categories"
+        "Bivariate regression and empirical frontier",
+        "Multi-indicator capability footprint (independently normalized)",
+        "Cross-sectional comparative rankings by volume",
+        "Cumulative distribution and Pareto 80/20 concentration"
     ]
+    indents = [12, 12, 8, 12, 12, 12, 12, 12, 12, 8, 12, 12]
     for idx, c in enumerate(charts):
         sub = subtitles[idx] if idx < len(subtitles) else ""
-        c_codes.append(generate_enhanced_chart_code(idx + 1, c, f"COLOR_PALETTE[{idx % len(COLOR_PALETTE)}:]", subtitle=sub, height=380))
+        c_codes.append(generate_enhanced_chart_code(idx + 1, c, f"COLOR_PALETTE[{idx % len(COLOR_PALETTE)}:]", subtitle=sub, height=380, indent=indents[idx]))
 
-    # Layout generation based on Archetype
-    if arch == "macro_policy":
-        code += f'''
-    # 3. Economic Trends & Visualizations
-    render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🏛️ Economic Indicators & Trends</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
-</div>""")
-
-    # Row 1: Hero Trajectory Split (2.3 : 1.0) with Benchmark Gauge
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Hero Trajectory
-        {c_codes[0]}
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Target Benchmark Gauge
-        {c_codes[1]}
-        st.plotly_chart(fig2, use_container_width=True)
-
-    # Row 2: 3-Column Comparative Analytical Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Component Breakdown Waterfall
-        {c_codes[2]}
-        st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Distribution Violin/Box
-        {c_codes[3]}
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Matrix
-        {c_codes[4]}
-        st.plotly_chart(fig5, use_container_width=True)
-
-    # Row 3: Correlation & Comparison Split (1.6 : 1.4)
-    r3_c1, r3_c2 = st.columns([1.6, 1.4])
-    with r3_c1:
-        # Chart 6: Pearson Correlation Matrix
-        {c_codes[5]}
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Relationship Scatter
-        {c_codes[6]}
-        st.plotly_chart(fig7, use_container_width=True)
-
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Polar Profile Radar
-        {c_codes[7]}
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Milestone Ranking Bar
-        {c_codes[8]}
-        st.plotly_chart(fig9, use_container_width=True)
-'''
-    elif arch == "social_demographics":
-        code += f'''
-    # 3. Regional Demographics & Social Distribution
-    render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">👥 Regional Demographics & Social Distribution</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
-</div>""")
-
-    # Row 1: Regional Benchmark Hero Split (2.1 : 1.1) with Target Gauge
-    r1_c1, r1_c2 = st.columns([2.1, 1.1])
-    with r1_c1:
-        # Chart 1: Regional Benchmark
-        {c_codes[0]}
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Target Coverage Gauge
-        {c_codes[1]}
-        st.plotly_chart(fig2, use_container_width=True)
-
-    # Row 2: Demographic Comparison & Spatial Scale (1.4 : 1.6)
-    r2_c1, r2_c2 = st.columns([1.4, 1.6])
-    with r2_c1:
-        # Chart 3: Demographic Comparison Pyramid
-        {c_codes[2]}
-        st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin Spread
-        {c_codes[3]}
-        st.plotly_chart(fig4, use_container_width=True)
-
-    # Row 3: 3-Column Dispersion & Progression Strip (1:1:1)
-    r3_c1, r3_c2, r3_c3 = st.columns(3)
-    with r3_c1:
-        # Chart 5: Multi-Factor Demographic Bubble Matrix
-        {c_codes[4]}
-        st.plotly_chart(fig5, use_container_width=True)
-    with r3_c2:
-        # Chart 6: Pearson Correlation Matrix
-        {c_codes[5]}
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c3:
-        # Chart 7: Relationship Scatter
-        {c_codes[6]}
-        st.plotly_chart(fig7, use_container_width=True)
-
-    # Row 4: Diagnostic Scan & Ranking Benchmark (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        {c_codes[7]}
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Ranking Benchmark
-        {c_codes[8]}
-        st.plotly_chart(fig9, use_container_width=True)
-'''
-    elif arch == "energy_logistics":
-        code += f'''
-    # 3. Operational Capacity & Flow Analytics
-    render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">⚡ Operational Capacity & Flow Analytics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
-</div>""")
-
-    # Row 1: Flow Conduit & Capacity Hero Split (2.3 : 1.0)
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Flow / Generation Trajectory Hero
-        {c_codes[0]}
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Capacity Utilization Gauge
-        {c_codes[1]}
-        st.plotly_chart(fig2, use_container_width=True)
-
-    # Row 2: 3-Column Operational Efficiency Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Sectoral Capacity Treemap
-        {c_codes[2]}
-        st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin
-        {c_codes[3]}
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Operational Throughput Bubble Matrix
-        {c_codes[4]}
-        st.plotly_chart(fig5, use_container_width=True)
-
-    # Row 3: Comparative Relationship (1.7 : 1.3)
-    r3_c1, r3_c2 = st.columns([1.7, 1.3])
-    with r3_c1:
-        # Chart 6: Operational Pearson Correlation Matrix
-        {c_codes[5]}
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Operational Efficiency Scatter
-        {c_codes[6]}
-        st.plotly_chart(fig7, use_container_width=True)
-
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        {c_codes[7]}
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Throughput Rankings Bar
-        {c_codes[8]}
-        st.plotly_chart(fig9, use_container_width=True)
-'''
-    else: # tech_science
-        code += f'''
-    # 3. Scientific & Technical Metrics
-    render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🔬 Scientific & Technical Metrics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
-</div>""")
-
-    # Row 1: Multivariate Space Hero Split (2.2 : 1.1)
-    r1_c1, r1_c2 = st.columns([2.2, 1.1])
-    with r1_c1:
-        # Chart 1: Parallel Coordinates Multivariate Exploration
-        {c_codes[0]}
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Benchmark Gauge
-        {c_codes[1]}
-        st.plotly_chart(fig2, use_container_width=True)
-
-    # Row 2: 3-Column Dynamics Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Structural Classification Visual
-        {c_codes[2]}
-        st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Box/Violin Spread
-        {c_codes[3]}
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Bubble Matrix
-        {c_codes[4]}
-        st.plotly_chart(fig5, use_container_width=True)
-
-    # Row 3: Complex Relationship Frontier (1.5 : 1.5)
-    r3_c1, r3_c2 = st.columns(2)
-    with r3_c1:
-        # Chart 6: Parameter Correlation Matrix
-        {c_codes[5]}
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Frontier Trade-Off Scatter
-        {c_codes[6]}
-        st.plotly_chart(fig7, use_container_width=True)
-
-    # Row 4: Multi-Indicator Profile & Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        {c_codes[7]}
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Performance Rankings Bar
-        {c_codes[8]}
-        st.plotly_chart(fig9, use_container_width=True)
-'''
-
-    # 4. Interactive Data Table (Visual 15) and Navigation Shortcuts
+    # Section 3: 4-Tab Executive Visual Analytics Suite (12 Specialized Visualizations)
     code += f'''
-    # 4. Interactive Data Table (Visual 15)
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
+    render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
+</div>""")
+
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
+
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+{c_codes[0]}
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+{c_codes[1]}
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+{c_codes[2]}
+        st.plotly_chart(fig3, use_container_width=True)
+
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+{c_codes[3]}
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+{c_codes[4]}
+            st.plotly_chart(fig5, use_container_width=True)
+
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+{c_codes[5]}
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+{c_codes[6]}
+            st.plotly_chart(fig7, use_container_width=True)
+
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+{c_codes[7]}
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+{c_codes[8]}
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+{c_codes[9]}
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+{c_codes[10]}
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+{c_codes[11]}
+            st.plotly_chart(fig12, use_container_width=True)
+'''
+
+    # 4. Interactive Data Table (Visual 18) and Navigation Shortcuts
+    code += f'''
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>
@@ -928,7 +819,7 @@ def build_all_diverse_dashboards():
     for i, spec in enumerate(build_dashboards.DASHBOARD_SPECS):
         csv_path = os.path.join(PROJECT_ROOT, spec['csv'])
         df = pd.read_csv(csv_path)
-        charts = create_9_diverse_charts(spec, df)
+        charts = create_12_diverse_charts(spec, df)
         for c in charts:
             all_chart_types[c[0]] += 1
             

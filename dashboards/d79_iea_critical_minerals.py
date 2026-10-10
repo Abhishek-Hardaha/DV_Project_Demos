@@ -2,7 +2,7 @@
 Dashboard Module: D79 - Critical Clean Energy Minerals Supply Concentration & Refining Dominance
 Domain: Geopolitics & Energy Transition Materials (Archetype: energy_logistics)
 Authentic Source: Verified Primary Dataset (data/analytical/d79_iea_critical_minerals.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d79_iea_critical_minerals.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Operational Capacity & Flow Analytics
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">⚡ Operational Capacity & Flow Analytics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Flow Conduit & Capacity Hero Split (2.3 : 1.0)
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Flow / Generation Trajectory Hero
-        fig1 = px.bar(df, x="mineral", y=['top_producer_share_pct', 'top_refiner_share_pct'], color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Top Sovereign Concentration: Mining Extraction Share vs Chemical Refining Share (%)", "Critical Mineral", "Share (%)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Capacity Utilization Gauge
-        val_gauge_2 = float(df['global_market_size_billion_usd'].dropna().iloc[-1]) if ('global_market_size_billion_usd' in df.columns and len(df['global_market_size_billion_usd'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=0.6, max_val=231.2, target=25.3, title="Global Mineral Market Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="$", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Operational Efficiency Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Sectoral Capacity Treemap
-        df_tree3 = df[df["global_market_size_billion_usd"] > 0] if ("global_market_size_billion_usd" in df.columns and pd.api.types.is_numeric_dtype(df["global_market_size_billion_usd"])) else df
-        tree_val_3 = "global_market_size_billion_usd" if ("global_market_size_billion_usd" in df.columns and pd.api.types.is_numeric_dtype(df["global_market_size_billion_usd"])) else None
-        fig3 = create_treemap(df_tree3, path=['mineral'], values=tree_val_3, title="Sectoral Capacity & Resource Mix", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_bar_chart(df, x="mineral", y=['top_producer_share_pct', 'top_refiner_share_pct'], title="Top Sovereign Concentration: Mining Extraction Share vs Chemical Refining Share (%)", x_title="Critical Mineral", y_title="Share (%)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['global_market_size_billion_usd'].dropna().iloc[-1]) if ('global_market_size_billion_usd' in df.columns and len(df['global_market_size_billion_usd'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=0.6, max_val=231.2, target=25.3, title="Global Mineral Market Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="$", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="mineral", metric_col="global_market_size_billion_usd", title="Global Market Size Billion Usd Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin
-        fig4 = create_violin_chart(df, x="mineral", y="global_market_size_billion_usd", title="Global Market Size Billion Usd Distribution by Mineral", x_title="Mineral", y_title="Global Market Size Billion Usd", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Operational Throughput Bubble Matrix
-        fig5 = create_bubble_chart(df, x="top_producer_share_pct", y="top_refiner_share_pct", size="global_market_size_billion_usd", color="mineral", hover_name="mineral", title="Top Producer Share Pct vs Top Refiner Share Pct Relationship", x_title="Top Producer Share Pct", y_title="Top Refiner Share Pct", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Comparative Relationship (1.7 : 1.3)
-    r3_c1, r3_c2 = st.columns([1.7, 1.3])
-    with r3_c1:
-        # Chart 6: Operational Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct', 'projected_2030_supply_deficit_pct', 'hhi_producer_concentration_index'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Operational Efficiency Scatter
-        fig7 = px.scatter(df, x="top_refiner_share_pct", y="projected_2030_supply_deficit_pct", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Refining Concentration Share vs Projected 2030 Supply Deficit (%)", "Top Refiner Share (%)", "2030 Deficit (%)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_tree4 = df[df["global_market_size_billion_usd"] > 0] if ("global_market_size_billion_usd" in df.columns and pd.api.types.is_numeric_dtype(df["global_market_size_billion_usd"])) else df
+            tree_val_4 = "global_market_size_billion_usd" if ("global_market_size_billion_usd" in df.columns and pd.api.types.is_numeric_dtype(df["global_market_size_billion_usd"])) else None
+            fig4 = create_treemap(df_tree4, path=['mineral'], values=tree_val_4, title="Sectoral Capacity & Resource Mix", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="mineral", y="global_market_size_billion_usd", title="Global Market Size Billion Usd Distribution by Mineral", x_title="Mineral", y_title="Global Market Size Billion Usd", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct', 'projected_2030_supply_deficit_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Throughput Rankings Bar
-        fig9 = create_horizontal_bar(df, x="global_market_size_billion_usd", y="mineral", title="Rankings by Global Market Size Billion Usd", x_title="Global Market Size Billion Usd", y_title="Mineral", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="top_producer_share_pct", y="top_refiner_share_pct", size="global_market_size_billion_usd", color="mineral", hover_name="mineral", title="Top Producer Share Pct vs Top Refiner Share Pct Multidimensional Matrix", x_title="Top Producer Share Pct", y_title="Top Refiner Share Pct", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct', 'projected_2030_supply_deficit_pct', 'hhi_producer_concentration_index'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="top_refiner_share_pct", y="projected_2030_supply_deficit_pct", trendline="ols", title="Top Refiner Share Pct vs Projected 2030 Supply Deficit Pct Regression Frontier", x_title="Top Refiner Share Pct", y_title="Projected 2030 Supply Deficit Pct", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['top_producer_share_pct', 'top_refiner_share_pct', 'global_market_size_billion_usd', 'recycling_share_of_supply_pct', 'projected_2030_supply_deficit_pct', 'hhi_producer_concentration_index'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="global_market_size_billion_usd", y="mineral", title="Rankings by Global Market Size Billion Usd", x_title="Global Market Size Billion Usd", y_title="Mineral", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="mineral", metric_col="global_market_size_billion_usd", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

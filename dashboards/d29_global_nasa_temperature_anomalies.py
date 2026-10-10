@@ -2,7 +2,7 @@
 Dashboard Module: D29 - Global Surface Temperature Anomalies & Climate Change
 Domain: Earth Science & Climatology (Archetype: tech_science)
 Authentic Source: Verified Primary Dataset (data/analytical/d29_global_nasa_temperature_anomalies.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d29_global_nasa_temperature_anomalies.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Scientific & Technical Metrics
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🔬 Scientific & Technical Metrics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Multivariate Space Hero Split (2.2 : 1.1)
-    r1_c1, r1_c2 = st.columns([2.2, 1.1])
-    with r1_c1:
-        # Chart 1: Parallel Coordinates Multivariate Exploration
-        fig1 = px.line(df, x="year", y=['annual_mean_anomaly_c', 'lowess_smoothing_c'], markers=True, color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Global Mean Surface Temperature Anomaly & LOWESS Trend (°C)", "Year", "Anomaly (°C)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Benchmark Gauge
-        val_gauge_2 = float(df['annual_mean_anomaly_c'].dropna().iloc[-1]) if ('annual_mean_anomaly_c' in df.columns and len(df['annual_mean_anomaly_c'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=-0.6, max_val=1.6, target=0.1, title="Latest Annual Anomaly (°C) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Dynamics Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Structural Classification Visual
-        df_sun3 = df[df["annual_mean_anomaly_c"] > 0] if ("annual_mean_anomaly_c" in df.columns and pd.api.types.is_numeric_dtype(df["annual_mean_anomaly_c"])) else df
-        sun_val_3 = "annual_mean_anomaly_c" if ("annual_mean_anomaly_c" in df.columns and pd.api.types.is_numeric_dtype(df["annual_mean_anomaly_c"])) else None
-        fig3 = create_sunburst(df_sun3, path=['baseline'], values=sun_val_3, title="Baseline Structural Breakdown", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_line_chart(df, x="year", y=['annual_mean_anomaly_c', 'lowess_smoothing_c'], title="Global Mean Surface Temperature Anomaly & LOWESS Trend (°C)", x_title="Year", y_title="Anomaly (°C)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['annual_mean_anomaly_c'].dropna().iloc[-1]) if ('annual_mean_anomaly_c' in df.columns and len(df['annual_mean_anomaly_c'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=-0.6, max_val=1.6, target=0.1, title="Latest Annual Anomaly (°C) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="year", metric_col="annual_mean_anomaly_c", title="Annual Mean Anomaly C Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Box/Violin Spread
-        fig4 = create_violin_chart(df, x="baseline", y="annual_mean_anomaly_c", title="Annual Mean Anomaly C Distribution by Baseline", x_title="Baseline", y_title="Annual Mean Anomaly C", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Bubble Matrix
-        fig5 = create_bubble_chart(df, x="annual_mean_anomaly_c", y="lowess_smoothing_c", size="year", color="baseline", hover_name="baseline", title="Annual Mean Anomaly C vs Lowess Smoothing C Relationship", x_title="Annual Mean Anomaly C", y_title="Lowess Smoothing C", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Complex Relationship Frontier (1.5 : 1.5)
-    r3_c1, r3_c2 = st.columns(2)
-    with r3_c1:
-        # Chart 6: Parameter Correlation Matrix
-        corr_cols_6 = [c for c in ['year', 'annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade', 'cumulative_warming_anomaly'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Frontier Trade-Off Scatter
-        fig7 = px.scatter(df, x="annual_mean_anomaly_c", y="cumulative_warming_anomaly", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Annual Temperature Departure vs Cumulative Anomaly Metric", "Annual Departure (°C)", "Cumulative Metric", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_sun4 = df[df["annual_mean_anomaly_c"] > 0] if ("annual_mean_anomaly_c" in df.columns and pd.api.types.is_numeric_dtype(df["annual_mean_anomaly_c"])) else df
+            sun_val_4 = "annual_mean_anomaly_c" if ("annual_mean_anomaly_c" in df.columns and pd.api.types.is_numeric_dtype(df["annual_mean_anomaly_c"])) else None
+            fig4 = create_sunburst(df_sun4, path=['baseline'], values=sun_val_4, title="Baseline Structural Breakdown", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="baseline", y="annual_mean_anomaly_c", title="Annual Mean Anomaly C Distribution by Baseline", x_title="Baseline", y_title="Annual Mean Anomaly C", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Multi-Indicator Profile & Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade', 'cumulative_warming_anomaly'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Performance Rankings Bar
-        fig9 = create_horizontal_bar(df, x="annual_mean_anomaly_c", y="baseline", title="Rankings by Annual Mean Anomaly C", x_title="Annual Mean Anomaly C", y_title="Baseline", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="annual_mean_anomaly_c", y="lowess_smoothing_c", size="year", color="baseline", hover_name="baseline", title="Annual Mean Anomaly C vs Lowess Smoothing C Multidimensional Matrix", x_title="Annual Mean Anomaly C", y_title="Lowess Smoothing C", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['year', 'annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade', 'cumulative_warming_anomaly'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="annual_mean_anomaly_c", y="cumulative_warming_anomaly", trendline="ols", title="Annual Mean Anomaly C vs Cumulative Warming Anomaly Regression Frontier", x_title="Annual Mean Anomaly C", y_title="Cumulative Warming Anomaly", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['annual_mean_anomaly_c', 'lowess_smoothing_c', 'decade', 'warming_rate_per_decade', 'cumulative_warming_anomaly'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="annual_mean_anomaly_c", y="baseline", title="Rankings by Annual Mean Anomaly C", x_title="Annual Mean Anomaly C", y_title="Baseline", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="baseline", metric_col="annual_mean_anomaly_c", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

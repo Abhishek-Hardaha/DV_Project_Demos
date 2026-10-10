@@ -2,7 +2,7 @@
 Dashboard Module: D07 - India Foreign Trade & Merchandise Export-Import Intelligence
 Domain: Trade & Commerce (Archetype: macro_policy)
 Authentic Source: Verified Primary Dataset (data/analytical/d07_india_foreign_trade.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d07_india_foreign_trade.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Economic Trends & Visualizations
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🏛️ Economic Indicators & Trends</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Hero Trajectory Split (2.3 : 1.0) with Benchmark Gauge
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Hero Trajectory
-        fig1 = px.line(df, x="fiscal_year", y=['merchandise_exports_usd_b', 'merchandise_imports_usd_b'], markers=True, color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Merchandise Exports vs Imports Trajectory ($ Billion)", "Fiscal Year", "USD Billions", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Target Benchmark Gauge
-        val_gauge_2 = float(df['merchandise_exports_usd_b'].dropna().iloc[-1]) if ('merchandise_exports_usd_b' in df.columns and len(df['merchandise_exports_usd_b'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=209.8, max_val=563.9, target=339.8, title="Merchandise Exports ($B) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="$", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Comparative Analytical Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Component Breakdown Waterfall
-        wf_labels_3 = [col.replace('_', ' ').title() for col in ['export_import_ratio_pct', 'trade_deficit_pct_exports', 'engineering_plus_petro_share_pct', 'crude_import_bill_share_pct'] if col in df.columns]
-        wf_vals_3 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['export_import_ratio_pct', 'trade_deficit_pct_exports', 'engineering_plus_petro_share_pct', 'crude_import_bill_share_pct'] if col in df.columns]
-        fig3 = create_waterfall_chart(wf_labels_3, wf_vals_3, title="India Foreign Trade & Merchandise Export-Import Intelligence Component Breakdown", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_line_chart(df, x="fiscal_year", y=['merchandise_exports_usd_b', 'merchandise_imports_usd_b'], title="Merchandise Exports vs Imports Trajectory ($ Billion)", x_title="Fiscal Year", y_title="USD Billions", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['merchandise_exports_usd_b'].dropna().iloc[-1]) if ('merchandise_exports_usd_b' in df.columns and len(df['merchandise_exports_usd_b'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=209.8, max_val=563.9, target=339.8, title="Merchandise Exports ($B) Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="$", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="fiscal_year", metric_col="merchandise_exports_usd_b", title="Merchandise Exports Usd B Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Distribution Violin/Box
-        fig4 = create_violin_chart(df, x="fiscal_year", y="merchandise_exports_usd_b", title="Merchandise Exports Usd B Distribution by Fiscal_Year", x_title="Fiscal_Year", y_title="Merchandise Exports Usd B", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Matrix
-        fig5 = create_bubble_chart(df, x="year_int", y="merchandise_exports_usd_b", size="merchandise_imports_usd_b", color="fiscal_year", hover_name="fiscal_year", title="Year Int vs Merchandise Exports Usd B Relationship", x_title="Year Int", y_title="Merchandise Exports Usd B", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Correlation & Comparison Split (1.6 : 1.4)
-    r3_c1, r3_c2 = st.columns([1.6, 1.4])
-    with r3_c1:
-        # Chart 6: Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['year_int', 'merchandise_exports_usd_b', 'merchandise_imports_usd_b', 'trade_balance_usd_b', 'total_trade_usd_b', 'export_import_ratio_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Relationship Scatter
-        fig7 = px.scatter(df, x="crude_oil_import_usd_b", y="trade_balance_usd_b", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Crude Oil Import Bill vs Trade Balance Deficit", "Crude Oil Imports ($ B)", "Trade Balance ($ B)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            wf_labels_4 = [col.replace('_', ' ').title() for col in ['export_import_ratio_pct', 'trade_deficit_pct_exports', 'engineering_plus_petro_share_pct', 'crude_import_bill_share_pct'] if col in df.columns]
+            wf_vals_4 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['export_import_ratio_pct', 'trade_deficit_pct_exports', 'engineering_plus_petro_share_pct', 'crude_import_bill_share_pct'] if col in df.columns]
+            fig4 = create_waterfall_chart(wf_labels_4, wf_vals_4, title="India Foreign Trade & Merchandise Export-Import Intelligence Component Breakdown", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="fiscal_year", y="merchandise_exports_usd_b", title="Merchandise Exports Usd B Distribution by Fiscal_Year", x_title="Fiscal_Year", y_title="Merchandise Exports Usd B", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Polar Profile Radar
-        radar_cols_8 = [c for c in ['year_int', 'merchandise_exports_usd_b', 'merchandise_imports_usd_b', 'trade_balance_usd_b', 'total_trade_usd_b'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Milestone Ranking Bar
-        fig9 = create_horizontal_bar(df, x="merchandise_exports_usd_b", y="fiscal_year", title="Rankings by Merchandise Exports Usd B", x_title="Merchandise Exports Usd B", y_title="Fiscal_Year", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="year_int", y="merchandise_exports_usd_b", size="merchandise_imports_usd_b", color="fiscal_year", hover_name="fiscal_year", title="Year Int vs Merchandise Exports Usd B Multidimensional Matrix", x_title="Year Int", y_title="Merchandise Exports Usd B", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            df_donut7 = df[(df["merchandise_exports_usd_b"] > 0)] if ("merchandise_exports_usd_b" in df.columns and pd.api.types.is_numeric_dtype(df["merchandise_exports_usd_b"])) else df
+            val_col_7 = "merchandise_exports_usd_b" if ("merchandise_exports_usd_b" in df.columns and pd.api.types.is_numeric_dtype(df["merchandise_exports_usd_b"])) else None
+            fig7 = create_donut_chart(df_donut7, names="fiscal_year", values=val_col_7, title="Merchandise Exports Usd B Share by Fiscal_Year", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['year_int', 'merchandise_exports_usd_b', 'merchandise_imports_usd_b', 'trade_balance_usd_b', 'total_trade_usd_b', 'export_import_ratio_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="crude_oil_import_usd_b", y="trade_balance_usd_b", trendline="ols", title="Crude Oil Import Usd B vs Trade Balance Usd B Regression Frontier", x_title="Crude Oil Import Usd B", y_title="Trade Balance Usd B", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['year_int', 'merchandise_exports_usd_b', 'merchandise_imports_usd_b', 'trade_balance_usd_b', 'total_trade_usd_b', 'export_import_ratio_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="merchandise_exports_usd_b", y="fiscal_year", title="Rankings by Merchandise Exports Usd B", x_title="Merchandise Exports Usd B", y_title="Fiscal_Year", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="fiscal_year", metric_col="merchandise_exports_usd_b", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

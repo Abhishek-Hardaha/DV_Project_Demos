@@ -2,7 +2,7 @@
 Dashboard Module: D11 - India Real-Time Urban Air Quality & AQI Intelligence
 Domain: Environment & Pollution (Archetype: tech_science)
 Authentic Source: Verified Primary Dataset (data/analytical/d11_india_cpcb_air_quality.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d11_india_cpcb_air_quality.csv")
@@ -279,68 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Scientific & Technical Metrics
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">🔬 Scientific & Technical Metrics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Multivariate Space Hero Split (2.2 : 1.1)
-    r1_c1, r1_c2 = st.columns([2.2, 1.1])
-    with r1_c1:
-        # Chart 1: Parallel Coordinates Multivariate Exploration
-        fig1 = create_geo_scatter(df, lat="latitude", lon="longitude", size="cpcb_aqi", color="cpcb_aqi", hover_name="city", title="National Continuous Ambient Air Quality Telemetry Stations", subtitle="Historical trajectory and primary trend", scope="asia", height=380)
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Benchmark Gauge
-        val_gauge_2 = float(df['cpcb_aqi'].dropna().iloc[-1]) if ('cpcb_aqi' in df.columns and len(df['cpcb_aqi'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=9.6, max_val=431.2, target=83.5, title="Average Monitored AQI Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Dynamics Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Structural Classification Visual
-        df_sun3 = df[df["cpcb_aqi"] > 0] if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else df
-        sun_val_3 = "cpcb_aqi" if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else None
-        fig3 = create_sunburst(df_sun3, path=['city'], values=sun_val_3, title="City Structural Breakdown", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_geo_scatter(df, lat="latitude", lon="longitude", size="cpcb_aqi", color="cpcb_aqi", hover_name="city", title="National Continuous Ambient Air Quality Telemetry Stations", subtitle="Historical trajectory and long-term trend", scope="asia", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['cpcb_aqi'].dropna().iloc[-1]) if ('cpcb_aqi' in df.columns and len(df['cpcb_aqi'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=9.6, max_val=431.2, target=83.5, title="Average Monitored AQI Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="city", metric_col="cpcb_aqi", title="Cpcb Aqi Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Box/Violin Spread
-        fig4 = create_violin_chart(df, x="city", y="cpcb_aqi", title="Cpcb Aqi Distribution by City", x_title="City", y_title="Cpcb Aqi", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Multi-Factor Bubble Matrix
-        fig5 = create_bubble_chart(df, x="latitude", y="longitude", size="pm2_5", color="city", hover_name="city", title="Latitude vs Longitude Relationship", x_title="Latitude", y_title="Longitude", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Complex Relationship Frontier (1.5 : 1.5)
-    r3_c1, r3_c2 = st.columns(2)
-    with r3_c1:
-        # Chart 6: Parameter Correlation Matrix
-        corr_cols_6 = [c for c in ['latitude', 'longitude', 'pm2_5', 'pm10', 'no2', 'so2'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Frontier Trade-Off Scatter
-        fig7 = px.scatter(df, x="pm2_5", y="pm10", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "PM2.5 vs PM10 Particulate Co-Movement Correlation", "PM2.5 (µg/m³)", "PM10 (µg/m³)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_sun4 = df[df["cpcb_aqi"] > 0] if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else df
+            sun_val_4 = "cpcb_aqi" if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else None
+            fig4 = create_sunburst(df_sun4, path=['city'], values=sun_val_4, title="City Structural Breakdown", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="city", y="cpcb_aqi", title="Cpcb Aqi Distribution by City", x_title="City", y_title="Cpcb Aqi", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Multi-Indicator Profile & Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['latitude', 'longitude', 'pm2_5', 'pm10', 'no2'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Performance Rankings Bar
-        fig9 = create_horizontal_bar(df, x="cpcb_aqi", y="city", title="Rankings by Cpcb Aqi", x_title="Cpcb Aqi", y_title="City", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="latitude", y="longitude", size="pm2_5", color="city", hover_name="city", title="Latitude vs Longitude Multidimensional Matrix", x_title="Latitude", y_title="Longitude", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            df_donut7 = df[(df["cpcb_aqi"] > 0)] if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else df
+            val_col_7 = "cpcb_aqi" if ("cpcb_aqi" in df.columns and pd.api.types.is_numeric_dtype(df["cpcb_aqi"])) else None
+            fig7 = create_donut_chart(df_donut7, names="city", values=val_col_7, title="Cpcb Aqi Share by City", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['latitude', 'longitude', 'pm2_5', 'pm10', 'no2', 'so2'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="pm2_5", y="pm10", trendline="ols", title="Pm2 5 vs Pm10 Regression Frontier", x_title="Pm2 5", y_title="Pm10", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['latitude', 'longitude', 'pm2_5', 'pm10', 'no2', 'so2'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="cpcb_aqi", y="city", title="Rankings by Cpcb Aqi", x_title="Cpcb Aqi", y_title="City", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="city", metric_col="cpcb_aqi", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

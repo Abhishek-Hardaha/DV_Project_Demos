@@ -2,7 +2,7 @@
 Dashboard Module: D81 - Global Food Import Dependency, Cereal Stockpiles & Caloric Deficits
 Domain: Agricultural Economics & Food Security (Archetype: energy_logistics)
 Authentic Source: Verified Primary Dataset (data/analytical/d81_fao_wfp_food_security.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d81_fao_wfp_food_security.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Operational Capacity & Flow Analytics
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">⚡ Operational Capacity & Flow Analytics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Flow Conduit & Capacity Hero Split (2.3 : 1.0)
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Flow / Generation Trajectory Hero
-        fig1 = px.bar(df, x="country", y=['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct'], color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Cereal Import Dependency Ratio vs Domestic Stock-to-Use Buffer (%)", "Country", "Ratio (%)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Capacity Utilization Gauge
-        val_gauge_2 = float(df['emergency_food_reserve_months'].dropna().iloc[-1]) if ('emergency_food_reserve_months' in df.columns and len(df['emergency_food_reserve_months'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=3.0, title="Emergency Grain Reserve Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Operational Efficiency Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Sectoral Capacity Treemap
-        df_tree3 = df[df["emergency_food_reserve_months"] > 0] if ("emergency_food_reserve_months" in df.columns and pd.api.types.is_numeric_dtype(df["emergency_food_reserve_months"])) else df
-        tree_val_3 = "emergency_food_reserve_months" if ("emergency_food_reserve_months" in df.columns and pd.api.types.is_numeric_dtype(df["emergency_food_reserve_months"])) else None
-        fig3 = create_treemap(df_tree3, path=['country'], values=tree_val_3, title="Sectoral Capacity & Resource Mix", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_bar_chart(df, x="country", y=['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct'], title="Cereal Import Dependency Ratio vs Domestic Stock-to-Use Buffer (%)", x_title="Country", y_title="Ratio (%)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['emergency_food_reserve_months'].dropna().iloc[-1]) if ('emergency_food_reserve_months' in df.columns and len(df['emergency_food_reserve_months'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=3.0, title="Emergency Grain Reserve Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="country", metric_col="emergency_food_reserve_months", title="Emergency Food Reserve Months Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin
-        fig4 = create_violin_chart(df, x="country", y="emergency_food_reserve_months", title="Emergency Food Reserve Months Distribution by Country", x_title="Country", y_title="Emergency Food Reserve Months", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Operational Throughput Bubble Matrix
-        fig5 = create_bubble_chart(df, x="cereal_import_dependency_ratio_pct", y="cereal_stock_to_use_ratio_pct", size="food_inflation_yoy_pct", color="country", hover_name="country", title="Cereal Import Dependency Ratio Pct vs Cereal Stock To Use Ratio Pct Relationship", x_title="Cereal Import Dependency Ratio Pct", y_title="Cereal Stock To Use Ratio Pct", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Comparative Relationship (1.7 : 1.3)
-    r3_c1, r3_c2 = st.columns([1.7, 1.3])
-    with r3_c1:
-        # Chart 6: Operational Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct', 'per_capita_food_supply_kcal_day', 'fertilizer_import_exposure_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Operational Efficiency Scatter
-        fig7 = px.scatter(df, x="cereal_import_dependency_ratio_pct", y="food_inflation_yoy_pct", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Import Dependency vs Year-on-Year Retail Food Inflation Rate (%)", "Import Dependency (%)", "Food Inflation (%)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_tree4 = df[df["emergency_food_reserve_months"] > 0] if ("emergency_food_reserve_months" in df.columns and pd.api.types.is_numeric_dtype(df["emergency_food_reserve_months"])) else df
+            tree_val_4 = "emergency_food_reserve_months" if ("emergency_food_reserve_months" in df.columns and pd.api.types.is_numeric_dtype(df["emergency_food_reserve_months"])) else None
+            fig4 = create_treemap(df_tree4, path=['country'], values=tree_val_4, title="Sectoral Capacity & Resource Mix", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_violin_chart(df, x="country", y="emergency_food_reserve_months", title="Emergency Food Reserve Months Distribution by Country", x_title="Country", y_title="Emergency Food Reserve Months", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct', 'per_capita_food_supply_kcal_day'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Throughput Rankings Bar
-        fig9 = create_horizontal_bar(df, x="emergency_food_reserve_months", y="country", title="Rankings by Emergency Food Reserve Months", x_title="Emergency Food Reserve Months", y_title="Country", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="cereal_import_dependency_ratio_pct", y="cereal_stock_to_use_ratio_pct", size="food_inflation_yoy_pct", color="country", hover_name="country", title="Cereal Import Dependency Ratio Pct vs Cereal Stock To Use Ratio Pct Multidimensional Matrix", x_title="Cereal Import Dependency Ratio Pct", y_title="Cereal Stock To Use Ratio Pct", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct', 'per_capita_food_supply_kcal_day', 'fertilizer_import_exposure_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="cereal_import_dependency_ratio_pct", y="food_inflation_yoy_pct", trendline="ols", title="Cereal Import Dependency Ratio Pct vs Food Inflation Yoy Pct Regression Frontier", x_title="Cereal Import Dependency Ratio Pct", y_title="Food Inflation Yoy Pct", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['cereal_import_dependency_ratio_pct', 'cereal_stock_to_use_ratio_pct', 'food_inflation_yoy_pct', 'undernourishment_prevalence_pct', 'per_capita_food_supply_kcal_day', 'fertilizer_import_exposure_pct'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="emergency_food_reserve_months", y="country", title="Rankings by Emergency Food Reserve Months", x_title="Emergency Food Reserve Months", y_title="Country", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="country", metric_col="emergency_food_reserve_months", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>

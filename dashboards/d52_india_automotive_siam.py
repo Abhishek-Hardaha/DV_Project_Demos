@@ -2,7 +2,7 @@
 Dashboard Module: D52 - India Automotive Industry Production, Domestic Sales & Exports
 Domain: Automotive Manufacturing & Industrial Output (Archetype: energy_logistics)
 Authentic Source: Verified Primary Dataset (data/analytical/d52_india_automotive_siam.csv)
-Visuals: 5 KPI Cards + 9 Specialized Plotly Visualizations + 1 Data Grid = 15 Visuals
+Visuals: 5 KPI Cards + 12 Specialized Plotly Visualizations + 1 Data Grid = 18 Visuals
 """
 
 import os
@@ -22,7 +22,8 @@ from app.components.charts import (
     create_radar_chart, create_waterfall_chart, create_treemap, create_box_chart,
     create_line_chart, create_bar_chart, create_area_chart, create_scatter_chart,
     create_gauge_chart, create_bubble_chart, create_sankey_diagram,
-    create_parallel_coordinates, create_pyramid_chart
+    create_parallel_coordinates, create_pyramid_chart,
+    create_growth_velocity_bar, create_pareto_chart
 )
 
 CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data/analytical/d52_india_automotive_siam.csv")
@@ -279,69 +280,97 @@ Production analytical pipeline &bull; Verified source: <code style="font-size:0.
     except Exception:
         pass
 
-    # 3. Operational Capacity & Flow Analytics
+    # 3. Visual Analytics Suite (12 Specialized Visualizations in 4 Executive Tabs)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
-<span class="visuals-section-title">⚡ Operational Capacity & Flow Analytics</span>
-<span class="visuals-density-pill">9 Analytical Visualizations</span>
+<span class="visuals-section-title">📊 Visual Analytics Suite</span>
+<span class="visuals-density-pill">12 Specialized Visualizations &bull; 4 Executive Tabs</span>
 </div>""")
 
-    # Row 1: Flow Conduit & Capacity Hero Split (2.3 : 1.0)
-    r1_c1, r1_c2 = st.columns([2.3, 1.0])
-    with r1_c1:
-        # Chart 1: Flow / Generation Trajectory Hero
-        fig1 = px.line(df, x="year", y=['total_production_million', 'domestic_sales_million', 'total_exports_million'], markers=True, color_discrete_sequence=COLOR_PALETTE[0:])
-        fig1 = base_layout(fig1, "Automotive Production, Domestic Sales & Export Trajectories", "Year", "Vehicles (Million)", height=380, subtitle="Historical trajectory and primary trend")
-        st.plotly_chart(fig1, use_container_width=True)
-    with r1_c2:
-        # Chart 2: Capacity Utilization Gauge
-        val_gauge_2 = float(df['total_production_million'].dropna().iloc[-1]) if ('total_production_million' in df.columns and len(df['total_production_million'].dropna()) > 0) else 0.0
-        fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=28.4, title="Peak Auto Production Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
-        st.plotly_chart(fig2, use_container_width=True)
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📈 Primary Trends & Trajectory",
+        "📊 Structural Breakdown & Distribution",
+        "🔬 Deep Drivers & Relationships",
+        "🏆 Rankings & Benchmarks"
+    ])
 
-    # Row 2: 3-Column Operational Efficiency Strip (1:1:1)
-    r2_c1, r2_c2, r2_c3 = st.columns(3)
-    with r2_c1:
-        # Chart 3: Sectoral Capacity Treemap
-        df_tree3 = df[df["pv_production_million"] > 0] if ("pv_production_million" in df.columns and pd.api.types.is_numeric_dtype(df["pv_production_million"])) else df
-        tree_val_3 = "pv_production_million" if ("pv_production_million" in df.columns and pd.api.types.is_numeric_dtype(df["pv_production_million"])) else None
-        fig3 = create_treemap(df_tree3, path=['year'], values=tree_val_3, title="Sectoral Capacity & Resource Mix", subtitle="Contribution breakdown by segment", height=380)
+    with tab1:
+        # Row 1: Hero Trajectory Split (2.3 : 1.0) with Target Benchmark Gauge
+        t1_c1, t1_c2 = st.columns([2.3, 1.0])
+        with t1_c1:
+            # Chart 1: Hero Trajectory
+            fig1 = create_line_chart(df, x="year", y=['total_production_million', 'domestic_sales_million', 'total_exports_million'], title="Automotive Production, Domestic Sales & Export Trajectories", x_title="Year", y_title="Vehicles (Million)", subtitle="Historical trajectory and long-term trend", height=380)
+            st.plotly_chart(fig1, use_container_width=True)
+        with t1_c2:
+            # Chart 2: Target Benchmark Gauge
+            val_gauge_2 = float(df['total_production_million'].dropna().iloc[-1]) if ('total_production_million' in df.columns and len(df['total_production_million'].dropna()) > 0) else 0.0
+            fig2 = create_gauge_chart(val_gauge_2, min_val=0.0, max_val=100.0, target=28.4, title="Peak Auto Production Target Benchmark Gauge", subtitle="Current level against target benchmark", suffix="", height=380)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        # Row 2: Period Growth Velocity Bar (Full Width)
+        # Chart 3: Period Growth Velocity Bar
+        fig3 = create_growth_velocity_bar(df, time_col="year", metric_col="total_production_million", title="Total Production Million Period Growth Velocity", subtitle="Period-over-period growth velocity and acceleration", height=380)
         st.plotly_chart(fig3, use_container_width=True)
-    with r2_c2:
-        # Chart 4: Dispersion Violin
-        fig4 = create_box_chart(df, x=None, y="pv_production_million", title="Distribution & Outlier Analysis", x_title="Quartiles", y_title="Pv Production Million", subtitle="Distribution spread and variance", height=380)
-        st.plotly_chart(fig4, use_container_width=True)
-    with r2_c3:
-        # Chart 5: Operational Throughput Bubble Matrix
-        fig5 = create_bubble_chart(df, x="pv_production_million", y="cv_production_million", size="year", color="three_wheeler_million", hover_name="year", title="Pv Production Million vs Cv Production Million Relationship", x_title="Pv Production Million", y_title="Cv Production Million", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
-        st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 3: Comparative Relationship (1.7 : 1.3)
-    r3_c1, r3_c2 = st.columns([1.7, 1.3])
-    with r3_c1:
-        # Chart 6: Operational Pearson Correlation Matrix
-        corr_cols_6 = [c for c in ['year', 'pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million', 'total_production_million'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        fig6 = create_correlation_heatmap(df, cols=corr_cols_6 if corr_cols_6 else None, title="Correlation Matrix (6 Key Indicators)", subtitle="Pairwise correlation coefficients across indicators", height=380)
-        st.plotly_chart(fig6, use_container_width=True)
-    with r3_c2:
-        # Chart 7: Operational Efficiency Scatter
-        fig7 = px.scatter(df, x="domestic_sales_million", y="total_exports_million", trendline="ols", color_discrete_sequence=COLOR_PALETTE[6:])
-        fig7 = base_layout(fig7, "Domestic Sales Demand vs Global Export Shipments", "Domestic Sales (M)", "Exports (M)", height=380, subtitle="Direct relationship and trendline")
-        st.plotly_chart(fig7, use_container_width=True)
+    with tab2:
+        # Row 1: Structural Classification & Dispersion Spread (1 : 1)
+        t2_c1, t2_c2 = st.columns(2)
+        with t2_c1:
+            # Chart 4: Structural Classification
+            df_tree4 = df[df["pv_production_million"] > 0] if ("pv_production_million" in df.columns and pd.api.types.is_numeric_dtype(df["pv_production_million"])) else df
+            tree_val_4 = "pv_production_million" if ("pv_production_million" in df.columns and pd.api.types.is_numeric_dtype(df["pv_production_million"])) else None
+            fig4 = create_treemap(df_tree4, path=['year'], values=tree_val_4, title="Sectoral Capacity & Resource Mix", subtitle="Hierarchical classification and structural composition", height=380)
+            st.plotly_chart(fig4, use_container_width=True)
+        with t2_c2:
+            # Chart 5: Dispersion Spread
+            fig5 = create_box_chart(df, x=None, y="pv_production_million", title="Distribution & Outlier Analysis", x_title="Quartiles", y_title="Pv Production Million", subtitle="Distribution spread, quartiles, and variance", height=380)
+            st.plotly_chart(fig5, use_container_width=True)
 
-    # Row 4: Diagnostic Radar & Milestone Ranking (1.3 : 1.7)
-    r4_c1, r4_c2 = st.columns([1.3, 1.7])
-    with r4_c1:
-        # Chart 8: Multi-Indicator Profile Radar
-        radar_cols_8 = [c for c in ['pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million', 'total_production_million'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
-        radar_vals_8 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_8]
-        fig8 = create_radar_chart(radar_cols_8, radar_vals_8, title="Multi-Indicator Capabilities Profile", subtitle="Comparative profile across core indicators (0-100% scale)", height=380)
-        st.plotly_chart(fig8, use_container_width=True)
-    with r4_c2:
-        # Chart 9: Comparative Throughput Rankings Bar
-        fig9 = create_horizontal_bar(df, x="total_production_million", y="year", title="Progress Over Time (Total Production Million)", x_title="Total Production Million", y_title="Timeline", subtitle="Comparative ranking across categories", height=380)
-        st.plotly_chart(fig9, use_container_width=True)
+        # Row 2: Multi-Factor Matrix & Proportional Contribution (1 : 1)
+        t2_c3, t2_c4 = st.columns(2)
+        with t2_c3:
+            # Chart 6: Multi-Factor Matrix
+            fig6 = create_bubble_chart(df, x="pv_production_million", y="cv_production_million", size="year", color="three_wheeler_million", hover_name="year", title="Pv Production Million vs Cv Production Million Multidimensional Matrix", x_title="Pv Production Million", y_title="Cv Production Million", subtitle="Multi-factor comparison (bubble size represents scale)", height=380)
+            st.plotly_chart(fig6, use_container_width=True)
+        with t2_c4:
+            # Chart 7: Proportional Contribution
+            wf_labels_7 = [col.replace('_', ' ').title() for col in ['pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million'] if col in df.columns]
+            wf_vals_7 = [float(df[col].dropna().iloc[-1]) if (col in df.columns and len(df[col].dropna()) > 0) else 0.0 for col in ['pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million'] if col in df.columns]
+            fig7 = create_waterfall_chart(wf_labels_7, wf_vals_7, title="Key Indicator Scale Comparison", subtitle="Proportional contribution and component share", height=380)
+            st.plotly_chart(fig7, use_container_width=True)
 
-    # 4. Interactive Data Table (Visual 15)
+    with tab3:
+        # Row 1: Diverging Correlation Matrix & Frontier Trade-Off Scatter (1 : 1)
+        t3_c1, t3_c2 = st.columns(2)
+        with t3_c1:
+            # Chart 8: Pearson Correlation Matrix
+            corr_cols_8 = [c for c in ['year', 'pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million', 'total_production_million'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]
+            fig8 = create_correlation_heatmap(df, cols=corr_cols_8 if corr_cols_8 else None, title="Cross-Indicator Correlation Matrix (6 Dimensions)", subtitle="Pairwise correlation coefficients across indicators", height=380)
+            st.plotly_chart(fig8, use_container_width=True)
+        with t3_c2:
+            # Chart 9: Frontier Trade-Off Scatter
+            fig9 = create_scatter_chart(df, x="domestic_sales_million", y="total_exports_million", trendline="ols", title="Domestic Sales Million vs Total Exports Million Regression Frontier", x_title="Domestic Sales Million", y_title="Total Exports Million", subtitle="Bivariate regression and empirical frontier", height=380)
+            st.plotly_chart(fig9, use_container_width=True)
+
+        # Row 2: Multi-Indicator Capabilities Profile (Full Width)
+        # Chart 10: Multi-Indicator Capabilities Profile Radar
+        radar_cols_10 = list(dict.fromkeys([c for c in ['pv_production_million', 'cv_production_million', 'three_wheeler_million', 'two_wheeler_million', 'total_production_million', 'domestic_sales_million'] if c in df.columns and pd.api.types.is_numeric_dtype(df[c])]))
+        radar_vals_10 = [float(df[c].dropna().iloc[-1]) if c in df.columns and len(df[c].dropna()) > 0 else 0.0 for c in radar_cols_10]
+        fig10 = create_radar_chart(radar_cols_10, radar_vals_10, title="Multi-Indicator Capabilities Footprint", subtitle="Multi-indicator capability footprint (independently normalized)", height=380, df=df)
+        st.plotly_chart(fig10, use_container_width=True)
+
+    with tab4:
+        # Row 1: Performance Rankings & Concentration Analysis (1 : 1)
+        t4_c1, t4_c2 = st.columns(2)
+        with t4_c1:
+            # Chart 11: Performance Rankings Horizontal Bar
+            fig11 = create_horizontal_bar(df, x="total_production_million", y="year", title="Progress Over Time (Total Production Million)", x_title="Total Production Million", y_title="Timeline", subtitle="Cross-sectional comparative rankings by volume", height=380)
+            st.plotly_chart(fig11, use_container_width=True)
+        with t4_c2:
+            # Chart 12: Concentration & Pareto Analysis
+            fig12 = create_pareto_chart(df, cat_col="year", metric_col="total_production_million", title="Pareto Concentration & Cumulative Distribution", subtitle="Cumulative distribution and Pareto 80/20 concentration", height=380)
+            st.plotly_chart(fig12, use_container_width=True)
+
+    # 4. Interactive Data Table (Visual 18)
     render_html("""<div class="visuals-section-header" style="margin-top:1.75rem;">
 <span class="visuals-section-title">📋 Complete Data Table</span>
 <span class="visuals-density-pill">Verified Data Records</span>
