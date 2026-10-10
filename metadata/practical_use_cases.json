@@ -1,0 +1,1788 @@
+[
+  {
+    "dashboard_id": "D01",
+    "slug": "d01_india_macro_gdp",
+    "title": "India Macroeconomic & GDP Growth Intelligence",
+    "domain": "Macroeconomics",
+    "target_user": "Senior Macroeconomics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within macroeconomics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Bank & Ministry of Statistics and Programme Implementation (MoSPI)",
+    "analytical_capabilities_and_metrics": [
+      "Current GDP ($3.50T)",
+      "YoY Growth Rate (+7.2%)",
+      "Services GVA Share (54.3%)",
+      "Gross Capital Formation (31.2%)",
+      "Services/Agri Ratio (3.6x)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D02",
+    "slug": "d02_india_rbi_inflation",
+    "title": "Reserve Bank of India (RBI) Inflation & Monetary Policy Monitor",
+    "domain": "Central Banking & Monetary Policy",
+    "target_user": "Senior Central Banking & Monetary Policy Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within central banking & monetary policy.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Reserve Bank of India (RBI DBIE) & MoSPI CPI",
+    "analytical_capabilities_and_metrics": [
+      "Latest Headline CPI (4.8%)",
+      "RBI Policy Repo Rate (6.50%)",
+      "Real Policy Rate (+1.7%)",
+      "Core Inflation (4.5%)",
+      "Target Band Deviation (+0.8%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D03",
+    "slug": "d03_india_census_demographics",
+    "title": "India State-Level Demographics & Census Analytics",
+    "domain": "Demographics & Human Capital",
+    "target_user": "Senior Demographics & Human Capital Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within demographics & human capital.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Office of the Registrar General & Census Commissioner, India (ORGI)",
+    "analytical_capabilities_and_metrics": [
+      "Total Population (1.21 Billion)",
+      "National Literacy (74.04%)",
+      "Sex Ratio (943 / 1000)",
+      "Gender Literacy Gap (16.3%)",
+      "Top Populated State (UP: 199.8M)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D04",
+    "slug": "d04_india_nfhs_health",
+    "title": "National Family Health Survey (NFHS-5) State Health Monitor",
+    "domain": "Public Health & Nutrition",
+    "target_user": "Senior Public Health & Nutrition Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within public health & nutrition.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Health and Family Welfare (MoHFW) / IIPS Mumbai",
+    "analytical_capabilities_and_metrics": [
+      "Institutional Births (88.6%)",
+      "Full Immunization (76.6%)",
+      "Child Stunting Rate (35.5%)",
+      "Female Anemia (57.0%)",
+      "Sanitation Coverage (71.3%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D05",
+    "slug": "d05_india_agriculture_yield",
+    "title": "India Agricultural Production & Crop Yield Analytics",
+    "domain": "Agriculture & Rural Economy",
+    "target_user": "Senior Agriculture & Rural Economy Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within agriculture & rural economy.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Directorate of Economics and Statistics, Ministry of Agriculture & Farmers Welfare",
+    "analytical_capabilities_and_metrics": [
+      "Total Foodgrains (329.7 MT)",
+      "Rice Output (135.8 MT)",
+      "Wheat Output (110.6 MT)",
+      "Average Foodgrain Yield (2,390 kg/ha)",
+      "Kharif Production Share (51.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D06",
+    "slug": "d06_india_power_energy",
+    "title": "India Power Generation & Renewable Energy Transition",
+    "domain": "Energy & Power Systems",
+    "target_user": "Senior Energy & Power Systems Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within energy & power systems.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Central Electricity Authority (CEA) / Ministry of Power / MNRE",
+    "analytical_capabilities_and_metrics": [
+      "Total Installed Capacity (442.9 GW)",
+      "Solar Installed (85.5 GW)",
+      "Wind Installed (46.2 GW)",
+      "Clean Power Share (44.6%)",
+      "Annual Generation (1,739 BU)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D07",
+    "slug": "d07_india_foreign_trade",
+    "title": "India Foreign Trade & Merchandise Export-Import Intelligence",
+    "domain": "Trade & Commerce",
+    "target_user": "Senior Trade & Commerce Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within trade & commerce.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Directorate General of Foreign Trade (DGFT) / Ministry of Commerce & Industry",
+    "analytical_capabilities_and_metrics": [
+      "Total Merchandise Exports ($437.1B)",
+      "Merchandise Imports ($677.2B)",
+      "Merchandise Trade Deficit (-$240.1B)",
+      "Engineering Goods Export ($111.5B)",
+      "Crude Oil Import Share (28.5%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D08",
+    "slug": "d08_india_fdi_inflows",
+    "title": "India Foreign Direct Investment (FDI) Inflows & Equity Trends",
+    "domain": "Investment & Capital Flows",
+    "target_user": "Senior Investment & Capital Flows Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within investment & capital flows.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+    "analytical_capabilities_and_metrics": [
+      "Cumulative Inflows ($70.9B FY24)",
+      "Peak FDI ($84.8B FY22)",
+      "Tech & Services Share (41.0%)",
+      "Top Source (Singapore: 28%)",
+      "3-Year Moving Avg ($75.7B)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D09",
+    "slug": "d09_india_highway_infrastructure",
+    "title": "India National Highway & Road Infrastructure Growth",
+    "domain": "Infrastructure & Transport",
+    "target_user": "Senior Infrastructure & Transport Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within infrastructure & transport.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Road Transport and Highways (MoRTH) / NHAI",
+    "analytical_capabilities_and_metrics": [
+      "Total NH Length (146,145 km)",
+      "10-Year Expansion (+60.1%)",
+      "Pace of Construction (31.5 km/day)",
+      "4-Lane+ Highway Share (48.0%)",
+      "Annual NH Addition (4,250 km)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D10",
+    "slug": "d10_india_railways_traffic",
+    "title": "Indian Railways Operational & Freight Traffic Analytics",
+    "domain": "Logistics & Public Transport",
+    "target_user": "Senior Logistics & Public Transport Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within logistics & public transport.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Railways (Railway Board Statistical Directorate)",
+    "analytical_capabilities_and_metrics": [
+      "Total Freight Loading (1,610 MT)",
+      "Coal Loading Share (48.5%)",
+      "Route Electrified (65,000 km)",
+      "Electrification Level (94.9%)",
+      "Operating Ratio (98.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D11",
+    "slug": "d11_india_cpcb_air_quality",
+    "title": "India Real-Time Urban Air Quality & AQI Intelligence",
+    "domain": "Environment & Pollution",
+    "target_user": "Senior Environment & Pollution Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within environment & pollution.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Central Pollution Control Board (CPCB) & Open-Meteo Atmospheric Models",
+    "analytical_capabilities_and_metrics": [
+      "Average Monitored AQI (142)",
+      "Highest AQI City (Delhi / Patna)",
+      "PM2.5 / PM10 Ratio (0.54)",
+      "Severe Episodes Count (12)",
+      "Active Monitoring Cities (10)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D12",
+    "slug": "d12_india_upi_digital_payments",
+    "title": "India Digital Public Infrastructure & UPI Financial Inclusion",
+    "domain": "Fintech & Digital Infrastructure",
+    "target_user": "Senior Fintech & Digital Infrastructure Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within fintech & digital infrastructure.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "National Payments Corporation of India (NPCI) & RBI Payment Systems",
+    "analytical_capabilities_and_metrics": [
+      "Monthly Volume (14.04B txns)",
+      "Monthly Value (Rs 20.45L Cr)",
+      "Average Ticket Size (Rs 1,456)",
+      "Merchant P2M Share (61.2%)",
+      "Retail Electronic Share (82.5%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D13",
+    "slug": "d13_india_state_finances",
+    "title": "India State Finances & Fiscal Deficit Intelligence",
+    "domain": "Public Finance & Fiscal Policy",
+    "target_user": "Senior Public Finance & Fiscal Policy Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within public finance & fiscal policy.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Reserve Bank of India (State Finances: A Study of Budgets)",
+    "analytical_capabilities_and_metrics": [
+      "National State Deficit Avg (3.3%)",
+      "Highest Debt-to-GSDP (Punjab: 47.6%)",
+      "Lowest Debt State (Odisha: 13.6%)",
+      "Average Own Tax Share (51.4%)",
+      "Average Capital Outlay (15.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D14",
+    "slug": "d14_india_higher_education",
+    "title": "India Higher Education & Gross Enrolment Ratio (AISHE)",
+    "domain": "Higher Education & Skills",
+    "target_user": "Senior Higher Education & Skills Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within higher education & skills.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Education (All India Survey on Higher Education - AISHE)",
+    "analytical_capabilities_and_metrics": [
+      "Top GER State (Chandigarh: 64.8%)",
+      "National GER Benchmark (28.4%)",
+      "Average Gender Parity Index (1.04)",
+      "Top College Density (Karnataka: 62)",
+      "Average PTR (23.5)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D15",
+    "slug": "d15_india_plfs_employment",
+    "title": "India Labor Force & Employment Dynamics (PLFS)",
+    "domain": "Employment & Labor Markets",
+    "target_user": "Senior Employment & Labor Markets Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within employment & labor markets.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Statistics and Programme Implementation (MoSPI - PLFS)",
+    "analytical_capabilities_and_metrics": [
+      "Overall LFPR (44.4%)",
+      "Overall Unemployment (3.2%)",
+      "Female LFPR Surge (30.0%)",
+      "Agriculture Workforce Share (45.8%)",
+      "Urban Female UR (7.0%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D16",
+    "slug": "d16_global_renewable_energy",
+    "title": "Global Renewable Energy Transition & Decarbonization",
+    "domain": "Global Energy & Decarbonization",
+    "target_user": "Senior Global Energy & Decarbonization Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within global energy & decarbonization.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Renewable Energy Agency (IRENA) & Energy Institute",
+    "analytical_capabilities_and_metrics": [
+      "Global Clean Power Share (39.8%)",
+      "Global Solar Output (1,630 TWh)",
+      "Global Wind Output (2,300 TWh)",
+      "China Clean Gen Share (34.2%)",
+      "EU Clean Gen Share (68.4%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D17",
+    "slug": "d17_global_co2_emissions",
+    "title": "Global CO2 Emissions, Carbon Budgets & Climate Trends",
+    "domain": "Climate & Greenhouse Gases",
+    "target_user": "Senior Climate & Greenhouse Gases Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within climate & greenhouse gases.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Global Carbon Project / EDGAR / World Bank Climate",
+    "analytical_capabilities_and_metrics": [
+      "Global Annual Emissions (37.1 Gt)",
+      "Top Emitter (China: 11.4 Gt)",
+      "US Per Capita (14.2 tCO2)",
+      "India Per Capita (2.0 tCO2)",
+      "Coal Share of Emissions (40.5%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D18",
+    "slug": "d18_global_health_life_expectancy",
+    "title": "Worldwide Global Health & Life Expectancy Dynamics",
+    "domain": "Global Health & Demographics",
+    "target_user": "Senior Global Health & Demographics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within global health & demographics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Health Organization (WHO GHO) & UN Population Division",
+    "analytical_capabilities_and_metrics": [
+      "Top Life Expectancy (Japan: 84.6 yrs)",
+      "Global Average LE (72.8 yrs)",
+      "Under-5 Survival Rate (96.5%)",
+      "HALE Gap to LE (8.2 yrs)",
+      "COVID LE Shock (-1.4 yrs)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D19",
+    "slug": "d19_global_maternal_child_health",
+    "title": "Global Maternal & Child Health Intelligence",
+    "domain": "Child Health & Nutrition",
+    "target_user": "Senior Child Health & Nutrition Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within child health & nutrition.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UNICEF Global Databases & WHO",
+    "analytical_capabilities_and_metrics": [
+      "Lowest Stunting (Chile: 1.8%)",
+      "Highest Immunization (Japan: 97.5%)",
+      "Exclusive Breastfeeding (50.2% avg)",
+      "Neonatal Mortality Range (0.8 - 39.2)",
+      "Child Risk Index Gap (12x)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D20",
+    "slug": "d20_global_poverty_inequality",
+    "title": "Global Economic Inequality & Poverty Headcount",
+    "domain": "Poverty & Income Distribution",
+    "target_user": "Senior Poverty & Income Distribution Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within poverty & income distribution.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Bank Poverty and Inequality Platform (PIP)",
+    "analytical_capabilities_and_metrics": [
+      "Global Extreme Poverty (8.5%)",
+      "East Asia Poverty Reduction (-64.4%)",
+      "Sub-Saharan Africa Poverty (37.4%)",
+      "Average Regional Gini (41.2)",
+      "Palma Inequality Ratio (3.8x)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D21",
+    "slug": "d21_global_fao_food_security",
+    "title": "Worldwide Food Security & Cereal Production Monitor",
+    "domain": "Food Security & Agriculture",
+    "target_user": "Senior Food Security & Agriculture Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within food security & agriculture.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Food and Agriculture Organization of the United Nations (FAO FAOSTAT)",
+    "analytical_capabilities_and_metrics": [
+      "Total Cereal Output (2,810 MT)",
+      "FAO Food Price Index (120.4)",
+      "Peak Food Price Index (143.7 in 2022)",
+      "Cereal Yield (4,152 kg/ha)",
+      "Stocks-to-Use Buffer (29.5%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D22",
+    "slug": "d22_global_forest_deforestation",
+    "title": "Global Forest Cover, Deforestation & Land Dynamics",
+    "domain": "Forestry & Land Conservation",
+    "target_user": "Senior Forestry & Land Conservation Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within forestry & land conservation.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "FAO Global Forest Resources Assessment & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Largest Forest (Russia: 8.15M sq km)",
+      "Brazil Forest Cover (59.4%)",
+      "Brazil Loss Since 1990 (-11.1%)",
+      "China Afforestation (+6.7%)",
+      "Protected Area Share (17.5%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D23",
+    "slug": "d23_global_water_stress",
+    "title": "Global Water Stress & Freshwater Resource Security",
+    "domain": "Water Resources & Hydrology",
+    "target_user": "Senior Water Resources & Hydrology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within water resources & hydrology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UN-Water / FAO AQUASTAT / World Bank Environment",
+    "analytical_capabilities_and_metrics": [
+      "Critical Stress (Kuwait: 3,850%)",
+      "India Water Stress (66.5%)",
+      "India Agri Withdrawal (91%)",
+      "Highest Per Capita (Canada: 76,500 m3)",
+      "Water Scarcity Threshold (1,000 m3)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D24",
+    "slug": "d24_global_trade_current_account",
+    "title": "Global Trade Openness & Current Account Balances",
+    "domain": "International Macroeconomics",
+    "target_user": "Senior International Macroeconomics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within international macroeconomics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Monetary Fund (IMF WEO) & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Top Surplus Nation (Germany: +6.4% GDP)",
+      "Persistent Deficit (USA: -3.8% GDP)",
+      "South Korea Openness (78.5% GDP)",
+      "India Trade Openness (52.4% GDP)",
+      "Global Imbalance Index (4.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D25",
+    "slug": "d25_global_itu_digital_divide",
+    "title": "Worldwide Internet Connectivity & Digital Divide",
+    "domain": "Telecommunications & Digital Access",
+    "target_user": "Senior Telecommunications & Digital Access Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within telecommunications & digital access.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Telecommunication Union (ITU) & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Global Internet Users (66.4%)",
+      "North America Users (93.5%)",
+      "Sub-Saharan Africa Users (34.4%)",
+      "Global Offline Population (2.6 Billion)",
+      "Mobile Subscriptions (109.8 / 100)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D26",
+    "slug": "d26_global_research_rd_innovation",
+    "title": "Global Research & Development (R&D) Expenditure and Innovation",
+    "domain": "Science & Innovation Policy",
+    "target_user": "Senior Science & Innovation Policy Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within science & innovation policy.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UNESCO Institute for Statistics (UIS) & World Bank Science",
+    "analytical_capabilities_and_metrics": [
+      "Highest R&D Intensity (Israel: 5.44%)",
+      "South Korea R&D (4.81%)",
+      "China Patent Dominance (1.46M)",
+      "Singapore High-Tech Export (52.4%)",
+      "India R&D Intensity (0.65%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D27",
+    "slug": "d27_global_external_debt_vulnerability",
+    "title": "Worldwide External Debt & Sovereign Vulnerability in Developing Nations",
+    "domain": "Sovereign Debt & Financial Stability",
+    "target_user": "Senior Sovereign Debt & Financial Stability Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within sovereign debt & financial stability.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Bank International Debt Statistics (IDS)",
+    "analytical_capabilities_and_metrics": [
+      "Highest Debt/GNI (Sri Lanka: 74.5%)",
+      "Highest Service Burden (Argentina: 42.5%)",
+      "India External Debt/GNI (18.7%)",
+      "India Service Burden (6.7%)",
+      "Concessional Debt Max (Kenya: 32%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D28",
+    "slug": "d28_global_usgs_earthquakes",
+    "title": "Global Seismic Activity & Earthquake Hazards (USGS Live GeoJSON)",
+    "domain": "Geophysics & Natural Hazards",
+    "target_user": "Senior Geophysics & Natural Hazards Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within geophysics & natural hazards.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "United States Geological Survey (USGS Earthquake Hazards Program)",
+    "analytical_capabilities_and_metrics": [
+      "Events Monitored (1,500)",
+      "Maximum Magnitude (7.8)",
+      "Shallow Quakes Share (74.2%)",
+      "Tsunami Warnings Triggered (18)",
+      "Highest Energy Event Place (Turkey / Pacific Ring)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D29",
+    "slug": "d29_global_nasa_temperature_anomalies",
+    "title": "Global Surface Temperature Anomalies & Climate Change",
+    "domain": "Earth Science & Climatology",
+    "target_user": "Senior Earth Science & Climatology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within earth science & climatology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "NASA Goddard Institute for Space Studies (GISTEMP v4) / NOAA",
+    "analytical_capabilities_and_metrics": [
+      "Latest Annual Anomaly (+1.28\u00b0C)",
+      "Warmest Decade (2010s / 2020s)",
+      "Warming Rate (+0.21\u00b0C / decade)",
+      "Years Above +1.0\u00b0C (9)",
+      "Baseline Period (1951-1980 mean)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D30",
+    "slug": "d30_global_un_urbanization",
+    "title": "Worldwide Urbanization & Megacity Population Trajectories",
+    "domain": "Urbanization & Human Settlement",
+    "target_user": "Senior Urbanization & Human Settlement Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within urbanization & human settlement.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "United Nations Department of Economic and Social Affairs (UN DESA)",
+    "analytical_capabilities_and_metrics": [
+      "Largest Megacity (Tokyo: 37.4M)",
+      "Fastest Growing (Delhi: 6.0x since 1980)",
+      "Dhaka Expansion (7.0x since 1980)",
+      "Megacities Over 20M (9)",
+      "Average Growth Multiple (3.2x)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D31",
+    "slug": "d31_global_unwto_tourism",
+    "title": "Global Tourism Arrivals & International Travel Recovery",
+    "domain": "Travel & Hospitality Economics",
+    "target_user": "Senior Travel & Hospitality Economics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within travel & hospitality economics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UN World Tourism Organization (UNWTO) & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Top Arrivals Destination (France: 89.1M)",
+      "Top Receipts Destination (USA: $210B)",
+      "2020 COVID Collapse (-73%)",
+      "Post-COVID Recovery (96% of 2019)",
+      "Average Spend / Arrival ($1,150)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D32",
+    "slug": "d32_global_iea_ev_adoption",
+    "title": "Worldwide Electric Vehicle (EV) Adoption & Battery Market Expansion",
+    "domain": "Clean Mobility & Automotive",
+    "target_user": "Senior Clean Mobility & Automotive Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within clean mobility & automotive.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Energy Agency (IEA Global EV Outlook) / OWID",
+    "analytical_capabilities_and_metrics": [
+      "Global EV Sales 2023 (~14M)",
+      "China Market Share (34.0%)",
+      "Europe Market Share (22.6%)",
+      "BEV Dominance Share (72%)",
+      "India EV Sales Surge (85k units)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D33",
+    "slug": "d33_global_financial_markets",
+    "title": "Global Financial Market Volatility & Major Exchange Trends",
+    "domain": "Capital Markets & Commodities",
+    "target_user": "Senior Capital Markets & Commodities Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within capital markets & commodities.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "S&P Dow Jones / World Gold Council / US EIA / NSE India",
+    "analytical_capabilities_and_metrics": [
+      "S&P 500 Level (5,600+)",
+      "Nifty 50 Level (24,000+)",
+      "Gold Price Peak ($2,600+)",
+      "Brent Crude ($78/bbl)",
+      "Gold-to-SP500 Ratio (0.45)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D34",
+    "slug": "d34_global_imf_sovereign_debt",
+    "title": "Global Sovereign Debt-to-GDP & Fiscal Policy Monitor",
+    "domain": "Sovereign Finance & Fiscal Prudence",
+    "target_user": "Senior Sovereign Finance & Fiscal Prudence Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within sovereign finance & fiscal prudence.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Monetary Fund (IMF Fiscal Monitor) & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Highest Sovereign Debt (Japan: 254.6%)",
+      "US Debt/GDP (123.3%)",
+      "India Debt/GDP (82.5%)",
+      "Germany Debt/GDP (63.7%)",
+      "Advanced Economies Avg (112.4%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D35",
+    "slug": "d35_india_gst_collections",
+    "title": "India Goods & Services Tax (GST) Revenue Collections",
+    "domain": "Taxation & Public Revenue",
+    "target_user": "Senior Taxation & Public Revenue Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within taxation & public revenue.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Goods and Services Tax Network (GSTN) / Department of Revenue",
+    "analytical_capabilities_and_metrics": [
+      "All-Time Peak (\u20b92.10 Lakh Cr)",
+      "Latest Collection (\u20b91.74 Lakh Cr)",
+      "IGST Share (49.2%)",
+      "Cess Revenue (\u20b912,200 Cr)",
+      "CGST+SGST (\u20b976,100 Cr)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D36",
+    "slug": "d36_india_pmjdy_inclusion",
+    "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY) Financial Inclusion",
+    "domain": "Banking & Financial Inclusion",
+    "target_user": "Senior Banking & Financial Inclusion Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within banking & financial inclusion.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department of Financial Services (DFS), Ministry of Finance",
+    "analytical_capabilities_and_metrics": [
+      "Total Beneficiaries (51.8 Cr)",
+      "Total Deposits (\u20b92.31 Lakh Cr)",
+      "Women Share (55.4%)",
+      "Rural Beneficiaries (67.2%)",
+      "Avg Balance / Account (\u20b94,460)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D37",
+    "slug": "d37_india_mgnregs_employment",
+    "title": "MGNREGS Rural Employment Guarantee & Wage Analytics",
+    "domain": "Rural Development & Social Safety",
+    "target_user": "Senior Rural Development & Social Safety Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within rural development & social safety.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Rural Development (MoRD) / nrega.nic.in",
+    "analytical_capabilities_and_metrics": [
+      "Total Person-Days (308 Crore)",
+      "Total Outlay (\u20b986,200 Cr)",
+      "National Women Share (58.4%)",
+      "Highest Wage Rate (Haryana: \u20b9357)",
+      "Avg Days / Household (52.4 Days)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D38",
+    "slug": "d38_india_civil_aviation",
+    "title": "India Civil Aviation Passenger & Cargo Traffic Growth",
+    "domain": "Aviation & Transport Logistics",
+    "target_user": "Senior Aviation & Transport Logistics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within aviation & transport logistics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Directorate General of Civil Aviation (DGCA) & AAI",
+    "analytical_capabilities_and_metrics": [
+      "Total Passengers (403.6M)",
+      "Domestic Passengers (332.1M)",
+      "International Traffic (71.5M)",
+      "Air Cargo (3.65M Tonnes)",
+      "Operational Airports (149+)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D39",
+    "slug": "d39_india_major_ports",
+    "title": "India Major Ports Cargo Handling & Maritime Logistics",
+    "domain": "Maritime Logistics & Port Infrastructure",
+    "target_user": "Senior Maritime Logistics & Port Infrastructure Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within maritime logistics & port infrastructure.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Ports, Shipping and Waterways (MoPSW) & IPA",
+    "analytical_capabilities_and_metrics": [
+      "Total Major Port Cargo (819.5 MMT)",
+      "Top Cargo Port (Paradip: 145.4 MMT)",
+      "Premier Container Port (JNPT: 76.4 MMT)",
+      "POL Traffic (258.4 MMT)",
+      "Avg Turnaround Time (44.2 Hours)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D40",
+    "slug": "d40_india_telecom_trai",
+    "title": "India Telecommunications & Wireless Subscriber Dynamics",
+    "domain": "Telecommunications & Digital Infrastructure",
+    "target_user": "Senior Telecommunications & Digital Infrastructure Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within telecommunications & digital infrastructure.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Telecom Regulatory Authority of India (TRAI)",
+    "analytical_capabilities_and_metrics": [
+      "Total Wireless Subs (1,165.5M)",
+      "Broadband Connections (924.1M)",
+      "Overall Tele-Density (85.5%)",
+      "Rural Subscribers (529.7M)",
+      "Rural Tele-Density (59.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D41",
+    "slug": "d41_india_mining_minerals",
+    "title": "India Mineral & Metallic Mining Production Analytics",
+    "domain": "Mining & Natural Resources",
+    "target_user": "Senior Mining & Natural Resources Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within mining & natural resources.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Indian Bureau of Mines (IBM) & Ministry of Mines",
+    "analytical_capabilities_and_metrics": [
+      "Iron Ore Output (274.5 MMT)",
+      "Limestone Output (435.8 MMT)",
+      "Bauxite Production (24.6 MMT)",
+      "Metallic Production Value (\u20b9342B)",
+      "Iron Ore 10-Yr Growth (+112%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D42",
+    "slug": "d42_india_forest_cover_isfr",
+    "title": "India State of Forest Report (ISFR) Canopy & Carbon Analytics",
+    "domain": "Forestry & Ecological Conservation",
+    "target_user": "Senior Forestry & Ecological Conservation Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within forestry & ecological conservation.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Forest Survey of India (FSI) & MoEFCC",
+    "analytical_capabilities_and_metrics": [
+      "Total Forest Cover (713,789 sq km)",
+      "Forest Land Share (21.71%)",
+      "Largest Forest State (MP: 77,493 sq km)",
+      "Highest Density State (Mizoram: 84.5%)",
+      "Total Carbon Stock (7,204M Tonnes)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D43",
+    "slug": "d43_india_petroleum_ppac",
+    "title": "India Petroleum, Refining & Fuel Consumption Intelligence",
+    "domain": "Hydrocarbons & Energy Security",
+    "target_user": "Senior Hydrocarbons & Energy Security Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within hydrocarbons & energy security.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Petroleum Planning & Analysis Cell (PPAC), MoPNG",
+    "analytical_capabilities_and_metrics": [
+      "POL Consumption (233.3 MMT)",
+      "Refinery Throughput (261.5 MMT)",
+      "Diesel Consumption (89.6 MMT)",
+      "Crude Import Dependency (87.8%)",
+      "Natural Gas Supply (36.4 BCM)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D44",
+    "slug": "d44_india_ncrb_crime",
+    "title": "National Crime Records Bureau (NCRB) Crime & Judicial Disposal",
+    "domain": "Law Enforcement & Justice Administration",
+    "target_user": "Senior Law Enforcement & Justice Administration Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within law enforcement & justice administration.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "National Crime Records Bureau (NCRB), Ministry of Home Affairs",
+    "analytical_capabilities_and_metrics": [
+      "Total IPC Crimes (3.56 Million)",
+      "National Crime Rate (258.1 / Lakh)",
+      "Highest Conviction Rate (Kerala: 84.2%)",
+      "Chargesheet Rate Avg (75.8%)",
+      "Cyber Crime Surge (65,890 Cases)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D45",
+    "slug": "d45_india_pmay_housing",
+    "title": "Pradhan Mantri Awas Yojana (PMAY) Housing Completion Monitor",
+    "domain": "Urban Development & Social Housing",
+    "target_user": "Senior Urban Development & Social Housing Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within urban development & social housing.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Ministry of Housing and Urban Affairs (MoHUA) & MoRD",
+    "analytical_capabilities_and_metrics": [
+      "Houses Sanctioned (3.82 Crore)",
+      "Houses Completed (3.14 Crore)",
+      "National Completion Rate (82.2%)",
+      "Central Outlay Disbursed (\u20b93.95 Lakh Cr)",
+      "Women Ownership Share (74.8%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D46",
+    "slug": "d46_india_jal_jeevan_mission",
+    "title": "Jal Jeevan Mission (JJM) Rural Tap Water Connectivity",
+    "domain": "Water Sanitation & Rural Health",
+    "target_user": "Senior Water Sanitation & Rural Health Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within water sanitation & rural health.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department of Drinking Water & Sanitation, Ministry of Jal Shakti",
+    "analytical_capabilities_and_metrics": [
+      "Tap Water Coverage (78.5%)",
+      "Taps Added Since 2019 (11.8 Crore)",
+      "2019 Baseline Share (16.7%)",
+      "100% Saturated States (6 States/UTs)",
+      "Rural Households Served (15.2 Crore)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D47",
+    "slug": "d47_india_udise_education",
+    "title": "UDISE+ School Education Infrastructure & Pupil-Teacher Ratio",
+    "domain": "School Education & Foundational Facilities",
+    "target_user": "Senior School Education & Foundational Facilities Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within school education & foundational facilities.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department of School Education & Literacy, Ministry of Education",
+    "analytical_capabilities_and_metrics": [
+      "Electricity Availability (90.4%)",
+      "Girls Toilet Availability (95.8%)",
+      "National Primary PTR (24.2 : 1)",
+      "Computer Lab Access (54.8%)",
+      "Internet Facility Access (42.1%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D48",
+    "slug": "d48_india_tourism_stats",
+    "title": "India Tourism Statistics & Foreign Exchange Earnings",
+    "domain": "Tourism, Hospitality & Cultural Economy",
+    "target_user": "Senior Tourism, Hospitality & Cultural Economy Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within tourism, hospitality & cultural economy.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Market Research Division, Ministry of Tourism",
+    "analytical_capabilities_and_metrics": [
+      "Domestic Visits (2.51 Billion)",
+      "Foreign Arrivals (9.24M)",
+      "Foreign Forex Earnings ($28.07B)",
+      "Avg Spend / Foreign Tourist ($3,038)",
+      "Medical Tourism Share (27.2%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D49",
+    "slug": "d49_india_food_pds_nfsa",
+    "title": "National Food Security Act (NFSA) & PDS Buffer Stock Logistics",
+    "domain": "Food Security & Welfare Supply Chain",
+    "target_user": "Senior Food Security & Welfare Supply Chain Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within food security & welfare supply chain.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department of Food & Public Distribution & FCI",
+    "analytical_capabilities_and_metrics": [
+      "Annual Grain Offtake (62.8 MMT)",
+      "Central Buffer Stock (59.8 MMT)",
+      "Food Subsidy Outlay (\u20b92.05 Lakh Cr)",
+      "Rice Share of PDS (58.1%)",
+      "Biometric Authentication (100.0%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D50",
+    "slug": "d50_india_patents_ip",
+    "title": "India Intellectual Property, Patents & Trademark Innovation",
+    "domain": "Intellectual Property & R&D Commercialization",
+    "target_user": "Senior Intellectual Property & R&D Commercialization Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within intellectual property & r&d commercialization.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Office of the CGPDTM, DPIIT, Ministry of Commerce",
+    "analytical_capabilities_and_metrics": [
+      "Patent Filings (90,300)",
+      "Patents Granted (42,100)",
+      "Domestic Applicant Share (54.5%)",
+      "Trademark Applications (482,100)",
+      "Grant Rate / Filings (46.6%)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D51",
+    "slug": "d51_india_pm_kisan",
+    "title": "PM-KISAN Farmer Direct Benefit Transfer (DBT) Analytics",
+    "domain": "Agrarian Welfare & Direct Benefits",
+    "target_user": "Senior Agrarian Welfare & Direct Benefits Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within agrarian welfare & direct benefits.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Department of Agriculture & Farmers Welfare",
+    "analytical_capabilities_and_metrics": [
+      "Total DBT Disbursed (\u20b93.12 Lakh Cr)",
+      "Farmer Beneficiaries (11.0 Crore)",
+      "e-KYC Compliance (94.6%)",
+      "Aadhaar Seeding Share (86.8%)",
+      "Largest Beneficiary State (UP: 2.62 Cr)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D52",
+    "slug": "d52_india_automotive_siam",
+    "title": "India Automotive Industry Production, Domestic Sales & Exports",
+    "domain": "Automotive Manufacturing & Industrial Output",
+    "target_user": "Senior Automotive Manufacturing & Industrial Output Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within automotive manufacturing & industrial output.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Society of Indian Automobile Manufacturers (SIAM) & MHI",
+    "analytical_capabilities_and_metrics": [
+      "Total Vehicle Output (28.43M)",
+      "PV Production (4.22M)",
+      "Two-Wheeler Output (21.44M)",
+      "Total Vehicle Exports (4.50M)",
+      "Domestic Sales (23.85M)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D53",
+    "slug": "d53_india_coal_production",
+    "title": "India Coal Production, Thermal Dispatch & Supply Logistics",
+    "domain": "Mining & Thermal Energy Baseload",
+    "target_user": "Senior Mining & Thermal Energy Baseload Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within mining & thermal energy baseload.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Coal Controller's Organisation (CCO) & Ministry of Coal",
+    "analytical_capabilities_and_metrics": [
+      "Total Coal Output (997.4 MT)",
+      "CIL Production (773.6 MT)",
+      "Power Sector Dispatch (814.2 MT)",
+      "Thermal Power Share (88.0%)",
+      "Pithead Stock Level (96.8 MT)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D54",
+    "slug": "d54_india_inland_waterways",
+    "title": "India Inland Waterways Freight Movement & Multimodal Logistics",
+    "domain": "Waterways Logistics & Multimodal Transport",
+    "target_user": "Senior Waterways Logistics & Multimodal Transport Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within waterways logistics & multimodal transport.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Inland Waterways Authority of India (IWAI), MoPSW",
+    "analytical_capabilities_and_metrics": [
+      "Total Waterway Freight (133.0 MMT)",
+      "NW-1 Ganga Freight (21.4 MMT)",
+      "NW-2 Brahmaputra (4.1 MMT)",
+      "10-Year Cargo Growth (+336%)",
+      "Goa Waterways Traffic (64.8 MMT)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D55",
+    "slug": "d55_iaea_nuclear_power",
+    "title": "IAEA Nuclear Power Infrastructure & Operational Reactor Metrics",
+    "domain": "Nuclear Physics & Global Energy Infrastructure",
+    "target_user": "Senior Nuclear Physics & Global Energy Infrastructure Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within nuclear physics & global energy infrastructure.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Atomic Energy Agency (IAEA PRIS)",
+    "analytical_capabilities_and_metrics": [
+      "Total Net Nuclear Capacity (372,279 MWe)",
+      "Operational Nuclear Reactors (413 Units)",
+      "Reactors Under Construction (48 Units)",
+      "Top Electricity Share - France (64.8%)",
+      "Mean Reactor Fleet Age (31.8 Yrs)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D56",
+    "slug": "d56_nasa_exoplanets",
+    "title": "NASA Confirmed Exoplanets Discovery & Planetary Astrophysics",
+    "domain": "Astrophysics & Space Exploration",
+    "target_user": "Senior Astrophysics & Space Exploration Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within astrophysics & space exploration.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "NASA Exoplanet Science Institute / Caltech",
+    "analytical_capabilities_and_metrics": [
+      "Total Confirmed Exoplanets (5,743 Planets)",
+      "Transit Method Discoveries (4,398 Exoplanets)",
+      "Super-Earths Identified (1,895 Worlds)",
+      "Gas Giants Catalogs (2,432 Planets)",
+      "Habitable Zone Candidates (75 Worlds)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D57",
+    "slug": "d57_unhcr_forced_displacement",
+    "title": "UNHCR Global Forced Displacement, Refugees & Asylum Seekers",
+    "domain": "Humanitarian Affairs & Demographics",
+    "target_user": "Senior Humanitarian Affairs & Demographics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within humanitarian affairs & demographics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "United Nations High Commissioner for Refugees (UNHCR)",
+    "analytical_capabilities_and_metrics": [
+      "Forcibly Displaced Worldwide (120.0M People)",
+      "Internally Displaced Persons (70.1M IDPs)",
+      "UNHCR Mandate Refugees (32.2M Refugees)",
+      "Pending Asylum Seekers (7.3M Applicants)",
+      "Child Displacement Share (40.0% Vulnerable)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D58",
+    "slug": "d58_nist_nvd_cybersecurity",
+    "title": "NIST / NVD Worldwide Cybersecurity Vulnerability Trends",
+    "domain": "Cybersecurity & Information Technology",
+    "target_user": "Senior Cybersecurity & Information Technology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within cybersecurity & information technology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "National Institute of Standards and Technology (NIST)",
+    "analytical_capabilities_and_metrics": [
+      "Annual Published CVEs (30,500 Vulnerabilities)",
+      "Critical Severity CVSS 9.0+ (5,720 Zero-Days/CVEs)",
+      "High Severity CVSS 7.0-8.9 (13,400 Flaws)",
+      "CISA KEV Wild Exploitations (365 Actively Exploited)",
+      "Remote Code Execution Share (31.8% of CVEs)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D59",
+    "slug": "d59_nsidc_arctic_sea_ice",
+    "title": "NSIDC / NOAA Arctic & Antarctic Sea Ice Extent & Cryosphere Monitor",
+    "domain": "Cryosphere Science & Polar Climatology",
+    "target_user": "Senior Cryosphere Science & Polar Climatology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within cryosphere science & polar climatology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "National Snow and Ice Data Center (NSIDC / NOAA)",
+    "analytical_capabilities_and_metrics": [
+      "Arctic September Ice Minimum (4.28 M sq km)",
+      "Arctic Winter Maximum Extent (14.72 M sq km)",
+      "Antarctic Summer Ice Extent (1.99 M sq km)",
+      "Satellite Era Arctic Loss (-44.2% since 1980)",
+      "Polar Albedo Feedback Index (80.1 Baseline)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D60",
+    "slug": "d60_icao_commercial_aviation",
+    "title": "ICAO / IATA Global Commercial Aviation & Air Traffic Activity",
+    "domain": "Global Aviation & Transportation",
+    "target_user": "Senior Global Aviation & Transportation Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within global aviation & transportation.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Civil Aviation Organization (ICAO / IATA)",
+    "analytical_capabilities_and_metrics": [
+      "Worldwide Air Passengers (4.70 Billion)",
+      "Revenue Passenger-Km (9.15 Trillion RPK)",
+      "Global Passenger Load Factor (82.6% Capacity)",
+      "Commercial Scheduled Flights (38.7M Flights)",
+      "Airline Industry Revenues ($964.0 Billion USD)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D61",
+    "slug": "d61_wgc_sovereign_gold_reserves",
+    "title": "World Gold Council Worldwide Sovereign Gold Reserves & Holdings",
+    "domain": "Central Banking & International Finance",
+    "target_user": "Senior Central Banking & International Finance Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within central banking & international finance.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Gold Council (WGC / IMF IFS)",
+    "analytical_capabilities_and_metrics": [
+      "Top Sovereign Gold Holder (8,133.5 Tonnes - US)",
+      "Tracked Sovereign Bullion (31,043.6 Tonnes)",
+      "Reserve Market Valuation ($618.1 Billion Peak)",
+      "India Official Gold Vault (840.8 Tonnes)",
+      "Top Gold FX Share - Portugal (73.1% Reserves)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D62",
+    "slug": "d62_unesco_world_heritage_sites",
+    "title": "UNESCO World Cultural & Natural Heritage Sites Distribution",
+    "domain": "Cultural Geography & Conservation Architecture",
+    "target_user": "Senior Cultural Geography & Conservation Architecture Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within cultural geography & conservation architecture.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UNESCO World Heritage Centre",
+    "analytical_capabilities_and_metrics": [
+      "Total Inscribed Heritage Sites (760 Properties)",
+      "Cultural Monument Inscriptions (577 Sites)",
+      "Natural Ecosystem Inscriptions (148 Sites)",
+      "India Sovereign Heritage Rank (43 Sites - 6th World)",
+      "Endangered Properties Monitored (4 Sites in Danger)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D63",
+    "slug": "d63_sia_wsts_semiconductor_market",
+    "title": "SIA / WSTS Global Semiconductor Billings & Product Categories",
+    "domain": "Advanced Microelectronics & Global Technology",
+    "target_user": "Senior Advanced Microelectronics & Global Technology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within advanced microelectronics & global technology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Semiconductor Industry Association (SIA / WSTS)",
+    "analytical_capabilities_and_metrics": [
+      "Global Chip Market Billings ($611.2 Billion USD)",
+      "Logic Integrated Circuits ($208.4 Billion)",
+      "Memory Semiconductor Market ($142.5 Billion)",
+      "Asia-Pacific Regional Share (55.7% Global Sales)",
+      "YoY Market Expansion Rate (+16.0% Rebound)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D64",
+    "slug": "d64_who_unicef_immunization",
+    "title": "WHO / UNICEF Global Childhood Vaccination & Immunization Coverage",
+    "domain": "Global Public Health & Epidemiology",
+    "target_user": "Senior Global Public Health & Epidemiology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within global public health & epidemiology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "World Health Organization (WHO / UNICEF WIISE)",
+    "analytical_capabilities_and_metrics": [
+      "DTP3 Third-Dose Benchmark (85.0% Global Rate)",
+      "Measles First-Dose MCV1 (84.0% Global Rate)",
+      "Polio Third-Dose Pol3 (85.0% Vaccination)",
+      "Zero-Dose Vulnerable Children (13.8M Unvaccinated)",
+      "Measles Second-Dose Booster (76.0% MCV2 Share)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D65",
+    "slug": "d65_noaa_ocean_heat_content",
+    "title": "NOAA NCEI Global Ocean Heat Content & Basin Warming Anomalies",
+    "domain": "Marine Oceanography & Planetary Thermodynamics",
+    "target_user": "Senior Marine Oceanography & Planetary Thermodynamics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within marine oceanography & planetary thermodynamics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "NOAA National Centers for Environmental Information (NCEI)",
+    "analytical_capabilities_and_metrics": [
+      "0-2000m Ocean Heat Content (411.0 Zettajoules)",
+      "Upper Ocean (0-700m) Anomaly (279.0 ZJ Heating)",
+      "Deep Column (700-2000m) Heat (132.0 ZJ Absorbed)",
+      "Pacific Basin Heat Absorption (188.5 ZJ Anomaly)",
+      "Annual Thermal Uptake Velocity (16.5 ZJ / Year)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D66",
+    "slug": "d66_ioc_olympic_games_history",
+    "title": "IOC Worldwide Modern Olympic Games Historical Performance",
+    "domain": "International Athletics & Sports Analytics",
+    "target_user": "Senior International Athletics & Sports Analytics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within international athletics & sports analytics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Olympic Committee (IOC)",
+    "analytical_capabilities_and_metrics": [
+      "Olympic Athlete Participation (10,500 Athletes)",
+      "Female Participation Share (50.0% Perfect Parity)",
+      "Participating Nations & NOCs (206 Delegations)",
+      "Contested Sport Medal Events (329 Competitions)",
+      "Top Delegation Medal Haul (126 Medals - USA)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D67",
+    "slug": "d67_unctad_maritime_merchant_fleet",
+    "title": "UNCTAD Global Maritime Merchant Fleet & Vessel Capacity",
+    "domain": "Maritime Economics & Global Supply Chain Logistics",
+    "target_user": "Senior Maritime Economics & Global Supply Chain Logistics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within maritime economics & global supply chain logistics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UN Conference on Trade and Development (UNCTAD)",
+    "analytical_capabilities_and_metrics": [
+      "World Merchant Fleet Tonnage (2,355.0M DWT)",
+      "Annual Seaborne Trade Volume (12.6 Billion Tons)",
+      "Dry Bulk Carrier Fleet (1,018.0M DWT Carrying)",
+      "Specialized LNG/LPG Gas Fleet (110.1M DWT)",
+      "Average Commercial Fleet Age (22.5 Years)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D68",
+    "slug": "d68_emdat_natural_disasters",
+    "title": "CRED EM-DAT International Natural Disasters & Economic Impact",
+    "domain": "Disaster Risk Science & Climatological Hazard Analysis",
+    "target_user": "Senior Disaster Risk Science & Climatological Hazard Analysis Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within disaster risk science & climatological hazard analysis.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Centre for Research on the Epidemiology of Disasters (CRED EM-DAT)",
+    "analytical_capabilities_and_metrics": [
+      "Annual Recorded Disasters (385 Natural Events)",
+      "Direct Economic Damages ($195.0 Billion USD)",
+      "Affected Global Population (90.5M Persons)",
+      "Hydro-Meteorological Share (68.1% of Hazards)",
+      "Recorded Human Fatalities (22.0k Casualties)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D69",
+    "slug": "d69_oecd_pisa_education",
+    "title": "OECD PISA Global Education Assessment & Student Literacy",
+    "domain": "Educational Metrics & Cognitive Human Capital",
+    "target_user": "Senior Educational Metrics & Cognitive Human Capital Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within educational metrics & cognitive human capital.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Organisation for Economic Co-operation and Development (OECD PISA)",
+    "analytical_capabilities_and_metrics": [
+      "Top Mathematics Score (575.0 Pts - Singapore)",
+      "Top Reading Literacy (543.0 Pts - Singapore)",
+      "Top Science Score (561.0 Pts - Singapore)",
+      "High Performing Cohort (41.2% Top Performers)",
+      "Socioeconomic Equity Index (0.88 High Parity - Estonia)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D70",
+    "slug": "d70_iucn_red_list_biodiversity",
+    "title": "IUCN Red List Global Biodiversity & Species Extinction Risk",
+    "domain": "Biodiversity & Conservation Biology",
+    "target_user": "Senior Biodiversity & Conservation Biology Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within biodiversity & conservation biology.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "International Union for Conservation of Nature (IUCN Red List)",
+    "analytical_capabilities_and_metrics": [
+      "Total Evaluated Species (163,040 Assessed)",
+      "Species Threatened with Extinction (45,350 Taxa)",
+      "Critically Endangered Species (9,760 Taxa at Brink)",
+      "Amphibian Extinction Risk (41.5% Threatened)",
+      "Reef Coral Vulnerability (33.4% Bleaching/Risk)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D71",
+    "slug": "d71_faostat_fertilizer_nutrients",
+    "title": "FAOSTAT Global Agricultural Fertilizer Consumption & Nutrient Application",
+    "domain": "Agronomy & Soil Biogeochemistry",
+    "target_user": "Senior Agronomy & Soil Biogeochemistry Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within agronomy & soil biogeochemistry.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Food and Agriculture Organization of the UN (FAOSTAT)",
+    "analytical_capabilities_and_metrics": [
+      "Total Nutrient Application (206.8 Million MT)",
+      "Nitrogen Fertilizer Influx (115.4 MMT N)",
+      "Phosphate Application (49.5 MMT P\u2082O\u2085)",
+      "Cropland Nutrient Intensity (140.6 kg / Hectare)",
+      "Global Cereal Grain Output (3.14 Billion Tonnes)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D72",
+    "slug": "d72_unoosa_orbital_space_launches",
+    "title": "UNOOSA / Space-Track Worldwide Orbital Space Launches & Missions",
+    "domain": "Aerospace Engineering & Astronautics",
+    "target_user": "Senior Aerospace Engineering & Astronautics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within aerospace engineering & astronautics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UN Office for Outer Space Affairs (UNOOSA / Space-Track)",
+    "analytical_capabilities_and_metrics": [
+      "Worldwide Orbital Launches (252 Missions)",
+      "Payloads Deployed to Orbit (3,210 Satellites)",
+      "Launch Success Reliability (96.8% Success Rate)",
+      "Commercial Satellite Share (92.8% of Payloads)",
+      "Leading National Operator (142 US Orbital Launches)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D73",
+    "slug": "d73_energy_institute_world_energy",
+    "title": "Energy Institute World Primary Energy Consumption by Fuel Mix",
+    "domain": "Energy Economics & Global Transition Thermodynamics",
+    "target_user": "Senior Energy Economics & Global Transition Thermodynamics Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within energy economics & global transition thermodynamics.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "Energy Institute (Statistical Review of World Energy)",
+    "analytical_capabilities_and_metrics": [
+      "Total World Primary Energy (631.2 Exajoules)",
+      "Modern Solar & Wind Energy (65.5 EJ Clean Power)",
+      "Fossil Fuel Dominance Share (80.9% of Total Energy)",
+      "Total Clean Electricity (130.1 EJ Clean Primary)",
+      "Coal Baseload Consumption (164.8 EJ Global Coal)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D74",
+    "slug": "d74_un_sdsn_world_happiness",
+    "title": "UN SDSN / Gallup World Happiness Index & Life Satisfaction",
+    "domain": "Behavioral Economics & Subjective Well-Being",
+    "target_user": "Senior Behavioral Economics & Subjective Well-Being Analysts, Public Policy Planners & Domain Specialists",
+    "real_world_problem": "Monitoring structural dynamics, regional performance imbalances, and risk indicators within behavioral economics & subjective well-being.",
+    "actionable_decisions_supported": "Capital expenditure allocation, policy intervention prioritization, and operational risk mitigation based on verified sovereign indicators.",
+    "data_provenance_and_authority": "UN Sustainable Development Solutions Network & Gallup",
+    "analytical_capabilities_and_metrics": [
+      "Top Happiness Rating (7.74 / 10 - Finland)",
+      "Global Cohort Mean Rating (6.81 / 10 Average)",
+      "Healthy Life Expectancy (74.4 Years - Japan)",
+      "High Social Support Network (1.62 Index - Iceland)",
+      "India Subjective Evaluation (4.05 / 10 Cantril Score)"
+    ],
+    "methodological_limitations": "Official statistical reporting lags, periodic base-year revisions, and deflator adjustments.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D75",
+    "slug": "d75_who_amr_surveillance",
+    "title": "Global Antimicrobial Resistance (AMR) & Pathogen Surveillance",
+    "domain": "Epidemiology & Clinical Pharmacology",
+    "target_user": "Hospital Epidemiologists, Infectious Disease Specialists & National Formulary Committees",
+    "real_world_problem": "Rapid emergence of multi-drug resistant bacterial pathogens rendering standard first-line empirical antibiotic treatments ineffective for bloodstream infections and sepsis.",
+    "actionable_decisions_supported": "Revising empirical sepsis antibiotic guidelines, prioritizing hospital antimicrobial stewardship audits, and guiding national reserve antibiotic stockpiles.",
+    "data_provenance_and_authority": "World Health Organization (WHO GLASS) & CDC",
+    "analytical_capabilities_and_metrics": [
+      "MRSA Bloodstream Resistance (36.2% Global Avg)",
+      "E. coli 3GC Resistance (39.5% Pathogen Rate)",
+      "K. pneumoniae Carbapenem (20.8% High Resistance)",
+      "Surveillance Culture Sites (3,105 Certified Labs)",
+      "Stewardship Compliance (74.2% Hospital Standard)"
+    ],
+    "methodological_limitations": "Standardized phenotypic antimicrobial susceptibility testing (AST) following EUCAST/CLSI breakpoints reported through national reference bacteriology laboratories.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D76",
+    "slug": "d76_grid_india_frequency_stability",
+    "title": "Power Grid Frequency Stability, Peak Load & Renewable Curtailment",
+    "domain": "Electrical Power Systems & Grid Reliability",
+    "target_user": "Power Grid Dispatchers, Energy Traders & Utility Renewable Integration Engineers",
+    "real_world_problem": "Intense midday solar generation ramps causing frequency spikes above 50.05 Hz followed by steep evening duck-curve deficits threatening grid islanding.",
+    "actionable_decisions_supported": "Scheduling battery storage (BESS) charging cycles, triggering thermal spinning reserve ramp-down, and assessing deviation settlement mechanism (DSM) commercial penalties.",
+    "data_provenance_and_authority": "Grid Controller of India (Grid-India / POSOCO) & CEA",
+    "analytical_capabilities_and_metrics": [
+      "Peak Demand Met (250.2 GW All-Time Record)",
+      "Band Frequency Compliance (91.5% Time in Band)",
+      "Renewable Grid Capacity (148.0 GW Solar/Wind)",
+      "Estimated RE Curtailment (5.8% Peak Hours)",
+      "Spinning Reserve Margin (5.6% Operating Buffer)"
+    ],
+    "methodological_limitations": "SCADA telemetry recording 15-minute average grid frequency and regional generation dispatch schedules compiled by National Load Despatch Centre (NLDC).",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D77",
+    "slug": "d77_cpcb_municipal_solid_waste",
+    "title": "Municipal Solid Waste Generation, Segregation & Landfill Diversion",
+    "domain": "Urban Sanitation & Environmental Engineering",
+    "target_user": "Municipal Commissioners, Sanitation Engineers & Circular Economy Concessionaires",
+    "real_world_problem": "Overcapacity metropolitan landfills producing toxic leachate groundwater contamination and severe landfill fires due to unsegregated municipal garbage.",
+    "actionable_decisions_supported": "Siting new decentralized biomethanation plants, reallocating waste collection truck fleets to low-segregation wards, and planning legacy dumpsite biomining tenders.",
+    "data_provenance_and_authority": "Central Pollution Control Board (CPCB) & MoHUA SBM-Urban",
+    "analytical_capabilities_and_metrics": [
+      "Total Monitored Waste (69,637 TPD Generated)",
+      "Doorstep Collection Rate (97.2% City Average)",
+      "Scientific Waste Processing (71.5% Metropolitan Rate)",
+      "Top Segregation City (Indore - 98.5% Source Segregated)",
+      "Waste-to-Energy Capacity (12,050 TPD Active)"
+    ],
+    "methodological_limitations": "Weighbridge logbooks at transfer stations and processing plants verified against Annual State Pollution Control Board MSW submissions under SWM Rules 2016.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D78",
+    "slug": "d78_cgwb_groundwater_stress",
+    "title": "Groundwater Depletion, Aquifer Salinity & Water Table Stress",
+    "domain": "Hydrogeology & Water Resource Management",
+    "target_user": "Irrigation District Engineers, Hydrogeologists & Agricultural Policymakers",
+    "real_world_problem": "Drastic drop in deep aquifers due to free agricultural power borewells causing pump failures, fluoride/saline water quality degradation, and agrarian bankruptcy.",
+    "actionable_decisions_supported": "Enforcing statutory bans on new commercial deep borewells in notified blocks, targeting artificial recharge check dams, and shifting crop patterns to millets.",
+    "data_provenance_and_authority": "Central Ground Water Board (CGWB), Ministry of Jal Shakti",
+    "analytical_capabilities_and_metrics": [
+      "Total Annual Extractable (398.2 BCM Groundwater)",
+      "Current Annual Extraction (239.5 BCM Withdrawn)",
+      "National Extraction Stage (60.1% Average Balance)",
+      "Over-Exploited Blocks (1,029 Dark Assessment Units)",
+      "Salinity Affected Districts (246 Agrarian Basins)"
+    ],
+    "methodological_limitations": "GEC-2015 methodology integrating water level fluctuation measurements across 26,000+ observation wells with specific yield and rainfall recharge modeling.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D79",
+    "slug": "d79_iea_critical_minerals",
+    "title": "Global Critical Raw Minerals Supply Chain Concentration & Security",
+    "domain": "Strategic Resources & Geopolitical Supply Chains",
+    "target_user": "Industrial Procurement Directors, National Security Advisors & EV Battery Chiefs",
+    "real_world_problem": "Extreme geographic concentration of mineral refining in a single geopolitical jurisdiction creating high vulnerability to export embargoes, tariffs, and shipping chokepoints.",
+    "actionable_decisions_supported": "Establishing national critical mineral strategic stockpiles, evaluating multi-billion dollar domestic refinery subsidies, and entering bilateral trade partnerships.",
+    "data_provenance_and_authority": "International Energy Agency (IEA) & USGS",
+    "analytical_capabilities_and_metrics": [
+      "Monitored Critical Minerals (12 Strategic Metals)",
+      "Peak Refining Concentration (98.2% China - Dysprosium)",
+      "Natural Graphite Refining (95.0% Monopolized Hub)",
+      "Global Critical Minerals Market ($306.9 Billion USD)",
+      "Highest Secondary Recycling (28.4% Platinum Group)"
+    ],
+    "methodological_limitations": "Material flow analysis tracking extraction, processing, and end-use demand across EV battery, solar PV, and wind turbine technology roadmaps.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D80",
+    "slug": "d80_nha_hospital_bed_capacity",
+    "title": "Public Healthcare Hospital Bed Capacity, ICU Utilization & Staffing",
+    "domain": "Healthcare Systems & Clinical Capacity Planning",
+    "target_user": "State Health Secretaries, Hospital Superintendents & Health Allocation Taskforces",
+    "real_world_problem": "Severe hospital bed crowding (>90% occupancy) in densely populated states alongside nurse-to-doctor ratios falling far below WHO guidelines (requiring 3:1).",
+    "actionable_decisions_supported": "Sanctioning 50-bed critical care hospital blocks under PM-ABHIM, deploying contractual nurses to high-strain hospitals, and optimizing tertiary referral transfers.",
+    "data_provenance_and_authority": "National Health Authority (NHA / MoHFW)",
+    "analytical_capabilities_and_metrics": [
+      "Total Public Hospital Beds (988,900 Active Beds)",
+      "Critical Care ICU Beds (104,190 ICU Units)",
+      "Top Bed Density State (Goa - 2.15 Beds / 1k Pop)",
+      "Average Bed Occupancy (80.2% System Pressure)",
+      "Empanelled PM-JAY Hospitals (22,960 Health Facilities)"
+    ],
+    "methodological_limitations": "Facility-level infrastructure audits verified through the PM-JAY Hospital Empanelment Management System and MoHFW National Health Mission reports.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D81",
+    "slug": "d81_fao_wfp_food_security",
+    "title": "Global Food Security, Cereal Import Dependency & Caloric Vulnerability",
+    "domain": "Agronomic Economics & Humanitarian Nutrition",
+    "target_user": "WFP Relief Planners, National Strategic Grain Managers & Agricultural Economists",
+    "real_world_problem": "Surging international wheat and rice prices driving import-dependent low-income countries into acute famine crises when national grain reserves fall below 60 days.",
+    "actionable_decisions_supported": "Triggering emergency humanitarian grain import tenders, releasing subsidized grain buffer stocks into local markets, and pre-positioning food aid shipments.",
+    "data_provenance_and_authority": "UN Food and Agriculture Organization (FAO) & WFP",
+    "analytical_capabilities_and_metrics": [
+      "Extreme Import Dependency (94.5% Cereal Deficit - Yemen)",
+      "Food Price Inflation Peak (72.4% Annual Spike - Sudan)",
+      "Lowest Food Reserve Buffer (0.8 Months Emergency Cover)",
+      "Average Caloric Availability (2,504 kcal / Person / Day)",
+      "Undernourishment Hotspot (54.0% Population - Somalia)"
+    ],
+    "methodological_limitations": "FAO Food Balance Sheets methodology tracking national supply utilization accounts, import dependency formulas, and household dietary consumption surveys.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D82",
+    "slug": "d82_morth_urban_traffic_congestion",
+    "title": "Urban Traffic Congestion Index, Bottleneck Speed & Commute Delay",
+    "domain": "Urban Mass Transit & Intelligent Transportation",
+    "target_user": "Municipal Traffic Police Commissioners, Urban Bus Transit Planners & Metro Rail Leads",
+    "real_world_problem": "Severe corridor traffic gridlock reducing surface speeds below 16 km/h, generating massive air pollution and hundreds of millions in wasted commuter work hours.",
+    "actionable_decisions_supported": "Designating bus rapid transit (BRT) priority corridors, synchronizing adaptive traffic signal controls (ATCS), and planning multi-level flyovers at critical choke points.",
+    "data_provenance_and_authority": "MoRTH Urban Mobility Division & TomTom Traffic Index",
+    "analytical_capabilities_and_metrics": [
+      "Peak Traffic Congestion (68.4% Delay - Bengaluru)",
+      "Lost Commuter Hours Peak (242 Hours / Commuter / Year)",
+      "Slowest Peak Hour Corridor (15.2 km/h Average Speed)",
+      "Time to Travel 10 km (29.5 Minutes Peak Journey)",
+      "Highest Transit Modal Share (68.2% Suburban Transit - Mumbai)"
+    ],
+    "methodological_limitations": "Floating car telemetry and GNSS probe trajectory data aggregated across municipal road networks measuring free-flow versus observed peak-period speeds.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D83",
+    "slug": "d83_nbtc_blood_bank_reserves",
+    "title": "National Blood Bank Inventory Reserves, Group Deficits & Logistics",
+    "domain": "Transfusion Medicine & Emergency Healthcare Supply Chain",
+    "target_user": "State Blood Transfusion Councils, Trauma Hospital Logistics Leads & Red Cross Coordinators",
+    "real_world_problem": "Dangerous stockouts of rare blood groups (O-negative, B-negative) during emergency surgeries and short platelet shelf-life (5 days) causing unnecessary maternal and trauma fatalities.",
+    "actionable_decisions_supported": "Routing emergency inter-district blood transfer vans, dispatching targeted mobile donor vans to deficit zones, and expanding component separation centrifuge access.",
+    "data_provenance_and_authority": "National Blood Transfusion Council (NBTC / e-RaktKosh) & MoHFW",
+    "analytical_capabilities_and_metrics": [
+      "Total Monitored Blood Banks (3,365 Licensed Facilities)",
+      "Annual Blood Units Collected (16.2 Million Units)",
+      "Highest Voluntary Donation (95.8% Voluntary - Tripura)",
+      "Critical Rare Stock Buffer (1.2 Days O-Negative - Bihar)",
+      "Component Separation Rate (69.8% National Standard)"
+    ],
+    "methodological_limitations": "Real-time stock entry registers on e-RaktKosh centralized portal tracking cross-matching logs, donor screening, and cold storage shelf-life compliance.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D84",
+    "slug": "d84_cpcb_cems_industrial_emissions",
+    "title": "Industrial Air Toxic Emissions, Continuous Monitoring & Compliance",
+    "domain": "Industrial Ecology & Environmental Regulatory Enforcement",
+    "target_user": "State Pollution Control Board Enforcement Officers, District Magistrates & Plant Safety VPs",
+    "real_world_problem": "Heavily polluting industries turning off electrostatic precipitators (ESPs) and scrubbers at night to cut electricity costs, creating severe toxic smogs in surrounding residential villages.",
+    "actionable_decisions_supported": "Issuing automated Show-Cause and Section 5 closure notices to defaulting plants, mandating wet-scrubber retrofits, and enforcing bank guarantees for environmental restoration.",
+    "data_provenance_and_authority": "Central Pollution Control Board (CPCB CEMS) & SPCB",
+    "analytical_capabilities_and_metrics": [
+      "Peak Industrial CEPI Score (93.69 Critically Polluted - Tarapur)",
+      "Connected Monitored Stacks (3,466 Industrial Chimneys)",
+      "Highest Stack PM Exceedance (36.8% Non-Compliant - Dhanbad)",
+      "Average SO2 Compliance Rate (70.2% Industrial Standard)",
+      "Statutory Closure Notices (196 Defaulting Plants)"
+    ],
+    "methodological_limitations": "Automated stack optical transmissometers and NDIR gas analyzers transmitting live concentration readings directly to CPCB national servers without manual intervention.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D85",
+    "slug": "d85_indian_railways_safety",
+    "title": "National Railway Track Derailment, Ultrasonic Flaws & Rail Safety",
+    "domain": "Railway Engineering & Operational Safety",
+    "target_user": "Chief Safety Officers (Railway Board), Permanent Way Engineers & Signal Supervisors",
+    "real_world_problem": "Fatigue-induced rail fractures and signal passing at danger (SPAD) causing catastrophic train derailments and loss of human life.",
+    "actionable_decisions_supported": "Prioritizing urgent track renewal ballast work on high-fracture corridors, scheduling Kavach loco installation contracts, and eliminating hazardous level crossings.",
+    "data_provenance_and_authority": "Commission of Railway Safety (CRS / MCA) & Indian Railways",
+    "analytical_capabilities_and_metrics": [
+      "Monitored Track Route (68,495 Kilometers)",
+      "USFD Track Fractures Found (2,389 Micro-Cracks Detected)",
+      "Consequential Rail Accidents (65 Incidents Nationwide)",
+      "Kavach Automatic Train Protection (2,850 Kilometers Deployed)",
+      "Track Renewal Completed (6,940 Route Kilometers Renewed)"
+    ],
+    "methodological_limitations": "Digital USFD trolley ultrasonic wave flaw testing records paired with permanent way inspectorial registers and CRS formal statutory accident investigation reports.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D86",
+    "slug": "d86_bis_sovereign_debt_default_risk",
+    "title": "Global Sovereign Debt Default Risk, Credit Spreads & Solvency",
+    "domain": "Sovereign Credit Risk & Macroprudential Solvency",
+    "target_user": "Sovereign Wealth Risk Officers, Central Bank Reserve Managers & Multilateral Debt Negotiators",
+    "real_world_problem": "Escalating international interest rates triggering severe sovereign debt servicing spirals, foreign exchange depletion, and sudden sovereign default lockouts.",
+    "actionable_decisions_supported": "Assessing eligibility for debt reprofiling under the G20 Common Framework, establishing foreign currency debt swap lines, and adjusting sovereign reserve risk weighting.",
+    "data_provenance_and_authority": "Bank for International Settlements (BIS) & World Bank",
+    "analytical_capabilities_and_metrics": [
+      "Peak CDS Credit Default Spread (2,600 bps - Sri Lanka)",
+      "Highest External Debt-to-GNI (78.2% Sovereign Ratio - Tunisia)",
+      "Short-Term Debt Exposure Peak (28.5% Rollover Risk - Turkey)",
+      "Debt Service to Exports Ratio (52.0% Foreign Exchange Drain)",
+      "Investment Grade Anchor Spread (88 bps - India BBB- Solid)"
+    ],
+    "methodological_limitations": "Merton structural credit model adaptations and standard CDS parity pricing combining sovereign external debt registries with secondary Eurobond spreads.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D87",
+    "slug": "d87_mnre_offgrid_solar_reliability",
+    "title": "Rural Off-Grid Solar Mini-Grid Electrification & Reliability",
+    "domain": "Distributed Renewable Energy & Rural Infrastructure",
+    "target_user": "Rural Energy Program Directors, Distributed Renewable Energy Developers & Micro-Grid Engineers",
+    "real_world_problem": "Rural grid outages lasting 8-12 hours during critical crop watering seasons causing diesel generator pollution and stunted rural micro-enterprise development.",
+    "actionable_decisions_supported": "Targeting capital subsidies to hamlets with lowest daily energy hours, sizing battery storage retrofits, and approving micro-enterprise commercial connections.",
+    "data_provenance_and_authority": "Ministry of New and Renewable Energy (MNRE) & IRENA",
+    "analytical_capabilities_and_metrics": [
+      "Installed Solar Mini-Grids (286,200 kWp Rural Capacity)",
+      "Electrified Remote Hamlets (16,040 Off-Grid Habitations)",
+      "Agricultural Solar Pumps (624,300 PM-KUSUM Pumps)",
+      "Average Daily Power Supply (18.4 Hours / Day)",
+      "Lithium Battery Adoption (53.8% Modern Storage Share)"
+    ],
+    "methodological_limitations": "Remote IoT smart meter telemetry connected to mini-grid charge controllers measuring daily kilowatt-hour generation and uptime SLA compliance.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D88",
+    "slug": "d88_njdg_court_case_pendency",
+    "title": "District Court Case Pendency, Disposal Rates & Judicial Delays",
+    "domain": "Judicial Administration & Legal Analytics",
+    "target_user": "High Court Administrative Judges, Law Secretaries & State Legal Aid Authorities",
+    "real_world_problem": "Over 44 million pending cases delaying property transfers, commercial contracts, and keeping thousands of impoverished citizens in jail as undertrials for years.",
+    "actionable_decisions_supported": "Sanctioning Fast Track Special Courts (FTSCs) for specific case classes, allocating judicial vacancies to high-pendency districts, and expanding National Lok Adalat mediation days.",
+    "data_provenance_and_authority": "National Judicial Data Grid (NJDG) & Ministry of Law & Justice",
+    "analytical_capabilities_and_metrics": [
+      "Total Pending Court Cases (44.6 Million Litigations)",
+      "Cases Older than 5 Years (32.4% Chronic Delay Ratio)",
+      "Ultra-Delayed Cases >10 Years (13.8% Justice Bottleneck)",
+      "Annual Disposals per Judge (1,712 Cases / Judge / Year)",
+      "Undertrial Prisoner Share (71.5% Prison Incarceration Rate)"
+    ],
+    "methodological_limitations": "CIS (Case Information System) automated court docket registries deployed across 3,300+ court complexes calculating case lifecycle milestones and judge-bench productivity.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D89",
+    "slug": "d89_certin_cyber_incidents",
+    "title": "National Cyber Threats, Ransomware Surge & Infrastructure Breaches",
+    "domain": "Cyber Defense & Critical Infrastructure Protection",
+    "target_user": "Chief Information Security Officers (CISOs), NCIIPC Threat Directors & Critical Infrastructure Leads",
+    "real_world_problem": "Targeted ransomware encrypting hospital patient records, power grid transmission SCADA networks, and banking portals, resulting in extortion and public panic.",
+    "actionable_decisions_supported": "Mandating zero-trust multi-factor architecture, scheduling air-gapped immutable backup drills, and enforcing sectoral cybersecurity compliance audits.",
+    "data_provenance_and_authority": "Indian Computer Emergency Response Team (CERT-In) & ENISA",
+    "analytical_capabilities_and_metrics": [
+      "Annual Cyber Incidents (1.72M Security Breaches)",
+      "Ransomware Attacks Reported (2,480 Enterprise Extortions)",
+      "Critical Sector Intrusions (355 Power/Bank Breaches)",
+      "Phishing Campaigns Tracked (98,400 Malicious Campaigns)",
+      "Mean Containment Duration (36.0 Hours Incident Resolution)"
+    ],
+    "methodological_limitations": "Standardized mandatory cybersecurity incident reporting logs under CERT-In Directions 2022 paired with forensic threat intelligence feeds from sectoral CERTs.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D90",
+    "slug": "d90_mofpi_cold_storage_logistics",
+    "title": "Agricultural Cold Storage Logistics, Food Loss & Horticultural Waste",
+    "domain": "Agro-Logistics & Post-Harvest Cold Chains",
+    "target_user": "Agro-Logistics Investors, Horticultural Board Directors & APMC Market Committee Leads",
+    "real_world_problem": "Over 18% of perishable fruits and vegetables rotting before reaching urban consumers due to a lack of farm-gate packhouses and refrigerated transport.",
+    "actionable_decisions_supported": "Approving capital subsidies for multi-commodity CA stores in fruit clusters, financing refrigerated reefer truck fleets, and building farm-gate solar cold rooms.",
+    "data_provenance_and_authority": "Ministry of Food Processing Industries (MoFPI) & NCCD",
+    "analytical_capabilities_and_metrics": [
+      "Installed Cold Chain Storage (401.8 Lakh Metric Tonnes)",
+      "Active Cold Storage Projects (8,485 Facilities Nationwide)",
+      "Average Horticultural Wastage (18.2% Post-Harvest Loss)",
+      "Multi-Commodity Share (31.4% Advanced CA Stores)",
+      "Annual Loss Financial Value (\u20b968,400 Crore Wasted Harvest)"
+    ],
+    "methodological_limitations": "National cold-chain capacity surveys conducted by NCCD and NABARD integrating state horticulture production data with physical capacity registrations.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D91",
+    "slug": "d91_fsi_wildfire_early_warning",
+    "title": "Forest Wildfire Early Warning, Thermal Burn Severity & Response",
+    "domain": "Forestry Fire Management & Remote Sensing Ecology",
+    "target_user": "Principal Chief Conservators of Forests (PCCF), Range Forest Officers & Disaster Response Teams",
+    "real_world_problem": "Intense pre-monsoon heatwaves igniting dry deciduous and pine forests, destroying valuable wildlife habitats, generating carbon emissions, and threatening forest settlements.",
+    "actionable_decisions_supported": "Pre-deploying fire watcher squads with leaf blowers to high-vulnerability compartments, clearing dry fuel along strategic fire-lines, and mobilizing aerial water drop teams.",
+    "data_provenance_and_authority": "Forest Survey of India (FSI FAST 3.0) & NASA FIRMS",
+    "analytical_capabilities_and_metrics": [
+      "Total Annual Fire Alerts (309,550 Satellite Thermal Points)",
+      "Affected Forest Area (392,320 Hectares Burned)",
+      "Highest State Alert Burden (34,500 Alerts - Odisha)",
+      "Extreme Fire Vulnerability (26.8% Forest Cover at Risk)",
+      "Average First-Response Time (49.5 Minutes to Frontline)"
+    ],
+    "methodological_limitations": "FSI Forest Fire Alert System version 3.0 processing SNPP-VIIRS and MODIS satellite daytime and nighttime passes overlayed onto digitized compartment boundaries.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D92",
+    "slug": "d92_mohua_urban_rental_housing",
+    "title": "Urban Affordable Rental Housing Deficit, Slum Upgradation & Tenancy",
+    "domain": "Urban Housing Economics & Social Policy",
+    "target_user": "Municipal Housing Commissioners, Slum Rehabilitation Authorities & Urban Planners",
+    "real_world_problem": "Exorbitant urban rents forcing low-income migrant workers into informal slums lacking sanitation, while over 1.4 million formal private apartments sit locked and vacant.",
+    "actionable_decisions_supported": "Rezoning government-funded vacant housing complexes into Affordable Rental Housing (ARHC), offering property tax incentives for formal rental leasing, and planning in-situ slum redevelopment.",
+    "data_provenance_and_authority": "Ministry of Housing and Urban Affairs (MoHUA ARHC) & Census",
+    "analytical_capabilities_and_metrics": [
+      "Metropolitan Housing Deficit (3.35 Million Urban Homes)",
+      "Highest Slum Population (41.8% Municipal Share - Mumbai)",
+      "Rent Burden Distress Peak (48.5% Median Income on Rent)",
+      "Migrant Worker Population (29.8 Million Informal Workers)",
+      "Sanctioned ARHC Rental Units (84,670 Dedicated Rentals)"
+    ],
+    "methodological_limitations": "Urban Local Body (ULB) housing demand surveys validated against Census household asset tables and PMAY-Urban MIS project completion records.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D93",
+    "slug": "d93_cmfri_marine_fisheries",
+    "title": "Coastal Marine Fisheries Catch, Trawling Intensity & Sustainable Yield",
+    "domain": "Marine Resource Economics & Sustainable Fisheries",
+    "target_user": "State Fisheries Directors, Marine Enforcement Agencies & Fisherfolk Cooperatives",
+    "real_world_problem": "Intense over-capitalized mechanized trawling harvesting juvenile commercial fish stocks, leading to localized fish population collapses and threatening artisanal fisherfolk livelihoods.",
+    "actionable_decisions_supported": "Enforcing uniform 61-day monsoon seasonal fishing bans, establishing statutory cod-end mesh size limits, and commissioning artificial reef sanctuaries to rejuvenate benthic stocks.",
+    "data_provenance_and_authority": "ICAR-Central Marine Fisheries Research Institute (CMFRI)",
+    "analytical_capabilities_and_metrics": [
+      "Total Marine Fish Landings (3.88 Million Metric Tonnes)",
+      "Mechanized Trawling Share (74.8% Commercial Catch)",
+      "Critical Over-Exploitation (1.22x Beyond Sustainable MSY - Goa)",
+      "Juvenile Bycatch Rate (17.5% Ecologically Damaging Discard)",
+      "Marine Seafood Export Value (\u20b946,800 Crore Earnings)"
+    ],
+    "methodological_limitations": "Stratified multistage random sampling design monitoring 1,265 marine fish landing centers throughout India's Exclusive Economic Zone (EEZ).",
+    "verification_status": "VERIFIED OPERATIONAL"
+  },
+  {
+    "dashboard_id": "D94",
+    "slug": "d94_telemanas_mental_health",
+    "title": "National Mental Health Support, Psychiatric Deficits & Tele-MANAS",
+    "domain": "Psychiatry & Public Mental Health Informatics",
+    "target_user": "National Mental Health Program Coordinators, Clinical Directors & Tele-MANAS State Leads",
+    "real_world_problem": "Enormous mental health treatment gap (>75%) combined with severe societal stigma and a crippling shortage of qualified psychiatrists in rural and tier-2 districts.",
+    "actionable_decisions_supported": "Allocating additional bilingual psychologists to high-volume Tele-MANAS cells, expanding the District Mental Health Programme (DMHP) to 100% of districts, and establishing psychiatric outpatient clinics in district civil hospitals.",
+    "data_provenance_and_authority": "Ministry of Health and Family Welfare (Tele-MANAS) & NIMHANS",
+    "analytical_capabilities_and_metrics": [
+      "Total Tele-MANAS Calls Handled (1.46 Million Distress Calls)",
+      "Tele-Counseling Resolution (85.6% Distress Managed on Call)",
+      "Acute Specialist Deficit (0.21 Psychiatrists / 100k - Bihar)",
+      "Anxiety & Depression Share (53.4% of Inbound Consultations)",
+      "Emergency Clinical Referrals (4.4% In-Person Hospital Interventions)"
+    ],
+    "methodological_limitations": "Anonymized call detail records and clinical triage notes logged by trained clinical psychologists and psychiatric social workers at 51 Tele-MANAS cells nationwide.",
+    "verification_status": "VERIFIED OPERATIONAL"
+  }
+]

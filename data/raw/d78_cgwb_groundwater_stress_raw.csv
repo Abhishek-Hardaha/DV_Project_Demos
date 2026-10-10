@@ -1,0 +1,26 @@
+state,total_annual_extractable_bcm,current_annual_extraction_bcm,stage_of_extraction_pct,over_exploited_units_count,critical_units_count,safe_units_count,salinity_affected_districts
+Punjab,18.84,28.02,148.7,117,4,19,14
+Rajasthan,11.23,16.94,150.8,203,34,38,28
+Haryana,8.62,11.58,134.3,85,12,22,16
+Tamil Nadu,18.52,14.82,80.0,435,63,484,18
+Uttar Pradesh,64.25,45.12,70.2,82,47,650,22
+Gujarat,19.85,10.58,53.3,28,12,184,19
+Madhya Pradesh,34.25,18.5,54.0,26,8,275,10
+Maharashtra,31.42,16.85,53.6,11,4,328,12
+Karnataka,16.8,11.25,67.0,55,14,152,15
+Andhra Pradesh,19.24,6.85,35.6,18,9,612,11
+Telangana,14.5,7.25,50.0,25,12,480,9
+Bihar,28.5,13.4,47.0,0,0,534,8
+West Bengal,26.85,11.2,41.7,1,3,265,14
+Odisha,16.4,4.25,25.9,0,0,314,6
+Assam,24.8,3.12,12.6,0,0,182,2
+Chhattisgarh,11.5,4.8,41.7,0,1,145,4
+Jharkhand,5.25,1.85,35.2,2,3,245,5
+Kerala,5.85,2.85,48.7,3,0,148,4
+Himachal Pradesh,0.42,0.18,42.8,1,0,9,1
+Uttarakhand,2.12,1.05,49.5,2,0,16,2
+Jammu and Kashmir,1.85,0.48,25.9,0,0,22,1
+Delhi,0.32,0.38,118.7,15,3,9,7
+Goa,0.15,0.05,33.3,0,0,12,1
+Puducherry,0.18,0.15,83.3,2,0,4,2
+Tripura,0.95,0.12,12.6,0,0,8,0

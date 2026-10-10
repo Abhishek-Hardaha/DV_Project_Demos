@@ -1,0 +1,89 @@
+/* ==========================================================================
+   State Indicators: Loading, Empty Search, Error, Cached Notice & Alerts
+   Transforms Generic Messages into Purpose-Built Analytical Feedback
+   ========================================================================== */
+
+/* 1. Alert Messages Overrides */
+div[data-testid="stAlert"] {
+  border-radius: var(--radius-lg) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding: 0.85rem 1.15rem !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Info Alert */
+div[data-testid="stAlert"]:has(div[role="alert"]) {
+  background: #050505 !important;
+  border-color: var(--border-default) !important;
+}
+
+/* Warning Alert */
+div[data-testid="stNotification"][kind="warning"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconWarning"]) {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #fde68a !important;
+}
+
+/* Error Alert */
+div[data-testid="stNotification"][kind="error"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconError"]) {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #fca5a5 !important;
+}
+
+/* Success Alert */
+div[data-testid="stNotification"][kind="success"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconSuccess"]) {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #6ee7b7 !important;
+}
+
+/* 2. Custom Empty State Widget */
+.empty-state-box {
+  background: linear-gradient(145deg, #050505 0%, #000000 100%);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.75;
+}
+
+.empty-state-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.empty-state-description {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* 3. Offline Cache Notice */
+.offline-cache-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}

@@ -1,0 +1,26 @@
+country,official_gold_holdings_tonnes,gold_share_total_forex_reserves_pct,annual_net_purchases_tonnes,market_value_usd_billion,per_capita_gold_grams,reserve_ranking_tier,usd_value_per_tonne_million,sovereign_gold_share_of_global_pct,gold_intensity_tier
+United States,8133.5,71.3,0.0,618.1,24.3,Tier 1 Dominant,75.99,27.96,Heavy Strategic Anchor (>60%)
+Germany,3352.7,70.6,-2.1,254.8,40.2,Tier 1 Dominant,76.0,11.52,Heavy Strategic Anchor (>60%)
+Italy,2451.8,67.4,0.0,186.3,41.6,Tier 1 Dominant,75.98,8.43,Heavy Strategic Anchor (>60%)
+France,2436.9,69.1,0.0,185.2,35.8,Tier 1 Dominant,76.0,8.38,Heavy Strategic Anchor (>60%)
+Russia,2335.9,29.5,16.2,177.5,16.2,Tier 2 Major,75.99,8.03,Balanced Allocation
+China,2264.3,4.9,72.8,172.1,1.6,Tier 2 Major,76.01,7.78,Low Allocation (<15%)
+Switzerland,1040.0,8.2,0.0,79.0,118.2,Tier 2 Major,75.96,3.57,Low Allocation (<15%)
+Japan,846.0,4.4,0.0,64.3,6.8,Tier 2 Major,76.0,2.91,Low Allocation (<15%)
+India,840.8,9.6,42.5,63.9,0.6,Tier 2 Major,76.0,2.89,Low Allocation (<15%)
+Netherlands,612.5,60.5,0.0,46.5,34.4,Tier 3 Sovereign,75.92,2.11,Heavy Strategic Anchor (>60%)
+Turkey,584.9,34.2,45.6,44.5,6.9,Tier 3 Sovereign,76.08,2.01,Balanced Allocation
+Taiwan,423.6,4.8,0.0,32.2,18.0,Tier 3 Sovereign,76.02,1.46,Low Allocation (<15%)
+Uzbekistan,371.4,71.8,8.4,28.2,10.3,Tier 3 Sovereign,75.93,1.28,Heavy Strategic Anchor (>60%)
+Portugal,382.6,73.1,0.0,29.1,37.1,Tier 3 Sovereign,76.06,1.32,Heavy Strategic Anchor (>60%)
+Poland,358.7,12.8,130.0,27.3,9.5,Tier 3 Sovereign,76.11,1.23,Balanced Allocation
+Saudi Arabia,323.1,4.3,0.0,24.6,9.0,Tier 3 Sovereign,76.14,1.11,Low Allocation (<15%)
+United Kingdom,310.3,11.2,0.0,23.6,4.6,Tier 3 Sovereign,76.06,1.07,Balanced Allocation
+Kazakhstan,298.8,56.4,-12.0,22.7,15.2,Tier 3 Sovereign,75.97,1.03,Heavy Strategic Anchor (>60%)
+Lebanon,286.8,54.2,0.0,21.8,52.1,Tier 3 Sovereign,76.01,0.99,Balanced Allocation
+Spain,281.6,18.5,0.0,21.4,5.9,Tier 3 Sovereign,75.99,0.97,Balanced Allocation
+Austria,280.0,61.2,0.0,21.3,31.1,Tier 3 Sovereign,76.07,0.96,Heavy Strategic Anchor (>60%)
+Thailand,244.4,6.8,0.0,18.6,3.4,Tier 3 Sovereign,76.1,0.84,Low Allocation (<15%)
+Belgium,227.4,36.8,0.0,17.3,19.4,Tier 3 Sovereign,76.08,0.78,Balanced Allocation
+Algeria,173.6,15.2,0.0,13.2,3.8,Tier 3 Sovereign,76.04,0.6,Balanced Allocation
+Singapore,230.2,3.8,25.1,17.5,39.0,Tier 3 Sovereign,76.02,0.79,Low Allocation (<15%)

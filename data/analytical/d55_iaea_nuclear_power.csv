@@ -1,0 +1,26 @@
+country,operational_reactors,total_net_capacity_mwe,under_construction_reactors,nuclear_share_electricity_pct,permanent_shutdown_reactors,mean_reactor_age_years,cumulative_generation_twh,capacity_per_reactor_mwe,total_reactor_fleet_experience,generation_intensity_per_gw,nuclear_power_tier
+United States,93,95835,0,18.6,41,42.1,804.5,1030.5,3915.3,8.39,Dominant Fleet
+France,56,61370,1,64.8,14,38.4,335.6,1095.9,2150.4,5.47,Dominant Fleet
+China,56,54152,27,4.9,0,10.2,433.4,967.0,571.2,8.0,Dominant Fleet
+Russia,36,26802,4,18.4,10,39.8,217.4,744.5,1432.8,8.11,Dominant Fleet
+Japan,33,31679,2,5.6,27,33.2,67.8,960.0,1095.6,2.14,Dominant Fleet
+South Korea,26,25825,2,31.5,2,23.5,180.5,993.3,611.0,6.99,Dominant Fleet
+India,24,7425,6,2.8,0,24.1,48.2,309.4,578.4,6.49,Dominant Fleet
+Canada,19,13624,0,13.7,6,39.5,87.6,717.1,750.5,6.43,Dominant Fleet
+Ukraine,15,13107,2,55.0,4,36.7,52.4,873.8,550.5,4.0,Dominant Fleet
+United Kingdom,9,5883,2,13.9,36,38.9,41.1,653.7,350.1,6.99,Substantial Fleet
+Spain,7,7123,0,20.3,3,39.2,56.1,1017.6,274.4,7.88,Substantial Fleet
+Sweden,6,6937,0,29.5,7,43.1,48.9,1156.2,258.6,7.05,Substantial Fleet
+Belgium,5,3928,0,41.2,3,44.5,33.6,785.6,222.5,8.55,Substantial Fleet
+Czechia,6,3932,0,40.0,0,29.7,30.4,655.3,178.2,7.73,Substantial Fleet
+Pakistan,6,3262,0,17.2,1,14.8,22.4,543.7,88.8,6.87,Substantial Fleet
+Finland,5,4394,0,41.0,0,26.3,32.8,878.8,131.5,7.46,Substantial Fleet
+Hungary,4,1916,2,48.8,0,38.6,15.9,479.0,154.4,8.3,Emerging / Small Fleet
+Switzerland,4,2973,0,32.4,1,48.2,23.4,743.2,192.8,7.87,Emerging / Small Fleet
+Slovakia,5,2294,1,61.3,3,31.2,18.3,458.8,156.0,7.98,Emerging / Small Fleet
+Brazil,2,1884,1,2.2,0,32.4,14.5,942.0,64.8,7.7,Emerging / Small Fleet
+South Africa,2,1854,0,4.4,0,39.6,12.1,927.0,79.2,6.53,Emerging / Small Fleet
+Mexico,2,1608,0,4.5,0,32.8,11.2,804.0,65.6,6.97,Emerging / Small Fleet
+Romania,2,1300,0,19.3,0,22.5,10.9,650.0,45.0,8.38,Emerging / Small Fleet
+Argentina,3,1641,1,5.4,0,27.9,9.8,547.0,83.7,5.97,Emerging / Small Fleet
+United Arab Emirates,4,5348,0,19.7,0,3.2,31.5,1337.0,12.8,5.89,Substantial Fleet

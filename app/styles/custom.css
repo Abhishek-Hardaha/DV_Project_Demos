@@ -1,0 +1,1199 @@
+/* ==========================================================================
+   Design System Tokens: Colors, Typography, Surfaces, Spacing & Shadows
+   Executive Public-Data Intelligence Platform Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Surfaces & Backgrounds - True OLED Pitch Black */
+  --bg-app: #000000;
+  --bg-canvas: #000000;
+  --bg-surface-1: #000000;
+  --bg-surface-2: #050505;
+  --bg-surface-3: #0c0c0c;
+  --bg-surface-elevated: #141414;
+  --bg-glass: rgba(0, 0, 0, 0.92);
+  --bg-glass-card: rgba(5, 5, 5, 0.9);
+
+  /* Primary Brand & Accents */
+  --accent-cyan: #38bdf8;
+  --accent-cyan-light: #7dd3fc;
+  --accent-cyan-dim: rgba(56, 189, 248, 0.15);
+  --accent-blue: #3b82f6;
+  --accent-blue-dim: rgba(59, 130, 246, 0.15);
+  --accent-indigo: #818cf8;
+  --accent-purple: #c084fc;
+  --accent-purple-dim: rgba(192, 132, 252, 0.15);
+
+  /* Semantic Feedback Indicators */
+  --color-success: #34d399;
+  --color-success-dim: rgba(52, 211, 153, 0.15);
+  --color-warning: #fbbf24;
+  --color-warning-dim: rgba(251, 191, 36, 0.15);
+  --color-danger: #f87171;
+  --color-danger-dim: rgba(248, 113, 113, 0.15);
+  --color-gold: #facc15;
+  --color-gold-dim: rgba(250, 204, 21, 0.15);
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-invert: #000000;
+
+  /* Border Colors */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: #171717;
+  --border-medium: #222222;
+  --border-highlight: #38bdf8;
+  --border-gold: rgba(250, 204, 21, 0.45);
+
+  /* Typography Fonts */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.9), 0 2px 4px -2px rgba(0, 0, 0, 0.9);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.95), 0 4px 6px -4px rgba(0, 0, 0, 0.95);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.98), 0 8px 10px -6px rgba(0, 0, 0, 0.98);
+  --shadow-glow-cyan: 0 0 25px -3px rgba(56, 189, 248, 0.3);
+  --shadow-glow-gold: 0 0 25px -3px rgba(250, 204, 21, 0.3);
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* ==========================================================================
+   Application Shell: Canvas, Viewport, Layout Grid & Global Overrides
+   Eliminates Streamlit Default Appearance and Establishes Premium Canvas
+   ========================================================================== */
+
+/* 1. Global Reset & Canvas Styling */
+html, body {
+  background-color: #000000 !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Streamlit App Container */
+.stApp {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Main Content Wrapper */
+.main .block-container {
+  max-width: 1440px !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3.5rem !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* 2. Hide Default Streamlit Clutter */
+header[data-testid="stHeader"] {
+  background: transparent !important;
+  height: 2.5rem !important;
+}
+
+div[data-testid="stDecoration"] {
+  display: none !important;
+}
+
+#MainMenu, footer, .stDeployButton {
+  display: none !important;
+}
+
+/* 3. Global Typography */
+h1, h2, h3, h4, h5, h6, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+  font-family: var(--font-sans) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+h1 {
+  font-size: 2rem !important;
+  line-height: 1.25 !important;
+}
+
+h2 {
+  font-size: 1.6rem !important;
+  line-height: 1.3 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+h3 {
+  font-size: 1.25rem !important;
+  line-height: 1.35 !important;
+}
+
+h4 {
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+}
+
+h5 {
+  font-size: 0.95rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--accent-cyan) !important;
+}
+
+p, span, label, div {
+  font-family: var(--font-sans);
+}
+
+.stCaption, small, span.caption {
+  color: var(--text-muted) !important;
+  font-size: 0.825rem !important;
+  line-height: 1.5 !important;
+}
+
+hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, var(--border-medium), transparent) !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* 4. Code and Monospace */
+code {
+  font-family: var(--font-mono) !important;
+  font-size: 0.85em !important;
+  background: #080808 !important;
+  color: var(--accent-cyan-light) !important;
+  padding: 0.2em 0.45em !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid #1a1a1a !important;
+}
+
+/* 5. Custom Sleek Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-medium);
+}
+
+
+/* ==========================================================================
+   Navigation Styles: Sidebar, Command Header, Nav Pills & Menu Items
+   Converts Streamlit Sidebar & Radio Widgets into Institutional Nav Drawer
+   ========================================================================== */
+
+/* 0. Hide Native Multi-Page Sidebar Nav & Top Toolbar */
+[data-testid="stSidebarNav"],
+div[data-testid="stSidebarNav"] {
+  display: none !important;
+}
+
+header[data-testid="stHeader"] {
+  background: transparent !important;
+}
+
+div[data-testid="stToolbar"] {
+  display: none !important;
+}
+
+/* 1. Sidebar Container */
+section[data-testid="stSidebar"] {
+  background-color: var(--bg-surface-1) !important;
+  border-right: 1px solid var(--border-default) !important;
+  box-shadow: 4px 0 24px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+section[data-testid="stSidebar"] > div {
+  padding-top: 1.5rem !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+/* 2. Sidebar Navigation Radio Replacement */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] > label {
+  display: none !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] {
+  gap: 0.35rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Radio Option as Interactive Nav Pill */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"] {
+  background: transparent !important;
+  border-radius: var(--radius-md) !important;
+  padding: 0.55rem 0.85rem !important;
+  margin: 0 !important;
+  transition: all var(--transition-fast) !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  width: 100% !important;
+}
+
+/* Hide default circular radio button input */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"] input {
+  display: none !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"] div:first-child {
+  display: none !important;
+}
+
+/* Text inside radio option */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"] div[data-testid="stMarkdownContainer"] p {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  margin: 0 !important;
+  transition: color var(--transition-fast) !important;
+}
+
+/* Hover State */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"]:hover {
+  background: var(--bg-surface-2) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-baseweb="radio"]:hover p {
+  color: var(--text-primary) !important;
+}
+
+/* Active / Selected State (Checked) */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[aria-checked="true"],
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked) {
+  background: linear-gradient(90deg, var(--accent-cyan-dim) 0%, #080808 100%) !important;
+  border-left: 3px solid var(--accent-cyan) !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.1) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[aria-checked="true"] p,
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked) p {
+  color: var(--accent-cyan-light) !important;
+  font-weight: 600 !important;
+}
+
+/* 3. Sidebar Header & Branding Card */
+.brand-sidebar-card {
+  background: linear-gradient(135deg, #070707 0%, #000000 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.brand-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+/* 4. Authenticity Status Footer Card */
+.sidebar-auth-badge {
+  background: #050505;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.auth-live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+  margin-right: 6px;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+
+/* ==========================================================================
+   Card Components: KPI Metrics, Gallery Cards, Showcase Tiles & Briefings
+   Custom Institutional Presentation for High-Density Analytics
+   ========================================================================== */
+
+/* 1. Executive KPI Metric Card */
+.kpi-container {
+  background: linear-gradient(145deg, #050505 0%, #000000 100%) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 1.15rem 1.25rem !important;
+  transition: all var(--transition-normal) !important;
+  box-shadow: var(--shadow-md) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 125px !important;
+}
+
+.kpi-container:hover {
+  transform: translateY(-3px) !important;
+  border-color: var(--border-highlight) !important;
+  box-shadow: var(--shadow-glow-cyan), var(--shadow-lg) !important;
+}
+
+/* Subtle Accent Top Border Highlight */
+.kpi-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-indigo));
+  opacity: 0.85;
+}
+
+.kpi-label {
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0.4rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.kpi-value {
+  font-size: 1.7rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.15 !important;
+  font-family: var(--font-mono) !important;
+  letter-spacing: -0.02em !important;
+  font-variant-numeric: tabular-nums !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.kpi-delta {
+  font-size: 0.775rem !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 3px 8px !important;
+  border-radius: var(--radius-pill) !important;
+  width: fit-content !important;
+}
+
+.delta-pos {
+  background: var(--color-success-dim) !important;
+  color: var(--color-success) !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
+.delta-neg {
+  background: var(--color-danger-dim) !important;
+  color: var(--color-danger) !important;
+  border: 1px solid rgba(248, 113, 113, 0.3) !important;
+}
+
+.delta-neutral {
+  background: rgba(148, 163, 184, 0.12) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+.kpi-footnote {
+  font-size: 0.72rem !important;
+  color: var(--text-faint) !important;
+  margin-top: 0.35rem !important;
+  line-height: 1.3 !important;
+}
+
+/* 2. Dashboard Gallery Cards */
+.gallery-card {
+  background: linear-gradient(145deg, #050505 0%, #000000 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.4rem;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow-cyan), var(--shadow-xl);
+}
+
+/* Flagship Showcase Glow */
+.gallery-card.showcase-glow, div:has(> .badge-showcase) {
+  border-color: var(--border-gold) !important;
+}
+
+.gallery-card.showcase-glow:hover {
+  box-shadow: var(--shadow-glow-gold), var(--shadow-xl) !important;
+}
+
+/* Pill Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  margin-right: 6px;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.badge-india {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+}
+
+.badge-global {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.badge-live {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+.badge-showcase {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(245, 158, 11, 0.3) 100%);
+  color: var(--color-gold);
+  border: 1px solid var(--border-gold);
+}
+
+.badge-map {
+  background: var(--accent-purple-dim);
+  color: var(--accent-purple);
+  border: 1px solid rgba(192, 132, 252, 0.35);
+}
+
+.badge-tier1 {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* 3. Institutional 3-Part Intelligence Container */
+.institutional-briefing {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg, #050505 0%, #000000 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.35rem 1.6rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.briefing-card {
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.15rem;
+  background: #050505;
+  border: 1px solid #141414;
+}
+
+.card-finding {
+  border-left: 4px solid var(--accent-cyan);
+}
+
+.card-why {
+  border-left: 4px solid var(--color-warning);
+}
+
+.card-note {
+  border-left: 4px solid var(--text-muted);
+}
+
+.briefing-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 5px;
+}
+
+.label-finding { color: var(--accent-cyan); }
+.label-why { color: var(--color-warning); }
+.label-note { color: var(--text-muted); }
+
+.briefing-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   Form Controls: Selects, Multiselects, Inputs, Sliders & Action Buttons
+   Custom Deep Styling for Professional Interactive Data Filtering
+   ========================================================================== */
+
+/* 1. Elevated Filter Panel Toolbar */
+.filter-panel {
+  background: linear-gradient(135deg, #050505 0%, #000000 100%) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 1.25rem 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* 2. Streamlit Selectbox & Dropdowns */
+div[data-baseweb="select"] {
+  background-color: var(--bg-surface-1) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+div[data-baseweb="select"] > div {
+  background-color: var(--bg-surface-1) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.88rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-baseweb="select"]:hover > div {
+  border-color: var(--accent-cyan) !important;
+}
+
+div[data-baseweb="select"] > div:focus-within {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 1px var(--accent-cyan) !important;
+}
+
+/* Dropdown Menu Popover */
+div[data-baseweb="popover"] {
+  background-color: var(--bg-surface-2) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-xl) !important;
+  overflow: hidden !important;
+}
+
+ul[role="listbox"] {
+  background-color: var(--bg-surface-2) !important;
+  padding: 0.35rem !important;
+}
+
+li[role="option"] {
+  color: var(--text-secondary) !important;
+  font-size: 0.86rem !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.5rem 0.75rem !important;
+  transition: background var(--transition-fast) !important;
+}
+
+li[role="option"]:hover, li[aria-selected="true"] {
+  background-color: var(--bg-surface-3) !important;
+  color: var(--accent-cyan-light) !important;
+}
+
+/* 3. Multiselect Tags */
+div[data-baseweb="tag"] {
+  background-color: var(--bg-surface-3) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 0.15rem 0.55rem !important;
+}
+
+div[data-baseweb="tag"] span {
+  color: var(--accent-cyan-light) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* 4. Text Inputs & Search Bars */
+div[data-testid="stTextInput"] input {
+  background-color: var(--bg-surface-1) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  padding: 0.6rem 0.85rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-testid="stTextInput"] input:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 1px var(--accent-cyan) !important;
+}
+
+/* Form Labels */
+.stTextInput label, .stSelectbox label, .stMultiSelect label, .stSlider label {
+  color: var(--text-muted) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* 5. Range Sliders */
+div[data-baseweb="slider"] {
+  margin-top: 0.5rem !important;
+}
+
+div[data-testid="stSlider"] div[role="slider"] {
+  background-color: var(--accent-cyan) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* 6. Buttons */
+button {
+  font-family: var(--font-sans) !important;
+  letter-spacing: 0.01em !important;
+  border-radius: var(--radius-md) !important;
+  transition: all var(--transition-fast) !important;
+}
+
+/* Secondary Button (Default Streamlit Button) */
+button[kind="secondary"] {
+  background: var(--bg-surface-2) !important;
+  border: 1px solid var(--border-medium) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  padding: 0.55rem 1rem !important;
+}
+
+button[kind="secondary"]:hover {
+  background: var(--bg-surface-3) !important;
+  border-color: var(--accent-cyan) !important;
+  color: var(--accent-cyan-light) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+button[kind="secondary"]:active {
+  transform: translateY(0) !important;
+}
+
+/* Primary Button */
+button[kind="primary"] {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35) !important;
+}
+
+button[kind="primary"]:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.5) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Download CSV Button */
+div[data-testid="stDownloadButton"] button {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+  color: var(--color-success) !important;
+  font-weight: 600 !important;
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+  background: rgba(16, 185, 129, 0.25) !important;
+  border-color: var(--color-success) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+
+/* ==========================================================================
+   Chart Components: Plotly Containers, Title Cards & Legend Layouts
+   Elevates Visualizations into Polished BI Analytical Widgets
+   ========================================================================== */
+
+/* 1. Chart Wrapper Container */
+.chart-widget-card {
+  background: #000000;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.15rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-fast);
+}
+
+.chart-widget-card:hover {
+  border-color: var(--border-medium);
+}
+
+/* 2. Plotly Element Embed */
+div[data-testid="stPlotlyChart"] {
+  background: #000000 !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 0.6rem !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-testid="stPlotlyChart"]:hover {
+  border-color: var(--border-medium) !important;
+  box-shadow: var(--shadow-lg), 0 0 15px rgba(56, 189, 248, 0.08) !important;
+}
+
+div[data-testid="stPlotlyChart"] > div {
+  border-radius: var(--radius-lg);
+}
+
+/* Plotly Modebar Controls (Zoom, Pan, Reset) */
+.js-plotly-plot .plotly .modebar {
+  background: #050505 !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-subtle) !important;
+  padding: 2px 4px !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn path {
+  fill: var(--text-muted) !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn:hover path {
+  fill: var(--accent-cyan) !important;
+}
+
+/* 3. Section Header for Visuals */
+.visuals-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.visuals-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visuals-density-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 2px 8px;
+}
+
+
+/* ==========================================================================
+   Table & Data Grid Components: Dataframes, Tables & Record Viewers
+   Upgrades Raw Dataframes into Polished Analytical Grids
+   ========================================================================== */
+
+/* 1. Dataframe Container Wrapper */
+.datagrid-wrapper {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.datagrid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.datagrid-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.datagrid-count-badge {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface-2);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+/* 2. Streamlit Dataframe Overrides */
+div[data-testid="stDataFrame"] {
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+  background-color: var(--bg-surface-1) !important;
+}
+
+/* Glide Data Grid Component inside Streamlit */
+div[data-testid="stDataFrame"] canvas {
+  border-radius: var(--radius-lg);
+}
+
+/* 3. Static HTML Table Fallback */
+table.dataframe {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 0.84rem !important;
+  background: var(--bg-surface-1) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+}
+
+table.dataframe th {
+  background: var(--bg-surface-2) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  padding: 0.65rem 0.85rem !important;
+  border-bottom: 2px solid var(--border-medium) !important;
+}
+
+table.dataframe td {
+  padding: 0.55rem 0.85rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+}
+
+table.dataframe tr:hover td {
+  background: var(--bg-surface-3) !important;
+}
+
+
+/* ==========================================================================
+   Modals, Tabs & Information Drawers: ⓘ Dossier & Expandable Panels
+   Transforms Default Expanders & Dialogs into Institutional Dossiers
+   ========================================================================== */
+
+/* 1. Information Dossier Expander */
+div[data-testid="stExpander"] {
+  background: #000000 !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-md) !important;
+  margin-bottom: 1.25rem !important;
+  overflow: hidden !important;
+}
+
+div[data-testid="stExpander"] details {
+  border: none !important;
+}
+
+div[data-testid="stExpander"] summary {
+  padding: 0.85rem 1.25rem !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-surface-2) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  transition: background var(--transition-fast) !important;
+}
+
+div[data-testid="stExpander"] summary:hover {
+  background: var(--bg-surface-3) !important;
+  color: var(--accent-cyan-light) !important;
+}
+
+div[data-testid="stExpander"] summary svg {
+  fill: var(--accent-cyan) !important;
+}
+
+div[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
+  padding: 1.25rem 1.5rem !important;
+}
+
+/* 2. Streamlit Tabs */
+div[data-baseweb="tab-list"] {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-medium) !important;
+  gap: 1.5rem !important;
+  padding-bottom: 2px !important;
+}
+
+button[data-baseweb="tab"] {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 0.25rem !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all var(--transition-fast) !important;
+}
+
+button[data-baseweb="tab"]:hover {
+  color: var(--text-primary) !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+  color: var(--accent-cyan) !important;
+  border-bottom-color: var(--accent-cyan) !important;
+  font-weight: 700 !important;
+}
+
+div[data-baseweb="tab-highlight"] {
+  background-color: var(--accent-cyan) !important;
+  height: 2px !important;
+}
+
+/* 3. Provenance Citation Card */
+.citation-card {
+  background: #050505;
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent-cyan);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 0.75rem;
+}
+
+
+/* ==========================================================================
+   State Indicators: Loading, Empty Search, Error, Cached Notice & Alerts
+   Transforms Generic Messages into Purpose-Built Analytical Feedback
+   ========================================================================== */
+
+/* 1. Alert Messages Overrides */
+div[data-testid="stAlert"] {
+  border-radius: var(--radius-lg) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding: 0.85rem 1.15rem !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Info Alert */
+div[data-testid="stAlert"]:has(div[role="alert"]) {
+  background: #050505 !important;
+  border-color: var(--border-default) !important;
+}
+
+/* Warning Alert */
+div[data-testid="stNotification"][kind="warning"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconWarning"]) {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #fde68a !important;
+}
+
+/* Error Alert */
+div[data-testid="stNotification"][kind="error"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconError"]) {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #fca5a5 !important;
+}
+
+/* Success Alert */
+div[data-testid="stNotification"][kind="success"],
+div[data-testid="stAlert"]:has(svg[data-testid="stIconSuccess"]) {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #6ee7b7 !important;
+}
+
+/* 2. Custom Empty State Widget */
+.empty-state-box {
+  background: linear-gradient(145deg, #050505 0%, #000000 100%);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.75;
+}
+
+.empty-state-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.empty-state-description {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* 3. Offline Cache Notice */
+.offline-cache-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+
+/* ==========================================================================
+   Responsive Adaptations & Breakpoints: Desktop, Tablet & Mobile Layouts
+   Ensures Clean Responsive Behavior and Readability on All Displays
+   ========================================================================== */
+
+/* 1. Large Displays (>= 1440px) */
+@media (min-width: 1440px) {
+  .main .block-container {
+    max-width: 1560px !important;
+  }
+}
+
+/* 2. Laptops and Medium Displays (<= 1200px) */
+@media (max-width: 1200px) {
+  .main .block-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  .hero-title {
+    font-size: 1.85rem !important;
+  }
+}
+
+/* 3. Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 1.75rem 1.25rem !important;
+  }
+  
+  .hero-title {
+    font-size: 1.6rem !important;
+  }
+
+  .kpi-container {
+    min-height: 110px !important;
+    padding: 1rem !important;
+  }
+
+  .kpi-value {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* 4. Compact & Mobile Viewports (<= 768px) */
+@media (max-width: 768px) {
+  .main .block-container {
+    padding-top: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .hero-container {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem !important;
+  }
+
+  .filter-panel {
+    padding: 1rem !important;
+  }
+
+  .institutional-briefing {
+    padding: 1rem !important;
+  }
+}
+
+

@@ -1,0 +1,13 @@
+mineral,primary_energy_use,top_producing_country,top_producer_share_pct,top_refining_country,top_refiner_share_pct,global_market_size_billion_usd,recycling_share_of_supply_pct,projected_2030_supply_deficit_pct,hhi_producer_concentration_index,hhi_refiner_concentration_index,refining_to_mining_dominance_ratio,geopolitical_vulnerability_tier
+Lithium,EV Batteries & Grid Storage,Australia,52.4,China,65.2,19.8,2.5,18.5,27.0,43.0,1.24,Concentrated Hub
+Cobalt,NMC Chemistry Cathodes,DR Congo,73.1,China,76.5,8.4,8.2,12.4,53.0,59.0,1.05,Monopoly Bottleneck (>75%)
+Nickel (Class 1),High-Nickel EV Batteries,Indonesia,48.5,China,38.0,36.2,7.8,8.2,24.0,14.0,0.78,Diversified Refining
+Graphite (Natural),Battery Anodes,China,70.2,China,95.0,5.2,1.2,24.0,49.0,90.0,1.35,Monopoly Bottleneck (>75%)
+Neodymium (REE),Wind Turbines & EV Motors,China,69.8,China,89.4,4.8,1.5,19.8,49.0,80.0,1.28,Monopoly Bottleneck (>75%)
+Dysprosium (REE),High-Temp Permanent Magnets,China,72.0,China,98.2,1.8,0.8,26.5,52.0,96.0,1.36,Monopoly Bottleneck (>75%)
+Copper,Grid Infrastructure & Motors,Chile,24.5,China,44.8,185.0,17.5,6.5,6.0,20.0,1.83,Diversified Refining
+Silicon (Solar Grade),Photovoltaic Wafers,China,78.4,China,86.2,14.5,0.5,4.2,61.0,74.0,1.1,Monopoly Bottleneck (>75%)
+Platinum,Hydrogen Fuel Cells & Auto-Cat,South Africa,71.8,South Africa,42.5,6.8,28.4,5.0,52.0,18.0,0.59,Diversified Refining
+Iridium,PEM Water Electrolyzers,South Africa,82.5,United Kingdom,45.0,0.8,14.2,38.0,68.0,20.0,0.55,Diversified Refining
+Manganese,Battery Cathodes & Steel,South Africa,36.4,China,92.5,18.2,3.4,9.5,13.0,86.0,2.54,Monopoly Bottleneck (>75%)
+Vanadium,Vanadium Redox Flow Batteries,China,62.5,China,58.0,2.4,4.5,11.2,39.0,34.0,0.93,Concentrated Hub

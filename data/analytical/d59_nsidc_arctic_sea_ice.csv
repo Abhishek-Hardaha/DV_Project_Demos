@@ -1,0 +1,17 @@
+year,arctic_september_minimum_million_sqkm,arctic_march_maximum_million_sqkm,antarctic_february_minimum_million_sqkm,antarctic_september_maximum_million_sqkm,arctic_extent_anomaly_sqkm,antarctic_extent_anomaly_sqkm,polar_albedo_feedback_index,global_polar_minimum_sqkm,seasonal_arctic_melt_range_sqkm,arctic_loss_vs_1980_pct,cryosphere_vulnerability_tier
+1980,7.67,16.04,3.12,19.12,1.25,0.42,100.0,10.79,8.37,0.0,Historical Baseline
+1985,6.7,15.89,2.95,18.98,0.28,0.28,98.4,9.65,9.19,-12.6,Historical Baseline
+1990,6.14,15.58,2.82,18.84,-0.28,0.14,96.1,8.96,9.44,-19.9,Historical Baseline
+1995,6.08,15.22,2.91,19.05,-0.34,0.35,95.2,8.99,9.14,-20.7,Historical Baseline
+2000,6.25,15.3,2.76,19.18,-0.17,0.48,95.8,9.01,9.05,-18.5,Historical Baseline
+2005,5.5,14.88,2.88,19.02,-0.92,0.32,91.5,8.38,9.38,-28.3,Historical Baseline
+2007,4.27,14.71,2.85,19.26,-2.15,0.56,84.2,7.12,10.44,-44.3,Severe Contraction
+2010,4.87,15.14,3.01,19.22,-1.55,0.52,87.6,7.88,10.27,-36.5,Moderate Loss
+2012,3.57,15.24,3.55,19.44,-2.85,0.74,78.4,7.12,11.67,-53.5,Severe Contraction
+2015,4.62,14.39,3.65,18.83,-1.8,0.13,85.1,8.27,9.77,-39.8,Severe Contraction
+2018,4.66,14.48,2.21,18.15,-1.76,-0.55,84.8,6.87,9.82,-39.2,Moderate Loss
+2020,3.92,15.05,2.68,18.95,-2.5,0.25,80.2,6.6,11.13,-48.9,Severe Contraction
+2021,4.92,14.77,2.6,18.75,-1.5,0.05,86.4,7.52,9.85,-35.9,Moderate Loss
+2022,4.87,14.88,1.98,18.19,-1.55,-0.51,84.5,6.85,10.01,-36.5,Moderate Loss
+2023,4.37,14.62,1.79,16.96,-2.05,-1.74,80.9,6.16,10.25,-43.0,Severe Contraction
+2024,4.28,14.72,1.99,17.15,-2.14,-1.55,80.1,6.27,10.44,-44.2,Severe Contraction

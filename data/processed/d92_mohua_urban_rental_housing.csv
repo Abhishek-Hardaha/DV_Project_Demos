@@ -1,0 +1,26 @@
+city,urban_housing_deficit_units,slum_population_share_pct,rent_to_income_burden_pct,migrant_worker_population_lakh,arhc_sanctioned_rental_units,avg_monthly_rent_1bhk_inr,vacant_formal_houses_count,rental_affordability_stress_ratio,arhc_coverage_of_deficit_pct,vacant_to_deficit_absorption_pct,rental_stress_tier
+Mumbai,485000,41.8,48.5,42.5,8420,18500,145000,1.62,1.74,29.9,Severe Rent Distress (>40%)
+Delhi,420000,29.4,42.0,38.0,9650,14200,185000,1.4,2.3,44.0,Severe Rent Distress (>40%)
+Kolkata,295000,31.5,34.5,21.0,4200,8900,82000,1.15,1.42,27.8,Moderate Cost Burden
+Bengaluru,245000,16.8,44.0,26.5,6800,16000,125000,1.47,2.78,51.0,Severe Rent Distress (>40%)
+Chennai,210000,28.5,36.2,18.5,5400,11500,78000,1.21,2.57,37.1,Moderate Cost Burden
+Hyderabad,185000,22.4,35.0,19.2,6100,10800,92000,1.17,3.3,49.7,Moderate Cost Burden
+Ahmedabad,168000,24.0,32.8,15.8,5800,9200,84000,1.09,3.45,50.0,Moderate Cost Burden
+Pune,154000,22.1,39.5,16.0,5200,13400,76000,1.32,3.38,49.4,Moderate Cost Burden
+Surat,172000,20.8,30.5,22.4,7400,7800,68000,1.02,4.3,39.5,Moderate Cost Burden
+Jaipur,98000,18.5,28.4,9.5,3400,7900,45000,0.95,3.47,45.9,Affordable Market (<30%)
+Lucknow,92000,21.0,29.0,8.8,3100,7600,42000,0.97,3.37,45.7,Affordable Market (<30%)
+Patna,115000,26.4,31.2,7.5,1800,6800,28000,1.04,1.57,24.3,Moderate Cost Burden
+Kanpur,88000,25.8,27.5,8.0,2400,6400,32000,0.92,2.73,36.4,Affordable Market (<30%)
+Nagpur,76000,24.2,28.0,7.8,2900,7200,38000,0.93,3.82,50.0,Affordable Market (<30%)
+Indore,64000,19.4,26.8,7.2,3800,7400,34000,0.89,5.94,53.1,Affordable Market (<30%)
+Bhopal,58000,21.5,26.0,6.4,2800,6900,31000,0.87,4.83,53.4,Affordable Market (<30%)
+Visakhapatnam,62000,23.0,29.5,7.0,3200,8100,29000,0.98,5.16,46.8,Affordable Market (<30%)
+Vadodara,52000,18.2,27.0,6.8,3400,7500,36000,0.9,6.54,69.2,Affordable Market (<30%)
+Ludhiana,78000,22.5,28.5,11.2,2600,6800,26000,0.95,3.33,33.3,Affordable Market (<30%)
+Agra,56000,24.0,26.2,5.8,1900,6200,24000,0.87,3.39,42.9,Affordable Market (<30%)
+Varanasi,48000,22.8,25.8,5.4,1600,5900,22000,0.86,3.33,45.8,Affordable Market (<30%)
+Coimbatore,44000,15.2,28.4,8.5,3600,8400,31000,0.95,8.18,70.5,Affordable Market (<30%)
+Kochi,38000,12.4,32.0,6.2,2400,10200,25000,1.07,6.32,65.8,Moderate Cost Burden
+Chandigarh,28000,14.0,34.2,5.5,2800,11000,18000,1.14,10.0,64.3,Moderate Cost Burden
+Thiruvananthapuram,24000,11.5,29.0,4.2,1900,8900,21000,0.97,7.92,87.5,Affordable Market (<30%)

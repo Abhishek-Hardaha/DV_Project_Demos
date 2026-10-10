@@ -1,0 +1,26 @@
+state,total_telemanas_calls_received,call_distress_resolution_pct,psychiatrists_per_100k_population,dmhp_covered_districts_pct,anxiety_depression_calls_pct,sleep_distress_calls_pct,severe_emergency_referrals_pct,psychiatrist_deficit_vs_who_target,unresolved_distress_calls_pct,anxiety_depression_calls_volume,mental_health_infrastructure_tier
+Tamil Nadu,145000,89.2,1.45,100.0,52.4,24.5,3.8,1.55,10.8,75980.0,Adequate Coverage (>1.0/100k)
+Maharashtra,128000,86.5,1.12,94.4,54.0,22.8,4.2,1.88,13.5,69120.0,Adequate Coverage (>1.0/100k)
+Karnataka,112000,88.0,1.35,100.0,50.8,25.2,3.6,1.65,12.0,56896.0,Adequate Coverage (>1.0/100k)
+Uttar Pradesh,168000,81.2,0.28,88.0,58.2,21.0,6.4,2.72,18.8,97776.0,Extreme Specialist Deficit (<0.5/100k)
+Kerala,98000,92.4,1.85,100.0,46.5,28.0,2.9,1.15,7.6,45570.0,Adequate Coverage (>1.0/100k)
+Andhra Pradesh,84000,85.0,0.88,96.2,51.2,23.5,4.5,2.12,15.0,43008.0,Moderate Deficit
+Telangana,79000,86.8,0.95,100.0,53.4,22.4,4.0,2.05,13.2,42186.0,Moderate Deficit
+Gujarat,72000,87.2,0.74,90.9,49.8,24.0,3.9,2.26,12.8,35856.0,Moderate Deficit
+West Bengal,68000,83.5,0.54,87.0,56.4,20.8,5.1,2.46,16.5,38352.0,Moderate Deficit
+Rajasthan,64000,84.1,0.48,87.9,55.0,21.5,5.2,2.52,15.9,35200.0,Extreme Specialist Deficit (<0.5/100k)
+Madhya Pradesh,59000,82.8,0.38,82.7,57.1,20.2,5.8,2.62,17.2,33689.0,Extreme Specialist Deficit (<0.5/100k)
+Bihar,52000,78.4,0.21,76.3,61.2,18.5,7.2,2.79,21.6,31824.0,Extreme Specialist Deficit (<0.5/100k)
+Punjab,44000,88.5,0.92,100.0,48.0,26.2,3.4,2.08,11.5,21120.0,Moderate Deficit
+Haryana,41000,86.2,0.81,100.0,51.5,23.8,3.8,2.19,13.8,21115.0,Moderate Deficit
+Odisha,38000,82.0,0.42,83.3,55.8,21.0,5.4,2.58,18.0,21204.0,Extreme Specialist Deficit (<0.5/100k)
+Assam,32000,80.5,0.35,79.4,58.0,19.8,5.9,2.65,19.5,18560.0,Extreme Specialist Deficit (<0.5/100k)
+Jharkhand,26000,79.0,0.26,75.0,59.5,19.0,6.5,2.74,21.0,15470.0,Extreme Specialist Deficit (<0.5/100k)
+Chhattisgarh,24000,81.5,0.34,81.8,56.2,20.5,5.6,2.66,18.5,13488.0,Extreme Specialist Deficit (<0.5/100k)
+Himachal Pradesh,18500,91.0,1.05,100.0,47.2,27.5,3.0,1.95,9.0,8732.0,Adequate Coverage (>1.0/100k)
+Uttarakhand,16800,85.8,0.68,92.3,52.8,23.0,4.2,2.32,14.2,8870.0,Moderate Deficit
+Jammu and Kashmir,28500,84.5,0.72,90.0,59.8,22.0,5.0,2.28,15.5,17043.0,Moderate Deficit
+Delhi,48000,89.5,1.62,100.0,51.0,25.8,3.5,1.38,10.5,24480.0,Adequate Coverage (>1.0/100k)
+Goa,8200,93.4,1.95,100.0,45.2,29.0,2.5,1.05,6.6,3706.0,Adequate Coverage (>1.0/100k)
+Tripura,7400,86.0,0.52,100.0,53.0,22.5,4.2,2.48,14.0,3922.0,Moderate Deficit
+Meghalaya,5800,84.2,0.44,83.3,54.8,21.8,4.8,2.56,15.8,3178.0,Extreme Specialist Deficit (<0.5/100k)

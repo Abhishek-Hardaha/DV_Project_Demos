@@ -1,0 +1,26 @@
+industrial_cluster,state,cepi_pollution_index,major_industry_type,stack_pm_exceedance_pct,so2_compliance_rate_pct,nox_compliance_rate_pct,cems_connected_stacks_count,closure_notices_issued
+Tarapur,Maharashtra,93.69,Chemicals & Bulk Drugs,28.5,68.2,71.4,245,18
+Vapi,Gujarat,90.25,"Dyes, Inks & Pesticides",26.2,72.0,74.5,310,14
+Singrauli,MP / UP,89.42,Thermal Power & Coal Mining,34.5,54.2,58.0,185,8
+Ankleshwar,Gujarat,88.5,Petrochemicals & Organics,22.8,75.4,78.2,280,11
+Korba,Chhattisgarh,88.24,Aluminium Smelters & Coal Power,32.1,58.0,62.4,142,6
+Chandrapur,Maharashtra,87.82,"Thermal Power, Steel & Cement",31.4,61.2,64.5,168,7
+Gajraula,Uttar Pradesh,86.85,Distilleries & Chemicals,29.8,64.5,68.0,94,12
+Jodhpur,Rajasthan,85.9,Textile Dyeing & Steel,27.4,69.0,72.8,124,9
+Manali,Tamil Nadu,84.15,Petroleum Refining & Petrochemicals,21.0,78.5,81.2,112,5
+Dhanbad,Jharkhand,83.95,Coal Washeries & Coke Plants,36.8,52.4,56.0,88,10
+Angul Talcher,Odisha,82.8,"Coal Mining, Smelters & Power",30.5,60.5,64.0,134,4
+Ludhiana,Punjab,81.6,Electroplating & Dyeing,28.2,67.4,70.8,178,15
+Pali,Rajasthan,80.4,Textile Processing & Bleaching,25.8,71.2,73.5,110,8
+Kanpur,Uttar Pradesh,79.8,Tanneries & Chemical Processing,31.0,63.8,67.2,156,16
+Cuddalore,Tamil Nadu,78.5,Pesticides & Pharmaceuticals,19.5,81.2,83.4,86,3
+Bhiwadi,Rajasthan,77.9,Engineering & Chemical Clusters,24.5,73.0,76.5,192,11
+Varanasi,Uttar Pradesh,76.4,"Textile, Diesel Works & Misc",26.2,70.5,74.0,72,7
+Visakhapatnam,Andhra Pradesh,75.8,"Refinery, Steel & Pharma",18.2,82.4,85.0,140,4
+Bhadravati,Karnataka,74.2,"Iron & Steel, Paper Mills",22.4,76.8,79.2,64,2
+Jharsuguda,Odisha,73.5,Aluminium & Power Plants,27.5,66.4,70.1,98,3
+Durgapur,West Bengal,72.8,Steel Plants & Heavy Engineering,28.4,65.0,68.5,118,5
+Haldia,West Bengal,71.9,Petrochemicals & Battery Units,19.0,80.5,82.8,92,4
+Kochi,Kerala,70.5,"Refining, Fertilisers & Chemicals",16.5,84.2,87.0,84,2
+Mandi Gobindgarh,Punjab,69.8,Steel Re-Rolling Mills,33.2,57.8,61.2,105,9
+Nagda,Madhya Pradesh,68.4,Viscose Staple Fibre & Chemicals,20.4,79.0,81.5,54,3

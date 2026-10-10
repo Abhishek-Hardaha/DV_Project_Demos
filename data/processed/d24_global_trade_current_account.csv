@@ -1,0 +1,193 @@
+country,year,current_account_gdp_pct,trade_openness_gdp_pct,surplus_deficit,abs_ca_imbalance_pct
+United States,2000,-4.0,24.0,Deficit,4.0
+United States,2001,-3.7,24.3,Deficit,3.7
+United States,2002,-4.2,24.6,Deficit,4.2
+United States,2003,-4.5,24.9,Deficit,4.5
+United States,2004,-5.1,25.2,Deficit,5.1
+United States,2005,-5.7,25.5,Deficit,5.7
+United States,2006,-5.8,25.8,Deficit,5.8
+United States,2007,-4.9,26.1,Deficit,4.9
+United States,2008,-4.6,26.4,Deficit,4.6
+United States,2009,-2.6,26.7,Deficit,2.6
+United States,2010,-2.9,27.0,Deficit,2.9
+United States,2011,-2.9,27.3,Deficit,2.9
+United States,2012,-2.6,27.6,Deficit,2.6
+United States,2013,-2.1,27.9,Deficit,2.1
+United States,2014,-2.1,28.2,Deficit,2.1
+United States,2015,-2.2,28.5,Deficit,2.2
+United States,2016,-2.1,28.8,Deficit,2.1
+United States,2017,-1.9,29.1,Deficit,1.9
+United States,2018,-2.1,29.4,Deficit,2.1
+United States,2019,-2.1,29.7,Deficit,2.1
+United States,2020,-2.9,30.0,Deficit,2.9
+United States,2021,-3.9,30.3,Deficit,3.9
+United States,2022,-3.7,30.6,Deficit,3.7
+United States,2023,-3.0,30.9,Deficit,3.0
+China,2000,1.7,40.0,Surplus,1.7
+China,2001,1.3,42.5,Surplus,1.3
+China,2002,2.4,45.0,Surplus,2.4
+China,2003,2.8,47.5,Surplus,2.8
+China,2004,3.5,50.0,Surplus,3.5
+China,2005,5.8,52.5,Surplus,5.8
+China,2006,8.4,55.0,Surplus,8.4
+China,2007,9.9,53.8,Surplus,9.9
+China,2008,9.1,52.6,Surplus,9.1
+China,2009,4.8,51.4,Surplus,4.8
+China,2010,3.9,50.2,Surplus,3.9
+China,2011,1.8,49.0,Surplus,1.8
+China,2012,2.5,47.8,Surplus,2.5
+China,2013,1.5,46.6,Surplus,1.5
+China,2014,2.2,45.4,Surplus,2.2
+China,2015,2.7,44.2,Surplus,2.7
+China,2016,1.8,43.0,Surplus,1.8
+China,2017,1.5,41.8,Surplus,1.5
+China,2018,0.2,40.6,Surplus,0.2
+China,2019,0.7,39.4,Surplus,0.7
+China,2020,1.7,38.2,Surplus,1.7
+China,2021,1.8,37.0,Surplus,1.8
+China,2022,2.2,35.8,Surplus,2.2
+China,2023,1.4,34.6,Surplus,1.4
+Germany,2000,-1.4,65.0,Deficit,1.4
+Germany,2001,-0.2,66.2,Deficit,0.2
+Germany,2002,1.9,67.4,Surplus,1.9
+Germany,2003,1.8,68.6,Surplus,1.8
+Germany,2004,4.6,69.8,Surplus,4.6
+Germany,2005,5.0,71.0,Surplus,5.0
+Germany,2006,6.1,72.2,Surplus,6.1
+Germany,2007,7.3,73.4,Surplus,7.3
+Germany,2008,6.1,74.6,Surplus,6.1
+Germany,2009,5.8,75.8,Surplus,5.8
+Germany,2010,5.7,77.0,Surplus,5.7
+Germany,2011,6.1,78.2,Surplus,6.1
+Germany,2012,7.1,79.4,Surplus,7.1
+Germany,2013,6.8,80.6,Surplus,6.8
+Germany,2014,7.4,81.8,Surplus,7.4
+Germany,2015,8.6,83.0,Surplus,8.6
+Germany,2016,8.6,84.2,Surplus,8.6
+Germany,2017,7.8,85.4,Surplus,7.8
+Germany,2018,7.4,86.6,Surplus,7.4
+Germany,2019,7.6,87.8,Surplus,7.6
+Germany,2020,7.0,89.0,Surplus,7.0
+Germany,2021,7.7,90.2,Surplus,7.7
+Germany,2022,4.2,91.4,Surplus,4.2
+Germany,2023,5.9,92.6,Surplus,5.9
+Japan,2000,2.7,21.0,Surplus,2.7
+Japan,2001,2.1,21.7,Surplus,2.1
+Japan,2002,2.7,22.4,Surplus,2.7
+Japan,2003,3.2,23.1,Surplus,3.2
+Japan,2004,3.7,23.8,Surplus,3.7
+Japan,2005,3.6,24.5,Surplus,3.6
+Japan,2006,3.9,25.2,Surplus,3.9
+Japan,2007,4.8,25.9,Surplus,4.8
+Japan,2008,3.3,26.6,Surplus,3.3
+Japan,2009,2.9,27.3,Surplus,2.9
+Japan,2010,3.9,28.0,Surplus,3.9
+Japan,2011,2.2,28.7,Surplus,2.2
+Japan,2012,1.0,29.4,Surplus,1.0
+Japan,2013,0.9,30.1,Surplus,0.9
+Japan,2014,0.8,30.8,Surplus,0.8
+Japan,2015,3.1,31.5,Surplus,3.1
+Japan,2016,4.0,32.2,Surplus,4.0
+Japan,2017,4.1,32.9,Surplus,4.1
+Japan,2018,3.5,33.6,Surplus,3.5
+Japan,2019,3.4,34.3,Surplus,3.4
+Japan,2020,2.9,35.0,Surplus,2.9
+Japan,2021,4.0,35.7,Surplus,4.0
+Japan,2022,2.1,36.4,Surplus,2.1
+Japan,2023,3.5,37.1,Surplus,3.5
+India,2000,-1.0,27.0,Deficit,1.0
+India,2001,0.1,28.1,Surplus,0.1
+India,2002,1.4,29.2,Surplus,1.4
+India,2003,1.5,30.3,Surplus,1.5
+India,2004,-0.3,31.4,Deficit,0.3
+India,2005,-1.2,32.5,Deficit,1.2
+India,2006,-1.0,33.6,Deficit,1.0
+India,2007,-1.3,34.7,Deficit,1.3
+India,2008,-2.3,35.8,Deficit,2.3
+India,2009,-2.8,36.9,Deficit,2.8
+India,2010,-2.8,38.0,Deficit,2.8
+India,2011,-4.3,39.1,Deficit,4.3
+India,2012,-4.8,40.2,Deficit,4.8
+India,2013,-1.7,41.3,Deficit,1.7
+India,2014,-1.3,42.4,Deficit,1.3
+India,2015,-1.1,43.5,Deficit,1.1
+India,2016,-0.6,44.6,Deficit,0.6
+India,2017,-1.8,45.7,Deficit,1.8
+India,2018,-2.1,46.8,Deficit,2.1
+India,2019,-0.9,47.9,Deficit,0.9
+India,2020,0.9,49.0,Surplus,0.9
+India,2021,-1.2,50.1,Deficit,1.2
+India,2022,-2.0,51.2,Deficit,2.0
+India,2023,-1.2,52.3,Deficit,1.2
+United Kingdom,2000,-2.2,45.0,Deficit,2.2
+United Kingdom,2001,-2.0,45.5,Deficit,2.0
+United Kingdom,2002,-2.1,46.0,Deficit,2.1
+United Kingdom,2003,-1.7,46.5,Deficit,1.7
+United Kingdom,2004,-2.2,47.0,Deficit,2.2
+United Kingdom,2005,-2.4,47.5,Deficit,2.4
+United Kingdom,2006,-2.7,48.0,Deficit,2.7
+United Kingdom,2007,-2.7,48.5,Deficit,2.7
+United Kingdom,2008,-3.5,49.0,Deficit,3.5
+United Kingdom,2009,-2.8,49.5,Deficit,2.8
+United Kingdom,2010,-2.6,50.0,Deficit,2.6
+United Kingdom,2011,-2.2,50.5,Deficit,2.2
+United Kingdom,2012,-3.7,51.0,Deficit,3.7
+United Kingdom,2013,-4.7,51.5,Deficit,4.7
+United Kingdom,2014,-4.6,52.0,Deficit,4.6
+United Kingdom,2015,-4.9,52.5,Deficit,4.9
+United Kingdom,2016,-5.2,53.0,Deficit,5.2
+United Kingdom,2017,-3.5,53.5,Deficit,3.5
+United Kingdom,2018,-3.9,54.0,Deficit,3.9
+United Kingdom,2019,-2.7,54.5,Deficit,2.7
+United Kingdom,2020,-2.6,55.0,Deficit,2.6
+United Kingdom,2021,-1.5,55.5,Deficit,1.5
+United Kingdom,2022,-3.8,56.0,Deficit,3.8
+United Kingdom,2023,-3.3,56.5,Deficit,3.3
+Brazil,2000,-3.8,45.0,Deficit,3.8
+Brazil,2001,-4.2,45.5,Deficit,4.2
+Brazil,2002,-1.5,46.0,Deficit,1.5
+Brazil,2003,0.8,46.5,Surplus,0.8
+Brazil,2004,1.8,47.0,Surplus,1.8
+Brazil,2005,1.6,47.5,Surplus,1.6
+Brazil,2006,1.2,48.0,Surplus,1.2
+Brazil,2007,0.1,48.5,Surplus,0.1
+Brazil,2008,-1.7,49.0,Deficit,1.7
+Brazil,2009,-1.5,49.5,Deficit,1.5
+Brazil,2010,-3.4,50.0,Deficit,3.4
+Brazil,2011,-3.0,50.5,Deficit,3.0
+Brazil,2012,-3.4,51.0,Deficit,3.4
+Brazil,2013,-3.4,51.5,Deficit,3.4
+Brazil,2014,-4.2,52.0,Deficit,4.2
+Brazil,2015,-3.0,52.5,Deficit,3.0
+Brazil,2016,-1.3,53.0,Deficit,1.3
+Brazil,2017,-0.7,53.5,Deficit,0.7
+Brazil,2018,-2.7,54.0,Deficit,2.7
+Brazil,2019,-3.5,54.5,Deficit,3.5
+Brazil,2020,-1.8,55.0,Deficit,1.8
+Brazil,2021,-2.8,55.5,Deficit,2.8
+Brazil,2022,-2.9,56.0,Deficit,2.9
+Brazil,2023,-1.3,56.5,Deficit,1.3
+South Korea,2000,2.2,70.0,Surplus,2.2
+South Korea,2001,1.6,71.5,Surplus,1.6
+South Korea,2002,1.1,73.0,Surplus,1.1
+South Korea,2003,1.8,74.5,Surplus,1.8
+South Korea,2004,3.9,76.0,Surplus,3.9
+South Korea,2005,1.8,77.5,Surplus,1.8
+South Korea,2006,0.7,79.0,Surplus,0.7
+South Korea,2007,1.1,80.5,Surplus,1.1
+South Korea,2008,0.3,82.0,Surplus,0.3
+South Korea,2009,3.3,83.5,Surplus,3.3
+South Korea,2010,2.8,85.0,Surplus,2.8
+South Korea,2011,1.6,86.5,Surplus,1.6
+South Korea,2012,2.2,88.0,Surplus,2.2
+South Korea,2013,5.6,89.5,Surplus,5.6
+South Korea,2014,5.5,91.0,Surplus,5.5
+South Korea,2015,6.5,92.5,Surplus,6.5
+South Korea,2016,6.2,94.0,Surplus,6.2
+South Korea,2017,5.0,95.5,Surplus,5.0
+South Korea,2018,4.4,97.0,Surplus,4.4
+South Korea,2019,3.6,98.5,Surplus,3.6
+South Korea,2020,4.6,100.0,Surplus,4.6
+South Korea,2021,4.7,101.5,Surplus,4.7
+South Korea,2022,1.8,103.0,Surplus,1.8
+South Korea,2023,2.1,104.5,Surplus,2.1

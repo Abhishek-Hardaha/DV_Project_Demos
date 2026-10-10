@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Table & Data Grid Components: Dataframes, Tables & Record Viewers
+   Upgrades Raw Dataframes into Polished Analytical Grids
+   ========================================================================== */
+
+/* 1. Dataframe Container Wrapper */
+.datagrid-wrapper {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.datagrid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.datagrid-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.datagrid-count-badge {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface-2);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+/* 2. Streamlit Dataframe Overrides */
+div[data-testid="stDataFrame"] {
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+  background-color: var(--bg-surface-1) !important;
+}
+
+/* Glide Data Grid Component inside Streamlit */
+div[data-testid="stDataFrame"] canvas {
+  border-radius: var(--radius-lg);
+}
+
+/* 3. Static HTML Table Fallback */
+table.dataframe {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 0.84rem !important;
+  background: var(--bg-surface-1) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+}
+
+table.dataframe th {
+  background: var(--bg-surface-2) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  padding: 0.65rem 0.85rem !important;
+  border-bottom: 2px solid var(--border-medium) !important;
+}
+
+table.dataframe td {
+  padding: 0.55rem 0.85rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+}
+
+table.dataframe tr:hover td {
+  background: var(--bg-surface-3) !important;
+}

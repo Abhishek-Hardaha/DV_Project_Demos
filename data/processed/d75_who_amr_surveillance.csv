@@ -1,0 +1,26 @@
+country,mrsa_resistance_pct,ecoli_3gcr_resistance_pct,klebsiella_carbapenem_res_pct,blood_culture_surveillance_sites,antimicrobial_stewardship_compliance_pct,defined_daily_doses_per_1000,amr_national_action_plan_tier,composite_amr_threat_score,stewardship_gap_pct,resistance_severity_tier
+India,58.4,74.2,56.8,142,62.4,21.8,Tier 1 Advanced,63.1,37.6,Critical Threat Level
+United States,32.1,16.5,3.8,480,89.2,23.4,Tier 1 Advanced,17.5,10.8,Controlled Resistance
+United Kingdom,11.2,12.8,2.1,195,94.5,18.2,Tier 1 Advanced,8.7,5.5,Controlled Resistance
+Greece,39.8,38.4,62.1,45,68.0,32.1,Tier 2 Intermediate,46.8,32.0,Critical Threat Level
+Italy,34.2,31.0,26.5,112,72.4,26.8,Tier 1 Advanced,30.6,27.6,Moderate Resistance
+China,31.4,55.6,22.8,350,78.1,19.5,Tier 1 Advanced,36.6,21.9,Moderate Resistance
+Brazil,48.6,42.1,38.4,88,59.2,22.4,Tier 2 Intermediate,43.0,40.8,Moderate Resistance
+South Africa,36.2,41.5,14.8,54,64.8,17.6,Tier 2 Intermediate,30.8,35.2,Moderate Resistance
+Thailand,28.5,49.2,18.6,76,71.0,24.2,Tier 2 Intermediate,32.1,29.0,Moderate Resistance
+France,12.8,14.2,1.8,210,91.0,23.9,Tier 1 Advanced,9.6,9.0,Controlled Resistance
+Germany,9.4,11.8,1.2,320,93.4,14.5,Tier 1 Advanced,7.5,6.6,Controlled Resistance
+Sweden,2.1,7.4,0.4,62,98.1,12.8,Tier 1 Advanced,3.3,1.9,Controlled Resistance
+Japan,44.2,24.8,1.5,180,88.5,14.9,Tier 1 Advanced,23.5,11.5,Moderate Resistance
+Australia,16.5,13.9,1.1,145,92.0,21.4,Tier 1 Advanced,10.5,8.0,Controlled Resistance
+Canada,18.2,14.8,1.6,130,90.5,17.8,Tier 1 Advanced,11.5,9.5,Controlled Resistance
+Spain,23.4,22.6,5.2,115,84.0,24.6,Tier 1 Advanced,17.1,16.0,Controlled Resistance
+Turkey,42.5,51.8,41.2,68,63.5,34.8,Tier 2 Intermediate,45.2,36.5,Critical Threat Level
+Egypt,64.2,68.4,58.2,32,48.2,36.2,Tier 3 Developing,63.6,51.8,Critical Threat Level
+Nigeria,51.8,62.4,34.5,24,42.0,19.4,Tier 3 Developing,49.6,58.0,Critical Threat Level
+Indonesia,44.8,61.2,28.4,48,56.4,21.0,Tier 3 Developing,44.8,43.6,Critical Threat Level
+Vietnam,68.5,65.8,44.2,42,58.1,28.4,Tier 3 Developing,59.5,41.9,Critical Threat Level
+Mexico,38.6,44.2,19.4,64,61.8,20.8,Tier 2 Intermediate,34.1,38.2,Moderate Resistance
+Argentina,46.2,32.8,24.1,52,67.2,21.6,Tier 2 Intermediate,34.4,32.8,Moderate Resistance
+Pakistan,62.4,76.5,48.6,38,44.8,27.5,Tier 3 Developing,62.5,55.2,Critical Threat Level
+Philippines,54.2,52.8,22.4,40,57.2,19.8,Tier 3 Developing,43.1,42.8,Moderate Resistance

@@ -1,0 +1,892 @@
+[
+  {
+    "id": "SRC_RBI",
+    "name": "Reserve Bank of India (RBI)",
+    "tier": "Tier 1 - National Central Bank",
+    "country": "India",
+    "url": "https://dbie.rbi.org.in/",
+    "datasets_count": 2,
+    "dashboards_count": 2,
+    "official_status": "Verified Sovereign Central Bank"
+  },
+  {
+    "id": "SRC_MOSPI",
+    "name": "Ministry of Statistics and Programme Implementation (MoSPI)",
+    "tier": "Tier 1 - National Statistics Office",
+    "country": "India",
+    "url": "https://mospi.gov.in/",
+    "datasets_count": 3,
+    "dashboards_count": 3,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_CENSUS",
+    "name": "Office of the Registrar General & Census Commissioner (ORGI)",
+    "tier": "Tier 1 - National Census Authority",
+    "country": "India",
+    "url": "https://censusindia.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Census Body"
+  },
+  {
+    "id": "SRC_MOHFW",
+    "name": "Ministry of Health and Family Welfare (MoHFW) / IIPS",
+    "tier": "Tier 1 - National Health Ministry",
+    "country": "India",
+    "url": "http://rchiips.org/nfhs/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_MOA",
+    "name": "Ministry of Agriculture & Farmers Welfare (DES)",
+    "tier": "Tier 1 - National Agriculture Ministry",
+    "country": "India",
+    "url": "https://desagri.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_CEA",
+    "name": "Central Electricity Authority (CEA) / Ministry of Power",
+    "tier": "Tier 1 - National Statutory Power Body",
+    "country": "India",
+    "url": "https://cea.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Authority"
+  },
+  {
+    "id": "SRC_DGFT",
+    "name": "Directorate General of Foreign Trade (DGFT) / Commerce Ministry",
+    "tier": "Tier 1 - Sovereign Trade Authority",
+    "country": "India",
+    "url": "https://tradestat.commerce.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Directorate"
+  },
+  {
+    "id": "SRC_DPIIT",
+    "name": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+    "tier": "Tier 1 - Sovereign Industry Department",
+    "country": "India",
+    "url": "https://dpiit.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Department"
+  },
+  {
+    "id": "SRC_MORTH",
+    "name": "Ministry of Road Transport and Highways (MoRTH) / NHAI",
+    "tier": "Tier 1 - National Infrastructure Ministry",
+    "country": "India",
+    "url": "https://morth.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_RAIL",
+    "name": "Ministry of Railways (Railway Board)",
+    "tier": "Tier 1 - Sovereign Transport Ministry",
+    "country": "India",
+    "url": "https://indianrailways.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_CPCB",
+    "name": "Central Pollution Control Board (CPCB) / Open-Meteo",
+    "tier": "Tier 1 - Environmental Regulatory Board & API",
+    "country": "India / Global",
+    "url": "https://cpcb.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statutory Body"
+  },
+  {
+    "id": "SRC_NPCI",
+    "name": "National Payments Corporation of India (NPCI)",
+    "tier": "Tier 1 - National Payment Infrastructure Utility",
+    "country": "India",
+    "url": "https://www.npci.org.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statutory Utility"
+  },
+  {
+    "id": "SRC_MOE",
+    "name": "Ministry of Education (AISHE)",
+    "tier": "Tier 1 - Sovereign Education Ministry",
+    "country": "India",
+    "url": "https://aishe.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_WB",
+    "name": "World Bank Group (WDI & PIP)",
+    "tier": "Tier 2 - Multilateral Development Bank",
+    "country": "Global",
+    "url": "https://data.worldbank.org/",
+    "datasets_count": 4,
+    "dashboards_count": 4,
+    "official_status": "Verified Intergovernmental Body"
+  },
+  {
+    "id": "SRC_IMF",
+    "name": "International Monetary Fund (IMF)",
+    "tier": "Tier 2 - International Monetary Authority",
+    "country": "Global",
+    "url": "https://www.imf.org/en/Data",
+    "datasets_count": 2,
+    "dashboards_count": 2,
+    "official_status": "Verified Intergovernmental Body"
+  },
+  {
+    "id": "SRC_WHO",
+    "name": "World Health Organization (WHO GHO)",
+    "tier": "Tier 2 - UN Specialized Health Body",
+    "country": "Global",
+    "url": "https://www.who.int/data/gho",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_UNICEF",
+    "name": "UNICEF (United Nations Children's Fund)",
+    "tier": "Tier 2 - UN Specialized Agency",
+    "country": "Global",
+    "url": "https://data.unicef.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_FAO",
+    "name": "Food and Agriculture Organization (FAO FAOSTAT)",
+    "tier": "Tier 2 - UN Specialized Agriculture Body",
+    "country": "Global",
+    "url": "https://www.fao.org/faostat/",
+    "datasets_count": 2,
+    "dashboards_count": 2,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_UNWATER",
+    "name": "UN-Water / AQUASTAT",
+    "tier": "Tier 2 - UN Inter-Agency Body",
+    "country": "Global",
+    "url": "https://www.unwater.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Mechanism"
+  },
+  {
+    "id": "SRC_ITU",
+    "name": "International Telecommunication Union (ITU)",
+    "tier": "Tier 2 - UN Specialized Telecom Body",
+    "country": "Global",
+    "url": "https://www.itu.int/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_UNESCO",
+    "name": "UNESCO Institute for Statistics (UIS)",
+    "tier": "Tier 2 - UN Scientific Agency",
+    "country": "Global",
+    "url": "http://uis.unesco.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_USGS",
+    "name": "United States Geological Survey (USGS)",
+    "tier": "Tier 1 - US Scientific Government Agency",
+    "country": "United States / Global",
+    "url": "https://earthquake.usgs.gov/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Agency"
+  },
+  {
+    "id": "SRC_NASA",
+    "name": "NASA Goddard Institute for Space Studies (GISS)",
+    "tier": "Tier 1 - US Space & Climate Agency",
+    "country": "United States / Global",
+    "url": "https://data.giss.nasa.gov/gistemp/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Agency"
+  },
+  {
+    "id": "SRC_UNDESA",
+    "name": "UN DESA (Population Division)",
+    "tier": "Tier 2 - UN Secretariat Department",
+    "country": "Global",
+    "url": "https://population.un.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Department"
+  },
+  {
+    "id": "SRC_UNWTO",
+    "name": "UN World Tourism Organization (UNWTO)",
+    "tier": "Tier 2 - UN Specialized Agency",
+    "country": "Global",
+    "url": "https://www.unwto.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified UN Agency"
+  },
+  {
+    "id": "SRC_IEA",
+    "name": "International Energy Agency (IEA)",
+    "tier": "Tier 2 - Autonomous Intergovernmental Body",
+    "country": "Global",
+    "url": "https://www.iea.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Intergovernmental Organization"
+  },
+  {
+    "id": "SRC_IRENA",
+    "name": "International Renewable Energy Agency (IRENA)",
+    "tier": "Tier 2 - Intergovernmental Organization",
+    "country": "Global",
+    "url": "https://www.irena.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Intergovernmental Organization"
+  },
+  {
+    "id": "SRC_GCP",
+    "name": "Global Carbon Project (GCP) / EDGAR",
+    "tier": "Tier 3 - International Scientific Project",
+    "country": "Global",
+    "url": "https://globalcarbonbudget.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Research Consortium"
+  },
+  {
+    "id": "SRC_EIA",
+    "name": "US Energy Information Administration (EIA) / S&P Dow Jones",
+    "tier": "Tier 1 - US Federal Statistical Agency",
+    "country": "United States",
+    "url": "https://www.eia.gov/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statistical Agency"
+  },
+  {
+    "id": "SRC_GSTN",
+    "name": "Goods and Services Tax Network (GSTN) / MoF",
+    "tier": "Tier 1 - Sovereign Tax Digital Network",
+    "country": "India",
+    "url": "https://www.gst.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Tax Network"
+  },
+  {
+    "id": "SRC_DFS",
+    "name": "Department of Financial Services (DFS), MoF",
+    "tier": "Tier 1 - Sovereign Financial Ministry",
+    "country": "India",
+    "url": "https://financialservices.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Department"
+  },
+  {
+    "id": "SRC_MORD",
+    "name": "Ministry of Rural Development (MoRD)",
+    "tier": "Tier 1 - Sovereign Rural Ministry",
+    "country": "India",
+    "url": "https://rural.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_DGCA",
+    "name": "Directorate General of Civil Aviation (DGCA) & AAI",
+    "tier": "Tier 1 - Sovereign Civil Aviation Directorate",
+    "country": "India",
+    "url": "https://www.dgca.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Directorate"
+  },
+  {
+    "id": "SRC_MOPSW",
+    "name": "Ministry of Ports, Shipping and Waterways (MoPSW) & IPA",
+    "tier": "Tier 1 - Sovereign Maritime Ministry",
+    "country": "India",
+    "url": "https://shipmin.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_TRAI",
+    "name": "Telecom Regulatory Authority of India (TRAI)",
+    "tier": "Tier 1 - Statutory Telecom Regulator",
+    "country": "India",
+    "url": "https://www.trai.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statutory Authority"
+  },
+  {
+    "id": "SRC_IBM",
+    "name": "Indian Bureau of Mines (IBM) & Ministry of Mines",
+    "tier": "Tier 1 - Sovereign Mineral Regulatory Bureau",
+    "country": "India",
+    "url": "https://ibm.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Bureau"
+  },
+  {
+    "id": "SRC_FSI",
+    "name": "Forest Survey of India (FSI) & MoEFCC",
+    "tier": "Tier 1 - National Forest Assessment Body",
+    "country": "India",
+    "url": "https://fsi.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Authority"
+  },
+  {
+    "id": "SRC_PPAC",
+    "name": "Petroleum Planning & Analysis Cell (PPAC), MoPNG",
+    "tier": "Tier 1 - Sovereign Hydrocarbon Planning Body",
+    "country": "India",
+    "url": "https://ppac.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Cell"
+  },
+  {
+    "id": "SRC_NCRB",
+    "name": "National Crime Records Bureau (NCRB), MHA",
+    "tier": "Tier 1 - National Crime Statistics Body",
+    "country": "India",
+    "url": "https://ncrb.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Bureau"
+  },
+  {
+    "id": "SRC_MOHUA",
+    "name": "Ministry of Housing and Urban Affairs (MoHUA)",
+    "tier": "Tier 1 - Sovereign Urban Ministry",
+    "country": "India",
+    "url": "https://mohua.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_JALSHAKTI",
+    "name": "Department of Drinking Water & Sanitation, Ministry of Jal Shakti",
+    "tier": "Tier 1 - Sovereign Water & Sanitation Department",
+    "country": "India",
+    "url": "https://jalshakti-ddws.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Department"
+  },
+  {
+    "id": "SRC_UDISE",
+    "name": "Department of School Education & Literacy, MoE",
+    "tier": "Tier 1 - Sovereign School Education Department",
+    "country": "India",
+    "url": "https://dsel.education.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Department"
+  },
+  {
+    "id": "SRC_TOURISM",
+    "name": "Ministry of Tourism (MR Division)",
+    "tier": "Tier 1 - Sovereign Tourism Ministry",
+    "country": "India",
+    "url": "https://tourism.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Ministry"
+  },
+  {
+    "id": "SRC_DFPD",
+    "name": "Department of Food & Public Distribution & FCI",
+    "tier": "Tier 1 - Sovereign Food & Grain Authority",
+    "country": "India",
+    "url": "https://dfpd.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Department"
+  },
+  {
+    "id": "SRC_CGPDTM",
+    "name": "Office of the CGPDTM, DPIIT, Ministry of Commerce",
+    "tier": "Tier 1 - National Intellectual Property Office",
+    "country": "India",
+    "url": "https://ipindia.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign IP Authority"
+  },
+  {
+    "id": "SRC_PMKISAN",
+    "name": "Department of Agriculture & Farmers Welfare (PM-KISAN)",
+    "tier": "Tier 1 - Sovereign Agriculture Mission Directorate",
+    "country": "India",
+    "url": "https://pmkisan.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign Directorate"
+  },
+  {
+    "id": "SRC_SIAM",
+    "name": "Society of Indian Automobile Manufacturers (SIAM) & MHI",
+    "tier": "Tier 1 - Apex Automotive Body & Sovereign Ministry",
+    "country": "India",
+    "url": "https://www.siam.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Apex Industry Body"
+  },
+  {
+    "id": "SRC_COAL",
+    "name": "Coal Controller's Organisation (CCO) & Ministry of Coal",
+    "tier": "Tier 1 - Statutory Coal Regulatory Directorate",
+    "country": "India",
+    "url": "https://coal.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statutory Body"
+  },
+  {
+    "id": "SRC_IWAI",
+    "name": "Inland Waterways Authority of India (IWAI), MoPSW",
+    "tier": "Tier 1 - Statutory Inland Waterways Authority",
+    "country": "India",
+    "url": "https://iwai.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Statutory Authority"
+  },
+  {
+    "id": "SRC_D55",
+    "name": "International Atomic Energy Agency (IAEA PRIS)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://pris.iaea.org/PRIS/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D56",
+    "name": "NASA Exoplanet Science Institute / Caltech",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D57",
+    "name": "United Nations High Commissioner for Refugees (UNHCR)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.unhcr.org/refugee-statistics/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D58",
+    "name": "National Institute of Standards and Technology (NIST)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://nvd.nist.gov/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D59",
+    "name": "National Snow and Ice Data Center (NSIDC / NOAA)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://nsidc.org/data/seaice_index/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D60",
+    "name": "International Civil Aviation Organization (ICAO / IATA)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.icao.int/sustainability/Pages/air-traffic-monitor.aspx",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D61",
+    "name": "World Gold Council (WGC / IMF IFS)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.gold.org/goldhub/data/monthly-central-bank-statistics",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D62",
+    "name": "UNESCO World Heritage Centre",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://whc.unesco.org/en/list/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D63",
+    "name": "Semiconductor Industry Association (SIA / WSTS)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.semiconductors.org/semiconductor-data/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D64",
+    "name": "World Health Organization (WHO / UNICEF WIISE)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://immunizationdata.who.int/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D65",
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.ncei.noaa.gov/access/global-ocean-heat-content/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D66",
+    "name": "International Olympic Committee (IOC)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://olympics.com/en/olympic-games/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D67",
+    "name": "UN Conference on Trade and Development (UNCTAD)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D68",
+    "name": "Centre for Research on the Epidemiology of Disasters (CRED EM-DAT)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.emdat.be/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D69",
+    "name": "Organisation for Economic Co-operation and Development (OECD PISA)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.oecd.org/pisa/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D70",
+    "name": "International Union for Conservation of Nature (IUCN Red List)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.iucnredlist.org/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D71",
+    "name": "Food and Agriculture Organization of the UN (FAOSTAT)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.fao.org/faostat/en/#data/RFN",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D72",
+    "name": "UN Office for Outer Space Affairs (UNOOSA / Space-Track)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.unoosa.org/oosa/en/ourwork/spacelaw/registers/index.html",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D73",
+    "name": "Energy Institute (Statistical Review of World Energy)",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://www.energyinst.org/statistical-review",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D74",
+    "name": "UN Sustainable Development Solutions Network & Gallup",
+    "tier": "Tier 1 - Sovereign & Multilateral Agency",
+    "country": "Global",
+    "url": "https://worldhappiness.report/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Sovereign / Multilateral Authority"
+  },
+  {
+    "id": "SRC_D75",
+    "name": "World Health Organization (WHO GLASS) & CDC",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "Global",
+    "url": "https://www.who.int/initiatives/glass",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D76",
+    "name": "Grid Controller of India (Grid-India / POSOCO) & CEA",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://posoco.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D77",
+    "name": "Central Pollution Control Board (CPCB) & MoHUA SBM-Urban",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://cpcb.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D78",
+    "name": "Central Ground Water Board (CGWB), Ministry of Jal Shakti",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://cgwb.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D79",
+    "name": "International Energy Agency (IEA) & USGS",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "Global",
+    "url": "https://www.iea.org/topics/critical-minerals",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D80",
+    "name": "National Health Authority (NHA / MoHFW)",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://nha.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D81",
+    "name": "UN Food and Agriculture Organization (FAO) & WFP",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "Global",
+    "url": "https://www.fao.org/faostat/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D82",
+    "name": "MoRTH Urban Mobility Division & TomTom Traffic Index",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://morth.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D83",
+    "name": "National Blood Transfusion Council (NBTC / e-RaktKosh) & MoHFW",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://eraktkosh.mohfw.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D84",
+    "name": "Central Pollution Control Board (CPCB CEMS) & SPCB",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://cpcb.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D85",
+    "name": "Commission of Railway Safety (CRS / MCA) & Indian Railways",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://indianrailways.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D86",
+    "name": "Bank for International Settlements (BIS) & World Bank",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "Global",
+    "url": "https://www.bis.org/statistics/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D87",
+    "name": "Ministry of New and Renewable Energy (MNRE) & IRENA",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://mnre.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D88",
+    "name": "National Judicial Data Grid (NJDG) & Ministry of Law & Justice",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://njdg.ecourts.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D89",
+    "name": "Indian Computer Emergency Response Team (CERT-In) & ENISA",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://www.cert-in.org.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D90",
+    "name": "Ministry of Food Processing Industries (MoFPI) & NCCD",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://mofpi.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D91",
+    "name": "Forest Survey of India (FSI FAST 3.0) & NASA FIRMS",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://fsi.nic.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D92",
+    "name": "Ministry of Housing and Urban Affairs (MoHUA ARHC) & Census",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://arhc.mohua.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D93",
+    "name": "ICAR-Central Marine Fisheries Research Institute (CMFRI)",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://www.cmfri.org.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  },
+  {
+    "id": "SRC_D94",
+    "name": "Ministry of Health and Family Welfare (Tele-MANAS) & NIMHANS",
+    "tier": "Tier 1 - Sovereign & Statutory Body",
+    "country": "India",
+    "url": "https://telemanas.mohfw.gov.in/",
+    "datasets_count": 1,
+    "dashboards_count": 1,
+    "official_status": "Verified Official Regulatory / Government Authority"
+  }
+]

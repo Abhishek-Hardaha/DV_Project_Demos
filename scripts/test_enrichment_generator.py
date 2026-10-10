@@ -1,0 +1,116 @@
+import os
+import sys
+import pandas as pd
+from collections import Counter
+
+sys.path.insert(0, os.path.dirname(__file__))
+import build_dashboards
+
+DOMAIN_ARCHETYPES = {
+    'Macroeconomics': 'macro_policy',
+    'Central Banking & Monetary Policy': 'macro_policy',
+    'Public Finance & Fiscal Policy': 'macro_policy',
+    'Sovereign Debt & Financial Stability': 'macro_policy',
+    'Sovereign Finance & Fiscal Prudence': 'macro_policy',
+    'Taxation & Public Revenue': 'macro_policy',
+    'Banking & Financial Inclusion': 'macro_policy',
+    'Capital Markets & Commodities': 'macro_policy',
+    'Central Banking & International Finance': 'macro_policy',
+    'Sovereign Debt Economics & Macroprudential Risk': 'macro_policy',
+    'Behavioral Economics & Subjective Well-Being': 'macro_policy',
+    'International Macroeconomics': 'macro_policy',
+    'Investment & Capital Flows': 'macro_policy',
+    'Trade & Commerce': 'macro_policy',
+    'Fintech & Digital Infrastructure': 'macro_policy',
+    'Poverty & Income Distribution': 'macro_policy',
+
+    'Demographics & Human Capital': 'social_demographics',
+    'Public Health & Nutrition': 'social_demographics',
+    'Child Health & Nutrition': 'social_demographics',
+    'Global Health & Demographics': 'social_demographics',
+    'Higher Education & Skills': 'social_demographics',
+    'Employment & Labor Markets': 'social_demographics',
+    'School Education & Foundational Facilities': 'social_demographics',
+    'Humanitarian Affairs & Demographics': 'social_demographics',
+    'Global Public Health & Epidemiology': 'social_demographics',
+    'Healthcare Delivery Systems & Clinical Capacity': 'social_demographics',
+    'Hematology & Public Health Logistics': 'social_demographics',
+    'Public Mental Health & Digital Healthcare Delivery': 'social_demographics',
+    'Rural Development & Social Safety': 'social_demographics',
+    'Agrarian Welfare & Direct Benefits': 'social_demographics',
+    'Educational Metrics & Cognitive Human Capital': 'social_demographics',
+    'Epidemiology & Clinical Pharmacology': 'social_demographics',
+    'Law Enforcement & Justice Administration': 'social_demographics',
+    'Judicial Administration & Legal Analytics': 'social_demographics',
+    'International Athletics & Sports Analytics': 'social_demographics',
+    'Cultural Geography & Conservation Architecture': 'social_demographics',
+    'Tourism, Hospitality & Cultural Economy': 'social_demographics',
+    'Travel & Hospitality Economics': 'social_demographics',
+    'Urbanization & Human Settlement': 'social_demographics',
+    'Urban Development & Social Housing': 'social_demographics',
+    'Urban Planning & Social Housing Policy': 'social_demographics',
+    'Water Sanitation & Rural Health': 'social_demographics',
+
+    'Energy & Power Systems': 'energy_logistics',
+    'Global Energy & Decarbonization': 'energy_logistics',
+    'Infrastructure & Transport': 'energy_logistics',
+    'Logistics & Public Transport': 'energy_logistics',
+    'Agriculture & Rural Economy': 'energy_logistics',
+    'Food Security & Agriculture': 'energy_logistics',
+    'Water Resources & Hydrology': 'energy_logistics',
+    'Aviation & Transport Logistics': 'energy_logistics',
+    'Maritime Logistics & Port Infrastructure': 'energy_logistics',
+    'Mining & Natural Resources': 'energy_logistics',
+    'Hydrocarbons & Energy Security': 'energy_logistics',
+    'Food Security & Welfare Supply Chain': 'energy_logistics',
+    'Automotive Manufacturing & Industrial Output': 'energy_logistics',
+    'Mining & Thermal Energy Baseload': 'energy_logistics',
+    'Waterways Logistics & Multimodal Transport': 'energy_logistics',
+    'Nuclear Physics & Global Energy Infrastructure': 'energy_logistics',
+    'Global Aviation & Transportation': 'energy_logistics',
+    'Maritime Economics & Global Supply Chain Logistics': 'energy_logistics',
+    'Agronomy & Soil Biogeochemistry': 'energy_logistics',
+    'Energy Economics & Global Transition Thermodynamics': 'energy_logistics',
+    'Electrical Engineering & National Grid Operations': 'energy_logistics',
+    'Agricultural Economics & Food Security': 'energy_logistics',
+    'Urban Mobility & Transportation Systems': 'energy_logistics',
+    'Railway Engineering & Operational Safety': 'energy_logistics',
+    'Rural Electrification & Renewable Energy Systems': 'energy_logistics',
+    'Agricultural Supply Chains & Food Processing Logistics': 'energy_logistics',
+    'Marine Biology & Sustainable Fisheries Management': 'energy_logistics',
+    'Clean Mobility & Automotive': 'energy_logistics',
+    'Geopolitics & Energy Transition Materials': 'energy_logistics',
+
+    'Environment & Pollution': 'tech_science',
+    'Climate & Greenhouse Gases': 'tech_science',
+    'Forestry & Land Conservation': 'tech_science',
+    'Forestry & Ecological Conservation': 'tech_science',
+    'Forest Ecology & Disaster Management': 'tech_science',
+    'Telecommunications & Digital Access': 'tech_science',
+    'Telecommunications & Digital Infrastructure': 'tech_science',
+    'Science & Innovation Policy': 'tech_science',
+    'Geophysics & Natural Hazards': 'tech_science',
+    'Earth Science & Climatology': 'tech_science',
+    'Intellectual Property & R&D Commercialization': 'tech_science',
+    'Astrophysics & Space Exploration': 'tech_science',
+    'Cybersecurity & Information Technology': 'tech_science',
+    'Cybersecurity & Digital Infrastructure Protection': 'tech_science',
+    'Cryosphere Science & Polar Climatology': 'tech_science',
+    'Advanced Microelectronics & Global Technology': 'tech_science',
+    'Marine Oceanography & Planetary Thermodynamics': 'tech_science',
+    'Disaster Risk Science & Climatological Hazard Analysis': 'tech_science',
+    'Biodiversity & Conservation Biology': 'tech_science',
+    'Aerospace Engineering & Astronautics': 'tech_science',
+    'Municipal Waste Management & Urban Sanitation': 'tech_science',
+    'Hydrogeology & Water Resource Security': 'tech_science',
+    'Industrial Pollution Control & Environmental Regulation': 'tech_science',
+}
+
+chart_type_counter = Counter()
+
+for spec in build_dashboards.DASHBOARD_SPECS[:10]:
+    arch = DOMAIN_ARCHETYPES.get(spec['domain'], 'macro_policy')
+    df = pd.read_csv(spec['csv'])
+    print(f"[{spec['id']}] {spec['title']} ({arch}): {len(spec['charts'])} current charts")
+
+print("Archetype test completed.")

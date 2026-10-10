@@ -1,0 +1,16 @@
+country,water_stress_pct,renewable_per_capita_m3,agri_withdrawal_pct,industrial_pct,municipal_pct,water_scarcity_flag,agri_withdrawal_dominance
+Kuwait,3850.0,5.0,54.0,2.0,44.0,True,False
+United Arab Emirates,1820.0,16.0,68.0,9.0,23.0,True,False
+Saudi Arabia,940.0,70.0,82.0,5.0,13.0,True,True
+Egypt,142.0,560.0,86.0,6.0,8.0,True,True
+Israel,115.0,85.0,55.0,6.0,39.0,True,False
+Pakistan,74.5,820.0,94.0,1.0,5.0,True,True
+India,66.5,1380.0,91.0,2.0,7.0,False,True
+South Africa,62.0,780.0,62.0,11.0,27.0,True,False
+China,43.2,2010.0,65.0,22.0,13.0,False,False
+Spain,42.1,2350.0,68.0,14.0,18.0,False,False
+United States,29.5,8800.0,40.0,46.0,14.0,False,False
+Germany,22.8,1850.0,2.0,84.0,14.0,False,False
+France,18.0,3100.0,12.0,69.0,19.0,False,False
+Brazil,1.4,39500.0,60.0,17.0,23.0,False,False
+Canada,1.2,76500.0,9.0,80.0,11.0,False,False

@@ -1,0 +1,26 @@
+state,annual_fire_alerts_count,forest_area_affected_hectares,extreme_fire_vulnerability_pct,forest_cover_sqkm,fire_season_mean_temp_c,mean_response_time_minutes,fire_watchers_deployed,fire_alerts_per_100_sqkm_forest,affected_forest_share_pct,fire_watcher_density_per_1000_ha,fire_risk_priority_tier
+Odisha,34500,48200,32.4,52156,38.5,42.0,2450,66.1,0.92,50.8,Critical Flame Front
+Madhya Pradesh,32800,44100,28.5,77493,40.2,48.0,3100,42.3,0.57,70.3,Critical Flame Front
+Chhattisgarh,28400,39500,31.0,55717,39.4,52.0,2600,51.0,0.71,65.8,Critical Flame Front
+Maharashtra,24200,31200,24.2,50798,39.8,45.0,2250,47.6,0.61,72.1,Critical Flame Front
+Jharkhand,19800,26400,29.8,25118,38.6,56.0,1650,78.8,1.05,62.5,Critical Flame Front
+Andhra Pradesh,18500,24800,27.5,29784,40.5,46.0,1540,62.1,0.83,62.1,Critical Flame Front
+Telangana,16400,21900,26.0,21214,41.0,44.0,1420,77.3,1.03,64.8,Critical Flame Front
+Uttarakhand,14200,18500,38.5,24305,32.4,38.0,1850,58.4,0.76,100.0,Critical Flame Front
+Assam,11200,14200,18.5,28312,33.2,62.0,1100,39.6,0.5,77.5,Moderate Season
+Karnataka,12500,15800,21.4,38730,36.8,41.0,1480,32.3,0.41,93.7,Critical Flame Front
+Mizoram,10800,13400,42.0,17820,30.5,72.0,850,60.6,0.75,63.4,Moderate Season
+Manipur,9400,11800,39.5,16598,31.0,78.0,780,56.6,0.71,66.1,Moderate Season
+Himachal Pradesh,8600,10500,34.2,15443,31.8,40.0,1200,55.7,0.68,114.3,Moderate Season
+Nagaland,7800,9400,37.8,12251,30.2,84.0,640,63.7,0.77,68.1,Moderate Season
+Arunachal Pradesh,8200,9800,22.0,66431,28.5,95.0,980,12.3,0.15,100.0,Moderate Season
+Meghalaya,6900,8100,35.0,17046,29.8,76.0,620,40.5,0.48,76.5,Moderate Season
+Tamil Nadu,7400,8900,19.8,26419,37.5,39.0,1150,28.0,0.34,129.2,Moderate Season
+Kerala,4500,5200,14.5,21253,34.2,34.0,1050,21.2,0.24,201.9,Low Fire Alert Frequency
+West Bengal,5200,6100,16.2,16832,36.0,48.0,890,30.9,0.36,145.9,Low Fire Alert Frequency
+Rajasthan,6100,7200,18.0,16655,42.5,54.0,780,36.6,0.43,108.3,Low Fire Alert Frequency
+Gujarat,4800,5400,15.5,14926,41.2,46.0,820,32.2,0.36,151.9,Low Fire Alert Frequency
+Uttar Pradesh,5800,6800,17.2,14818,41.0,50.0,940,39.1,0.46,138.2,Low Fire Alert Frequency
+Bihar,4200,4900,19.0,7381,40.0,58.0,650,56.9,0.66,132.7,Low Fire Alert Frequency
+Tripura,3400,3800,31.5,7726,32.5,68.0,450,44.0,0.49,118.4,Low Fire Alert Frequency
+Goa,850,920,11.2,2244,33.8,28.0,240,37.9,0.41,260.9,Low Fire Alert Frequency

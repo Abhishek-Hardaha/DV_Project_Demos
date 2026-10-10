@@ -1,0 +1,17 @@
+zone,headquarters,track_route_km,consequential_accidents_count,derailments_count,usfd_fractures_detected_count,track_renewal_executed_km,kavach_atp_deployed_km,unmanned_level_crossings_eliminated,usfd_fractures_per_1000_km,kavach_atp_coverage_pct,derailment_rate_per_1000_km,track_renewal_intensity_pct
+Northern Railway,Delhi,7345,9,7,245,580,180,42,33.4,2.5,0.95,7.9
+Western Railway,Mumbai,6520,4,3,168,520,240,28,25.8,3.7,0.46,8.0
+Central Railway,Mumbai,4180,5,4,142,460,195,34,34.0,4.7,0.96,11.0
+Eastern Railway,Kolkata,2740,3,2,115,340,110,18,42.0,4.0,0.73,12.4
+Southern Railway,Chennai,5080,4,3,138,480,160,26,27.2,3.1,0.59,9.4
+South Central Railway,Secunderabad,6150,2,1,98,590,850,48,15.9,13.8,0.16,9.6
+South Eastern Railway,Kolkata,2720,4,3,154,380,95,22,56.6,3.5,1.1,14.0
+East Central Railway,Hajipur,4150,7,6,210,410,80,38,50.6,1.9,1.45,9.9
+North Western Railway,Jaipur,5620,3,2,124,490,140,30,22.1,2.5,0.36,8.7
+South Western Railway,Hubballi,3560,2,2,88,360,120,16,24.7,3.4,0.56,10.1
+North Central Railway,Prayagraj,3240,6,5,192,440,280,24,59.3,8.6,1.54,13.6
+South East Central Railway,Bilaspur,2510,3,2,112,350,65,14,44.6,2.6,0.8,13.9
+West Central Railway,Jabalpur,3010,3,2,105,390,175,18,34.9,5.8,0.66,13.0
+East Coast Railway,Bhubaneswar,2780,4,3,135,420,90,15,48.6,3.2,1.08,15.1
+Northeast Frontier Railway,Guwahati,4120,5,4,178,310,45,25,43.2,1.1,0.97,7.5
+North Eastern Railway,Gorakhpur,3890,4,3,145,370,70,32,37.3,1.8,0.77,9.5

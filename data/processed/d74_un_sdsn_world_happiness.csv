@@ -1,0 +1,26 @@
+country,happiness_cantril_ladder_score,gdp_per_capita_purchasing_power_parity,social_support_index,healthy_life_expectancy_years,freedom_to_make_life_choices_score,generosity_index,perceptions_of_corruption_score,dystopia_residual_score,economic_and_social_synergy_score,governance_trust_index,happiness_ranking_tier
+Finland,7.741,1.844,1.572,72.1,0.856,0.142,0.546,2.382,3.416,1.402,High Flourishing
+Denmark,7.583,1.908,1.52,71.5,0.838,0.204,0.534,2.381,3.428,1.372,High Flourishing
+Iceland,7.525,1.881,1.617,72.8,0.829,0.258,0.17,2.454,3.498,0.999,High Flourishing
+Sweden,7.344,1.878,1.501,72.4,0.838,0.221,0.52,2.324,3.379,1.358,High Flourishing
+Israel,7.341,1.824,1.505,73.2,0.608,0.113,0.155,2.924,3.329,0.763,High Flourishing
+Netherlands,7.319,1.901,1.462,71.8,0.772,0.247,0.428,2.296,3.363,1.2,High Flourishing
+Norway,7.305,1.952,1.487,72.2,0.827,0.211,0.465,2.221,3.439,1.292,High Flourishing
+Luxembourg,7.122,2.144,1.38,72.0,0.773,0.145,0.432,2.052,3.524,1.205,High Flourishing
+Switzerland,7.06,1.97,1.43,73.1,0.772,0.175,0.474,2.072,3.4,1.246,Moderate Well-Being
+Australia,7.057,1.854,1.461,71.9,0.762,0.225,0.323,2.235,3.315,1.085,Moderate Well-Being
+New Zealand,7.029,1.811,1.514,71.8,0.756,0.225,0.469,2.062,3.325,1.225,Moderate Well-Being
+Costa Rica,6.955,1.483,1.372,70.8,0.768,0.082,0.118,2.923,2.855,0.886,Moderate Well-Being
+Canada,6.9,1.842,1.439,71.6,0.73,0.185,0.354,2.162,3.281,1.084,Moderate Well-Being
+Austria,6.9,1.884,1.396,71.5,0.718,0.174,0.298,2.242,3.28,1.016,Moderate Well-Being
+United States,6.725,1.947,1.36,66.8,0.658,0.178,0.158,2.244,3.307,0.816,Moderate Well-Being
+Germany,6.719,1.868,1.391,71.2,0.686,0.155,0.364,2.074,3.259,1.05,Emerging Well-Being
+Belgium,6.695,1.864,1.402,71.3,0.68,0.125,0.284,2.158,3.266,0.964,Emerging Well-Being
+United Kingdom,6.749,1.819,1.411,71.1,0.702,0.239,0.334,2.046,3.23,1.036,Moderate Well-Being
+France,6.609,1.821,1.375,72.3,0.638,0.086,0.254,2.247,3.196,0.892,Emerging Well-Being
+Spain,6.421,1.775,1.442,72.6,0.65,0.108,0.184,2.073,3.217,0.834,Emerging Well-Being
+Italy,6.324,1.798,1.328,72.4,0.54,0.098,0.076,2.304,3.126,0.616,Emerging Well-Being
+Japan,6.06,1.792,1.384,74.4,0.64,0.012,0.218,1.834,3.176,0.858,Emerging Well-Being
+Brazil,6.272,1.428,1.344,65.8,0.69,0.134,0.118,2.368,2.772,0.808,Emerging Well-Being
+China,5.973,1.512,1.258,69.2,0.785,0.224,0.152,1.844,2.77,0.937,Emerging Well-Being
+India,4.054,1.159,0.674,61.2,0.785,0.175,0.118,0.945,1.833,0.903,Emerging Well-Being

@@ -1,0 +1,23 @@
+state,total_ipc_crimes,crime_rate_per_lakh,crimes_against_women,cyber_crimes,conviction_rate_pct,chargesheet_rate_pct,women_crime_share_pct,cyber_crime_rate_index,judicial_clearance_composite,crime_severity_tier
+Uttar Pradesh,357467,153.2,65743,4421,76.9,78.4,18.39,12.37,77.6,Moderate Incidence
+Maharashtra,374038,298.5,45331,8249,14.5,82.1,12.12,22.05,48.3,High Incidence
+Madhya Pradesh,298741,351.4,32765,3421,38.2,84.5,10.97,11.45,61.4,Severe Reporting Incidence
+Rajasthan,305392,378.2,45058,2841,44.5,76.2,14.75,9.3,60.4,Severe Reporting Incidence
+Gujarat,231452,329.5,8745,1942,21.4,86.4,3.78,8.39,53.9,High Incidence
+Kerala,490212,1378.1,20145,1420,84.2,94.2,4.11,2.9,89.2,Severe Reporting Incidence
+Tamil Nadu,335414,436.5,9421,2145,62.4,82.5,2.81,6.4,72.4,Severe Reporting Incidence
+Karnataka,137452,204.2,14210,12556,42.1,79.4,10.34,91.35,60.8,Moderate Incidence
+Bihar,218451,174.5,20452,1845,39.8,68.4,9.36,8.45,54.1,Moderate Incidence
+West Bengal,182410,184.2,34738,2410,11.2,62.1,19.04,13.21,36.6,Moderate Incidence
+Andhra Pradesh,174215,331.4,25586,2341,41.5,84.1,14.69,13.44,62.8,High Incidence
+Telangana,152410,401.2,22415,15297,52.1,81.2,14.71,100.37,66.6,Severe Reporting Incidence
+Haryana,108420,365.4,16982,3420,41.2,74.2,15.66,31.54,57.7,Severe Reporting Incidence
+Odisha,155420,338.2,31842,1940,9.8,72.4,20.49,12.48,41.1,High Incidence
+Assam,119420,337.8,23452,1740,13.4,52.8,19.64,14.57,33.1,High Incidence
+Punjab,72410,239.5,5420,780,48.2,71.2,7.49,10.77,59.7,Moderate Incidence
+Chhattisgarh,74210,248.5,8940,450,49.5,81.4,12.05,6.06,65.4,High Incidence
+Jharkhand,61420,156.4,8420,1420,36.2,64.2,13.71,23.12,50.2,Moderate Incidence
+Uttarakhand,34780,301.2,3420,680,58.4,78.2,9.83,19.55,68.3,High Incidence
+Himachal Pradesh,18940,254.1,1640,180,29.4,82.1,8.66,9.5,55.8,High Incidence
+Jammu & Kashmir,29840,218.4,3712,184,79.4,84.2,12.44,6.17,81.8,Moderate Incidence
+Delhi UT,298988,1425.4,14247,685,32.1,72.8,4.77,2.29,52.4,Severe Reporting Incidence

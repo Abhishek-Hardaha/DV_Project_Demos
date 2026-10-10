@@ -1,0 +1,5857 @@
+{
+  "audit_timestamp": "2026-10-09T20:31:54.236685",
+  "total_datasets_audited": 94,
+  "overall_quality_status": "PASSED_HIGH_CONFIDENCE",
+  "datasets": {
+    "d01_india_macro_gdp": {
+      "dataset_id": "d01_india_macro_gdp",
+      "row_count": 24,
+      "column_count": 14,
+      "columns": [
+        "year",
+        "country",
+        "gdp_current_usd",
+        "gdp_growth_pct",
+        "gdp_per_capita_usd",
+        "agriculture_gva_pct",
+        "industry_gva_pct",
+        "services_gva_pct",
+        "gross_capital_formation_pct",
+        "inflation_cpi_pct",
+        "gdp_current_trillion_usd",
+        "gdp_yoy_growth_calc",
+        "rolling_3yr_gdp_growth",
+        "services_to_agriculture_ratio"
+      ],
+      "total_nulls": 1,
+      "null_percentage": 0.3,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2023.0,
+          "mean": 2011.5,
+          "std": 7.07
+        },
+        "gdp_current_usd": {
+          "min": 468395521654.46,
+          "max": 3500906030644.76,
+          "mean": 1779471105088.45,
+          "std": 956018573552.75
+        },
+        "gdp_growth_pct": {
+          "min": -5.78,
+          "max": 9.69,
+          "mean": 6.16,
+          "std": 3.09
+        },
+        "gdp_per_capita_usd": {
+          "min": 442.75,
+          "max": 2434.45,
+          "mean": 1352.98,
+          "std": 632.5
+        },
+        "agriculture_gva_pct": {
+          "min": 16.03,
+          "max": 21.62,
+          "mean": 17.65,
+          "std": 1.53
+        },
+        "industry_gva_pct": {
+          "min": 24.59,
+          "max": 31.14,
+          "mean": 28.01,
+          "std": 2.07
+        }
+      }
+    },
+    "d02_india_rbi_inflation": {
+      "dataset_id": "d02_india_rbi_inflation",
+      "row_count": 114,
+      "column_count": 18,
+      "columns": [
+        "date",
+        "year",
+        "month",
+        "headline_cpi_yoy",
+        "food_inflation_yoy",
+        "fuel_inflation_yoy",
+        "core_cpi_yoy",
+        "rbi_repo_rate",
+        "reverse_repo_rate",
+        "crr_pct",
+        "target_band_upper",
+        "target_band_mid",
+        "target_band_lower",
+        "real_policy_rate",
+        "inflation_deviation_from_target",
+        "breached_upper_tolerance",
+        "cpi_3m_rolling_avg",
+        "food_fuel_spread"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.26,
+          "std": 2.76
+        },
+        "month": {
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.34,
+          "std": 3.46
+        },
+        "headline_cpi_yoy": {
+          "min": 1.46,
+          "max": 7.79,
+          "mean": 5.0,
+          "std": 1.42
+        },
+        "food_inflation_yoy": {
+          "min": -2.65,
+          "max": 14.19,
+          "mean": 4.97,
+          "std": 3.55
+        },
+        "fuel_inflation_yoy": {
+          "min": -4.21,
+          "max": 14.35,
+          "mean": 5.11,
+          "std": 4.0
+        },
+        "core_cpi_yoy": {
+          "min": 3.1,
+          "max": 7.0,
+          "mean": 5.01,
+          "std": 0.88
+        }
+      }
+    },
+    "d03_india_census_demographics": {
+      "dataset_id": "d03_india_census_demographics",
+      "row_count": 36,
+      "column_count": 17,
+      "columns": [
+        "state",
+        "state_code",
+        "pop_2001",
+        "pop_2011",
+        "growth_pct",
+        "sex_ratio",
+        "literacy_pct",
+        "male_literacy",
+        "female_literacy",
+        "density_sqkm",
+        "urban_pct",
+        "gender_literacy_gap",
+        "pop_2011_millions",
+        "pop_share_national_pct",
+        "sex_ratio_deviation_from_parity",
+        "literacy_rank",
+        "urbanization_category"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "pop_2001": {
+          "min": 60650.0,
+          "max": 166197921.0,
+          "mean": 28570394.78,
+          "std": 36138125.17
+        },
+        "pop_2011": {
+          "min": 64473.0,
+          "max": 199812341.0,
+          "mean": 33642479.61,
+          "std": 43047822.23
+        },
+        "growth_pct": {
+          "min": -0.58,
+          "max": 54.92,
+          "mean": 18.04,
+          "std": 9.18
+        },
+        "sex_ratio": {
+          "min": 668.0,
+          "max": 1084.0,
+          "mean": 937.36,
+          "std": 68.83
+        },
+        "literacy_pct": {
+          "min": 61.8,
+          "max": 94.0,
+          "mean": 77.38,
+          "std": 8.53
+        },
+        "male_literacy": {
+          "min": 71.2,
+          "max": 96.11,
+          "mean": 84.0,
+          "std": 6.73
+        }
+      }
+    },
+    "d04_india_nfhs_health": {
+      "dataset_id": "d04_india_nfhs_health",
+      "row_count": 36,
+      "column_count": 13,
+      "columns": [
+        "state",
+        "inst_births_pct",
+        "immunization_pct",
+        "stunting_pct",
+        "wasting_pct",
+        "anemia_women_pct",
+        "sanitation_pct",
+        "clean_fuel_pct",
+        "insurance_pct",
+        "child_nutrition_distress_index",
+        "maternal_health_security_score",
+        "sanitation_fuel_composite_pct",
+        "health_performance_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "inst_births_pct": {
+          "min": 45.7,
+          "max": 99.9,
+          "mean": 89.03,
+          "std": 11.47
+        },
+        "immunization_pct": {
+          "min": 57.9,
+          "max": 92.5,
+          "mean": 78.27,
+          "std": 8.66
+        },
+        "stunting_pct": {
+          "min": 20.0,
+          "max": 46.5,
+          "mean": 31.27,
+          "std": 6.2
+        },
+        "wasting_pct": {
+          "min": 8.4,
+          "max": 25.6,
+          "mean": 16.54,
+          "std": 4.35
+        },
+        "anemia_women_pct": {
+          "min": 29.4,
+          "max": 78.6,
+          "mean": 54.56,
+          "std": 11.96
+        },
+        "sanitation_pct": {
+          "min": 49.4,
+          "max": 99.8,
+          "mean": 78.59,
+          "std": 11.14
+        }
+      }
+    },
+    "d05_india_agriculture_yield": {
+      "dataset_id": "d05_india_agriculture_yield",
+      "row_count": 23,
+      "column_count": 19,
+      "columns": [
+        "crop_year",
+        "year_int",
+        "total_foodgrains_mt",
+        "rice_mt",
+        "wheat_mt",
+        "pulses_mt",
+        "coarse_cereals_mt",
+        "oilseeds_mt",
+        "sugarcane_mt",
+        "foodgrains_area_mha",
+        "foodgrains_yield_kg_ha",
+        "rice_yield_kg_ha",
+        "wheat_yield_kg_ha",
+        "kharif_share_pct",
+        "rabi_share_pct",
+        "foodgrain_growth_yoy_pct",
+        "rice_wheat_dominance_pct",
+        "yield_index_base2000",
+        "rolling_3yr_prod_mt"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year_int": {
+          "min": 2000.0,
+          "max": 2022.0,
+          "mean": 2011.0,
+          "std": 6.78
+        },
+        "total_foodgrains_mt": {
+          "min": 174.8,
+          "max": 329.7,
+          "mean": 249.29,
+          "std": 41.76
+        },
+        "rice_mt": {
+          "min": 71.8,
+          "max": 135.8,
+          "mean": 102.72,
+          "std": 15.6
+        },
+        "wheat_mt": {
+          "min": 65.8,
+          "max": 110.6,
+          "mean": 87.92,
+          "std": 14.76
+        },
+        "pulses_mt": {
+          "min": 11.1,
+          "max": 27.3,
+          "mean": 18.01,
+          "std": 5.02
+        },
+        "coarse_cereals_mt": {
+          "min": 26.1,
+          "max": 57.2,
+          "mean": 40.64,
+          "std": 7.33
+        }
+      }
+    },
+    "d06_india_power_energy": {
+      "dataset_id": "d06_india_power_energy",
+      "row_count": 13,
+      "column_count": 18,
+      "columns": [
+        "year",
+        "thermal_gw",
+        "hydro_gw",
+        "nuclear_gw",
+        "solar_gw",
+        "wind_gw",
+        "bio_smallhydro_gw",
+        "total_installed_gw",
+        "renewable_v_gw",
+        "total_clean_gw",
+        "clean_capacity_share_pct",
+        "solar_wind_share_pct",
+        "total_generation_bu",
+        "peak_demand_met_gw",
+        "thermal_capacity_share_pct",
+        "solar_wind_growth_yoy_gw",
+        "annual_generation_growth_pct",
+        "clean_power_multiplier_2012"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2012.0,
+          "max": 2024.0,
+          "mean": 2018.0,
+          "std": 3.89
+        },
+        "thermal_gw": {
+          "min": 140.0,
+          "max": 243.0,
+          "mean": 208.0,
+          "std": 34.96
+        },
+        "hydro_gw": {
+          "min": 39.0,
+          "max": 47.0,
+          "mean": 43.92,
+          "std": 2.93
+        },
+        "nuclear_gw": {
+          "min": 4.8,
+          "max": 8.2,
+          "mean": 6.35,
+          "std": 1.07
+        },
+        "solar_gw": {
+          "min": 1.0,
+          "max": 85.5,
+          "mean": 27.62,
+          "std": 27.49
+        },
+        "wind_gw": {
+          "min": 17.4,
+          "max": 46.2,
+          "mean": 31.98,
+          "std": 9.51
+        }
+      }
+    },
+    "d07_india_foreign_trade": {
+      "dataset_id": "d07_india_foreign_trade",
+      "row_count": 10,
+      "column_count": 21,
+      "columns": [
+        "fiscal_year",
+        "year_int",
+        "merchandise_exports_usd_b",
+        "merchandise_imports_usd_b",
+        "trade_balance_usd_b",
+        "total_trade_usd_b",
+        "export_import_ratio_pct",
+        "engineering_goods_usd_b",
+        "petroleum_products_usd_b",
+        "gems_jewellery_usd_b",
+        "chemicals_usd_b",
+        "pharma_drugs_usd_b",
+        "electronic_goods_usd_b",
+        "agriculture_marine_usd_b",
+        "crude_oil_import_usd_b",
+        "electronics_import_usd_b",
+        "machinery_import_usd_b",
+        "trade_deficit_pct_exports",
+        "engineering_plus_petro_share_pct",
+        "crude_import_bill_share_pct",
+        "export_growth_yoy_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year_int": {
+          "min": 2014.0,
+          "max": 2023.0,
+          "mean": 2018.5,
+          "std": 3.03
+        },
+        "merchandise_exports_usd_b": {
+          "min": 262.3,
+          "max": 451.1,
+          "mean": 339.75,
+          "std": 69.91
+        },
+        "merchandise_imports_usd_b": {
+          "min": 381.0,
+          "max": 714.0,
+          "mean": 506.48,
+          "std": 121.73
+        },
+        "trade_balance_usd_b": {
+          "min": -262.9,
+          "max": -102.6,
+          "mean": -166.73,
+          "std": 54.19
+        },
+        "total_trade_usd_b": {
+          "min": 643.3,
+          "max": 1165.1,
+          "mean": 846.23,
+          "std": 190.98
+        },
+        "export_import_ratio_pct": {
+          "min": 63.2,
+          "max": 74.0,
+          "mean": 67.61,
+          "std": 3.59
+        }
+      }
+    },
+    "d08_india_fdi_inflows": {
+      "dataset_id": "d08_india_fdi_inflows",
+      "row_count": 19,
+      "column_count": 20,
+      "columns": [
+        "fiscal_year",
+        "year_int",
+        "total_fdi_usd_m",
+        "total_fdi_usd_b",
+        "computer_software_hardware_m",
+        "services_financial_banking_m",
+        "telecommunications_m",
+        "automobile_industry_m",
+        "trading_m",
+        "construction_infrastructure_m",
+        "pharma_drugs_m",
+        "source_singapore_pct",
+        "source_mauritius_pct",
+        "source_usa_pct",
+        "source_netherlands_pct",
+        "source_japan_pct",
+        "fdi_yoy_growth_pct",
+        "tech_services_fdi_usd_m",
+        "tech_services_share_pct",
+        "fdi_3yr_moving_avg_b"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year_int": {
+          "min": 2005.0,
+          "max": 2023.0,
+          "mean": 2014.0,
+          "std": 5.63
+        },
+        "total_fdi_usd_m": {
+          "min": 8961.0,
+          "max": 84835.0,
+          "mean": 50810.84,
+          "std": 20666.67
+        },
+        "total_fdi_usd_b": {
+          "min": 8.96,
+          "max": 84.83,
+          "mean": 50.81,
+          "std": 20.67
+        },
+        "computer_software_hardware_m": {
+          "min": 1254.5,
+          "max": 20360.4,
+          "mean": 9458.3,
+          "std": 6157.14
+        },
+        "services_financial_banking_m": {
+          "min": 1523.4,
+          "max": 14422.0,
+          "mean": 8637.85,
+          "std": 3513.34
+        },
+        "telecommunications_m": {
+          "min": 627.3,
+          "max": 5938.5,
+          "mean": 3556.77,
+          "std": 1446.67
+        }
+      }
+    },
+    "d09_india_highway_infrastructure": {
+      "dataset_id": "d09_india_highway_infrastructure",
+      "row_count": 11,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "nh_total_length_km",
+        "nh_added_in_year_km",
+        "construction_pace_km_day",
+        "capital_outlay_inr_cr",
+        "four_lane_plus_pct",
+        "two_lane_pct",
+        "single_intermediate_lane_pct",
+        "bharatmala_pariyojana_expenditure_cr",
+        "cumulative_nh_expansion_pct",
+        "annual_nh_pace_index"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2014.0,
+          "max": 2024.0,
+          "mean": 2019.0,
+          "std": 3.32
+        },
+        "nh_total_length_km": {
+          "min": 91287.0,
+          "max": 146145.0,
+          "mean": 125119.0,
+          "std": 20914.25
+        },
+        "nh_added_in_year_km": {
+          "min": 606.0,
+          "max": 13147.0,
+          "mean": 5388.0,
+          "std": 4007.72
+        },
+        "construction_pace_km_day": {
+          "min": 11.7,
+          "max": 36.5,
+          "mean": 25.32,
+          "std": 8.51
+        },
+        "capital_outlay_inr_cr": {
+          "min": 32483.0,
+          "max": 327613.0,
+          "mean": 132975.55,
+          "std": 96791.89
+        },
+        "four_lane_plus_pct": {
+          "min": 23.0,
+          "max": 48.0,
+          "mean": 35.5,
+          "std": 8.29
+        }
+      }
+    },
+    "d10_india_railways_traffic": {
+      "dataset_id": "d10_india_railways_traffic",
+      "row_count": 15,
+      "column_count": 17,
+      "columns": [
+        "year",
+        "total_freight_loading_mt",
+        "coal_freight_mt",
+        "iron_ore_mt",
+        "cement_mt",
+        "steel_pig_iron_mt",
+        "foodgrains_mt",
+        "fertilizers_mt",
+        "container_service_mt",
+        "pol_petroleum_mt",
+        "route_electrification_km",
+        "electrification_pct",
+        "operating_ratio_pct",
+        "passenger_originating_millions",
+        "coal_freight_share_pct",
+        "freight_growth_yoy_pct",
+        "electrification_gap_km"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2017.0,
+          "std": 4.47
+        },
+        "total_freight_loading_mt": {
+          "min": 887.7,
+          "max": 1610.0,
+          "mean": 1199.39,
+          "std": 235.04
+        },
+        "coal_freight_mt": {
+          "min": 430.5,
+          "max": 780.9,
+          "mean": 581.71,
+          "std": 114.01
+        },
+        "iron_ore_mt": {
+          "min": 99.4,
+          "max": 180.3,
+          "mean": 134.33,
+          "std": 26.32
+        },
+        "cement_mt": {
+          "min": 87.0,
+          "max": 157.8,
+          "mean": 117.53,
+          "std": 23.04
+        },
+        "steel_pig_iron_mt": {
+          "min": 39.9,
+          "max": 72.5,
+          "mean": 53.98,
+          "std": 10.59
+        }
+      }
+    },
+    "d11_india_cpcb_air_quality": {
+      "dataset_id": "d11_india_cpcb_air_quality",
+      "row_count": 1920,
+      "column_count": 16,
+      "columns": [
+        "city",
+        "state",
+        "latitude",
+        "longitude",
+        "timestamp",
+        "pm2_5",
+        "pm10",
+        "no2",
+        "so2",
+        "co",
+        "ozone",
+        "cpcb_aqi",
+        "aqi_category",
+        "pm_ratio",
+        "high_pollution_flag",
+        "hour"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "latitude": {
+          "min": 12.97,
+          "max": 28.61,
+          "mean": 20.77,
+          "std": 5.19
+        },
+        "longitude": {
+          "min": 72.57,
+          "max": 88.36,
+          "mean": 78.73,
+          "std": 4.91
+        },
+        "pm2_5": {
+          "min": 7.5,
+          "max": 178.3,
+          "mean": 45.22,
+          "std": 25.95
+        },
+        "pm10": {
+          "min": 8.8,
+          "max": 259.8,
+          "mean": 60.68,
+          "std": 40.3
+        },
+        "no2": {
+          "min": 0.3,
+          "max": 93.0,
+          "mean": 18.51,
+          "std": 14.93
+        },
+        "so2": {
+          "min": 2.7,
+          "max": 54.9,
+          "mean": 15.76,
+          "std": 10.25
+        }
+      }
+    },
+    "d12_india_upi_digital_payments": {
+      "dataset_id": "d12_india_upi_digital_payments",
+      "row_count": 90,
+      "column_count": 14,
+      "columns": [
+        "date",
+        "year",
+        "month",
+        "volume_millions",
+        "volume_billions",
+        "value_inr_crore",
+        "value_inr_lakh_crore",
+        "avg_ticket_size_inr",
+        "p2p_share_pct",
+        "p2m_merchant_share_pct",
+        "upi_share_of_retail_payments_pct",
+        "vol_mom_growth_pct",
+        "val_mom_growth_pct",
+        "ticket_size_trend_3m"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2017.0,
+          "max": 2024.0,
+          "mean": 2020.27,
+          "std": 2.19
+        },
+        "month": {
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.3,
+          "std": 3.47
+        },
+        "volume_millions": {
+          "min": 4.2,
+          "max": 28651.3,
+          "mean": 7701.12,
+          "std": 9074.8
+        },
+        "volume_billions": {
+          "min": 0.0,
+          "max": 28.65,
+          "mean": 7.7,
+          "std": 9.07
+        },
+        "value_inr_crore": {
+          "min": 6510.0,
+          "max": 37161601.3,
+          "mean": 10326115.93,
+          "std": 11958006.89
+        },
+        "value_inr_lakh_crore": {
+          "min": 0.07,
+          "max": 371.62,
+          "mean": 103.26,
+          "std": 119.58
+        }
+      }
+    },
+    "d13_india_state_finances": {
+      "dataset_id": "d13_india_state_finances",
+      "row_count": 20,
+      "column_count": 8,
+      "columns": [
+        "state",
+        "fiscal_deficit_gsdp_pct",
+        "debt_gsdp_pct",
+        "own_tax_revenue_share_pct",
+        "capital_outlay_pct_exp",
+        "revenue_deficit_gsdp_pct",
+        "fiscal_prudence_score",
+        "capex_to_debt_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "fiscal_deficit_gsdp_pct": {
+          "min": 1.8,
+          "max": 4.8,
+          "mean": 3.3,
+          "std": 0.72
+        },
+        "debt_gsdp_pct": {
+          "min": 13.6,
+          "max": 47.6,
+          "mean": 30.28,
+          "std": 8.69
+        },
+        "own_tax_revenue_share_pct": {
+          "min": 26.5,
+          "max": 68.2,
+          "mean": 49.76,
+          "std": 12.79
+        },
+        "capital_outlay_pct_exp": {
+          "min": 7.5,
+          "max": 24.1,
+          "mean": 15.03,
+          "std": 4.06
+        },
+        "revenue_deficit_gsdp_pct": {
+          "min": -2.8,
+          "max": 3.2,
+          "mean": 0.58,
+          "std": 1.47
+        },
+        "fiscal_prudence_score": {
+          "min": -17.4,
+          "max": 58.2,
+          "mean": 21.52,
+          "std": 19.66
+        }
+      }
+    },
+    "d14_india_higher_education": {
+      "dataset_id": "d14_india_higher_education",
+      "row_count": 21,
+      "column_count": 9,
+      "columns": [
+        "state",
+        "ger_total",
+        "ger_male",
+        "ger_female",
+        "gpi",
+        "colleges_per_lakh_pop",
+        "ptr",
+        "ger_gender_gap",
+        "capacity_adequacy_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "ger_total": {
+          "min": 16.9,
+          "max": 64.8,
+          "mean": 33.32,
+          "std": 12.13
+        },
+        "ger_male": {
+          "min": 17.1,
+          "max": 59.2,
+          "mean": 32.46,
+          "std": 10.92
+        },
+        "ger_female": {
+          "min": 15.9,
+          "max": 71.4,
+          "mean": 34.26,
+          "std": 13.91
+        },
+        "gpi": {
+          "min": 0.87,
+          "max": 1.47,
+          "mean": 1.04,
+          "std": 0.15
+        },
+        "colleges_per_lakh_pop": {
+          "min": 7.0,
+          "max": 62.0,
+          "mean": 31.43,
+          "std": 14.62
+        },
+        "ptr": {
+          "min": 14.0,
+          "max": 55.0,
+          "mean": 24.38,
+          "std": 10.14
+        }
+      }
+    },
+    "d15_india_plfs_employment": {
+      "dataset_id": "d15_india_plfs_employment",
+      "row_count": 6,
+      "column_count": 15,
+      "columns": [
+        "survey_round",
+        "lfpr_total",
+        "lfpr_male",
+        "lfpr_female",
+        "wpr_total",
+        "ur_total",
+        "ur_rural_male",
+        "ur_rural_female",
+        "ur_urban_male",
+        "ur_urban_female",
+        "agri_share",
+        "industry_share",
+        "services_share",
+        "female_lfpr_gap",
+        "urban_rural_ur_gap"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 95,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "lfpr_total": {
+          "min": 36.9,
+          "max": 44.4,
+          "mean": 40.55,
+          "std": 2.96
+        },
+        "lfpr_male": {
+          "min": 55.5,
+          "max": 57.8,
+          "mean": 56.75,
+          "std": 0.99
+        },
+        "lfpr_female": {
+          "min": 17.5,
+          "max": 30.0,
+          "mean": 23.53,
+          "std": 4.88
+        },
+        "wpr_total": {
+          "min": 34.7,
+          "max": 42.9,
+          "mean": 38.67,
+          "std": 3.24
+        },
+        "ur_total": {
+          "min": 3.2,
+          "max": 6.1,
+          "mean": 4.7,
+          "std": 1.1
+        },
+        "ur_rural_male": {
+          "min": 2.7,
+          "max": 5.8,
+          "mean": 4.38,
+          "std": 1.18
+        }
+      }
+    },
+    "d16_global_renewable_energy": {
+      "dataset_id": "d16_global_renewable_energy",
+      "row_count": 152,
+      "column_count": 16,
+      "columns": [
+        "country",
+        "year",
+        "coal_twh",
+        "gas_twh",
+        "hydro_twh",
+        "nuclear_twh",
+        "solar_twh",
+        "wind_twh",
+        "bio_other_twh",
+        "total_generation_twh",
+        "clean_power_twh",
+        "renewable_power_twh",
+        "clean_share_pct",
+        "solar_wind_share_pct",
+        "fossil_power_twh",
+        "clean_to_fossil_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2023.0,
+          "mean": 2014.0,
+          "std": 5.5
+        },
+        "coal_twh": {
+          "min": 106.0,
+          "max": 9640.0,
+          "mean": 1915.12,
+          "std": 2735.98
+        },
+        "gas_twh": {
+          "min": 34.0,
+          "max": 5580.0,
+          "mean": 898.42,
+          "std": 1460.6
+        },
+        "hydro_twh": {
+          "min": 17.5,
+          "max": 4250.0,
+          "mean": 714.1,
+          "std": 1128.56
+        },
+        "nuclear_twh": {
+          "min": 17.0,
+          "max": 2700.0,
+          "mean": 574.02,
+          "std": 813.02
+        },
+        "solar_twh": {
+          "min": 0.5,
+          "max": 887.3,
+          "mean": 62.02,
+          "std": 122.34
+        }
+      }
+    },
+    "d17_global_co2_emissions": {
+      "dataset_id": "d17_global_co2_emissions",
+      "row_count": 238,
+      "column_count": 12,
+      "columns": [
+        "country",
+        "year",
+        "co2_emissions_mt",
+        "co2_emissions_gt",
+        "population_millions",
+        "co2_per_capita_tonnes",
+        "coal_share_pct",
+        "oil_share_pct",
+        "gas_share_pct",
+        "cement_flaring_share_pct",
+        "emissions_growth_yoy_pct",
+        "cumulative_emissions_mt"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1990.0,
+          "max": 2023.0,
+          "mean": 2006.5,
+          "std": 9.83
+        },
+        "co2_emissions_mt": {
+          "min": 600.0,
+          "max": 36230.0,
+          "mean": 7169.08,
+          "std": 9510.89
+        },
+        "co2_emissions_gt": {
+          "min": 0.6,
+          "max": 36.23,
+          "mean": 7.17,
+          "std": 9.51
+        },
+        "population_millions": {
+          "min": 123.4,
+          "max": 8006.0,
+          "mean": 1438.02,
+          "std": 2199.05
+        },
+        "co2_per_capita_tonnes": {
+          "min": 0.69,
+          "max": 20.0,
+          "mean": 8.85,
+          "std": 5.68
+        },
+        "coal_share_pct": {
+          "min": 15.0,
+          "max": 52.0,
+          "mean": 27.0,
+          "std": 16.2
+        }
+      }
+    },
+    "d18_global_health_life_expectancy": {
+      "dataset_id": "d18_global_health_life_expectancy",
+      "row_count": 460,
+      "column_count": 10,
+      "columns": [
+        "country",
+        "region",
+        "income_group",
+        "year",
+        "life_expectancy_years",
+        "healthy_life_expectancy_years",
+        "under5_mortality_rate",
+        "maternal_mortality_ratio",
+        "unhealthy_years_lived",
+        "survival_to_five_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2022.0,
+          "mean": 2011.0,
+          "std": 6.64
+        },
+        "life_expectancy_years": {
+          "min": 46.3,
+          "max": 84.6,
+          "mean": 70.67,
+          "std": 9.97
+        },
+        "healthy_life_expectancy_years": {
+          "min": 40.7,
+          "max": 74.4,
+          "mean": 62.18,
+          "std": 8.77
+        },
+        "under5_mortality_rate": {
+          "min": 2.1,
+          "max": 177.3,
+          "mean": 30.66,
+          "std": 39.98
+        },
+        "maternal_mortality_ratio": {
+          "min": 3.0,
+          "max": 1594.0,
+          "mean": 215.73,
+          "std": 398.99
+        },
+        "unhealthy_years_lived": {
+          "min": 5.6,
+          "max": 10.2,
+          "mean": 8.48,
+          "std": 1.2
+        }
+      }
+    },
+    "d19_global_maternal_child_health": {
+      "dataset_id": "d19_global_maternal_child_health",
+      "row_count": 15,
+      "column_count": 8,
+      "columns": [
+        "country",
+        "u5_stunting_pct",
+        "measles_immunization_pct",
+        "dtp3_immunization_pct",
+        "exclusive_breastfeeding_pct",
+        "neonatal_mortality_rate",
+        "immunization_average_pct",
+        "child_survival_risk_index"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "u5_stunting_pct": {
+          "min": 1.8,
+          "max": 41.8,
+          "mean": 19.0,
+          "std": 15.63
+        },
+        "measles_immunization_pct": {
+          "min": 60.0,
+          "max": 99.0,
+          "mean": 86.13,
+          "std": 13.08
+        },
+        "dtp3_immunization_pct": {
+          "min": 62.0,
+          "max": 99.0,
+          "mean": 87.53,
+          "std": 12.25
+        },
+        "exclusive_breastfeeding_pct": {
+          "min": 25.6,
+          "max": 65.0,
+          "mean": 48.33,
+          "std": 12.49
+        },
+        "neonatal_mortality_rate": {
+          "min": 0.8,
+          "max": 39.2,
+          "mean": 14.15,
+          "std": 12.61
+        },
+        "immunization_average_pct": {
+          "min": 61.0,
+          "max": 99.0,
+          "mean": 86.83,
+          "std": 12.64
+        }
+      }
+    },
+    "d20_global_poverty_inequality": {
+      "dataset_id": "d20_global_poverty_inequality",
+      "row_count": 119,
+      "column_count": 9,
+      "columns": [
+        "region",
+        "year",
+        "poverty_headcount_2_15_pct",
+        "poverty_headcount_3_65_pct",
+        "gini_index",
+        "income_share_richest_10_pct",
+        "income_share_poorest_20_pct",
+        "palma_ratio",
+        "moderate_poverty_spread_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1990.0,
+          "max": 2022.0,
+          "mean": 2006.0,
+          "std": 9.84
+        },
+        "poverty_headcount_2_15_pct": {
+          "min": 1.1,
+          "max": 65.5,
+          "mean": 20.67,
+          "std": 17.65
+        },
+        "poverty_headcount_3_65_pct": {
+          "min": 2.4,
+          "max": 85.0,
+          "mean": 37.08,
+          "std": 26.96
+        },
+        "gini_index": {
+          "min": 29.0,
+          "max": 62.0,
+          "mean": 41.21,
+          "std": 9.48
+        },
+        "income_share_richest_10_pct": {
+          "min": 42.5,
+          "max": 52.7,
+          "mean": 46.16,
+          "std": 3.16
+        },
+        "income_share_poorest_20_pct": {
+          "min": 3.0,
+          "max": 6.1,
+          "mean": 4.81,
+          "std": 0.98
+        }
+      }
+    },
+    "d21_global_fao_food_security": {
+      "dataset_id": "d21_global_fao_food_security",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "fao_food_price_index",
+        "total_cereal_production_mt",
+        "wheat_production_mt",
+        "rice_milled_mt",
+        "maize_production_mt",
+        "cereal_yield_kg_ha",
+        "global_undernourishment_pct",
+        "cereal_stocks_to_use_ratio_pct",
+        "food_price_yoy_pct",
+        "cereal_production_yoy_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2012.0,
+          "std": 7.36
+        },
+        "fao_food_price_index": {
+          "min": 52.8,
+          "max": 143.7,
+          "mean": 96.42,
+          "std": 26.87
+        },
+        "total_cereal_production_mt": {
+          "min": 1575.0,
+          "max": 2527.8,
+          "mean": 2051.4,
+          "std": 292.18
+        },
+        "wheat_production_mt": {
+          "min": 585.0,
+          "max": 789.0,
+          "mean": 687.0,
+          "std": 62.56
+        },
+        "rice_milled_mt": {
+          "min": 400.0,
+          "max": 524.8,
+          "mean": 462.4,
+          "std": 38.27
+        },
+        "maize_production_mt": {
+          "min": 590.0,
+          "max": 1214.0,
+          "mean": 902.0,
+          "std": 191.35
+        }
+      }
+    },
+    "d22_global_forest_deforestation": {
+      "dataset_id": "d22_global_forest_deforestation",
+      "row_count": 70,
+      "column_count": 8,
+      "columns": [
+        "country",
+        "year",
+        "forest_share_land_pct",
+        "forest_area_sqkm",
+        "total_land_area_sqkm",
+        "protected_areas_pct",
+        "deforestation_risk",
+        "forest_change_since_base_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1990.0,
+          "max": 2022.0,
+          "mean": 2008.86,
+          "std": 10.67
+        },
+        "forest_share_land_pct": {
+          "min": 16.7,
+          "max": 70.5,
+          "mean": 42.08,
+          "std": 17.12
+        },
+        "forest_area_sqkm": {
+          "min": 638550.0,
+          "max": 8157240.0,
+          "mean": 2713911.31,
+          "std": 2304418.65
+        },
+        "total_land_area_sqkm": {
+          "min": 1280000.0,
+          "max": 16380000.0,
+          "mean": 6842000.0,
+          "std": 4540047.76
+        },
+        "protected_areas_pct": {
+          "min": 12.0,
+          "max": 20.0,
+          "mean": 16.71,
+          "std": 2.66
+        },
+        "forest_change_since_base_pct": {
+          "min": -16.3,
+          "max": 6.7,
+          "mean": -1.9,
+          "std": 4.96
+        }
+      }
+    },
+    "d23_global_water_stress": {
+      "dataset_id": "d23_global_water_stress",
+      "row_count": 15,
+      "column_count": 8,
+      "columns": [
+        "country",
+        "water_stress_pct",
+        "renewable_per_capita_m3",
+        "agri_withdrawal_pct",
+        "industrial_pct",
+        "municipal_pct",
+        "water_scarcity_flag",
+        "agri_withdrawal_dominance"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "water_stress_pct": {
+          "min": 1.2,
+          "max": 3850.0,
+          "mean": 481.88,
+          "std": 1055.19
+        },
+        "renewable_per_capita_m3": {
+          "min": 5.0,
+          "max": 76500.0,
+          "mean": 9188.4,
+          "std": 21128.26
+        },
+        "agri_withdrawal_pct": {
+          "min": 2.0,
+          "max": 94.0,
+          "mean": 56.53,
+          "std": 29.26
+        },
+        "industrial_pct": {
+          "min": 1.0,
+          "max": 84.0,
+          "mean": 24.93,
+          "std": 29.62
+        },
+        "municipal_pct": {
+          "min": 5.0,
+          "max": 44.0,
+          "mean": 18.53,
+          "std": 11.23
+        }
+      }
+    },
+    "d24_global_trade_current_account": {
+      "dataset_id": "d24_global_trade_current_account",
+      "row_count": 192,
+      "column_count": 6,
+      "columns": [
+        "country",
+        "year",
+        "current_account_gdp_pct",
+        "trade_openness_gdp_pct",
+        "surplus_deficit",
+        "abs_ca_imbalance_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2023.0,
+          "mean": 2011.5,
+          "std": 6.94
+        },
+        "current_account_gdp_pct": {
+          "min": -5.8,
+          "max": 9.9,
+          "mean": 0.65,
+          "std": 3.69
+        },
+        "trade_openness_gdp_pct": {
+          "min": 21.0,
+          "max": 104.5,
+          "mean": 51.11,
+          "std": 21.29
+        },
+        "abs_ca_imbalance_pct": {
+          "min": 0.1,
+          "max": 9.9,
+          "mean": 3.18,
+          "std": 1.97
+        }
+      }
+    },
+    "d25_global_itu_digital_divide": {
+      "dataset_id": "d25_global_itu_digital_divide",
+      "row_count": 133,
+      "column_count": 7,
+      "columns": [
+        "region",
+        "year",
+        "internet_users_pct",
+        "fixed_broadband_per_100",
+        "mobile_cellular_per_100",
+        "offline_population_pct",
+        "mobile_to_broadband_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2023.0,
+          "mean": 2014.0,
+          "std": 5.5
+        },
+        "internet_users_pct": {
+          "min": 2.0,
+          "max": 95.0,
+          "mean": 46.96,
+          "std": 25.24
+        },
+        "fixed_broadband_per_100": {
+          "min": 0.2,
+          "max": 36.0,
+          "mean": 13.91,
+          "std": 11.05
+        },
+        "mobile_cellular_per_100": {
+          "min": 10.0,
+          "max": 142.0,
+          "mean": 82.09,
+          "std": 33.06
+        },
+        "offline_population_pct": {
+          "min": 5.0,
+          "max": 98.0,
+          "mean": 53.04,
+          "std": 25.24
+        },
+        "mobile_to_broadband_ratio": {
+          "min": 3.8,
+          "max": 60.0,
+          "mean": 14.59,
+          "std": 15.67
+        }
+      }
+    },
+    "d26_global_research_rd_innovation": {
+      "dataset_id": "d26_global_research_rd_innovation",
+      "row_count": 12,
+      "column_count": 6,
+      "columns": [
+        "country",
+        "rd_expenditure_pct_gdp",
+        "researchers_per_million",
+        "patents_resident",
+        "hightech_export_share_pct",
+        "innovation_intensity_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "rd_expenditure_pct_gdp": {
+          "min": 0.6,
+          "max": 5.44,
+          "mean": 2.56,
+          "std": 1.53
+        },
+        "researchers_per_million": {
+          "min": 262.0,
+          "max": 8714.0,
+          "mean": 4414.58,
+          "std": 2975.99
+        },
+        "patents_resident": {
+          "min": 612.0,
+          "max": 1464605.0,
+          "mean": 187766.92,
+          "std": 413947.65
+        },
+        "hightech_export_share_pct": {
+          "min": 6.4,
+          "max": 52.4,
+          "mean": 23.35,
+          "std": 12.55
+        },
+        "innovation_intensity_ratio": {
+          "min": 0.17,
+          "max": 45.38,
+          "mean": 14.74,
+          "std": 15.02
+        }
+      }
+    },
+    "d27_global_external_debt_vulnerability": {
+      "dataset_id": "d27_global_external_debt_vulnerability",
+      "row_count": 10,
+      "column_count": 7,
+      "columns": [
+        "country",
+        "external_debt_usd_b",
+        "debt_to_gni_pct",
+        "debt_service_export_pct",
+        "concessional_share_pct",
+        "risk_category",
+        "debt_vulnerability_score"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "external_debt_usd_b": {
+          "min": 29.2,
+          "max": 732.1,
+          "mean": 296.66,
+          "std": 260.67
+        },
+        "debt_to_gni_pct": {
+          "min": 18.7,
+          "max": 74.5,
+          "mean": 42.31,
+          "std": 14.72
+        },
+        "debt_service_export_pct": {
+          "min": 6.7,
+          "max": 42.5,
+          "mean": 28.22,
+          "std": 10.65
+        },
+        "concessional_share_pct": {
+          "min": 0.8,
+          "max": 32.0,
+          "mean": 12.22,
+          "std": 10.28
+        },
+        "debt_vulnerability_score": {
+          "min": 13.9,
+          "max": 59.4,
+          "mean": 36.67,
+          "std": 12.25
+        }
+      }
+    },
+    "d28_global_usgs_earthquakes": {
+      "dataset_id": "d28_global_usgs_earthquakes",
+      "row_count": 1500,
+      "column_count": 15,
+      "columns": [
+        "id",
+        "magnitude",
+        "place",
+        "time_utc",
+        "epoch_ms",
+        "latitude",
+        "longitude",
+        "depth_km",
+        "depth_category",
+        "tsunami_flag",
+        "significance",
+        "felt_reports",
+        "status",
+        "high_magnitude",
+        "energy_joules_est"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "magnitude": {
+          "min": 4.5,
+          "max": 7.8,
+          "mean": 4.81,
+          "std": 0.35
+        },
+        "epoch_ms": {
+          "min": 1785479421847.0,
+          "max": 1791484323544.0,
+          "mean": 1788238796414.93,
+          "std": 1712041189.8
+        },
+        "latitude": {
+          "min": -65.57,
+          "max": 82.59,
+          "mean": -0.07,
+          "std": 27.09
+        },
+        "longitude": {
+          "min": -179.99,
+          "max": 179.99,
+          "mean": 56.68,
+          "std": 115.06
+        },
+        "depth_km": {
+          "min": 0.0,
+          "max": 645.0,
+          "mean": 55.77,
+          "std": 107.41
+        },
+        "tsunami_flag": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.01,
+          "std": 0.08
+        }
+      }
+    },
+    "d29_global_nasa_temperature_anomalies": {
+      "dataset_id": "d29_global_nasa_temperature_anomalies",
+      "row_count": 146,
+      "column_count": 8,
+      "columns": [
+        "year",
+        "annual_mean_anomaly_c",
+        "lowess_smoothing_c",
+        "baseline",
+        "anomaly_above_1c",
+        "decade",
+        "warming_rate_per_decade",
+        "cumulative_warming_anomaly"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1880.0,
+          "max": 2025.0,
+          "mean": 1952.5,
+          "std": 42.29
+        },
+        "annual_mean_anomaly_c": {
+          "min": -0.49,
+          "max": 1.29,
+          "mean": 0.08,
+          "std": 0.4
+        },
+        "lowess_smoothing_c": {
+          "min": -0.42,
+          "max": 1.23,
+          "mean": 0.08,
+          "std": 0.39
+        },
+        "decade": {
+          "min": 1880.0,
+          "max": 2020.0,
+          "mean": 1948.08,
+          "std": 42.33
+        },
+        "warming_rate_per_decade": {
+          "min": -0.35,
+          "max": 0.54,
+          "mean": 0.08,
+          "std": 0.18
+        },
+        "cumulative_warming_anomaly": {
+          "min": -15.24,
+          "max": 11.86,
+          "mean": -8.85,
+          "std": 6.6
+        }
+      }
+    },
+    "d30_global_un_urbanization": {
+      "dataset_id": "d30_global_un_urbanization",
+      "row_count": 60,
+      "column_count": 6,
+      "columns": [
+        "city",
+        "country",
+        "year",
+        "population_millions",
+        "growth_multiple_since_1980",
+        "pop_growth_factor_since_2000"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1980.0,
+          "max": 2024.0,
+          "mean": 2004.0,
+          "std": 15.84
+        },
+        "population_millions": {
+          "min": 3.4,
+          "max": 37.4,
+          "mean": 18.59,
+          "std": 8.3
+        },
+        "growth_multiple_since_1980": {
+          "min": 1.0,
+          "max": 7.03,
+          "mean": 2.23,
+          "std": 1.5
+        },
+        "pop_growth_factor_since_2000": {
+          "min": 0.33,
+          "max": 2.32,
+          "mean": 1.15,
+          "std": 0.49
+        }
+      }
+    },
+    "d31_global_unwto_tourism": {
+      "dataset_id": "d31_global_unwto_tourism",
+      "row_count": 154,
+      "column_count": 6,
+      "columns": [
+        "country",
+        "year",
+        "tourist_arrivals_millions",
+        "tourism_receipts_usd_billions",
+        "covid_impact_year",
+        "receipt_per_arrival_usd"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2010.0,
+          "max": 2023.0,
+          "mean": 2016.5,
+          "std": 4.04
+        },
+        "tourist_arrivals_millions": {
+          "min": 4.8,
+          "max": 90.9,
+          "mean": 42.28,
+          "std": 20.54
+        },
+        "tourism_receipts_usd_billions": {
+          "min": 6.6,
+          "max": 230.8,
+          "mean": 48.72,
+          "std": 42.42
+        },
+        "receipt_per_arrival_usd": {
+          "min": 541.0,
+          "max": 2967.0,
+          "mean": 1171.38,
+          "std": 627.61
+        }
+      }
+    },
+    "d32_global_iea_ev_adoption": {
+      "dataset_id": "d32_global_iea_ev_adoption",
+      "row_count": 45,
+      "column_count": 9,
+      "columns": [
+        "market",
+        "year",
+        "ev_sales_thousands",
+        "ev_market_share_pct",
+        "powertrain_bev_pct",
+        "powertrain_phev_pct",
+        "ev_sales_millions",
+        "bev_sales_k",
+        "phev_sales_k"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2023.0,
+          "mean": 2019.0,
+          "std": 2.61
+        },
+        "ev_sales_thousands": {
+          "min": 0.5,
+          "max": 6938.2,
+          "mean": 795.48,
+          "std": 1368.41
+        },
+        "ev_market_share_pct": {
+          "min": 0.1,
+          "max": 34.0,
+          "mean": 6.26,
+          "std": 7.78
+        },
+        "powertrain_bev_pct": {
+          "min": 58.0,
+          "max": 72.0,
+          "mean": 63.6,
+          "std": 6.94
+        },
+        "powertrain_phev_pct": {
+          "min": 28.0,
+          "max": 42.0,
+          "mean": 36.4,
+          "std": 6.94
+        },
+        "ev_sales_millions": {
+          "min": 0.0,
+          "max": 6.94,
+          "mean": 0.8,
+          "std": 1.37
+        }
+      }
+    },
+    "d33_global_financial_markets": {
+      "dataset_id": "d33_global_financial_markets",
+      "row_count": 321,
+      "column_count": 11,
+      "columns": [
+        "Date",
+        "SP500",
+        "Consumer Price Index",
+        "Long Interest Rate",
+        "PE10",
+        "Gold_USD",
+        "Brent_Oil_USD",
+        "SP500_Return_YoY",
+        "Gold_Return_YoY",
+        "Oil_Return_YoY",
+        "Gold_to_SP500_Ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "SP500": {
+          "min": 757.13,
+          "max": 7711.32,
+          "mean": 2408.86,
+          "std": 1655.37
+        },
+        "Consumer Price Index": {
+          "min": 0.0,
+          "max": 306.13,
+          "mean": 200.27,
+          "std": 78.14
+        },
+        "Long Interest Rate": {
+          "min": 0.0,
+          "max": 6.66,
+          "mean": 2.87,
+          "std": 1.61
+        },
+        "PE10": {
+          "min": 0.0,
+          "max": 43.77,
+          "mean": 24.0,
+          "std": 10.03
+        },
+        "Gold_USD": {
+          "min": 260.0,
+          "max": 5020.0,
+          "mean": 1317.74,
+          "std": 911.87
+        },
+        "Brent_Oil_USD": {
+          "min": 18.38,
+          "max": 132.72,
+          "mean": 67.53,
+          "std": 28.32
+        }
+      }
+    },
+    "d34_global_imf_sovereign_debt": {
+      "dataset_id": "d34_global_imf_sovereign_debt",
+      "row_count": 240,
+      "column_count": 7,
+      "columns": [
+        "country",
+        "economy_group",
+        "year",
+        "gross_debt_gdp_pct",
+        "primary_balance_gdp_pct",
+        "debt_above_100pct_gdp",
+        "debt_growth_5yr"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2024.0,
+          "mean": 2014.5,
+          "std": 5.78
+        },
+        "gross_debt_gdp_pct": {
+          "min": 26.2,
+          "max": 254.6,
+          "mean": 91.62,
+          "std": 48.48
+        },
+        "primary_balance_gdp_pct": {
+          "min": -13.8,
+          "max": 30.1,
+          "mean": -1.44,
+          "std": 5.04
+        },
+        "debt_growth_5yr": {
+          "min": -3.0,
+          "max": 30.6,
+          "mean": 8.11,
+          "std": 8.35
+        }
+      }
+    },
+    "d35_india_gst_collections": {
+      "dataset_id": "d35_india_gst_collections",
+      "row_count": 26,
+      "column_count": 14,
+      "columns": [
+        "year",
+        "month",
+        "cgst_crore",
+        "sgst_crore",
+        "igst_crore",
+        "cess_crore",
+        "total_gst_crore",
+        "date",
+        "total_gst_lakh_crore",
+        "cgst_sgst_combined",
+        "igst_share_pct",
+        "cess_share_pct",
+        "rolling_3m_avg_crore",
+        "period_str"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2018.0,
+          "max": 2024.0,
+          "mean": 2021.0,
+          "std": 1.94
+        },
+        "month": {
+          "min": 1.0,
+          "max": 10.0,
+          "mean": 5.46,
+          "std": 3.3
+        },
+        "cgst_crore": {
+          "min": 5934.0,
+          "max": 43846.0,
+          "mean": 24207.19,
+          "std": 8126.34
+        },
+        "sgst_crore": {
+          "min": 7500.0,
+          "max": 53538.0,
+          "mean": 31252.19,
+          "std": 9476.75
+        },
+        "igst_crore": {
+          "min": 15000.0,
+          "max": 99623.0,
+          "mean": 65419.27,
+          "std": 19940.25
+        },
+        "cess_crore": {
+          "min": 3737.0,
+          "max": 13260.0,
+          "mean": 9626.12,
+          "std": 2177.63
+        }
+      }
+    },
+    "d36_india_pmjdy_inclusion": {
+      "dataset_id": "d36_india_pmjdy_inclusion",
+      "row_count": 28,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "total_beneficiaries_lakh",
+        "rural_beneficiaries_lakh",
+        "urban_beneficiaries_lakh",
+        "women_beneficiaries_lakh",
+        "total_deposits_crore",
+        "rupay_cards_issued_lakh",
+        "rural_share_pct",
+        "women_share_pct",
+        "avg_deposit_per_account_inr",
+        "rupay_card_penetration_pct",
+        "deposit_density_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_beneficiaries_lakh": {
+          "min": 2.1,
+          "max": 934.5,
+          "mean": 183.07,
+          "std": 215.05
+        },
+        "rural_beneficiaries_lakh": {
+          "min": 0.6,
+          "max": 621.2,
+          "mean": 123.64,
+          "std": 147.76
+        },
+        "urban_beneficiaries_lakh": {
+          "min": 1.2,
+          "max": 313.3,
+          "mean": 59.43,
+          "std": 68.73
+        },
+        "women_beneficiaries_lakh": {
+          "min": 1.2,
+          "max": 512.4,
+          "mean": 102.52,
+          "std": 118.87
+        },
+        "total_deposits_crore": {
+          "min": 240.5,
+          "max": 43250.8,
+          "mean": 8097.93,
+          "std": 9402.57
+        },
+        "rupay_cards_issued_lakh": {
+          "min": 1.8,
+          "max": 642.1,
+          "mean": 131.97,
+          "std": 147.42
+        }
+      }
+    },
+    "d37_india_mgnregs_employment": {
+      "dataset_id": "d37_india_mgnregs_employment",
+      "row_count": 22,
+      "column_count": 11,
+      "columns": [
+        "state",
+        "persondays_generated_lakh",
+        "women_persondays_lakh",
+        "women_participation_pct",
+        "total_expenditure_crore",
+        "avg_wage_rate_rs",
+        "households_worked_lakh",
+        "persondays_per_household",
+        "cost_per_personday_rs",
+        "women_inclusion_tier",
+        "wage_deviation_from_avg"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "persondays_generated_lakh": {
+          "min": 120.4,
+          "max": 3420.8,
+          "mean": 1307.19,
+          "std": 1059.33
+        },
+        "women_persondays_lakh": {
+          "min": 58.2,
+          "max": 2940.5,
+          "mean": 748.26,
+          "std": 703.8
+        },
+        "women_participation_pct": {
+          "min": 38.0,
+          "max": 89.0,
+          "mean": 56.43,
+          "std": 13.04
+        },
+        "total_expenditure_crore": {
+          "min": 420.5,
+          "max": 12840.4,
+          "mean": 4703.23,
+          "std": 3764.36
+        },
+        "avg_wage_rate_rs": {
+          "min": 221.0,
+          "max": 357.0,
+          "mean": 260.34,
+          "std": 38.04
+        },
+        "households_worked_lakh": {
+          "min": 2.1,
+          "max": 25.1,
+          "mean": 12.57,
+          "std": 6.66
+        }
+      }
+    },
+    "d38_india_civil_aviation": {
+      "dataset_id": "d38_india_civil_aviation",
+      "row_count": 11,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "domestic_passengers_million",
+        "intl_passengers_million",
+        "total_passengers_million",
+        "aircraft_movements_million",
+        "cargo_tonnage_million_mt",
+        "operating_airports_count",
+        "domestic_share_pct",
+        "pax_per_aircraft_movement",
+        "pax_yoy_growth_pct",
+        "cargo_per_airport_kt"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2014.0,
+          "max": 2024.0,
+          "mean": 2019.0,
+          "std": 3.32
+        },
+        "domestic_passengers_million": {
+          "min": 105.2,
+          "max": 332.1,
+          "mean": 226.45,
+          "std": 73.69
+        },
+        "intl_passengers_million": {
+          "min": 18.4,
+          "max": 71.5,
+          "mean": 52.2,
+          "std": 17.47
+        },
+        "total_passengers_million": {
+          "min": 123.6,
+          "max": 403.6,
+          "mean": 278.65,
+          "std": 88.93
+        },
+        "aircraft_movements_million": {
+          "min": 1.15,
+          "max": 2.65,
+          "mean": 1.97,
+          "std": 0.49
+        },
+        "cargo_tonnage_million_mt": {
+          "min": 2.47,
+          "max": 3.65,
+          "mean": 3.14,
+          "std": 0.42
+        }
+      }
+    },
+    "d39_india_major_ports": {
+      "dataset_id": "d39_india_major_ports",
+      "row_count": 12,
+      "column_count": 12,
+      "columns": [
+        "port_name",
+        "coast",
+        "total_traffic_mmt",
+        "pol_oil_mmt",
+        "iron_ore_mmt",
+        "coal_mmt",
+        "container_other_mmt",
+        "avg_turnaround_hours",
+        "pol_share_pct",
+        "bulk_cargo_share_pct",
+        "container_share_pct",
+        "turnaround_efficiency_rank"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_traffic_mmt": {
+          "min": 20.8,
+          "max": 145.4,
+          "mean": 68.66,
+          "std": 37.69
+        },
+        "pol_oil_mmt": {
+          "min": 2.1,
+          "max": 68.4,
+          "mean": 22.17,
+          "std": 18.33
+        },
+        "iron_ore_mmt": {
+          "min": 0.8,
+          "max": 78.2,
+          "mean": 14.58,
+          "std": 21.84
+        },
+        "coal_mmt": {
+          "min": 1.2,
+          "max": 28.5,
+          "mean": 12.25,
+          "std": 8.72
+        },
+        "container_other_mmt": {
+          "min": 1.8,
+          "max": 76.4,
+          "mean": 19.67,
+          "std": 20.33
+        },
+        "avg_turnaround_hours": {
+          "min": 24.1,
+          "max": 62.5,
+          "mean": 44.93,
+          "std": 9.59
+        }
+      }
+    },
+    "d40_india_telecom_trai": {
+      "dataset_id": "d40_india_telecom_trai",
+      "row_count": 10,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "quarter",
+        "total_wireless_sub_million",
+        "urban_sub_million",
+        "rural_sub_million",
+        "overall_teledensity_pct",
+        "urban_teledensity_pct",
+        "broadband_sub_million",
+        "rural_sub_share_pct",
+        "broadband_penetration_pct",
+        "broadband_yoy_growth_pct",
+        "time_label"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2016.0,
+          "max": 2024.0,
+          "mean": 2020.4,
+          "std": 2.88
+        },
+        "quarter": {
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 3.6,
+          "std": 0.97
+        },
+        "total_wireless_sub_million": {
+          "min": 1127.4,
+          "max": 1183.4,
+          "mean": 1156.92,
+          "std": 17.36
+        },
+        "urban_sub_million": {
+          "min": 625.5,
+          "max": 688.3,
+          "mean": 647.27,
+          "std": 22.42
+        },
+        "rural_sub_million": {
+          "min": 444.3,
+          "max": 533.6,
+          "mean": 509.65,
+          "std": 25.98
+        },
+        "overall_teledensity_pct": {
+          "min": 84.4,
+          "max": 91.1,
+          "mean": 87.07,
+          "std": 2.13
+        }
+      }
+    },
+    "d41_india_mining_minerals": {
+      "dataset_id": "d41_india_mining_minerals",
+      "row_count": 10,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "iron_ore_million_mt",
+        "bauxite_million_mt",
+        "limestone_million_mt",
+        "manganese_ore_million_mt",
+        "zinc_conc_million_mt",
+        "copper_conc_million_mt",
+        "total_metallic_value_billion_inr",
+        "total_bulk_minerals_mmt",
+        "iron_ore_share_pct",
+        "iron_ore_yoy_growth_pct",
+        "value_per_mt_iron_inr"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "iron_ore_million_mt": {
+          "min": 129.3,
+          "max": 274.5,
+          "mean": 213.75,
+          "std": 46.07
+        },
+        "bauxite_million_mt": {
+          "min": 20.4,
+          "max": 24.7,
+          "mean": 23.06,
+          "std": 1.32
+        },
+        "limestone_million_mt": {
+          "min": 313.4,
+          "max": 435.8,
+          "mean": 356.22,
+          "std": 42.99
+        },
+        "manganese_ore_million_mt": {
+          "min": 2.14,
+          "max": 3.65,
+          "mean": 2.85,
+          "std": 0.47
+        },
+        "zinc_conc_million_mt": {
+          "min": 1.48,
+          "max": 1.84,
+          "mean": 1.62,
+          "std": 0.13
+        }
+      }
+    },
+    "d42_india_forest_cover_isfr": {
+      "dataset_id": "d42_india_forest_cover_isfr",
+      "row_count": 23,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "total_forest_sqkm",
+        "very_dense_forest_sqkm",
+        "mod_dense_forest_sqkm",
+        "open_forest_sqkm",
+        "forest_cover_pct",
+        "carbon_stock_million_tonnes",
+        "dense_forest_sqkm",
+        "dense_canopy_ratio",
+        "carbon_density_tonnes_per_sqkm",
+        "national_forest_share_pct",
+        "ecological_zone_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_forest_sqkm": {
+          "min": 2244.0,
+          "max": 77493.0,
+          "mean": 28284.74,
+          "std": 19478.23
+        },
+        "very_dense_forest_sqkm": {
+          "min": 72.0,
+          "max": 21058.0,
+          "mean": 3753.48,
+          "std": 4548.57
+        },
+        "mod_dense_forest_sqkm": {
+          "min": 576.0,
+          "max": 34209.0,
+          "mean": 12504.74,
+          "std": 9539.32
+        },
+        "open_forest_sqkm": {
+          "min": 1130.0,
+          "max": 36619.0,
+          "mean": 12026.52,
+          "std": 7602.95
+        },
+        "forest_cover_pct": {
+          "min": 4.87,
+          "max": 84.53,
+          "mean": 41.18,
+          "std": 25.86
+        },
+        "carbon_stock_million_tonnes": {
+          "min": 24.8,
+          "max": 1024.2,
+          "mean": 271.66,
+          "std": 219.04
+        }
+      }
+    },
+    "d43_india_petroleum_ppac": {
+      "dataset_id": "d43_india_petroleum_ppac",
+      "row_count": 10,
+      "column_count": 14,
+      "columns": [
+        "year",
+        "crude_production_mmt",
+        "natural_gas_bcm",
+        "refinery_throughput_mmt",
+        "pol_consumption_mmt",
+        "diesel_consumption_mmt",
+        "petrol_consumption_mmt",
+        "lpg_consumption_mmt",
+        "import_dependency_pct",
+        "net_crude_deficit_mmt",
+        "diesel_share_pct",
+        "petrol_to_diesel_ratio",
+        "cooking_fuel_lpg_share_pct",
+        "consumption_yoy_growth_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "crude_production_mmt": {
+          "min": 29.2,
+          "max": 37.5,
+          "mean": 33.13,
+          "std": 3.3
+        },
+        "natural_gas_bcm": {
+          "min": 28.7,
+          "max": 36.4,
+          "mean": 32.74,
+          "std": 2.05
+        },
+        "refinery_throughput_mmt": {
+          "min": 221.8,
+          "max": 261.5,
+          "mean": 244.52,
+          "std": 14.26
+        },
+        "pol_consumption_mmt": {
+          "min": 184.7,
+          "max": 233.3,
+          "mean": 208.2,
+          "std": 14.52
+        },
+        "diesel_consumption_mmt": {
+          "min": 72.7,
+          "max": 89.6,
+          "mean": 79.79,
+          "std": 5.57
+        }
+      }
+    },
+    "d44_india_ncrb_crime": {
+      "dataset_id": "d44_india_ncrb_crime",
+      "row_count": 22,
+      "column_count": 11,
+      "columns": [
+        "state",
+        "total_ipc_crimes",
+        "crime_rate_per_lakh",
+        "crimes_against_women",
+        "cyber_crimes",
+        "conviction_rate_pct",
+        "chargesheet_rate_pct",
+        "women_crime_share_pct",
+        "cyber_crime_rate_index",
+        "judicial_clearance_composite",
+        "crime_severity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_ipc_crimes": {
+          "min": 18940.0,
+          "max": 490212.0,
+          "mean": 192341.0,
+          "std": 129596.51
+        },
+        "crime_rate_per_lakh": {
+          "min": 153.2,
+          "max": 1425.4,
+          "mean": 386.63,
+          "std": 338.48
+        },
+        "crimes_against_women": {
+          "min": 1640.0,
+          "max": 65743.0,
+          "mean": 21031.09,
+          "std": 16284.32
+        },
+        "cyber_crimes": {
+          "min": 180.0,
+          "max": 15297.0,
+          "mean": 3198.5,
+          "std": 3911.78
+        },
+        "conviction_rate_pct": {
+          "min": 9.8,
+          "max": 84.2,
+          "mean": 42.11,
+          "std": 21.36
+        },
+        "chargesheet_rate_pct": {
+          "min": 52.8,
+          "max": 94.2,
+          "mean": 76.95,
+          "std": 9.25
+        }
+      }
+    },
+    "d45_india_pmay_housing": {
+      "dataset_id": "d45_india_pmay_housing",
+      "row_count": 22,
+      "column_count": 11,
+      "columns": [
+        "state",
+        "houses_sanctioned_thousand",
+        "houses_grounded_thousand",
+        "houses_completed_thousand",
+        "central_assistance_crore",
+        "women_ownership_pct",
+        "completion_rate_pct",
+        "grounding_rate_pct",
+        "avg_central_subsidy_per_house_inr",
+        "pipeline_houses_thousand",
+        "national_completion_share_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "houses_sanctioned_thousand": {
+          "min": 54.2,
+          "max": 4210.5,
+          "mean": 1459.95,
+          "std": 1264.56
+        },
+        "houses_grounded_thousand": {
+          "min": 48.1,
+          "max": 3840.2,
+          "mean": 1311.61,
+          "std": 1159.74
+        },
+        "houses_completed_thousand": {
+          "min": 42.5,
+          "max": 3410.8,
+          "mean": 1154.91,
+          "std": 1045.72
+        },
+        "central_assistance_crore": {
+          "min": 920.4,
+          "max": 51420.5,
+          "mean": 17977.66,
+          "std": 14546.49
+        },
+        "women_ownership_pct": {
+          "min": 61.2,
+          "max": 86.4,
+          "mean": 73.56,
+          "std": 7.54
+        },
+        "completion_rate_pct": {
+          "min": 63.3,
+          "max": 86.6,
+          "mean": 76.25,
+          "std": 6.44
+        }
+      }
+    },
+    "d46_india_jal_jeevan_mission": {
+      "dataset_id": "d46_india_jal_jeevan_mission",
+      "row_count": 20,
+      "column_count": 10,
+      "columns": [
+        "state",
+        "total_rural_households_lakh",
+        "fhtc_provided_lakh",
+        "current_coverage_pct",
+        "baseline_2019_pct",
+        "certified_har_ghar_jal_pct",
+        "coverage_expansion_percentage_points",
+        "unconnected_households_lakh",
+        "saturation_status",
+        "growth_multiplier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_rural_households_lakh": {
+          "min": 2.39,
+          "max": 265.42,
+          "mean": 91.48,
+          "std": 63.79
+        },
+        "fhtc_provided_lakh": {
+          "min": 2.39,
+          "max": 218.42,
+          "mean": 70.37,
+          "std": 52.1
+        },
+        "current_coverage_pct": {
+          "min": 45.0,
+          "max": 100.0,
+          "mean": 80.72,
+          "std": 18.22
+        },
+        "baseline_2019_pct": {
+          "min": 1.2,
+          "max": 76.4,
+          "mean": 25.42,
+          "std": 23.83
+        },
+        "certified_har_ghar_jal_pct": {
+          "min": 34.8,
+          "max": 100.0,
+          "mean": 71.29,
+          "std": 23.44
+        },
+        "coverage_expansion_percentage_points": {
+          "min": 23.6,
+          "max": 94.4,
+          "mean": 55.3,
+          "std": 18.89
+        }
+      }
+    },
+    "d47_india_udise_education": {
+      "dataset_id": "d47_india_udise_education",
+      "row_count": 20,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "electricity_avail_pct",
+        "drinking_water_avail_pct",
+        "girls_toilet_avail_pct",
+        "computer_facility_pct",
+        "internet_facility_pct",
+        "ptr_primary",
+        "ptr_upper_primary",
+        "basic_amenities_composite_pct",
+        "digital_readiness_composite_pct",
+        "ptr_gap",
+        "infrastructure_parity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "electricity_avail_pct": {
+          "min": 68.4,
+          "max": 99.8,
+          "mean": 90.76,
+          "std": 8.96
+        },
+        "drinking_water_avail_pct": {
+          "min": 94.2,
+          "max": 99.9,
+          "mean": 98.24,
+          "std": 1.61
+        },
+        "girls_toilet_avail_pct": {
+          "min": 86.4,
+          "max": 99.6,
+          "mean": 95.09,
+          "std": 4.12
+        },
+        "computer_facility_pct": {
+          "min": 28.4,
+          "max": 95.4,
+          "mean": 66.43,
+          "std": 22.1
+        },
+        "internet_facility_pct": {
+          "min": 20.5,
+          "max": 88.5,
+          "mean": 54.83,
+          "std": 21.79
+        },
+        "ptr_primary": {
+          "min": 12.4,
+          "max": 47.2,
+          "mean": 25.03,
+          "std": 7.54
+        }
+      }
+    },
+    "d48_india_tourism_stats": {
+      "dataset_id": "d48_india_tourism_stats",
+      "row_count": 10,
+      "column_count": 10,
+      "columns": [
+        "year",
+        "foreign_tourist_arrivals_million",
+        "foreign_exchange_earnings_usd_billion",
+        "domestic_tourist_visits_million",
+        "top_state_share_pct",
+        "medical_tourism_share_pct",
+        "fee_per_foreign_tourist_usd",
+        "domestic_to_foreign_ratio",
+        "fta_yoy_growth_pct",
+        "domestic_visits_billion"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2014.0,
+          "max": 2023.0,
+          "mean": 2018.5,
+          "std": 3.03
+        },
+        "foreign_tourist_arrivals_million": {
+          "min": 1.53,
+          "max": 10.93,
+          "mean": 7.57,
+          "std": 3.21
+        },
+        "foreign_exchange_earnings_usd_billion": {
+          "min": 6.96,
+          "max": 30.06,
+          "mean": 21.04,
+          "std": 8.15
+        },
+        "domestic_tourist_visits_million": {
+          "min": 610.2,
+          "max": 2509.7,
+          "mean": 1569.18,
+          "std": 613.16
+        },
+        "top_state_share_pct": {
+          "min": 1.24,
+          "max": 4.12,
+          "mean": 2.9,
+          "std": 0.96
+        },
+        "medical_tourism_share_pct": {
+          "min": 7.2,
+          "max": 27.2,
+          "mean": 19.4,
+          "std": 6.97
+        }
+      }
+    },
+    "d49_india_food_pds_nfsa": {
+      "dataset_id": "d49_india_food_pds_nfsa",
+      "row_count": 10,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "total_offtake_million_mt",
+        "rice_offtake_million_mt",
+        "wheat_offtake_million_mt",
+        "central_buffer_stock_million_mt",
+        "food_subsidy_thousand_crore",
+        "aadhaar_authenticated_pds_pct",
+        "rice_share_pct",
+        "wheat_share_pct",
+        "subsidy_per_mt_inr",
+        "buffer_to_offtake_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "total_offtake_million_mt": {
+          "min": 51.4,
+          "max": 92.8,
+          "mean": 64.15,
+          "std": 15.32
+        },
+        "rice_offtake_million_mt": {
+          "min": 24.5,
+          "max": 51.4,
+          "mean": 33.94,
+          "std": 10.02
+        },
+        "wheat_offtake_million_mt": {
+          "min": 26.3,
+          "max": 41.4,
+          "mean": 30.21,
+          "std": 5.72
+        },
+        "central_buffer_stock_million_mt": {
+          "min": 53.8,
+          "max": 82.5,
+          "mean": 63.72,
+          "std": 10.34
+        },
+        "food_subsidy_thousand_crore": {
+          "min": 110.1,
+          "max": 289.0,
+          "mean": 190.28,
+          "std": 61.1
+        }
+      }
+    },
+    "d50_india_patents_ip": {
+      "dataset_id": "d50_india_patents_ip",
+      "row_count": 11,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "patents_filed",
+        "patents_granted",
+        "domestic_filed",
+        "foreign_filed",
+        "domestic_share_pct",
+        "trademark_applications",
+        "grant_to_filing_ratio_pct",
+        "domestic_to_foreign_ratio",
+        "patent_filings_yoy_growth_pct",
+        "grants_yoy_growth_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2014.0,
+          "max": 2024.0,
+          "mean": 2019.0,
+          "std": 3.32
+        },
+        "patents_filed": {
+          "min": 42723.0,
+          "max": 90300.0,
+          "mean": 57333.36,
+          "std": 16222.31
+        },
+        "patents_granted": {
+          "min": 5978.0,
+          "max": 42100.0,
+          "mean": 20227.36,
+          "std": 12243.89
+        },
+        "domestic_filed": {
+          "min": 12071.0,
+          "max": 49200.0,
+          "mean": 23302.64,
+          "std": 12579.64
+        },
+        "foreign_filed": {
+          "min": 29697.0,
+          "max": 41100.0,
+          "mean": 34030.73,
+          "std": 3777.48
+        },
+        "domestic_share_pct": {
+          "min": 28.3,
+          "max": 54.5,
+          "mean": 38.4,
+          "std": 8.83
+        }
+      }
+    },
+    "d51_india_pm_kisan": {
+      "dataset_id": "d51_india_pm_kisan",
+      "row_count": 21,
+      "column_count": 10,
+      "columns": [
+        "state",
+        "farmer_beneficiaries_lakh",
+        "cumulative_dbt_crore",
+        "ekyc_authenticated_pct",
+        "aadhaar_seeded_pct",
+        "women_farmers_pct",
+        "avg_transfer_per_farmer_inr",
+        "digital_compliance_score",
+        "national_farmer_share_pct",
+        "beneficiary_scale_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "farmer_beneficiaries_lakh": {
+          "min": 2.6,
+          "max": 262.4,
+          "mean": 54.89,
+          "std": 55.68
+        },
+        "cumulative_dbt_crore": {
+          "min": 520.4,
+          "max": 52480.5,
+          "mean": 10978.47,
+          "std": 11136.98
+        },
+        "ekyc_authenticated_pct": {
+          "min": 88.5,
+          "max": 97.4,
+          "mean": 94.35,
+          "std": 2.45
+        },
+        "aadhaar_seeded_pct": {
+          "min": 78.4,
+          "max": 91.5,
+          "mean": 86.02,
+          "std": 3.61
+        },
+        "women_farmers_pct": {
+          "min": 11.2,
+          "max": 18.4,
+          "mean": 15.16,
+          "std": 1.98
+        },
+        "avg_transfer_per_farmer_inr": {
+          "min": 20000.2,
+          "max": 20015.4,
+          "mean": 20001.84,
+          "std": 3.31
+        }
+      }
+    },
+    "d52_india_automotive_siam": {
+      "dataset_id": "d52_india_automotive_siam",
+      "row_count": 10,
+      "column_count": 13,
+      "columns": [
+        "year",
+        "pv_production_million",
+        "cv_production_million",
+        "three_wheeler_million",
+        "two_wheeler_million",
+        "total_production_million",
+        "domestic_sales_million",
+        "total_exports_million",
+        "pv_share_of_production_pct",
+        "two_wheeler_share_pct",
+        "export_intensity_pct",
+        "domestic_market_absorption_pct",
+        "production_yoy_growth_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "pv_production_million": {
+          "min": 2.77,
+          "max": 4.22,
+          "mean": 3.58,
+          "std": 0.47
+        },
+        "cv_production_million": {
+          "min": 0.57,
+          "max": 1.06,
+          "mean": 0.78,
+          "std": 0.16
+        },
+        "three_wheeler_million": {
+          "min": 0.5,
+          "max": 1.13,
+          "mean": 0.9,
+          "std": 0.2
+        },
+        "two_wheeler_million": {
+          "min": 15.12,
+          "max": 23.15,
+          "mean": 19.36,
+          "std": 2.22
+        },
+        "total_production_million": {
+          "min": 19.36,
+          "max": 29.08,
+          "mean": 24.78,
+          "std": 2.91
+        }
+      }
+    },
+    "d53_india_coal_production": {
+      "dataset_id": "d53_india_coal_production",
+      "row_count": 10,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "total_raw_coal_production_mt",
+        "cil_production_mt",
+        "power_sector_dispatch_mt",
+        "coal_imports_mt",
+        "pithead_stock_mt",
+        "power_sector_share_pct",
+        "non_cil_production_mt",
+        "cil_share_pct",
+        "import_to_domestic_ratio",
+        "power_dispatch_yoy_growth_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "total_raw_coal_production_mt": {
+          "min": 609.2,
+          "max": 997.4,
+          "mean": 742.62,
+          "std": 120.22
+        },
+        "cil_production_mt": {
+          "min": 494.2,
+          "max": 773.6,
+          "mean": 605.91,
+          "std": 81.05
+        },
+        "power_sector_dispatch_mt": {
+          "min": 485.4,
+          "max": 814.2,
+          "mean": 597.06,
+          "std": 104.85
+        },
+        "coal_imports_mt": {
+          "min": 191.0,
+          "max": 262.5,
+          "mean": 222.91,
+          "std": 22.28
+        },
+        "pithead_stock_mt": {
+          "min": 53.4,
+          "max": 96.8,
+          "mean": 73.91,
+          "std": 14.51
+        }
+      }
+    },
+    "d54_india_inland_waterways": {
+      "dataset_id": "d54_india_inland_waterways",
+      "row_count": 10,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_waterway_cargo_mmt",
+        "nw1_ganga_mmt",
+        "nw2_brahmaputra_mmt",
+        "nw3_west_coast_mmt",
+        "goa_waterways_mmt",
+        "maharashtra_waterways_mmt",
+        "nw1_ganga_share_pct",
+        "nw2_brahmaputra_share_pct",
+        "tidal_coastal_cargo_mmt",
+        "cargo_yoy_growth_pct",
+        "nw1_to_nw2_ratio"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "total_waterway_cargo_mmt": {
+          "min": 30.5,
+          "max": 133.0,
+          "mean": 80.77,
+          "std": 34.87
+        },
+        "nw1_ganga_mmt": {
+          "min": 5.8,
+          "max": 21.4,
+          "mean": 12.33,
+          "std": 5.47
+        },
+        "nw2_brahmaputra_mmt": {
+          "min": 0.4,
+          "max": 4.1,
+          "mean": 1.86,
+          "std": 1.25
+        },
+        "nw3_west_coast_mmt": {
+          "min": 1.2,
+          "max": 3.1,
+          "mean": 2.17,
+          "std": 0.65
+        },
+        "goa_waterways_mmt": {
+          "min": 12.4,
+          "max": 64.8,
+          "mean": 37.32,
+          "std": 18.06
+        }
+      }
+    },
+    "d55_iaea_nuclear_power": {
+      "dataset_id": "d55_iaea_nuclear_power",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "country",
+        "operational_reactors",
+        "total_net_capacity_mwe",
+        "under_construction_reactors",
+        "nuclear_share_electricity_pct",
+        "permanent_shutdown_reactors",
+        "mean_reactor_age_years",
+        "cumulative_generation_twh",
+        "capacity_per_reactor_mwe",
+        "total_reactor_fleet_experience",
+        "generation_intensity_per_gw",
+        "nuclear_power_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "operational_reactors": {
+          "min": 2.0,
+          "max": 93.0,
+          "mean": 17.2,
+          "std": 22.49
+        },
+        "total_net_capacity_mwe": {
+          "min": 1300.0,
+          "max": 95835.0,
+          "mean": 15443.84,
+          "std": 23252.48
+        },
+        "under_construction_reactors": {
+          "min": 0.0,
+          "max": 27.0,
+          "mean": 2.04,
+          "std": 5.4
+        },
+        "nuclear_share_electricity_pct": {
+          "min": 2.2,
+          "max": 64.8,
+          "mean": 24.66,
+          "std": 19.07
+        },
+        "permanent_shutdown_reactors": {
+          "min": 0.0,
+          "max": 41.0,
+          "mean": 6.32,
+          "std": 11.43
+        },
+        "mean_reactor_age_years": {
+          "min": 3.2,
+          "max": 48.2,
+          "mean": 32.02,
+          "std": 11.01
+        }
+      }
+    },
+    "d56_nasa_exoplanets": {
+      "dataset_id": "d56_nasa_exoplanets",
+      "row_count": 15,
+      "column_count": 14,
+      "columns": [
+        "discovery_year",
+        "total_confirmed_cumulative",
+        "transit_method_cumulative",
+        "radial_velocity_cumulative",
+        "microlensing_cumulative",
+        "imaging_cumulative",
+        "terrestrial_rocky_count",
+        "super_earths_count",
+        "gas_giants_count",
+        "habitable_zone_candidates",
+        "transit_share_pct",
+        "habitable_share_pct",
+        "rocky_and_super_earth_count",
+        "annual_new_discoveries"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "discovery_year": {
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2013.33,
+          "std": 8.03
+        },
+        "total_confirmed_cumulative": {
+          "min": 50.0,
+          "max": 5743.0,
+          "mean": 2450.07,
+          "std": 2269.79
+        },
+        "transit_method_cumulative": {
+          "min": 2.0,
+          "max": 4398.0,
+          "mean": 1797.8,
+          "std": 1828.72
+        },
+        "radial_velocity_cumulative": {
+          "min": 46.0,
+          "max": 1092.0,
+          "mean": 556.0,
+          "std": 361.47
+        },
+        "microlensing_cumulative": {
+          "min": 0.0,
+          "max": 178.0,
+          "mean": 59.8,
+          "std": 65.35
+        },
+        "imaging_cumulative": {
+          "min": 2.0,
+          "max": 81.0,
+          "mean": 37.33,
+          "std": 30.52
+        }
+      }
+    },
+    "d57_unhcr_forced_displacement": {
+      "dataset_id": "d57_unhcr_forced_displacement",
+      "row_count": 13,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_displaced_millions",
+        "refugees_under_unhcr_millions",
+        "idps_conflict_millions",
+        "asylum_seekers_millions",
+        "venezuelans_displaced_millions",
+        "children_pct_displaced",
+        "refugees_returned_millions",
+        "idp_share_of_total_pct",
+        "refugee_share_of_total_pct",
+        "children_displaced_millions",
+        "annual_displacement_delta_millions"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2017.77,
+          "std": 4.28
+        },
+        "total_displaced_millions": {
+          "min": 43.7,
+          "max": 120.0,
+          "mean": 78.12,
+          "std": 24.89
+        },
+        "refugees_under_unhcr_millions": {
+          "min": 10.5,
+          "max": 32.2,
+          "mean": 20.35,
+          "std": 7.12
+        },
+        "idps_conflict_millions": {
+          "min": 27.5,
+          "max": 70.1,
+          "mean": 46.52,
+          "std": 13.6
+        },
+        "asylum_seekers_millions": {
+          "min": 0.8,
+          "max": 7.3,
+          "mean": 3.74,
+          "std": 2.0
+        },
+        "venezuelans_displaced_millions": {
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 2.42,
+          "std": 2.49
+        }
+      }
+    },
+    "d58_nist_nvd_cybersecurity": {
+      "dataset_id": "d58_nist_nvd_cybersecurity",
+      "row_count": 13,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_cves_published",
+        "critical_severity_count",
+        "high_severity_count",
+        "medium_severity_count",
+        "low_severity_count",
+        "remote_code_execution_pct",
+        "exploited_in_wild_cisa_kev",
+        "critical_plus_high_count",
+        "critical_high_share_pct",
+        "cisa_kev_exploitation_rate_pct",
+        "yoy_cve_growth_rate_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2017.77,
+          "std": 4.28
+        },
+        "total_cves_published": {
+          "min": 4639.0,
+          "max": 30500.0,
+          "mean": 15569.54,
+          "std": 9026.83
+        },
+        "critical_severity_count": {
+          "min": 735.0,
+          "max": 5720.0,
+          "mean": 2945.62,
+          "std": 1831.74
+        },
+        "high_severity_count": {
+          "min": 1720.0,
+          "max": 13400.0,
+          "mean": 6583.54,
+          "std": 4056.97
+        },
+        "medium_severity_count": {
+          "min": 1845.0,
+          "max": 10080.0,
+          "mean": 5270.23,
+          "std": 2809.72
+        },
+        "low_severity_count": {
+          "min": 334.0,
+          "max": 1300.0,
+          "mean": 770.15,
+          "std": 357.12
+        }
+      }
+    },
+    "d59_nsidc_arctic_sea_ice": {
+      "dataset_id": "d59_nsidc_arctic_sea_ice",
+      "row_count": 16,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "arctic_september_minimum_million_sqkm",
+        "arctic_march_maximum_million_sqkm",
+        "antarctic_february_minimum_million_sqkm",
+        "antarctic_september_maximum_million_sqkm",
+        "arctic_extent_anomaly_sqkm",
+        "antarctic_extent_anomaly_sqkm",
+        "polar_albedo_feedback_index",
+        "global_polar_minimum_sqkm",
+        "seasonal_arctic_melt_range_sqkm",
+        "arctic_loss_vs_1980_pct",
+        "cryosphere_vulnerability_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1980.0,
+          "max": 2024.0,
+          "mean": 2007.94,
+          "std": 14.23
+        },
+        "arctic_september_minimum_million_sqkm": {
+          "min": 3.57,
+          "max": 7.67,
+          "mean": 5.17,
+          "std": 1.12
+        },
+        "arctic_march_maximum_million_sqkm": {
+          "min": 14.39,
+          "max": 16.04,
+          "mean": 15.06,
+          "std": 0.48
+        },
+        "antarctic_february_minimum_million_sqkm": {
+          "min": 1.79,
+          "max": 3.65,
+          "mean": 2.73,
+          "std": 0.53
+        },
+        "antarctic_september_maximum_million_sqkm": {
+          "min": 16.96,
+          "max": 19.44,
+          "mean": 18.69,
+          "std": 0.73
+        },
+        "arctic_extent_anomaly_sqkm": {
+          "min": -2.85,
+          "max": 1.25,
+          "mean": -1.25,
+          "std": 1.12
+        }
+      }
+    },
+    "d60_icao_commercial_aviation": {
+      "dataset_id": "d60_icao_commercial_aviation",
+      "row_count": 13,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "global_passengers_billion",
+        "revenue_passenger_km_trillion",
+        "freight_tonne_km_billion",
+        "scheduled_flights_million",
+        "global_passenger_load_factor_pct",
+        "airline_industry_operating_revenue_usd_billion",
+        "jet_fuel_consumption_million_barrels",
+        "passengers_per_flight_avg",
+        "revenue_per_passenger_usd",
+        "rpk_per_passenger_km",
+        "fuel_intensity_per_1000_rpk"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2024.0,
+          "mean": 2016.31,
+          "std": 6.07
+        },
+        "global_passengers_billion": {
+          "min": 1.8,
+          "max": 4.7,
+          "mean": 3.3,
+          "std": 0.99
+        },
+        "revenue_passenger_km_trillion": {
+          "min": 2.99,
+          "max": 9.15,
+          "mean": 6.17,
+          "std": 2.06
+        },
+        "freight_tonne_km_billion": {
+          "min": 142.0,
+          "max": 235.0,
+          "mean": 198.69,
+          "std": 29.53
+        },
+        "scheduled_flights_million": {
+          "min": 16.9,
+          "max": 38.9,
+          "mean": 30.38,
+          "std": 7.06
+        },
+        "global_passenger_load_factor_pct": {
+          "min": 65.1,
+          "max": 82.6,
+          "mean": 77.63,
+          "std": 5.62
+        }
+      }
+    },
+    "d61_wgc_sovereign_gold_reserves": {
+      "dataset_id": "d61_wgc_sovereign_gold_reserves",
+      "row_count": 25,
+      "column_count": 10,
+      "columns": [
+        "country",
+        "official_gold_holdings_tonnes",
+        "gold_share_total_forex_reserves_pct",
+        "annual_net_purchases_tonnes",
+        "market_value_usd_billion",
+        "per_capita_gold_grams",
+        "reserve_ranking_tier",
+        "usd_value_per_tonne_million",
+        "sovereign_gold_share_of_global_pct",
+        "gold_intensity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "official_gold_holdings_tonnes": {
+          "min": 173.6,
+          "max": 8133.5,
+          "mean": 1163.67,
+          "std": 1715.28
+        },
+        "gold_share_total_forex_reserves_pct": {
+          "min": 3.8,
+          "max": 73.1,
+          "mean": 34.42,
+          "std": 27.65
+        },
+        "annual_net_purchases_tonnes": {
+          "min": -12.0,
+          "max": 130.0,
+          "mean": 13.06,
+          "std": 30.91
+        },
+        "market_value_usd_billion": {
+          "min": 13.2,
+          "max": 618.1,
+          "mean": 88.44,
+          "std": 130.35
+        },
+        "per_capita_gold_grams": {
+          "min": 0.6,
+          "max": 118.2,
+          "mean": 23.4,
+          "std": 24.93
+        },
+        "usd_value_per_tonne_million": {
+          "min": 75.92,
+          "max": 76.14,
+          "mean": 76.02,
+          "std": 0.05
+        }
+      }
+    },
+    "d62_unesco_world_heritage_sites": {
+      "dataset_id": "d62_unesco_world_heritage_sites",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "country",
+        "cultural_sites_count",
+        "natural_sites_count",
+        "mixed_sites_count",
+        "total_heritage_sites",
+        "sites_in_danger_count",
+        "transboundary_sites_count",
+        "year_first_inscribed",
+        "cultural_share_pct",
+        "natural_share_pct",
+        "global_heritage_site_share_pct",
+        "heritage_density_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "cultural_sites_count": {
+          "min": 5.0,
+          "max": 54.0,
+          "mean": 22.2,
+          "std": 14.71
+        },
+        "natural_sites_count": {
+          "min": 0.0,
+          "max": 15.0,
+          "mean": 5.16,
+          "std": 4.27
+        },
+        "mixed_sites_count": {
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 1.12,
+          "std": 1.3
+        },
+        "total_heritage_sites": {
+          "min": 7.0,
+          "max": 60.0,
+          "mean": 28.48,
+          "std": 16.2
+        },
+        "sites_in_danger_count": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.16,
+          "std": 0.37
+        },
+        "transboundary_sites_count": {
+          "min": 0.0,
+          "max": 10.0,
+          "mean": 2.0,
+          "std": 2.66
+        }
+      }
+    },
+    "d63_sia_wsts_semiconductor_market": {
+      "dataset_id": "d63_sia_wsts_semiconductor_market",
+      "row_count": 12,
+      "column_count": 15,
+      "columns": [
+        "year",
+        "total_semiconductor_sales_billion_usd",
+        "logic_chips_sales_billion",
+        "memory_chips_sales_billion",
+        "microprocessor_mpu_mcu_billion",
+        "analog_chips_sales_billion",
+        "discretes_opto_sensors_billion",
+        "asia_pacific_sales_billion",
+        "americas_sales_billion",
+        "europe_sales_billion",
+        "japan_sales_billion",
+        "asia_pacific_market_share_pct",
+        "americas_market_share_pct",
+        "logic_memory_combined_share_pct",
+        "yoy_market_expansion_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2018.0,
+          "std": 4.39
+        },
+        "total_semiconductor_sales_billion_usd": {
+          "min": 291.6,
+          "max": 611.2,
+          "mean": 438.87,
+          "std": 110.29
+        },
+        "logic_chips_sales_billion": {
+          "min": 72.1,
+          "max": 208.4,
+          "mean": 123.89,
+          "std": 44.58
+        },
+        "memory_chips_sales_billion": {
+          "min": 56.8,
+          "max": 158.0,
+          "mean": 108.89,
+          "std": 34.04
+        },
+        "microprocessor_mpu_mcu_billion": {
+          "min": 52.4,
+          "max": 89.2,
+          "mean": 69.09,
+          "std": 12.26
+        },
+        "analog_chips_sales_billion": {
+          "min": 39.3,
+          "max": 89.0,
+          "mean": 60.4,
+          "std": 17.51
+        }
+      }
+    },
+    "d64_who_unicef_immunization": {
+      "dataset_id": "d64_who_unicef_immunization",
+      "row_count": 14,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "dtp3_coverage_pct",
+        "measles_mcv1_coverage_pct",
+        "polio_pol3_coverage_pct",
+        "bcg_tuberculosis_pct",
+        "hepb3_hepatitis_pct",
+        "rotavirus_coverage_pct",
+        "unvaccinated_zero_dose_children_millions",
+        "measles_mcv2_second_dose_pct",
+        "vaccine_equity_gap_mcv1_vs_mcv2",
+        "composite_core_vaccination_index",
+        "zero_dose_children_reduction_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2015.14,
+          "std": 7.28
+        },
+        "dtp3_coverage_pct": {
+          "min": 72.0,
+          "max": 86.0,
+          "mean": 82.86,
+          "std": 3.82
+        },
+        "measles_mcv1_coverage_pct": {
+          "min": 72.0,
+          "max": 86.0,
+          "mean": 82.36,
+          "std": 3.93
+        },
+        "polio_pol3_coverage_pct": {
+          "min": 72.0,
+          "max": 86.0,
+          "mean": 82.71,
+          "std": 3.81
+        },
+        "bcg_tuberculosis_pct": {
+          "min": 78.0,
+          "max": 89.0,
+          "mean": 86.36,
+          "std": 3.0
+        },
+        "hepb3_hepatitis_pct": {
+          "min": 30.0,
+          "max": 85.0,
+          "mean": 74.64,
+          "std": 15.69
+        }
+      }
+    },
+    "d65_noaa_ocean_heat_content": {
+      "dataset_id": "d65_noaa_ocean_heat_content",
+      "row_count": 15,
+      "column_count": 11,
+      "columns": [
+        "year",
+        "ocean_heat_content_0_700m_zettajoules",
+        "ocean_heat_content_0_2000m_zettajoules",
+        "north_atlantic_heat_anomaly_zj",
+        "south_atlantic_heat_anomaly_zj",
+        "pacific_ocean_heat_anomaly_zj",
+        "indian_ocean_heat_anomaly_zj",
+        "annual_ocean_heat_uptake_rate_zj_yr",
+        "deep_ocean_heat_700_2000m_zj",
+        "upper_ocean_heat_share_pct",
+        "cumulative_thermal_expansion_index"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 1965.0,
+          "max": 2024.0,
+          "mean": 2006.47,
+          "std": 18.78
+        },
+        "ocean_heat_content_0_700m_zettajoules": {
+          "min": -12.4,
+          "max": 279.0,
+          "mean": 145.04,
+          "std": 107.14
+        },
+        "ocean_heat_content_0_2000m_zettajoules": {
+          "min": -28.5,
+          "max": 411.0,
+          "mean": 213.49,
+          "std": 159.9
+        },
+        "north_atlantic_heat_anomaly_zj": {
+          "min": -4.1,
+          "max": 66.5,
+          "mean": 34.01,
+          "std": 25.25
+        },
+        "south_atlantic_heat_anomaly_zj": {
+          "min": -2.5,
+          "max": 47.2,
+          "mean": 24.31,
+          "std": 18.14
+        },
+        "pacific_ocean_heat_anomaly_zj": {
+          "min": -14.2,
+          "max": 188.5,
+          "mean": 98.32,
+          "std": 73.79
+        }
+      }
+    },
+    "d66_ioc_olympic_games_history": {
+      "dataset_id": "d66_ioc_olympic_games_history",
+      "row_count": 17,
+      "column_count": 12,
+      "columns": [
+        "edition_year",
+        "host_city_country",
+        "participating_nations",
+        "participating_athletes",
+        "female_athlete_share_pct",
+        "total_events_contested",
+        "usa_medals_total",
+        "china_medals_total",
+        "india_medals_total",
+        "athletes_per_nation_avg",
+        "athletes_per_event_avg",
+        "gender_parity_gap_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "edition_year": {
+          "min": 1960.0,
+          "max": 2024.0,
+          "mean": 1992.0,
+          "std": 20.2
+        },
+        "participating_nations": {
+          "min": 80.0,
+          "max": 207.0,
+          "mean": 157.24,
+          "std": 50.31
+        },
+        "participating_athletes": {
+          "min": 5151.0,
+          "max": 11420.0,
+          "mean": 8543.53,
+          "std": 2437.54
+        },
+        "female_athlete_share_pct": {
+          "min": 11.4,
+          "max": 50.0,
+          "mean": 30.41,
+          "std": 13.37
+        },
+        "total_events_contested": {
+          "min": 150.0,
+          "max": 339.0,
+          "mean": 249.76,
+          "std": 61.69
+        },
+        "usa_medals_total": {
+          "min": 0.0,
+          "max": 174.0,
+          "mean": 100.06,
+          "std": 33.63
+        }
+      }
+    },
+    "d67_unctad_maritime_merchant_fleet": {
+      "dataset_id": "d67_unctad_maritime_merchant_fleet",
+      "row_count": 12,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "world_fleet_deadweight_tonnage_million",
+        "container_ships_dwt_million",
+        "bulk_carriers_dwt_million",
+        "oil_tankers_dwt_million",
+        "general_cargo_dwt_million",
+        "lng_lpg_gas_carriers_dwt_million",
+        "average_vessel_age_years",
+        "seaborne_trade_volume_billion_tons",
+        "bulk_plus_tanker_share_pct",
+        "container_share_pct",
+        "carrying_capacity_per_ton_trade"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2024.0,
+          "mean": 2016.08,
+          "std": 6.29
+        },
+        "world_fleet_deadweight_tonnage_million": {
+          "min": 960.0,
+          "max": 2355.0,
+          "mean": 1777.67,
+          "std": 467.29
+        },
+        "container_ships_dwt_million": {
+          "min": 98.2,
+          "max": 336.0,
+          "mean": 240.56,
+          "std": 74.13
+        },
+        "bulk_carriers_dwt_million": {
+          "min": 325.4,
+          "max": 1018.0,
+          "mean": 739.25,
+          "std": 237.85
+        },
+        "oil_tankers_dwt_million": {
+          "min": 338.1,
+          "max": 649.2,
+          "mean": 532.12,
+          "std": 103.8
+        },
+        "general_cargo_dwt_million": {
+          "min": 98.5,
+          "max": 119.5,
+          "mean": 112.63,
+          "std": 6.72
+        }
+      }
+    },
+    "d68_emdat_natural_disasters": {
+      "dataset_id": "d68_emdat_natural_disasters",
+      "row_count": 15,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_recorded_disasters",
+        "flood_events_count",
+        "storm_cyclone_events_count",
+        "earthquake_events_count",
+        "extreme_temperature_wildfire_count",
+        "total_fatalities_thousands",
+        "total_affected_people_millions",
+        "total_economic_damages_billion_usd",
+        "hydrometeorological_share_pct",
+        "economic_damage_per_event_million_usd",
+        "fatalities_per_event_avg"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2014.13,
+          "std": 7.58
+        },
+        "total_recorded_disasters": {
+          "min": 345.0,
+          "max": 432.0,
+          "mean": 391.87,
+          "std": 26.49
+        },
+        "flood_events_count": {
+          "min": 138.0,
+          "max": 223.0,
+          "mean": 170.47,
+          "std": 23.17
+        },
+        "storm_cyclone_events_count": {
+          "min": 92.0,
+          "max": 130.0,
+          "mean": 111.6,
+          "std": 11.43
+        },
+        "earthquake_events_count": {
+          "min": 25.0,
+          "max": 38.0,
+          "mean": 31.0,
+          "std": 3.66
+        },
+        "extreme_temperature_wildfire_count": {
+          "min": 21.0,
+          "max": 45.0,
+          "mean": 31.07,
+          "std": 8.24
+        }
+      }
+    },
+    "d69_oecd_pisa_education": {
+      "dataset_id": "d69_oecd_pisa_education",
+      "row_count": 21,
+      "column_count": 13,
+      "columns": [
+        "country",
+        "mathematics_score_mean",
+        "reading_score_mean",
+        "science_score_mean",
+        "composite_pisa_average",
+        "socioeconomic_equity_index",
+        "high_performing_students_pct",
+        "low_performing_students_pct",
+        "education_expenditure_per_student_usd",
+        "math_reading_gap",
+        "performance_ratio_high_to_low",
+        "expenditure_efficiency_points_per_10k_usd",
+        "academic_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "mathematics_score_mean": {
+          "min": 379.0,
+          "max": 575.0,
+          "mean": 475.33,
+          "std": 49.19
+        },
+        "reading_score_mean": {
+          "min": 409.0,
+          "max": 543.0,
+          "mean": 479.48,
+          "std": 36.52
+        },
+        "science_score_mean": {
+          "min": 403.0,
+          "max": 561.0,
+          "mean": 487.81,
+          "std": 42.0
+        },
+        "composite_pisa_average": {
+          "min": 397.3,
+          "max": 559.7,
+          "mean": 480.87,
+          "std": 41.93
+        },
+        "socioeconomic_equity_index": {
+          "min": 0.64,
+          "max": 0.88,
+          "mean": 0.77,
+          "std": 0.07
+        },
+        "high_performing_students_pct": {
+          "min": 1.1,
+          "max": 41.2,
+          "mean": 14.58,
+          "std": 9.3
+        }
+      }
+    },
+    "d70_iucn_red_list_biodiversity": {
+      "dataset_id": "d70_iucn_red_list_biodiversity",
+      "row_count": 12,
+      "column_count": 13,
+      "columns": [
+        "year",
+        "total_assessed_species",
+        "critically_endangered_species",
+        "endangered_species",
+        "vulnerable_species",
+        "total_threatened_species",
+        "extinct_and_extinct_in_wild_species",
+        "amphibians_threatened_pct",
+        "mammals_threatened_pct",
+        "corals_threatened_pct",
+        "threatened_share_of_assessed_pct",
+        "critically_endangered_share_pct",
+        "annual_assessed_species_growth"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2024.0,
+          "mean": 2016.08,
+          "std": 6.29
+        },
+        "total_assessed_species": {
+          "min": 38047.0,
+          "max": 163040.0,
+          "mean": 100082.67,
+          "std": 45614.89
+        },
+        "critically_endangered_species": {
+          "min": 2874.0,
+          "max": 9760.0,
+          "mean": 6148.58,
+          "std": 2612.47
+        },
+        "endangered_species": {
+          "min": 4414.0,
+          "max": 17480.0,
+          "mean": 10210.17,
+          "std": 5100.21
+        },
+        "vulnerable_species": {
+          "min": 7921.0,
+          "max": 18110.0,
+          "mean": 12983.0,
+          "std": 3526.55
+        },
+        "total_threatened_species": {
+          "min": 15209.0,
+          "max": 45350.0,
+          "mean": 29341.75,
+          "std": 11206.6
+        }
+      }
+    },
+    "d71_faostat_fertilizer_nutrients": {
+      "dataset_id": "d71_faostat_fertilizer_nutrients",
+      "row_count": 13,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_nutrient_consumption_million_tonnes",
+        "nitrogen_n_million_tonnes",
+        "phosphorus_p2o5_million_tonnes",
+        "potassium_k2o_million_tonnes",
+        "nutrient_use_per_cropland_kg_ha",
+        "nitrogen_use_efficiency_pct",
+        "asia_fertilizer_share_pct",
+        "cereal_grain_production_billion_tonnes",
+        "nitrogen_share_of_total_pct",
+        "npk_ratio_p_to_n",
+        "cereal_yield_per_nutrient_tonne"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2002.0,
+          "max": 2024.0,
+          "mean": 2015.0,
+          "std": 7.18
+        },
+        "total_nutrient_consumption_million_tonnes": {
+          "min": 142.5,
+          "max": 208.5,
+          "mean": 185.02,
+          "std": 20.89
+        },
+        "nitrogen_n_million_tonnes": {
+          "min": 84.8,
+          "max": 117.2,
+          "mean": 107.3,
+          "std": 9.96
+        },
+        "phosphorus_p2o5_million_tonnes": {
+          "min": 33.8,
+          "max": 50.5,
+          "mean": 44.23,
+          "std": 5.31
+        },
+        "potassium_k2o_million_tonnes": {
+          "min": 23.9,
+          "max": 41.9,
+          "mean": 33.48,
+          "std": 6.01
+        },
+        "nutrient_use_per_cropland_kg_ha": {
+          "min": 98.5,
+          "max": 141.5,
+          "mean": 125.92,
+          "std": 13.65
+        }
+      }
+    },
+    "d72_unoosa_orbital_space_launches": {
+      "dataset_id": "d72_unoosa_orbital_space_launches",
+      "row_count": 12,
+      "column_count": 15,
+      "columns": [
+        "year",
+        "total_orbital_launches",
+        "successful_orbital_launches",
+        "payloads_placed_in_orbit",
+        "commercial_satellite_payloads",
+        "government_civil_payloads",
+        "military_defense_payloads",
+        "united_states_launches",
+        "china_launches",
+        "russia_launches",
+        "india_isro_launches",
+        "launch_success_rate_pct",
+        "payloads_per_launch_density",
+        "commercial_payload_share_pct",
+        "us_launch_share_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2005.0,
+          "max": 2024.0,
+          "mean": 2016.08,
+          "std": 6.29
+        },
+        "total_orbital_launches": {
+          "min": 55.0,
+          "max": 252.0,
+          "mean": 124.0,
+          "std": 64.43
+        },
+        "successful_orbital_launches": {
+          "min": 52.0,
+          "max": 244.0,
+          "mean": 117.92,
+          "std": 62.16
+        },
+        "payloads_placed_in_orbit": {
+          "min": 73.0,
+          "max": 3210.0,
+          "mean": 1086.0,
+          "std": 1205.31
+        },
+        "commercial_satellite_payloads": {
+          "min": 24.0,
+          "max": 2980.0,
+          "mean": 941.83,
+          "std": 1148.9
+        },
+        "government_civil_payloads": {
+          "min": 31.0,
+          "max": 135.0,
+          "mean": 85.75,
+          "std": 37.65
+        }
+      }
+    },
+    "d73_energy_institute_world_energy": {
+      "dataset_id": "d73_energy_institute_world_energy",
+      "row_count": 14,
+      "column_count": 13,
+      "columns": [
+        "year",
+        "total_primary_energy_exajoules",
+        "oil_consumption_exajoules",
+        "natural_gas_exajoules",
+        "coal_consumption_exajoules",
+        "renewables_wind_solar_exajoules",
+        "hydroelectricity_exajoules",
+        "nuclear_energy_exajoules",
+        "fossil_fuel_share_pct",
+        "renewable_energy_share_pct",
+        "clean_power_combined_exajoules",
+        "clean_power_share_total_pct",
+        "coal_oil_combined_share_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2015.14,
+          "std": 7.28
+        },
+        "total_primary_energy_exajoules": {
+          "min": 401.5,
+          "max": 631.2,
+          "mean": 545.85,
+          "std": 65.14
+        },
+        "oil_consumption_exajoules": {
+          "min": 154.2,
+          "max": 198.8,
+          "mean": 184.18,
+          "std": 12.21
+        },
+        "natural_gas_exajoules": {
+          "min": 85.1,
+          "max": 147.2,
+          "mean": 125.97,
+          "std": 19.16
+        },
+        "coal_consumption_exajoules": {
+          "min": 98.4,
+          "max": 164.8,
+          "mean": 149.24,
+          "std": 18.22
+        },
+        "renewables_wind_solar_exajoules": {
+          "min": 2.5,
+          "max": 65.5,
+          "mean": 29.5,
+          "std": 21.18
+        }
+      }
+    },
+    "d74_un_sdsn_world_happiness": {
+      "dataset_id": "d74_un_sdsn_world_happiness",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "country",
+        "happiness_cantril_ladder_score",
+        "gdp_per_capita_purchasing_power_parity",
+        "social_support_index",
+        "healthy_life_expectancy_years",
+        "freedom_to_make_life_choices_score",
+        "generosity_index",
+        "perceptions_of_corruption_score",
+        "dystopia_residual_score",
+        "economic_and_social_synergy_score",
+        "governance_trust_index",
+        "happiness_ranking_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "happiness_cantril_ladder_score": {
+          "min": 4.05,
+          "max": 7.74,
+          "mean": 6.79,
+          "std": 0.73
+        },
+        "gdp_per_capita_purchasing_power_parity": {
+          "min": 1.16,
+          "max": 2.14,
+          "mean": 1.8,
+          "std": 0.2
+        },
+        "social_support_index": {
+          "min": 0.67,
+          "max": 1.62,
+          "mean": 1.4,
+          "std": 0.17
+        },
+        "healthy_life_expectancy_years": {
+          "min": 61.2,
+          "max": 74.4,
+          "mean": 71.08,
+          "std": 2.76
+        },
+        "freedom_to_make_life_choices_score": {
+          "min": 0.54,
+          "max": 0.86,
+          "mean": 0.73,
+          "std": 0.08
+        },
+        "generosity_index": {
+          "min": 0.01,
+          "max": 0.26,
+          "mean": 0.17,
+          "std": 0.06
+        }
+      }
+    },
+    "d75_who_amr_surveillance": {
+      "dataset_id": "d75_who_amr_surveillance",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "country",
+        "mrsa_resistance_pct",
+        "ecoli_3gcr_resistance_pct",
+        "klebsiella_carbapenem_res_pct",
+        "blood_culture_surveillance_sites",
+        "antimicrobial_stewardship_compliance_pct",
+        "defined_daily_doses_per_1000",
+        "amr_national_action_plan_tier",
+        "composite_amr_threat_score",
+        "stewardship_gap_pct",
+        "resistance_severity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "mrsa_resistance_pct": {
+          "min": 2.1,
+          "max": 68.5,
+          "mean": 36.81,
+          "std": 18.31
+        },
+        "ecoli_3gcr_resistance_pct": {
+          "min": 7.4,
+          "max": 76.5,
+          "mean": 39.47,
+          "std": 21.77
+        },
+        "klebsiella_carbapenem_res_pct": {
+          "min": 0.4,
+          "max": 62.1,
+          "mean": 23.19,
+          "std": 20.22
+        },
+        "blood_culture_surveillance_sites": {
+          "min": 24.0,
+          "max": 480.0,
+          "mean": 124.48,
+          "std": 113.42
+        },
+        "antimicrobial_stewardship_compliance_pct": {
+          "min": 42.0,
+          "max": 98.1,
+          "mean": 71.85,
+          "std": 16.94
+        },
+        "defined_daily_doses_per_1000": {
+          "min": 12.8,
+          "max": 36.2,
+          "mean": 22.62,
+          "std": 5.89
+        }
+      }
+    },
+    "d76_grid_india_frequency_stability": {
+      "dataset_id": "d76_grid_india_frequency_stability",
+      "row_count": 10,
+      "column_count": 13,
+      "columns": [
+        "year",
+        "peak_demand_met_gw",
+        "energy_met_billion_units",
+        "time_within_frequency_band_pct",
+        "frequency_excursion_high_pct",
+        "frequency_excursion_low_pct",
+        "renewable_installed_capacity_gw",
+        "estimated_renewable_curtailment_pct",
+        "spinning_reserve_margin_pct",
+        "total_frequency_excursions_pct",
+        "renewable_share_of_capacity_pct",
+        "curtailment_volume_gw_est",
+        "yoy_peak_demand_growth_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.5,
+          "std": 3.03
+        },
+        "peak_demand_met_gw": {
+          "min": 148.5,
+          "max": 250.2,
+          "mean": 192.1,
+          "std": 34.66
+        },
+        "energy_met_billion_units": {
+          "min": 1072.0,
+          "max": 1710.0,
+          "mean": 1333.6,
+          "std": 213.6
+        },
+        "time_within_frequency_band_pct": {
+          "min": 78.4,
+          "max": 91.5,
+          "mean": 86.09,
+          "std": 4.44
+        },
+        "frequency_excursion_high_pct": {
+          "min": 5.4,
+          "max": 12.2,
+          "mean": 8.42,
+          "std": 2.29
+        },
+        "frequency_excursion_low_pct": {
+          "min": 3.1,
+          "max": 9.4,
+          "mean": 5.49,
+          "std": 2.15
+        }
+      }
+    },
+    "d77_cpcb_municipal_solid_waste": {
+      "dataset_id": "d77_cpcb_municipal_solid_waste",
+      "row_count": 25,
+      "column_count": 13,
+      "columns": [
+        "city",
+        "waste_generated_tpd",
+        "waste_collected_tpd",
+        "waste_processed_tpd",
+        "source_segregation_pct",
+        "legacy_landfill_waste_lakh_tons",
+        "wet_organic_waste_pct",
+        "dry_recyclable_pct",
+        "waste_to_energy_capacity_tpd",
+        "collection_efficiency_pct",
+        "processing_rate_pct",
+        "unprocessed_landfill_waste_tpd",
+        "processing_performance_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "waste_generated_tpd": {
+          "min": 420.0,
+          "max": 11332.0,
+          "mean": 2712.68,
+          "std": 2777.78
+        },
+        "waste_collected_tpd": {
+          "min": 390.0,
+          "max": 10980.0,
+          "mean": 2614.0,
+          "std": 2701.14
+        },
+        "waste_processed_tpd": {
+          "min": 340.0,
+          "max": 8240.0,
+          "mean": 1933.6,
+          "std": 2063.94
+        },
+        "source_segregation_pct": {
+          "min": 28.5,
+          "max": 98.5,
+          "mean": 68.04,
+          "std": 19.03
+        },
+        "legacy_landfill_waste_lakh_tons": {
+          "min": 0.0,
+          "max": 280.0,
+          "mean": 62.52,
+          "std": 66.42
+        },
+        "wet_organic_waste_pct": {
+          "min": 48.5,
+          "max": 62.5,
+          "mean": 54.62,
+          "std": 3.59
+        }
+      }
+    },
+    "d78_cgwb_groundwater_stress": {
+      "dataset_id": "d78_cgwb_groundwater_stress",
+      "row_count": 25,
+      "column_count": 13,
+      "columns": [
+        "state",
+        "total_annual_extractable_bcm",
+        "current_annual_extraction_bcm",
+        "stage_of_extraction_pct",
+        "over_exploited_units_count",
+        "critical_units_count",
+        "safe_units_count",
+        "salinity_affected_districts",
+        "net_groundwater_balance_bcm",
+        "total_stressed_units",
+        "total_assessed_units",
+        "stressed_units_share_pct",
+        "aquifer_stress_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_annual_extractable_bcm": {
+          "min": 0.15,
+          "max": 64.25,
+          "mean": 15.31,
+          "std": 14.73
+        },
+        "current_annual_extraction_bcm": {
+          "min": 0.05,
+          "max": 45.12,
+          "mean": 9.27,
+          "std": 10.5
+        },
+        "stage_of_extraction_pct": {
+          "min": 12.6,
+          "max": 150.8,
+          "mean": 60.66,
+          "std": 39.0
+        },
+        "over_exploited_units_count": {
+          "min": 0.0,
+          "max": 435.0,
+          "mean": 44.44,
+          "std": 94.54
+        },
+        "critical_units_count": {
+          "min": 0.0,
+          "max": 63.0,
+          "mean": 9.16,
+          "std": 15.9
+        },
+        "safe_units_count": {
+          "min": 4.0,
+          "max": 650.0,
+          "mean": 206.28,
+          "std": 207.32
+        }
+      }
+    },
+    "d79_iea_critical_minerals": {
+      "dataset_id": "d79_iea_critical_minerals",
+      "row_count": 12,
+      "column_count": 13,
+      "columns": [
+        "mineral",
+        "primary_energy_use",
+        "top_producing_country",
+        "top_producer_share_pct",
+        "top_refining_country",
+        "top_refiner_share_pct",
+        "global_market_size_billion_usd",
+        "recycling_share_of_supply_pct",
+        "projected_2030_supply_deficit_pct",
+        "hhi_producer_concentration_index",
+        "hhi_refiner_concentration_index",
+        "refining_to_mining_dominance_ratio",
+        "geopolitical_vulnerability_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "top_producer_share_pct": {
+          "min": 24.5,
+          "max": 82.5,
+          "mean": 61.84,
+          "std": 17.77
+        },
+        "top_refiner_share_pct": {
+          "min": 38.0,
+          "max": 98.2,
+          "mean": 69.27,
+          "std": 22.98
+        },
+        "global_market_size_billion_usd": {
+          "min": 0.8,
+          "max": 185.0,
+          "mean": 25.32,
+          "std": 51.3
+        },
+        "recycling_share_of_supply_pct": {
+          "min": 0.5,
+          "max": 28.4,
+          "mean": 7.54,
+          "std": 8.54
+        },
+        "projected_2030_supply_deficit_pct": {
+          "min": 4.2,
+          "max": 38.0,
+          "mean": 15.32,
+          "std": 10.28
+        },
+        "hhi_producer_concentration_index": {
+          "min": 6.0,
+          "max": 68.0,
+          "mean": 41.08,
+          "std": 19.4
+        }
+      }
+    },
+    "d80_nha_hospital_bed_capacity": {
+      "dataset_id": "d80_nha_hospital_bed_capacity",
+      "row_count": 25,
+      "column_count": 13,
+      "columns": [
+        "state",
+        "total_public_hospital_beds",
+        "total_icu_beds",
+        "beds_per_1000_population",
+        "icu_bed_share_pct",
+        "avg_bed_occupancy_rate_pct",
+        "doctors_per_1000",
+        "nurses_per_1000",
+        "pmjay_empanelled_hospitals",
+        "nurse_to_doctor_ratio",
+        "who_bed_density_gap",
+        "total_staffing_density_per_1000",
+        "healthcare_capacity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_public_hospital_beds": {
+          "min": 3400.0,
+          "max": 112000.0,
+          "mean": 38752.0,
+          "std": 29321.58
+        },
+        "total_icu_beds": {
+          "min": 310.0,
+          "max": 11500.0,
+          "mean": 4038.0,
+          "std": 3114.77
+        },
+        "beds_per_1000_population": {
+          "min": 0.31,
+          "max": 2.15,
+          "mean": 0.93,
+          "std": 0.4
+        },
+        "icu_bed_share_pct": {
+          "min": 7.5,
+          "max": 13.9,
+          "mean": 10.28,
+          "std": 1.68
+        },
+        "avg_bed_occupancy_rate_pct": {
+          "min": 66.8,
+          "max": 96.8,
+          "mean": 81.07,
+          "std": 7.81
+        },
+        "doctors_per_1000": {
+          "min": 0.38,
+          "max": 1.6,
+          "mean": 0.85,
+          "std": 0.33
+        }
+      }
+    },
+    "d81_fao_wfp_food_security": {
+      "dataset_id": "d81_fao_wfp_food_security",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "country",
+        "cereal_import_dependency_ratio_pct",
+        "cereal_stock_to_use_ratio_pct",
+        "food_inflation_yoy_pct",
+        "undernourishment_prevalence_pct",
+        "per_capita_food_supply_kcal_day",
+        "fertilizer_import_exposure_pct",
+        "emergency_food_reserve_months",
+        "import_inflation_stress_index",
+        "caloric_gap_vs_benchmark_kcal",
+        "food_security_vulnerability_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "cereal_import_dependency_ratio_pct": {
+          "min": -8.2,
+          "max": 94.5,
+          "mean": 47.88,
+          "std": 28.78
+        },
+        "cereal_stock_to_use_ratio_pct": {
+          "min": 6.5,
+          "max": 36.4,
+          "mean": 15.51,
+          "std": 6.53
+        },
+        "food_inflation_yoy_pct": {
+          "min": 4.2,
+          "max": 72.4,
+          "mean": 22.55,
+          "std": 17.08
+        },
+        "undernourishment_prevalence_pct": {
+          "min": 3.8,
+          "max": 54.0,
+          "mean": 21.67,
+          "std": 15.54
+        },
+        "per_capita_food_supply_kcal_day": {
+          "min": 1920.0,
+          "max": 3350.0,
+          "mean": 2530.0,
+          "std": 430.54
+        },
+        "fertilizer_import_exposure_pct": {
+          "min": 32.0,
+          "max": 99.0,
+          "mean": 75.12,
+          "std": 21.62
+        }
+      }
+    },
+    "d82_morth_urban_traffic_congestion": {
+      "dataset_id": "d82_morth_urban_traffic_congestion",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "city",
+        "congestion_level_pct",
+        "lost_hours_per_year_commute",
+        "avg_peak_speed_kmh",
+        "avg_off_peak_speed_kmh",
+        "time_to_travel_10km_mins",
+        "co2_emissions_per_commuter_kg",
+        "public_transit_modal_share_pct",
+        "speed_reduction_penalty_pct",
+        "lost_economic_hours_per_day",
+        "speed_ratio_offpeak_to_peak",
+        "congestion_severity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "congestion_level_pct": {
+          "min": 29.4,
+          "max": 68.4,
+          "mean": 44.55,
+          "std": 10.17
+        },
+        "lost_hours_per_year_commute": {
+          "min": 86.0,
+          "max": 242.0,
+          "mean": 146.68,
+          "std": 41.09
+        },
+        "avg_peak_speed_kmh": {
+          "min": 15.2,
+          "max": 32.4,
+          "mean": 23.63,
+          "std": 4.8
+        },
+        "avg_off_peak_speed_kmh": {
+          "min": 26.4,
+          "max": 46.0,
+          "mean": 35.91,
+          "std": 5.43
+        },
+        "time_to_travel_10km_mins": {
+          "min": 13.8,
+          "max": 29.5,
+          "mean": 20.38,
+          "std": 4.39
+        },
+        "co2_emissions_per_commuter_kg": {
+          "min": 610.0,
+          "max": 1120.0,
+          "mean": 750.0,
+          "std": 127.02
+        }
+      }
+    },
+    "d83_nbtc_blood_bank_reserves": {
+      "dataset_id": "d83_nbtc_blood_bank_reserves",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "state",
+        "total_registered_blood_banks",
+        "annual_units_collected_lakh",
+        "voluntary_donation_pct",
+        "o_negative_reserve_days",
+        "b_negative_reserve_days",
+        "blood_component_separation_pct",
+        "annual_wastage_due_to_expiry_pct",
+        "rare_blood_group_average_reserve_days",
+        "annual_wastage_units_approx",
+        "blood_reserve_security_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_registered_blood_banks": {
+          "min": 12.0,
+          "max": 410.0,
+          "mean": 136.44,
+          "std": 106.01
+        },
+        "annual_units_collected_lakh": {
+          "min": 0.32,
+          "max": 17.8,
+          "mean": 6.02,
+          "std": 4.64
+        },
+        "voluntary_donation_pct": {
+          "min": 48.5,
+          "max": 95.8,
+          "mean": 78.23,
+          "std": 12.67
+        },
+        "o_negative_reserve_days": {
+          "min": 1.2,
+          "max": 4.8,
+          "mean": 3.07,
+          "std": 0.99
+        },
+        "b_negative_reserve_days": {
+          "min": 1.5,
+          "max": 5.2,
+          "mean": 3.35,
+          "std": 1.0
+        },
+        "blood_component_separation_pct": {
+          "min": 42.0,
+          "max": 88.0,
+          "mean": 66.04,
+          "std": 12.04
+        }
+      }
+    },
+    "d84_cpcb_cems_industrial_emissions": {
+      "dataset_id": "d84_cpcb_cems_industrial_emissions",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "industrial_cluster",
+        "state",
+        "cepi_pollution_index",
+        "major_industry_type",
+        "stack_pm_exceedance_pct",
+        "so2_compliance_rate_pct",
+        "nox_compliance_rate_pct",
+        "cems_connected_stacks_count",
+        "closure_notices_issued",
+        "combined_gaseous_compliance_rate_pct",
+        "stack_exceedance_stacks_estimate",
+        "pollution_severity_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "cepi_pollution_index": {
+          "min": 68.4,
+          "max": 93.69,
+          "mean": 80.52,
+          "std": 7.25
+        },
+        "stack_pm_exceedance_pct": {
+          "min": 16.5,
+          "max": 36.8,
+          "mean": 26.47,
+          "std": 5.43
+        },
+        "so2_compliance_rate_pct": {
+          "min": 52.4,
+          "max": 84.2,
+          "mean": 69.32,
+          "std": 9.04
+        },
+        "nox_compliance_rate_pct": {
+          "min": 56.0,
+          "max": 87.0,
+          "mean": 72.47,
+          "std": 8.59
+        },
+        "cems_connected_stacks_count": {
+          "min": 54.0,
+          "max": 310.0,
+          "mean": 137.24,
+          "std": 65.5
+        },
+        "closure_notices_issued": {
+          "min": 2.0,
+          "max": 18.0,
+          "mean": 7.84,
+          "std": 4.6
+        }
+      }
+    },
+    "d85_indian_railways_safety": {
+      "dataset_id": "d85_indian_railways_safety",
+      "row_count": 16,
+      "column_count": 13,
+      "columns": [
+        "zone",
+        "headquarters",
+        "track_route_km",
+        "consequential_accidents_count",
+        "derailments_count",
+        "usfd_fractures_detected_count",
+        "track_renewal_executed_km",
+        "kavach_atp_deployed_km",
+        "unmanned_level_crossings_eliminated",
+        "usfd_fractures_per_1000_km",
+        "kavach_atp_coverage_pct",
+        "derailment_rate_per_1000_km",
+        "track_renewal_intensity_pct"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "track_route_km": {
+          "min": 2510.0,
+          "max": 7345.0,
+          "mean": 4225.94,
+          "std": 1503.4
+        },
+        "consequential_accidents_count": {
+          "min": 2.0,
+          "max": 9.0,
+          "mean": 4.25,
+          "std": 1.84
+        },
+        "derailments_count": {
+          "min": 1.0,
+          "max": 7.0,
+          "mean": 3.25,
+          "std": 1.61
+        },
+        "usfd_fractures_detected_count": {
+          "min": 88.0,
+          "max": 245.0,
+          "mean": 146.81,
+          "std": 42.99
+        },
+        "track_renewal_executed_km": {
+          "min": 310.0,
+          "max": 590.0,
+          "mean": 430.62,
+          "std": 83.78
+        },
+        "kavach_atp_deployed_km": {
+          "min": 45.0,
+          "max": 850.0,
+          "mean": 180.94,
+          "std": 190.11
+        }
+      }
+    },
+    "d86_bis_sovereign_debt_default_risk": {
+      "dataset_id": "d86_bis_sovereign_debt_default_risk",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "country",
+        "external_debt_to_gni_pct",
+        "sovereign_rating_grade",
+        "cds_5yr_spread_bps",
+        "external_debt_service_to_exports_pct",
+        "short_term_debt_share_pct",
+        "multilateral_concessional_share_pct",
+        "default_risk_tier",
+        "implied_1yr_default_prob_pct",
+        "short_term_debt_vulnerability_index",
+        "concessional_cushion_factor"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "external_debt_to_gni_pct": {
+          "min": 18.7,
+          "max": 78.2,
+          "mean": 45.51,
+          "std": 15.52
+        },
+        "cds_5yr_spread_bps": {
+          "min": 45.0,
+          "max": 2600.0,
+          "mean": 618.6,
+          "std": 731.41
+        },
+        "external_debt_service_to_exports_pct": {
+          "min": 6.7,
+          "max": 52.0,
+          "mean": 25.26,
+          "std": 13.0
+        },
+        "short_term_debt_share_pct": {
+          "min": 8.0,
+          "max": 28.5,
+          "mean": 15.69,
+          "std": 4.64
+        },
+        "multilateral_concessional_share_pct": {
+          "min": 4.2,
+          "max": 62.0,
+          "mean": 24.46,
+          "std": 15.73
+        },
+        "implied_1yr_default_prob_pct": {
+          "min": 0.75,
+          "max": 43.33,
+          "mean": 10.31,
+          "std": 12.19
+        }
+      }
+    },
+    "d87_mnre_offgrid_solar_reliability": {
+      "dataset_id": "d87_mnre_offgrid_solar_reliability",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "minigrid_solar_capacity_kwp",
+        "beneficiary_hamlets_count",
+        "standalone_solar_pumps_installed",
+        "avg_daily_power_supply_hours",
+        "minigrid_uptime_sla_pct",
+        "storage_battery_lithium_share_pct",
+        "micro_enterprise_connections",
+        "capacity_per_hamlet_kwp",
+        "pumps_per_hamlet_density",
+        "daily_unserved_power_hours",
+        "dignified_energy_access_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "minigrid_solar_capacity_kwp": {
+          "min": 1900.0,
+          "max": 28500.0,
+          "mean": 11076.0,
+          "std": 7558.23
+        },
+        "beneficiary_hamlets_count": {
+          "min": 140.0,
+          "max": 1850.0,
+          "mean": 648.4,
+          "std": 450.9
+        },
+        "standalone_solar_pumps_installed": {
+          "min": 1400.0,
+          "max": 84200.0,
+          "mean": 25176.0,
+          "std": 21856.43
+        },
+        "avg_daily_power_supply_hours": {
+          "min": 13.8,
+          "max": 22.5,
+          "mean": 18.08,
+          "std": 2.85
+        },
+        "minigrid_uptime_sla_pct": {
+          "min": 85.5,
+          "max": 98.4,
+          "mean": 93.09,
+          "std": 3.97
+        },
+        "storage_battery_lithium_share_pct": {
+          "min": 38.5,
+          "max": 72.0,
+          "mean": 53.77,
+          "std": 9.75
+        }
+      }
+    },
+    "d88_njdg_court_case_pendency": {
+      "dataset_id": "d88_njdg_court_case_pendency",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "total_pending_cases_lakh",
+        "cases_older_than_5_years_pct",
+        "cases_older_than_10_years_pct",
+        "civil_cases_share_pct",
+        "criminal_cases_share_pct",
+        "annual_cases_disposed_per_judge",
+        "undertrial_prisoners_share_pct",
+        "total_chronic_delay_cases_lakh",
+        "ultra_chronic_cases_over_10y_lakh",
+        "criminal_to_civil_ratio",
+        "pendency_distress_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_pending_cases_lakh": {
+          "min": 0.22,
+          "max": 112.5,
+          "mean": 18.42,
+          "std": 23.2
+        },
+        "cases_older_than_5_years_pct": {
+          "min": 12.8,
+          "max": 48.5,
+          "mean": 27.88,
+          "std": 9.8
+        },
+        "cases_older_than_10_years_pct": {
+          "min": 2.9,
+          "max": 26.2,
+          "mean": 11.09,
+          "std": 6.28
+        },
+        "civil_cases_share_pct": {
+          "min": 22.4,
+          "max": 58.0,
+          "mean": 36.72,
+          "std": 8.91
+        },
+        "criminal_cases_share_pct": {
+          "min": 42.0,
+          "max": 77.6,
+          "mean": 63.28,
+          "std": 8.91
+        },
+        "annual_cases_disposed_per_judge": {
+          "min": 1100.0,
+          "max": 2250.0,
+          "mean": 1705.2,
+          "std": 313.77
+        }
+      }
+    },
+    "d89_certin_cyber_incidents": {
+      "dataset_id": "d89_certin_cyber_incidents",
+      "row_count": 10,
+      "column_count": 12,
+      "columns": [
+        "year",
+        "total_cyber_security_incidents",
+        "ransomware_attacks_reported",
+        "phishing_incidents_count",
+        "critical_infrastructure_breaches",
+        "avg_incident_containment_hours",
+        "financial_fraud_cases_lakh",
+        "govt_websites_defaced",
+        "ransomware_share_of_incidents_pct",
+        "phishing_share_pct",
+        "yoy_incident_surge_pct",
+        "containment_velocity_index"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "year": {
+          "min": 2012.0,
+          "max": 2024.0,
+          "mean": 2018.9,
+          "std": 3.93
+        },
+        "total_cyber_security_incidents": {
+          "min": 22144.0,
+          "max": 1720000.0,
+          "mean": 798541.4,
+          "std": 712456.86
+        },
+        "ransomware_attacks_reported": {
+          "min": 18.0,
+          "max": 2480.0,
+          "mean": 1011.3,
+          "std": 921.4
+        },
+        "phishing_incidents_count": {
+          "min": 2450.0,
+          "max": 98400.0,
+          "mean": 43933.0,
+          "std": 37544.08
+        },
+        "critical_infrastructure_breaches": {
+          "min": 12.0,
+          "max": 355.0,
+          "mean": 162.1,
+          "std": 129.83
+        },
+        "avg_incident_containment_hours": {
+          "min": 36.0,
+          "max": 142.0,
+          "mean": 73.7,
+          "std": 36.3
+        }
+      }
+    },
+    "d90_mofpi_cold_storage_logistics": {
+      "dataset_id": "d90_mofpi_cold_storage_logistics",
+      "row_count": 25,
+      "column_count": 11,
+      "columns": [
+        "state",
+        "cold_storage_capacity_lakh_mt",
+        "cold_storage_projects_count",
+        "estimated_horticultural_loss_pct",
+        "multi_commodity_storage_share_pct",
+        "reefer_vehicles_registered",
+        "farm_gate_packhouses_count",
+        "post_harvest_loss_value_crore",
+        "avg_capacity_per_project_mt",
+        "multi_commodity_capacity_lakh_mt",
+        "cold_chain_deficit_risk_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "cold_storage_capacity_lakh_mt": {
+          "min": 0.28,
+          "max": 148.5,
+          "mean": 17.02,
+          "std": 30.74
+        },
+        "cold_storage_projects_count": {
+          "min": 6.0,
+          "max": 2420.0,
+          "mean": 337.6,
+          "std": 501.15
+        },
+        "estimated_horticultural_loss_pct": {
+          "min": 11.8,
+          "max": 28.0,
+          "mean": 19.21,
+          "std": 4.53
+        },
+        "multi_commodity_storage_share_pct": {
+          "min": 6.5,
+          "max": 72.5,
+          "mean": 30.66,
+          "std": 16.3
+        },
+        "reefer_vehicles_registered": {
+          "min": 35.0,
+          "max": 2650.0,
+          "mean": 822.0,
+          "std": 624.92
+        },
+        "farm_gate_packhouses_count": {
+          "min": 10.0,
+          "max": 480.0,
+          "mean": 138.92,
+          "std": 108.23
+        }
+      }
+    },
+    "d91_fsi_wildfire_early_warning": {
+      "dataset_id": "d91_fsi_wildfire_early_warning",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "annual_fire_alerts_count",
+        "forest_area_affected_hectares",
+        "extreme_fire_vulnerability_pct",
+        "forest_cover_sqkm",
+        "fire_season_mean_temp_c",
+        "mean_response_time_minutes",
+        "fire_watchers_deployed",
+        "fire_alerts_per_100_sqkm_forest",
+        "affected_forest_share_pct",
+        "fire_watcher_density_per_1000_ha",
+        "fire_risk_priority_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "annual_fire_alerts_count": {
+          "min": 850.0,
+          "max": 34500.0,
+          "mean": 12258.0,
+          "std": 9284.66
+        },
+        "forest_area_affected_hectares": {
+          "min": 920.0,
+          "max": 48200.0,
+          "mean": 15872.8,
+          "std": 13034.08
+        },
+        "extreme_fire_vulnerability_pct": {
+          "min": 11.2,
+          "max": 42.0,
+          "mean": 26.05,
+          "std": 8.86
+        },
+        "forest_cover_sqkm": {
+          "min": 2244.0,
+          "max": 77493.0,
+          "mean": 27098.8,
+          "std": 19223.63
+        },
+        "fire_season_mean_temp_c": {
+          "min": 28.5,
+          "max": 42.5,
+          "mean": 36.04,
+          "std": 4.37
+        },
+        "mean_response_time_minutes": {
+          "min": 28.0,
+          "max": 95.0,
+          "mean": 53.76,
+          "std": 16.72
+        }
+      }
+    },
+    "d92_mohua_urban_rental_housing": {
+      "dataset_id": "d92_mohua_urban_rental_housing",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "city",
+        "urban_housing_deficit_units",
+        "slum_population_share_pct",
+        "rent_to_income_burden_pct",
+        "migrant_worker_population_lakh",
+        "arhc_sanctioned_rental_units",
+        "avg_monthly_rent_1bhk_inr",
+        "vacant_formal_houses_count",
+        "rental_affordability_stress_ratio",
+        "arhc_coverage_of_deficit_pct",
+        "vacant_to_deficit_absorption_pct",
+        "rental_stress_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "urban_housing_deficit_units": {
+          "min": 24000.0,
+          "max": 485000.0,
+          "mean": 134200.0,
+          "std": 119611.87
+        },
+        "slum_population_share_pct": {
+          "min": 11.5,
+          "max": 41.8,
+          "mean": 22.31,
+          "std": 6.46
+        },
+        "rent_to_income_burden_pct": {
+          "min": 25.8,
+          "max": 48.5,
+          "mean": 32.02,
+          "std": 6.03
+        },
+        "migrant_worker_population_lakh": {
+          "min": 4.2,
+          "max": 42.5,
+          "mean": 13.43,
+          "std": 10.18
+        },
+        "arhc_sanctioned_rental_units": {
+          "min": 1600.0,
+          "max": 9650.0,
+          "mean": 4102.8,
+          "std": 2185.6
+        },
+        "avg_monthly_rent_1bhk_inr": {
+          "min": 5900.0,
+          "max": 18500.0,
+          "mean": 9340.0,
+          "std": 3226.71
+        }
+      }
+    },
+    "d93_cmfri_marine_fisheries": {
+      "dataset_id": "d93_cmfri_marine_fisheries",
+      "row_count": 13,
+      "column_count": 11,
+      "columns": [
+        "maritime_state",
+        "annual_fish_landings_lakh_tonnes",
+        "mechanized_trawler_catch_share_pct",
+        "maximum_sustainable_yield_ratio",
+        "juvenile_bycatch_share_pct",
+        "active_fisherfolk_lakh",
+        "motorized_boats_registered",
+        "export_value_inr_crore",
+        "msy_exploitation_status",
+        "juvenile_bycatch_volume_lakh_t",
+        "export_earning_per_tonne_inr"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "annual_fish_landings_lakh_tonnes": {
+          "min": 0.28,
+          "max": 7.42,
+          "mean": 3.39,
+          "std": 2.58
+        },
+        "mechanized_trawler_catch_share_pct": {
+          "min": 12.0,
+          "max": 88.4,
+          "mean": 65.2,
+          "std": 24.4
+        },
+        "maximum_sustainable_yield_ratio": {
+          "min": 0.38,
+          "max": 1.22,
+          "mean": 0.96,
+          "std": 0.27
+        },
+        "juvenile_bycatch_share_pct": {
+          "min": 4.2,
+          "max": 26.0,
+          "mean": 16.76,
+          "std": 6.51
+        },
+        "active_fisherfolk_lakh": {
+          "min": 0.2,
+          "max": 6.2,
+          "mean": 2.76,
+          "std": 2.14
+        },
+        "motorized_boats_registered": {
+          "min": 850.0,
+          "max": 18500.0,
+          "mean": 8273.08,
+          "std": 6128.91
+        }
+      }
+    },
+    "d94_telemanas_mental_health": {
+      "dataset_id": "d94_telemanas_mental_health",
+      "row_count": 25,
+      "column_count": 12,
+      "columns": [
+        "state",
+        "total_telemanas_calls_received",
+        "call_distress_resolution_pct",
+        "psychiatrists_per_100k_population",
+        "dmhp_covered_districts_pct",
+        "anxiety_depression_calls_pct",
+        "sleep_distress_calls_pct",
+        "severe_emergency_referrals_pct",
+        "psychiatrist_deficit_vs_who_target",
+        "unresolved_distress_calls_pct",
+        "anxiety_depression_calls_volume",
+        "mental_health_infrastructure_tier"
+      ],
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "duplicate_rows": 0,
+      "quality_score": 100,
+      "authenticity_status": "VERIFIED_AUTHENTIC",
+      "primary_source_verified": true,
+      "stat_summary": {
+        "total_telemanas_calls_received": {
+          "min": 5800.0,
+          "max": 168000.0,
+          "mean": 58688.0,
+          "std": 43919.12
+        },
+        "call_distress_resolution_pct": {
+          "min": 78.4,
+          "max": 93.4,
+          "mean": 85.49,
+          "std": 3.94
+        },
+        "psychiatrists_per_100k_population": {
+          "min": 0.21,
+          "max": 1.95,
+          "mean": 0.81,
+          "std": 0.5
+        },
+        "dmhp_covered_districts_pct": {
+          "min": 75.0,
+          "max": 100.0,
+          "mean": 91.54,
+          "std": 8.56
+        },
+        "anxiety_depression_calls_pct": {
+          "min": 45.2,
+          "max": 61.2,
+          "mean": 53.55,
+          "std": 4.29
+        },
+        "sleep_distress_calls_pct": {
+          "min": 18.5,
+          "max": 29.0,
+          "mean": 22.97,
+          "std": 2.79
+        }
+      }
+    }
+  },
+  "average_quality_score": 99.9,
+  "total_data_points": 95254
+}

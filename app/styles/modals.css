@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Modals, Tabs & Information Drawers: ⓘ Dossier & Expandable Panels
+   Transforms Default Expanders & Dialogs into Institutional Dossiers
+   ========================================================================== */
+
+/* 1. Information Dossier Expander */
+div[data-testid="stExpander"] {
+  background: #000000 !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-md) !important;
+  margin-bottom: 1.25rem !important;
+  overflow: hidden !important;
+}
+
+div[data-testid="stExpander"] details {
+  border: none !important;
+}
+
+div[data-testid="stExpander"] summary {
+  padding: 0.85rem 1.25rem !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-surface-2) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  transition: background var(--transition-fast) !important;
+}
+
+div[data-testid="stExpander"] summary:hover {
+  background: var(--bg-surface-3) !important;
+  color: var(--accent-cyan-light) !important;
+}
+
+div[data-testid="stExpander"] summary svg {
+  fill: var(--accent-cyan) !important;
+}
+
+div[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
+  padding: 1.25rem 1.5rem !important;
+}
+
+/* 2. Streamlit Tabs */
+div[data-baseweb="tab-list"] {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-medium) !important;
+  gap: 1.5rem !important;
+  padding-bottom: 2px !important;
+}
+
+button[data-baseweb="tab"] {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 0.25rem !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all var(--transition-fast) !important;
+}
+
+button[data-baseweb="tab"]:hover {
+  color: var(--text-primary) !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+  color: var(--accent-cyan) !important;
+  border-bottom-color: var(--accent-cyan) !important;
+  font-weight: 700 !important;
+}
+
+div[data-baseweb="tab-highlight"] {
+  background-color: var(--accent-cyan) !important;
+  height: 2px !important;
+}
+
+/* 3. Provenance Citation Card */
+.citation-card {
+  background: #050505;
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent-cyan);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 0.75rem;
+}

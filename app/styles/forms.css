@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Form Controls: Selects, Multiselects, Inputs, Sliders & Action Buttons
+   Custom Deep Styling for Professional Interactive Data Filtering
+   ========================================================================== */
+
+/* 1. Elevated Filter Panel Toolbar */
+.filter-panel {
+  background: linear-gradient(135deg, #050505 0%, #000000 100%) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 1.25rem 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* 2. Streamlit Selectbox & Dropdowns */
+div[data-baseweb="select"] {
+  background-color: var(--bg-surface-1) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+div[data-baseweb="select"] > div {
+  background-color: var(--bg-surface-1) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.88rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-baseweb="select"]:hover > div {
+  border-color: var(--accent-cyan) !important;
+}
+
+div[data-baseweb="select"] > div:focus-within {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 1px var(--accent-cyan) !important;
+}
+
+/* Dropdown Menu Popover */
+div[data-baseweb="popover"] {
+  background-color: var(--bg-surface-2) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-xl) !important;
+  overflow: hidden !important;
+}
+
+ul[role="listbox"] {
+  background-color: var(--bg-surface-2) !important;
+  padding: 0.35rem !important;
+}
+
+li[role="option"] {
+  color: var(--text-secondary) !important;
+  font-size: 0.86rem !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.5rem 0.75rem !important;
+  transition: background var(--transition-fast) !important;
+}
+
+li[role="option"]:hover, li[aria-selected="true"] {
+  background-color: var(--bg-surface-3) !important;
+  color: var(--accent-cyan-light) !important;
+}
+
+/* 3. Multiselect Tags */
+div[data-baseweb="tag"] {
+  background-color: var(--bg-surface-3) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 0.15rem 0.55rem !important;
+}
+
+div[data-baseweb="tag"] span {
+  color: var(--accent-cyan-light) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* 4. Text Inputs & Search Bars */
+div[data-testid="stTextInput"] input {
+  background-color: var(--bg-surface-1) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  padding: 0.6rem 0.85rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-testid="stTextInput"] input:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 1px var(--accent-cyan) !important;
+}
+
+/* Form Labels */
+.stTextInput label, .stSelectbox label, .stMultiSelect label, .stSlider label {
+  color: var(--text-muted) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* 5. Range Sliders */
+div[data-baseweb="slider"] {
+  margin-top: 0.5rem !important;
+}
+
+div[data-testid="stSlider"] div[role="slider"] {
+  background-color: var(--accent-cyan) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* 6. Buttons */
+button {
+  font-family: var(--font-sans) !important;
+  letter-spacing: 0.01em !important;
+  border-radius: var(--radius-md) !important;
+  transition: all var(--transition-fast) !important;
+}
+
+/* Secondary Button (Default Streamlit Button) */
+button[kind="secondary"] {
+  background: var(--bg-surface-2) !important;
+  border: 1px solid var(--border-medium) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  padding: 0.55rem 1rem !important;
+}
+
+button[kind="secondary"]:hover {
+  background: var(--bg-surface-3) !important;
+  border-color: var(--accent-cyan) !important;
+  color: var(--accent-cyan-light) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+button[kind="secondary"]:active {
+  transform: translateY(0) !important;
+}
+
+/* Primary Button */
+button[kind="primary"] {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35) !important;
+}
+
+button[kind="primary"]:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.5) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Download CSV Button */
+div[data-testid="stDownloadButton"] button {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+  color: var(--color-success) !important;
+  font-weight: 600 !important;
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+  background: rgba(16, 185, 129, 0.25) !important;
+  border-color: var(--color-success) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}

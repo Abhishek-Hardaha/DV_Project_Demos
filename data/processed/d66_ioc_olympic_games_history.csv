@@ -1,0 +1,18 @@
+edition_year,host_city_country,participating_nations,participating_athletes,female_athlete_share_pct,total_events_contested,usa_medals_total,china_medals_total,india_medals_total,athletes_per_nation_avg,athletes_per_event_avg,gender_parity_gap_pct
+1960,Rome (Italy),83,5338,11.4,150,71,0,1,64.3,35.6,38.6
+1964,Tokyo (Japan),93,5151,13.2,163,90,0,1,55.4,31.6,36.8
+1968,Mexico City (Mexico),112,5516,14.2,172,107,0,1,49.2,32.1,35.8
+1972,Munich (West Germany),121,7134,14.8,195,94,0,1,59.0,36.6,35.2
+1976,Montreal (Canada),92,6084,20.7,198,94,0,0,66.1,30.7,29.3
+1980,Moscow (USSR),80,5179,21.5,203,0,0,1,64.7,25.5,28.5
+1984,Los Angeles (USA),140,6829,23.0,221,174,32,0,48.8,30.9,27.0
+1988,Seoul (South Korea),159,8391,26.1,237,94,28,0,52.8,35.4,23.9
+1992,Barcelona (Spain),169,9356,28.8,257,108,54,0,55.4,36.4,21.2
+1996,Atlanta (USA),197,10318,34.0,271,101,50,1,52.4,38.1,16.0
+2000,Sydney (Australia),199,10651,38.2,300,93,58,1,53.5,35.5,11.8
+2004,Athens (Greece),201,10625,40.7,301,101,63,1,52.9,35.3,9.3
+2008,Beijing (China),204,10942,42.4,302,110,100,3,53.6,36.2,7.6
+2012,London (UK),204,10568,44.2,302,104,91,6,51.8,35.0,5.8
+2016,Rio de Janeiro (Brazil),207,11238,45.0,306,121,70,2,54.3,36.7,5.0
+2020,Tokyo (Japan),206,11420,48.8,339,113,89,7,55.4,33.7,1.2
+2024,Paris (France),206,10500,50.0,329,126,91,6,51.0,31.9,0.0

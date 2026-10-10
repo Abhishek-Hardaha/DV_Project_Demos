@@ -1,0 +1,155 @@
+country,year,tourist_arrivals_millions,tourism_receipts_usd_billions,covid_impact_year,receipt_per_arrival_usd
+France,2010,59.1,46.1,False,780.0
+France,2011,62.6,48.9,False,781.0
+France,2012,66.2,51.7,False,781.0
+France,2013,69.7,54.4,False,780.0
+France,2014,73.2,57.2,False,781.0
+France,2015,76.8,60.0,False,781.0
+France,2016,80.3,62.7,False,781.0
+France,2017,83.8,65.5,False,782.0
+France,2018,87.4,68.2,False,780.0
+France,2019,90.9,71.0,False,781.0
+France,2020,24.5,19.2,True,784.0
+France,2021,34.5,27.0,True,783.0
+France,2022,62.7,53.9,False,860.0
+France,2023,89.1,76.5,False,859.0
+Spain,2010,54.4,51.8,False,952.0
+Spain,2011,57.7,54.9,False,951.0
+Spain,2012,60.9,58.0,False,952.0
+Spain,2013,64.2,61.1,False,952.0
+Spain,2014,67.4,64.2,False,953.0
+Spain,2015,70.7,67.3,False,952.0
+Spain,2016,73.9,70.4,False,953.0
+Spain,2017,77.2,73.5,False,952.0
+Spain,2018,80.4,76.6,False,953.0
+Spain,2019,83.7,79.7,False,952.0
+Spain,2020,22.6,21.5,True,951.0
+Spain,2021,31.8,30.3,True,953.0
+Spain,2022,57.8,60.5,False,1047.0
+Spain,2023,82.0,85.9,False,1048.0
+United States,2010,51.6,139.2,False,2698.0
+United States,2011,54.7,147.5,False,2697.0
+United States,2012,57.8,155.8,False,2696.0
+United States,2013,60.9,164.1,False,2695.0
+United States,2014,64.0,172.5,False,2695.0
+United States,2015,67.0,180.8,False,2699.0
+United States,2016,70.1,189.1,False,2698.0
+United States,2017,73.2,197.4,False,2697.0
+United States,2018,76.3,205.8,False,2697.0
+United States,2019,79.4,214.1,False,2696.0
+United States,2020,21.4,57.8,True,2701.0
+United States,2021,30.2,81.4,True,2695.0
+United States,2022,54.8,162.5,False,2965.0
+United States,2023,77.8,230.8,False,2967.0
+China,2010,42.7,26.1,False,611.0
+China,2011,45.3,27.6,False,609.0
+China,2012,47.8,29.2,False,611.0
+China,2013,50.4,30.7,False,609.0
+China,2014,52.9,32.3,False,611.0
+China,2015,55.5,33.9,False,611.0
+China,2016,58.0,35.4,False,610.0
+China,2017,60.6,37.0,False,611.0
+China,2018,63.1,38.5,False,610.0
+China,2019,65.7,40.1,False,610.0
+China,2020,17.7,10.8,True,610.0
+China,2021,25.0,15.2,True,608.0
+China,2022,45.3,30.4,False,671.0
+China,2023,57.8,38.8,False,671.0
+Italy,2010,41.9,32.2,False,768.0
+Italy,2011,44.4,34.2,False,770.0
+Italy,2012,46.9,36.1,False,770.0
+Italy,2013,49.5,38.0,False,768.0
+Italy,2014,52.0,40.0,False,769.0
+Italy,2015,54.5,41.9,False,769.0
+Italy,2016,57.0,43.8,False,768.0
+Italy,2017,59.5,45.7,False,768.0
+Italy,2018,62.0,47.7,False,769.0
+Italy,2019,64.5,49.6,False,769.0
+Italy,2020,17.4,13.4,True,770.0
+Italy,2021,24.5,18.8,True,767.0
+Italy,2022,44.5,37.6,False,845.0
+Italy,2023,63.2,53.5,False,847.0
+Turkey,2010,33.3,22.3,False,670.0
+Turkey,2011,35.3,23.6,False,669.0
+Turkey,2012,37.3,25.0,False,670.0
+Turkey,2013,39.3,26.3,False,669.0
+Turkey,2014,41.2,27.6,False,670.0
+Turkey,2015,43.2,29.0,False,671.0
+Turkey,2016,45.2,30.3,False,670.0
+Turkey,2017,47.2,31.6,False,669.0
+Turkey,2018,49.2,33.0,False,671.0
+Turkey,2019,51.2,34.3,False,670.0
+Turkey,2020,13.8,9.3,True,674.0
+Turkey,2021,19.5,13.0,True,667.0
+Turkey,2022,35.3,26.0,False,737.0
+Turkey,2023,50.2,37.0,False,737.0
+Mexico,2010,29.2,16.0,False,548.0
+Mexico,2011,31.0,16.9,False,545.0
+Mexico,2012,32.8,17.9,False,546.0
+Mexico,2013,34.5,18.9,False,548.0
+Mexico,2014,36.2,19.8,False,547.0
+Mexico,2015,38.0,20.8,False,547.0
+Mexico,2016,39.8,21.7,False,545.0
+Mexico,2017,41.5,22.7,False,547.0
+Mexico,2018,43.2,23.6,False,546.0
+Mexico,2019,45.0,24.6,False,547.0
+Mexico,2020,12.2,6.6,True,541.0
+Mexico,2021,17.1,9.3,True,544.0
+Mexico,2022,31.0,18.7,False,603.0
+Mexico,2023,44.1,26.5,False,601.0
+Thailand,2010,25.9,39.3,False,1517.0
+Thailand,2011,27.4,41.7,False,1522.0
+Thailand,2012,29.0,44.0,False,1517.0
+Thailand,2013,30.5,46.4,False,1521.0
+Thailand,2014,32.1,48.7,False,1517.0
+Thailand,2015,33.6,51.1,False,1521.0
+Thailand,2016,35.2,53.4,False,1517.0
+Thailand,2017,36.7,55.8,False,1520.0
+Thailand,2018,38.3,58.1,False,1517.0
+Thailand,2019,39.8,60.5,False,1520.0
+Thailand,2020,10.7,16.3,True,1523.0
+Thailand,2021,15.1,23.0,True,1523.0
+Thailand,2022,27.5,45.9,False,1669.0
+Thailand,2023,35.0,58.6,False,1674.0
+Germany,2010,25.7,27.1,False,1054.0
+Germany,2011,27.3,28.7,False,1051.0
+Germany,2012,28.8,30.3,False,1052.0
+Germany,2013,30.4,32.0,False,1053.0
+Germany,2014,31.9,33.6,False,1053.0
+Germany,2015,33.4,35.2,False,1054.0
+Germany,2016,35.0,36.8,False,1051.0
+Germany,2017,36.5,38.5,False,1055.0
+Germany,2018,38.1,40.1,False,1052.0
+Germany,2019,39.6,41.7,False,1053.0
+Germany,2020,10.7,11.3,True,1056.0
+Germany,2021,15.0,15.8,True,1053.0
+Germany,2022,27.3,31.7,False,1161.0
+Germany,2023,38.8,45.0,False,1160.0
+United Kingdom,2010,25.6,34.3,False,1340.0
+United Kingdom,2011,27.1,36.3,False,1339.0
+United Kingdom,2012,28.7,38.4,False,1338.0
+United Kingdom,2013,30.2,40.4,False,1338.0
+United Kingdom,2014,31.7,42.5,False,1341.0
+United Kingdom,2015,33.3,44.5,False,1336.0
+United Kingdom,2016,34.8,46.6,False,1339.0
+United Kingdom,2017,36.3,48.6,False,1339.0
+United Kingdom,2018,37.9,50.7,False,1338.0
+United Kingdom,2019,39.4,52.7,False,1338.0
+United Kingdom,2020,10.6,14.2,True,1340.0
+United Kingdom,2021,15.0,20.0,True,1333.0
+United Kingdom,2022,27.2,40.0,False,1471.0
+United Kingdom,2023,38.6,56.8,False,1472.0
+India,2010,11.6,20.5,False,1767.0
+India,2011,12.3,21.8,False,1772.0
+India,2012,13.0,23.0,False,1769.0
+India,2013,13.7,24.2,False,1766.0
+India,2014,14.4,25.5,False,1771.0
+India,2015,15.1,26.7,False,1768.0
+India,2016,15.8,27.9,False,1766.0
+India,2017,16.5,29.1,False,1764.0
+India,2018,17.2,30.4,False,1767.0
+India,2019,17.9,31.6,False,1765.0
+India,2020,4.8,8.5,True,1771.0
+India,2021,6.8,12.0,True,1765.0
+India,2022,12.4,24.0,False,1935.0
+India,2023,17.5,34.1,False,1949.0

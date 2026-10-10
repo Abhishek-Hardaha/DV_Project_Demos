@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "metrics": {
+    "dashboard_count": 94,
+    "analytical_csv_count": 94,
+    "analytical_parquet_count": 94,
+    "raw_csv_count": 95,
+    "unique_sources_count": 89,
+    "gov_sources_count": 76,
+    "api_endpoints_count": 5
+  }
+}

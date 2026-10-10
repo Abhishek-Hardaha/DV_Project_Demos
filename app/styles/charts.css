@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Chart Components: Plotly Containers, Title Cards & Legend Layouts
+   Elevates Visualizations into Polished BI Analytical Widgets
+   ========================================================================== */
+
+/* 1. Chart Wrapper Container */
+.chart-widget-card {
+  background: #000000;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.15rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-fast);
+}
+
+.chart-widget-card:hover {
+  border-color: var(--border-medium);
+}
+
+/* 2. Plotly Element Embed */
+div[data-testid="stPlotlyChart"] {
+  background: #000000 !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 0.6rem !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all var(--transition-fast) !important;
+}
+
+div[data-testid="stPlotlyChart"]:hover {
+  border-color: var(--border-medium) !important;
+  box-shadow: var(--shadow-lg), 0 0 15px rgba(56, 189, 248, 0.08) !important;
+}
+
+div[data-testid="stPlotlyChart"] > div {
+  border-radius: var(--radius-lg);
+}
+
+/* Plotly Modebar Controls (Zoom, Pan, Reset) */
+.js-plotly-plot .plotly .modebar {
+  background: #050505 !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-subtle) !important;
+  padding: 2px 4px !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn path {
+  fill: var(--text-muted) !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn:hover path {
+  fill: var(--accent-cyan) !important;
+}
+
+/* 3. Section Header for Visuals */
+.visuals-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.visuals-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visuals-density-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 2px 8px;
+}

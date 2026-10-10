@@ -1,0 +1,21 @@
+state,electricity_avail_pct,drinking_water_avail_pct,girls_toilet_avail_pct,computer_facility_pct,internet_facility_pct,ptr_primary,ptr_upper_primary,basic_amenities_composite_pct,digital_readiness_composite_pct,ptr_gap,infrastructure_parity_tier
+Kerala,98.4,99.8,99.2,94.2,88.5,17.4,15.2,99.13,91.35,2.2,Advanced Digital
+Tamil Nadu,97.2,99.5,98.4,82.4,74.2,19.8,18.4,98.37,78.3,1.4,Advanced Digital
+Gujarat,99.5,99.9,99.5,92.1,78.4,24.5,22.1,99.63,85.25,2.4,Advanced Digital
+Maharashtra,96.8,99.4,98.2,88.4,76.5,25.1,23.4,98.13,82.45,1.7,Advanced Digital
+Punjab,99.8,99.9,99.6,95.4,84.2,21.4,18.2,99.77,89.8,3.2,Advanced Digital
+Haryana,98.5,99.8,99.1,88.2,78.4,22.8,19.5,99.13,83.3,3.3,Advanced Digital
+Himachal Pradesh,96.4,99.2,98.5,84.1,72.4,12.4,11.2,98.03,78.25,1.2,Advanced Digital
+Karnataka,96.2,99.1,97.8,81.2,68.5,23.2,21.4,97.7,74.85,1.8,Progressive
+Andhra Pradesh,94.5,98.8,96.4,74.5,59.2,22.1,20.4,96.57,66.85,1.7,Progressive
+Telangana,93.8,98.5,95.8,71.2,54.8,21.8,19.8,96.03,63.0,2.0,Progressive
+Rajasthan,88.4,98.2,94.2,68.4,51.2,26.4,24.2,93.6,59.8,2.2,Progressive
+Madhya Pradesh,84.2,97.4,91.8,48.2,36.4,28.4,26.5,91.13,42.3,1.9,Emerging Digital
+Chhattisgarh,89.5,96.8,92.4,42.1,31.5,22.4,21.2,92.9,36.8,1.2,Emerging Digital
+Odisha,82.4,97.1,91.2,44.5,34.2,24.5,22.8,90.23,39.35,1.7,Emerging Digital
+West Bengal,98.2,99.4,97.8,54.2,42.1,32.4,29.8,98.47,48.15,2.6,Progressive
+Assam,74.2,95.4,88.4,38.2,28.4,24.1,21.8,86.0,33.3,2.3,Emerging Digital
+Jharkhand,68.4,94.2,86.4,32.1,24.5,33.4,31.2,83.0,28.3,2.2,Emerging Digital
+Bihar,79.4,96.2,88.5,28.4,20.5,47.2,41.5,88.03,24.45,5.7,Emerging Digital
+Uttar Pradesh,88.2,97.8,93.4,52.4,38.4,34.5,31.2,93.13,45.4,3.3,Emerging Digital
+Uttarakhand,91.2,98.4,95.2,68.4,54.2,16.8,15.4,94.93,61.3,1.4,Progressive

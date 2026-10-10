@@ -1,0 +1,241 @@
+country,economy_group,year,gross_debt_gdp_pct,primary_balance_gdp_pct,debt_above_100pct_gdp,debt_growth_5yr
+Japan,Advanced,2005,174.3,-4.5,True,0.0
+Japan,Advanced,2006,178.5,-3.2,True,0.0
+Japan,Advanced,2007,182.8,-2.4,True,0.0
+Japan,Advanced,2008,187.0,-3.4,True,0.0
+Japan,Advanced,2009,191.2,-8.8,True,0.0
+Japan,Advanced,2010,195.4,-8.0,True,21.1
+Japan,Advanced,2011,199.7,-8.0,True,21.2
+Japan,Advanced,2012,203.9,-7.5,True,21.1
+Japan,Advanced,2013,208.1,-6.6,True,21.1
+Japan,Advanced,2014,212.3,-4.6,True,21.1
+Japan,Advanced,2015,216.6,-2.9,True,21.2
+Japan,Advanced,2016,220.8,-3.1,True,21.1
+Japan,Advanced,2017,225.0,-2.4,True,21.1
+Japan,Advanced,2018,229.2,-2.0,True,21.1
+Japan,Advanced,2019,233.5,-2.5,True,21.2
+Japan,Advanced,2020,247.2,-8.5,True,30.6
+Japan,Advanced,2021,251.4,-5.6,True,30.6
+Japan,Advanced,2022,246.1,-4.8,True,21.1
+Japan,Advanced,2023,250.4,-2.9,True,21.2
+Japan,Advanced,2024,254.6,-1.8,True,21.1
+Greece,Advanced,2005,107.4,-2.2,True,0.0
+Greece,Advanced,2006,110.1,-1.5,True,0.0
+Greece,Advanced,2007,112.8,-2.3,True,0.0
+Greece,Advanced,2008,115.5,-5.4,True,0.0
+Greece,Advanced,2009,118.2,-10.1,True,0.0
+Greece,Advanced,2010,120.9,-5.3,True,13.5
+Greece,Advanced,2011,123.6,-2.9,True,13.5
+Greece,Advanced,2012,126.3,-1.3,True,13.5
+Greece,Advanced,2013,129.0,0.8,True,13.5
+Greece,Advanced,2014,131.7,0.4,True,13.5
+Greece,Advanced,2015,134.5,0.6,True,13.6
+Greece,Advanced,2016,137.2,3.7,True,13.6
+Greece,Advanced,2017,139.9,3.9,True,13.6
+Greece,Advanced,2018,142.6,4.3,True,13.6
+Greece,Advanced,2019,145.3,4.0,True,13.6
+Greece,Advanced,2020,157.5,-6.9,True,23.0
+Greece,Advanced,2021,160.2,-5.0,True,23.0
+Greece,Advanced,2022,153.4,0.1,True,13.5
+Greece,Advanced,2023,156.1,1.9,True,13.5
+Greece,Advanced,2024,158.8,2.1,True,13.5
+Italy,Advanced,2005,101.9,0.8,True,0.0
+Italy,Advanced,2006,103.9,1.6,True,0.0
+Italy,Advanced,2007,105.8,3.5,True,0.0
+Italy,Advanced,2008,107.8,2.4,True,0.0
+Italy,Advanced,2009,109.8,-0.8,True,0.0
+Italy,Advanced,2010,111.7,0.1,True,9.8
+Italy,Advanced,2011,113.7,1.2,True,9.8
+Italy,Advanced,2012,115.6,2.2,True,9.8
+Italy,Advanced,2013,117.6,1.9,True,9.8
+Italy,Advanced,2014,119.6,1.5,True,9.8
+Italy,Advanced,2015,121.5,1.4,True,9.8
+Italy,Advanced,2016,123.5,1.4,True,9.8
+Italy,Advanced,2017,125.5,1.4,True,9.9
+Italy,Advanced,2018,127.4,1.4,True,9.8
+Italy,Advanced,2019,129.4,1.7,True,9.8
+Italy,Advanced,2020,140.8,-6.0,True,19.3
+Italy,Advanced,2021,142.8,-3.7,True,19.3
+Italy,Advanced,2022,135.3,-3.6,True,9.8
+Italy,Advanced,2023,137.2,-3.4,True,9.8
+Italy,Advanced,2024,139.2,-0.5,True,9.8
+United States,Advanced,2005,65.5,-1.7,False,0.0
+United States,Advanced,2006,68.5,-0.4,False,0.0
+United States,Advanced,2007,71.6,-1.2,False,0.0
+United States,Advanced,2008,74.6,-5.0,False,0.0
+United States,Advanced,2009,77.7,-11.3,False,0.0
+United States,Advanced,2010,80.7,-9.1,False,15.2
+United States,Advanced,2011,83.8,-7.9,False,15.3
+United States,Advanced,2012,86.8,-5.7,False,15.2
+United States,Advanced,2013,89.8,-3.0,False,15.2
+United States,Advanced,2014,92.9,-1.8,False,15.2
+United States,Advanced,2015,95.9,-1.4,False,15.2
+United States,Advanced,2016,99.0,-1.8,False,15.2
+United States,Advanced,2017,102.0,-2.1,True,15.2
+United States,Advanced,2018,105.0,-3.4,True,15.2
+United States,Advanced,2019,108.1,-3.8,True,15.2
+United States,Advanced,2020,120.6,-13.2,True,24.7
+United States,Advanced,2021,123.7,-10.1,True,24.7
+United States,Advanced,2022,117.2,-3.6,True,15.2
+United States,Advanced,2023,120.3,-4.3,True,15.3
+United States,Advanced,2024,123.3,-4.5,True,15.2
+France,Advanced,2005,67.4,-0.6,False,0.0
+France,Advanced,2006,69.7,0.1,False,0.0
+France,Advanced,2007,72.1,-0.1,False,0.0
+France,Advanced,2008,74.4,-1.8,False,0.0
+France,Advanced,2009,76.7,-4.7,False,0.0
+France,Advanced,2010,79.0,-4.5,False,11.6
+France,Advanced,2011,81.4,-2.7,False,11.7
+France,Advanced,2012,83.7,-2.3,False,11.6
+France,Advanced,2013,86.0,-1.9,False,11.6
+France,Advanced,2014,88.3,-1.7,False,11.6
+France,Advanced,2015,90.7,-1.4,False,11.7
+France,Advanced,2016,93.0,-1.7,False,11.6
+France,Advanced,2017,95.3,-1.1,False,11.6
+France,Advanced,2018,97.6,-0.7,False,11.6
+France,Advanced,2019,100.0,-1.4,True,11.7
+France,Advanced,2020,111.8,-7.4,True,21.1
+France,Advanced,2021,114.1,-5.0,True,21.1
+France,Advanced,2022,106.9,-2.8,True,11.6
+France,Advanced,2023,109.3,-3.3,True,11.7
+France,Advanced,2024,111.6,-3.2,True,11.6
+United Kingdom,Advanced,2005,39.9,-1.3,False,0.0
+United Kingdom,Advanced,2006,43.1,-0.8,False,0.0
+United Kingdom,Advanced,2007,46.4,-0.9,False,0.0
+United Kingdom,Advanced,2008,49.6,-3.2,False,0.0
+United Kingdom,Advanced,2009,52.9,-7.9,False,0.0
+United Kingdom,Advanced,2010,56.1,-7.0,False,16.2
+United Kingdom,Advanced,2011,59.4,-4.9,False,16.3
+United Kingdom,Advanced,2012,62.6,-5.3,False,16.2
+United Kingdom,Advanced,2013,65.8,-3.8,False,16.2
+United Kingdom,Advanced,2014,69.1,-3.9,False,16.2
+United Kingdom,Advanced,2015,72.3,-2.7,False,16.2
+United Kingdom,Advanced,2016,75.6,-1.8,False,16.2
+United Kingdom,Advanced,2017,78.8,-0.4,False,16.2
+United Kingdom,Advanced,2018,82.0,0.1,False,16.2
+United Kingdom,Advanced,2019,85.3,-0.7,False,16.2
+United Kingdom,Advanced,2020,98.0,-10.9,False,25.7
+United Kingdom,Advanced,2021,101.3,-5.9,True,25.7
+United Kingdom,Advanced,2022,95.0,-2.2,False,16.2
+United Kingdom,Advanced,2023,98.3,-2.5,False,16.3
+United Kingdom,Advanced,2024,101.5,-2.8,True,16.2
+India,Emerging,2005,81.0,-2.5,False,0.0
+India,Emerging,2006,81.1,-1.1,False,0.0
+India,Emerging,2007,81.2,-0.8,False,0.0
+India,Emerging,2008,81.2,-4.2,False,0.0
+India,Emerging,2009,81.3,-5.1,False,0.0
+India,Emerging,2010,81.4,-3.3,False,0.4
+India,Emerging,2011,81.5,-3.6,False,0.4
+India,Emerging,2012,81.6,-3.3,False,0.4
+India,Emerging,2013,81.6,-2.6,False,0.4
+India,Emerging,2014,81.7,-2.1,False,0.4
+India,Emerging,2015,81.8,-2.0,False,0.4
+India,Emerging,2016,81.9,-1.8,False,0.4
+India,Emerging,2017,81.9,-2.1,False,0.3
+India,Emerging,2018,82.0,-2.2,False,0.4
+India,Emerging,2019,82.1,-2.5,False,0.4
+India,Emerging,2020,91.7,-8.1,False,9.9
+India,Emerging,2021,91.8,-4.7,False,9.9
+India,Emerging,2022,82.3,-3.7,False,0.4
+India,Emerging,2023,82.4,-3.3,False,0.4
+India,Emerging,2024,82.5,-2.9,False,0.4
+Brazil,Emerging,2005,68.7,3.4,False,0.0
+Brazil,Emerging,2006,69.6,2.9,False,0.0
+Brazil,Emerging,2007,70.6,3.1,False,0.0
+Brazil,Emerging,2008,71.5,3.2,False,0.0
+Brazil,Emerging,2009,72.5,1.8,False,0.0
+Brazil,Emerging,2010,73.4,2.5,False,4.7
+Brazil,Emerging,2011,74.4,2.9,False,4.8
+Brazil,Emerging,2012,75.3,2.1,False,4.7
+Brazil,Emerging,2013,76.3,1.7,False,4.8
+Brazil,Emerging,2014,77.2,-0.6,False,4.7
+Brazil,Emerging,2015,78.2,-1.9,False,4.8
+Brazil,Emerging,2016,79.1,-2.3,False,4.7
+Brazil,Emerging,2017,80.1,-1.6,False,4.8
+Brazil,Emerging,2018,81.0,-1.5,False,4.7
+Brazil,Emerging,2019,82.0,-0.8,False,4.8
+Brazil,Emerging,2020,92.4,-9.2,False,14.2
+Brazil,Emerging,2021,93.4,0.7,False,14.3
+Brazil,Emerging,2022,84.8,1.3,False,4.7
+Brazil,Emerging,2023,85.8,-2.3,False,4.8
+Brazil,Emerging,2024,86.7,-2.2,False,4.7
+China,Emerging,2005,26.3,-0.2,False,0.0
+China,Emerging,2006,29.3,0.3,False,0.0
+China,Emerging,2007,32.3,1.9,False,0.0
+China,Emerging,2008,35.3,0.8,False,0.0
+China,Emerging,2009,38.4,-1.3,False,0.0
+China,Emerging,2010,41.4,0.6,False,15.1
+China,Emerging,2011,44.4,0.8,False,15.1
+China,Emerging,2012,47.4,0.5,False,15.1
+China,Emerging,2013,50.4,-0.1,False,15.1
+China,Emerging,2014,53.4,-0.3,False,15.0
+China,Emerging,2015,56.5,-2.3,False,15.1
+China,Emerging,2016,59.5,-3.2,False,15.1
+China,Emerging,2017,62.5,-3.4,False,15.1
+China,Emerging,2018,65.5,-4.2,False,15.1
+China,Emerging,2019,68.5,-5.4,False,15.1
+China,Emerging,2020,81.0,-8.1,False,24.5
+China,Emerging,2021,84.1,-5.1,False,24.6
+China,Emerging,2022,77.6,-6.5,False,15.1
+China,Emerging,2023,80.6,-5.8,False,15.1
+China,Emerging,2024,83.6,-5.1,False,15.1
+Germany,Advanced,2005,67.1,-0.6,False,0.0
+Germany,Advanced,2006,66.9,1.1,False,0.0
+Germany,Advanced,2007,66.7,2.8,False,0.0
+Germany,Advanced,2008,66.6,2.5,False,0.0
+Germany,Advanced,2009,66.4,-0.4,False,0.0
+Germany,Advanced,2010,66.2,-1.7,False,-0.9
+Germany,Advanced,2011,66.0,1.6,False,-0.9
+Germany,Advanced,2012,65.8,2.3,False,-0.9
+Germany,Advanced,2013,65.7,1.9,False,-0.9
+Germany,Advanced,2014,65.5,2.4,False,-0.9
+Germany,Advanced,2015,65.3,2.2,False,-0.9
+Germany,Advanced,2016,65.1,2.4,False,-0.9
+Germany,Advanced,2017,65.0,2.5,False,-0.8
+Germany,Advanced,2018,64.8,3.0,False,-0.9
+Germany,Advanced,2019,64.6,2.3,False,-0.9
+Germany,Advanced,2020,73.9,-3.8,False,8.6
+Germany,Advanced,2021,73.7,-3.1,False,8.6
+Germany,Advanced,2022,64.1,-2.0,False,-0.9
+Germany,Advanced,2023,63.9,-1.6,False,-0.9
+Germany,Advanced,2024,63.7,-1.2,False,-0.9
+South Africa,Emerging,2005,33.5,1.4,False,0.0
+South Africa,Emerging,2006,35.6,2.9,False,0.0
+South Africa,Emerging,2007,37.8,2.7,False,0.0
+South Africa,Emerging,2008,39.9,1.7,False,0.0
+South Africa,Emerging,2009,42.0,-2.6,False,0.0
+South Africa,Emerging,2010,44.2,-2.1,False,10.7
+South Africa,Emerging,2011,46.3,-1.8,False,10.7
+South Africa,Emerging,2012,48.5,-1.8,False,10.7
+South Africa,Emerging,2013,50.6,-1.4,False,10.7
+South Africa,Emerging,2014,52.7,-1.0,False,10.7
+South Africa,Emerging,2015,54.9,-0.5,False,10.7
+South Africa,Emerging,2016,57.0,-0.3,False,10.7
+South Africa,Emerging,2017,59.1,-0.7,False,10.6
+South Africa,Emerging,2018,61.3,-0.6,False,10.7
+South Africa,Emerging,2019,63.4,-2.0,False,10.7
+South Africa,Emerging,2020,75.1,-6.8,False,20.2
+South Africa,Emerging,2021,77.2,-1.8,False,20.2
+South Africa,Emerging,2022,69.8,-0.2,False,10.7
+South Africa,Emerging,2023,72.0,-0.5,False,10.7
+South Africa,Emerging,2024,74.1,-0.8,False,10.7
+Saudi Arabia,Emerging,2005,37.3,23.4,False,0.0
+Saudi Arabia,Emerging,2006,36.7,24.3,False,0.0
+Saudi Arabia,Emerging,2007,36.1,16.5,False,0.0
+Saudi Arabia,Emerging,2008,35.5,30.1,False,0.0
+Saudi Arabia,Emerging,2009,35.0,-4.1,False,0.0
+Saudi Arabia,Emerging,2010,34.4,6.8,False,-2.9
+Saudi Arabia,Emerging,2011,33.8,14.8,False,-2.9
+Saudi Arabia,Emerging,2012,33.2,14.3,False,-2.9
+Saudi Arabia,Emerging,2013,32.6,8.5,False,-2.9
+Saudi Arabia,Emerging,2014,32.0,-1.4,False,-3.0
+Saudi Arabia,Emerging,2015,31.5,-13.8,False,-2.9
+Saudi Arabia,Emerging,2016,30.9,-11.9,False,-2.9
+Saudi Arabia,Emerging,2017,30.3,-7.5,False,-2.9
+Saudi Arabia,Emerging,2018,29.7,-4.7,False,-2.9
+Saudi Arabia,Emerging,2019,29.1,-3.4,False,-2.9
+Saudi Arabia,Emerging,2020,38.0,-10.1,False,6.5
+Saudi Arabia,Emerging,2021,37.5,-1.2,False,6.6
+Saudi Arabia,Emerging,2022,27.4,3.5,False,-2.9
+Saudi Arabia,Emerging,2023,26.8,-1.0,False,-2.9
+Saudi Arabia,Emerging,2024,26.2,1.5,False,-2.9

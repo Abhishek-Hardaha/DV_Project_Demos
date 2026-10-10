@@ -1,0 +1,26 @@
+state,total_pending_cases_lakh,cases_older_than_5_years_pct,cases_older_than_10_years_pct,civil_cases_share_pct,criminal_cases_share_pct,annual_cases_disposed_per_judge,undertrial_prisoners_share_pct,total_chronic_delay_cases_lakh,ultra_chronic_cases_over_10y_lakh,criminal_to_civil_ratio,pendency_distress_tier
+Uttar Pradesh,112.5,44.8,22.4,28.5,71.5,1420,78.4,50.4,25.2,2.51,Severe Pendency Gridlock
+Maharashtra,52.8,38.2,17.5,38.0,62.0,1650,72.0,20.17,9.24,1.63,Severe Pendency Gridlock
+Bihar,36.2,42.1,20.8,22.4,77.6,1180,82.5,15.24,7.53,3.46,Severe Pendency Gridlock
+West Bengal,28.4,48.5,26.2,34.5,65.5,1100,79.1,13.77,7.44,1.9,Severe Pendency Gridlock
+Rajasthan,24.8,32.4,12.8,31.0,69.0,1720,74.0,8.04,3.17,2.23,Severe Pendency Gridlock
+Madhya Pradesh,21.5,28.6,10.4,29.5,70.5,1850,68.5,6.15,2.24,2.39,Severe Pendency Gridlock
+Gujarat,19.8,34.2,14.5,41.2,58.8,1780,66.2,6.77,2.87,1.43,Severe Pendency Gridlock
+Karnataka,20.4,26.5,8.9,44.0,56.0,1920,64.8,5.41,1.82,1.27,Severe Pendency Gridlock
+Kerala,22.1,16.8,4.2,46.5,53.5,2250,58.0,3.71,0.93,1.15,Severe Pendency Gridlock
+Tamil Nadu,16.5,22.4,7.5,48.2,51.8,2050,61.2,3.7,1.24,1.07,High Caseload
+Andhra Pradesh,9.8,19.5,6.2,42.0,58.0,1890,63.5,1.91,0.61,1.38,High Caseload
+Telangana,11.2,21.0,7.0,39.5,60.5,1840,65.0,2.35,0.78,1.53,High Caseload
+Punjab,10.4,18.2,5.4,38.4,61.6,1960,67.2,1.89,0.56,1.6,High Caseload
+Haryana,14.8,21.5,6.8,36.0,64.0,1910,69.0,3.18,1.01,1.78,High Caseload
+Odisha,18.2,41.0,19.2,26.8,73.2,1340,77.5,7.46,3.49,2.73,High Caseload
+Jharkhand,5.8,36.4,16.0,24.0,76.0,1290,79.8,2.11,0.93,3.17,High Caseload
+Chhattisgarh,4.5,24.2,8.5,28.0,72.0,1750,68.0,1.09,0.38,2.57,Manageable Docket
+Assam,4.9,29.5,11.8,25.5,74.5,1420,74.2,1.45,0.58,2.92,Manageable Docket
+Delhi,14.2,24.8,8.2,49.0,51.0,1880,81.0,3.52,1.16,1.04,High Caseload
+Himachal Pradesh,3.2,14.2,3.8,47.0,53.0,2100,56.5,0.45,0.12,1.13,Manageable Docket
+Uttarakhand,3.8,22.0,7.2,34.0,66.0,1680,69.5,0.84,0.27,1.94,Manageable Docket
+Jammu and Kashmir,3.4,31.0,13.5,38.0,62.0,1350,76.0,1.05,0.46,1.63,Manageable Docket
+Goa,0.65,18.5,5.0,58.0,42.0,1740,54.0,0.12,0.03,0.72,Manageable Docket
+Tripura,0.42,12.8,2.9,36.0,64.0,2150,62.0,0.05,0.01,1.78,Manageable Docket
+Meghalaya,0.22,28.0,10.5,32.0,68.0,1410,73.0,0.06,0.02,2.12,Manageable Docket

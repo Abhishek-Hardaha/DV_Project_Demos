@@ -1,0 +1,62 @@
+[
+  {
+    "api_name": "Open-Meteo Air Quality Atmospheric API",
+    "provider": "Open-Meteo & Central Pollution Control Board (CPCB) Standards",
+    "endpoint": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "method": "GET",
+    "parameters": "latitude, longitude, hourly=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone, past_days=3",
+    "auth_required": false,
+    "response_format": "JSON",
+    "refresh_cadence": "Hourly Live Stream",
+    "dashboard_linked": "D11 - India Urban Air Quality",
+    "description": "High-resolution atmospheric dispersion modeling delivering real-time particulate and chemical pollutant concentrations across 10 Indian metropolitan cities."
+  },
+  {
+    "api_name": "USGS Earthquake Hazards Real-Time GeoJSON API",
+    "provider": "United States Geological Survey (USGS)",
+    "endpoint": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "method": "GET",
+    "parameters": "format=geojson, starttime=2023-01-01, minmagnitude=4.5, limit=1500",
+    "auth_required": false,
+    "response_format": "GeoJSON",
+    "refresh_cadence": "Live Seismic Stream (Continuous)",
+    "dashboard_linked": "D28 - Global Seismic Activity",
+    "description": "Official seismic monitoring feed reporting real-time hypocenter coordinates, Richter magnitude, focal depth, felt intensity, and tsunami advisories globally."
+  },
+  {
+    "api_name": "World Bank Indicator API (v2)",
+    "provider": "World Bank Group Development Data Hub",
+    "endpoint": "https://api.worldbank.org/v2/country/{country}/indicator/{indicator}",
+    "method": "GET",
+    "parameters": "format=json, date=1990:2023, per_page=1000",
+    "auth_required": false,
+    "response_format": "JSON",
+    "refresh_cadence": "Annual / Semi-Annual WDI Releases",
+    "dashboard_linked": "D01 - India Macro GDP, Global Comparisons",
+    "description": "Standardized programmatic endpoint providing over 1,400 macro, social, and structural indicators across 217 sovereign nations."
+  },
+  {
+    "api_name": "NASA Goddard Surface Temperature Analysis Feed",
+    "provider": "NASA GISS & NOAA National Centers for Environmental Information",
+    "endpoint": "https://data.giss.nasa.gov/gistemp/graphs_v4/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt",
+    "method": "GET",
+    "parameters": "None (Machine-Readable TXT Table Stream)",
+    "auth_required": false,
+    "response_format": "Fixed-Width Text / CSV",
+    "refresh_cadence": "Monthly Climatology Update",
+    "dashboard_linked": "D29 - Global Surface Temperature Anomalies",
+    "description": "Official global land-ocean temperature anomaly series relative to 1951-1980 baseline combining GHCNv4 and ERSSTv5."
+  },
+  {
+    "api_name": "Open Government Data (OGD) / Reserve Bank Database on Indian Economy",
+    "provider": "Reserve Bank of India (DBIE)",
+    "endpoint": "https://dbie.rbi.org.in/",
+    "method": "GET / HTTP Secure",
+    "parameters": "Indicator series codes for Policy Repo, Reverse Repo, CPI Combined",
+    "auth_required": false,
+    "response_format": "CSV / Structured Publications",
+    "refresh_cadence": "Monthly Monetary Bulletins",
+    "dashboard_linked": "D02 - RBI Inflation & Monetary Policy",
+    "description": "Central repository for macroeconomic, monetary, banking, and financial market statistics maintained by India's central bank."
+  }
+]

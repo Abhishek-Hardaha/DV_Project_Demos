@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Design System Tokens: Colors, Typography, Surfaces, Spacing & Shadows
+   Executive Public-Data Intelligence Platform Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Surfaces & Backgrounds - True OLED Pitch Black */
+  --bg-app: #000000;
+  --bg-canvas: #000000;
+  --bg-surface-1: #000000;
+  --bg-surface-2: #050505;
+  --bg-surface-3: #0c0c0c;
+  --bg-surface-elevated: #141414;
+  --bg-glass: rgba(0, 0, 0, 0.92);
+  --bg-glass-card: rgba(5, 5, 5, 0.9);
+
+  /* Primary Brand & Accents */
+  --accent-cyan: #38bdf8;
+  --accent-cyan-light: #7dd3fc;
+  --accent-cyan-dim: rgba(56, 189, 248, 0.15);
+  --accent-blue: #3b82f6;
+  --accent-blue-dim: rgba(59, 130, 246, 0.15);
+  --accent-indigo: #818cf8;
+  --accent-purple: #c084fc;
+  --accent-purple-dim: rgba(192, 132, 252, 0.15);
+
+  /* Semantic Feedback Indicators */
+  --color-success: #34d399;
+  --color-success-dim: rgba(52, 211, 153, 0.15);
+  --color-warning: #fbbf24;
+  --color-warning-dim: rgba(251, 191, 36, 0.15);
+  --color-danger: #f87171;
+  --color-danger-dim: rgba(248, 113, 113, 0.15);
+  --color-gold: #facc15;
+  --color-gold-dim: rgba(250, 204, 21, 0.15);
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-invert: #000000;
+
+  /* Border Colors */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: #171717;
+  --border-medium: #222222;
+  --border-highlight: #38bdf8;
+  --border-gold: rgba(250, 204, 21, 0.45);
+
+  /* Typography Fonts */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  --shadow-glow-cyan: 0 0 25px -3px rgba(56, 189, 248, 0.25);
+  --shadow-glow-gold: 0 0 25px -3px rgba(250, 204, 21, 0.25);
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,61 @@
+city,country,year,population_millions,growth_multiple_since_1980
+Tokyo,Japan,1980,28.5,1.0
+Tokyo,Japan,1990,31.5,1.11
+Tokyo,Japan,2000,34.5,1.21
+Tokyo,Japan,2010,35.7,1.25
+Tokyo,Japan,2020,37.0,1.3
+Tokyo,Japan,2024,37.4,1.31
+Delhi,India,1980,5.6,1.0
+Delhi,India,1990,10.6,1.9
+Delhi,India,2000,15.7,2.8
+Delhi,India,2010,23.3,4.16
+Delhi,India,2020,31.1,5.55
+Delhi,India,2024,33.8,6.04
+Shanghai,China,1980,6.0,1.0
+Shanghai,China,1990,9.6,1.6
+Shanghai,China,2000,13.2,2.2
+Shanghai,China,2010,20.2,3.37
+Shanghai,China,2020,27.4,4.57
+Shanghai,China,2024,29.9,4.98
+Dhaka,Bangladesh,1980,3.4,1.0
+Dhaka,Bangladesh,1990,6.9,2.01
+Dhaka,Bangladesh,2000,10.3,3.03
+Dhaka,Bangladesh,2010,16.0,4.71
+Dhaka,Bangladesh,2020,21.9,6.43
+Dhaka,Bangladesh,2024,23.9,7.03
+Sao Paulo,Brazil,1980,12.1,1.0
+Sao Paulo,Brazil,1990,14.6,1.21
+Sao Paulo,Brazil,2000,17.1,1.41
+Sao Paulo,Brazil,2010,19.5,1.61
+Sao Paulo,Brazil,2020,21.9,1.81
+Sao Paulo,Brazil,2024,22.8,1.88
+Cairo,Egypt,1980,7.3,1.0
+Cairo,Egypt,1990,10.4,1.43
+Cairo,Egypt,2000,13.6,1.86
+Cairo,Egypt,2010,17.4,2.38
+Cairo,Egypt,2020,21.2,2.91
+Cairo,Egypt,2024,22.6,3.1
+Mexico City,Mexico,1980,13.0,1.0
+Mexico City,Mexico,1990,15.8,1.21
+Mexico City,Mexico,2000,18.5,1.42
+Mexico City,Mexico,2010,20.2,1.55
+Mexico City,Mexico,2020,21.9,1.68
+Mexico City,Mexico,2024,22.5,1.73
+Beijing,China,1980,5.4,1.0
+Beijing,China,1990,7.8,1.44
+Beijing,China,2000,10.2,1.89
+Beijing,China,2010,15.2,2.82
+Beijing,China,2020,20.4,3.78
+Beijing,China,2024,22.2,4.11
+Mumbai,India,1980,8.7,1.0
+Mumbai,India,1990,12.4,1.43
+Mumbai,India,2000,16.1,1.85
+Mumbai,India,2010,18.4,2.12
+Mumbai,India,2020,20.8,2.39
+Mumbai,India,2024,21.6,2.48
+Osaka,Japan,1980,17.0,1.0
+Osaka,Japan,1990,17.9,1.05
+Osaka,Japan,2000,18.7,1.1
+Osaka,Japan,2010,18.8,1.11
+Osaka,Japan,2020,19.0,1.11
+Osaka,Japan,2024,19.0,1.12

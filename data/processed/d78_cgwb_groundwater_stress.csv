@@ -1,0 +1,26 @@
+state,total_annual_extractable_bcm,current_annual_extraction_bcm,stage_of_extraction_pct,over_exploited_units_count,critical_units_count,safe_units_count,salinity_affected_districts,net_groundwater_balance_bcm,total_stressed_units,total_assessed_units,stressed_units_share_pct,aquifer_stress_tier
+Punjab,18.84,28.02,148.7,117,4,19,14,-9.18,121,140,86.4,Severe Over-Exploited (>100%)
+Rajasthan,11.23,16.94,150.8,203,34,38,28,-5.71,237,275,86.2,Severe Over-Exploited (>100%)
+Haryana,8.62,11.58,134.3,85,12,22,16,-2.96,97,119,81.5,Severe Over-Exploited (>100%)
+Tamil Nadu,18.52,14.82,80.0,435,63,484,18,3.7,498,982,50.7,Semi-Critical / Critical
+Uttar Pradesh,64.25,45.12,70.2,82,47,650,22,19.13,129,779,16.6,Semi-Critical / Critical
+Gujarat,19.85,10.58,53.3,28,12,184,19,9.27,40,224,17.9,Safe Extraction
+Madhya Pradesh,34.25,18.5,54.0,26,8,275,10,15.75,34,309,11.0,Safe Extraction
+Maharashtra,31.42,16.85,53.6,11,4,328,12,14.57,15,343,4.4,Safe Extraction
+Karnataka,16.8,11.25,67.0,55,14,152,15,5.55,69,221,31.2,Safe Extraction
+Andhra Pradesh,19.24,6.85,35.6,18,9,612,11,12.39,27,639,4.2,Safe Extraction
+Telangana,14.5,7.25,50.0,25,12,480,9,7.25,37,517,7.2,Safe Extraction
+Bihar,28.5,13.4,47.0,0,0,534,8,15.1,0,534,0.0,Safe Extraction
+West Bengal,26.85,11.2,41.7,1,3,265,14,15.65,4,269,1.5,Safe Extraction
+Odisha,16.4,4.25,25.9,0,0,314,6,12.15,0,314,0.0,Safe Extraction
+Assam,24.8,3.12,12.6,0,0,182,2,21.68,0,182,0.0,Safe Extraction
+Chhattisgarh,11.5,4.8,41.7,0,1,145,4,6.7,1,146,0.7,Safe Extraction
+Jharkhand,5.25,1.85,35.2,2,3,245,5,3.4,5,250,2.0,Safe Extraction
+Kerala,5.85,2.85,48.7,3,0,148,4,3.0,3,151,2.0,Safe Extraction
+Himachal Pradesh,0.42,0.18,42.8,1,0,9,1,0.24,1,10,10.0,Safe Extraction
+Uttarakhand,2.12,1.05,49.5,2,0,16,2,1.07,2,18,11.1,Safe Extraction
+Jammu and Kashmir,1.85,0.48,25.9,0,0,22,1,1.37,0,22,0.0,Safe Extraction
+Delhi,0.32,0.38,118.7,15,3,9,7,-0.06,18,27,66.7,Severe Over-Exploited (>100%)
+Goa,0.15,0.05,33.3,0,0,12,1,0.1,0,12,0.0,Safe Extraction
+Puducherry,0.18,0.15,83.3,2,0,4,2,0.03,2,6,33.3,Semi-Critical / Critical
+Tripura,0.95,0.12,12.6,0,0,8,0,0.83,0,8,0.0,Safe Extraction
