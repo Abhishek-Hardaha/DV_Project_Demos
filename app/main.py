@@ -40,7 +40,7 @@ DASHBOARD_DICT = {d["id"]: d for d in DASHBOARDS}
 
 # Session State for navigation
 if "current_view" not in st.session_state:
-    st.session_state["current_view"] = "Landing Page"
+    st.session_state["current_view"] = "Dashboard Gallery"
 
 if "selected_dashboard_id" not in st.session_state:
     st.session_state["selected_dashboard_id"] = "D01"
@@ -64,25 +64,25 @@ Verified Public Data Suite<br>
 </div>""")
 
     nav_options = [
-        "Landing Page",
         "Dashboard Gallery",
         "Dashboards",
+        "Landing Page",
         "Dataset Explorer",
         "Source Directory",
         "API Catalog"
     ]
 
-    cur_view = st.session_state.get("current_view", "Landing Page")
+    cur_view = st.session_state.get("current_view", "Dashboard Gallery")
     if cur_view not in nav_options:
-        cur_view = "Landing Page"
+        cur_view = "Dashboard Gallery"
         st.session_state["current_view"] = cur_view
 
     cur_idx = nav_options.index(cur_view)
 
     nav_labels = {
-        "Landing Page": "🏠  Overview",
-        "Dashboard Gallery": "🖼️  Gallery",
+        "Dashboard Gallery": "🖼️  Gallery (Main)",
         "Dashboards": "📊  Dashboards",
+        "Landing Page": "🏠  Overview",
         "Dataset Explorer": "📁  Datasets",
         "Source Directory": "🏛️  Data Sources",
         "API Catalog": "⚡  API Catalog"

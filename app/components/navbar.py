@@ -7,16 +7,16 @@ import streamlit as st
 from app.components.html_utils import render_html
 
 NAV_ITEMS = [
-    ("Landing Page", "Overview"),
     ("Dashboard Gallery", "Gallery"),
     ("Dashboards", "Dashboards"),
+    ("Landing Page", "Overview"),
     ("Dataset Explorer", "Datasets"),
     ("Source Directory", "Sources"),
     ("API Catalog", "APIs")
 ]
 
 def render_top_navbar(total_dashboards=94):
-    cur_view = st.session_state.get("current_view", "Landing Page")
+    cur_view = st.session_state.get("current_view", "Dashboard Gallery")
 
     # Clean, modern header
     render_html(f"""

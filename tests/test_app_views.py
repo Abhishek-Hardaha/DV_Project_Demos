@@ -14,6 +14,12 @@ if PROJECT_ROOT not in sys.path:
 
 MAIN_APP_PATH = os.path.join(PROJECT_ROOT, "app", "main.py")
 
+def test_default_view_is_dashboard_gallery():
+    at = AppTest.from_file(MAIN_APP_PATH)
+    at.run(timeout=30)
+    assert at.session_state["current_view"] == "Dashboard Gallery", f"Expected Dashboard Gallery, got {at.session_state['current_view']}"
+    assert len(at.exception) == 0, f"Default gallery view threw exceptions: {[e.value for e in at.exception]}"
+
 def test_landing_page_renders_cleanly():
     at = AppTest.from_file(MAIN_APP_PATH)
     at.session_state["current_view"] = "Landing Page"

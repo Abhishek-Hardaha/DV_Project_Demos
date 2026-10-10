@@ -22,13 +22,14 @@ def render(on_select_dashboard):
     dashboards = load_dashboards()
 
     render_header(
-        title="Dashboard Gallery",
-        subtitle=f"Browse {len(dashboards)} interactive dashboards across economics, health, energy, demographics, and science.",
+        title="DV Projects using Official Data",
+        subtitle=f"Explore {len(dashboards)} production dashboards powered by verified official data across national and global domains.",
         active_view="Gallery",
         meta_chips=[
             f"{len(dashboards)} Dashboards",
-            "10 Flagships",
-            "Verified Official Data"
+            "100% Real Data",
+            "89 Official Sources",
+            "Interactive Visual Suite"
         ]
     )
 
